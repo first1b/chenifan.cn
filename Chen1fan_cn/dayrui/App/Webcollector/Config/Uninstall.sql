@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS `{dbprefix}webcollector_config`,`{dbprefix}webcollector_rules`;

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>数据分析，到底要懂多少业务？ - 干货分享 - 澈逆凡博客</title>
+<meta name="description" content="同学们经常听到：数据分析要懂业务，到底懂多少才算懂业务？还有新手同学很困惑，说：“我就不懂，又能咋样！”今天系统讲解下。问题场景：小明去面试数据分析师，面试官问：“满减促销活动怎么分析？”小明答：“促…"/>
+<meta name="keywords" content="业务, 数据分析,"/>
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script type="text/javascript" charset="utf-8">$(function(){$("img.lazy").lazyload({effect: "fadeIn"});});</script>
+<script>
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('2 5=5||[];(b(){2 1=4.c("6");1.9="8://1.7.g/1.h?f";2 3=4.d("6")[0];3.e.a(1,3)})();',18,18,'|hm|var|s|document|_0|script|baidu|https|src|insertBefore|function|createElement|getElementsByTagName|parentNode|ae86b9f95e6431d72b52a53c0ca66253|com|js'.split('|'),0,{}))
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h1 class="logo">
+            <a href="/" title="澈逆凡博客" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h1>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="/a/ganhuo/">干货分享</a>
+                        <ul class="sub-menu">
+                            
+                            <li><a href="/a/yygh/">运营</a></li>
+                            
+                            <li><a href="/a/jishu/">IT技术</a></li>
+                            
+                            <li><a href="/a/yx/">网络营销</a></li>
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/a/qgzt/">文案</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/news/">互联网资讯</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/gushici/">神回复</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                        <li class="first">
+                            <span class="time">20-06-05</span>
+                            <a target="_blank" href="/hd/14.html" title="网站公告：澈逆凡博客上线了！">网站公告：澈逆凡博客上线了！</a>
+                        </li>
+
+                    </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>
+    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+                                
+                            </div>
+                            <h1 class="title">数据分析，到底要懂多少业务？</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i></span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="/a/ganhuo/">干货分享</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2021-06-18 23:14</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><script src="/plus/count.php?view=yes&aid=3406&mid=1" type='text/javascript' language="javascript"></script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <tbody><tr>
+                            <td>
+                                                                <span class="span-img"><img src="/uploads/allimg/c210618/1624029116450P-155515.jpg" alt="数据分析，到底要懂多少业务？"></span>
+                                                                
+
+                                	<p>同学们经常听到：数据分析要懂业务，到底懂多少才算懂业务？还有新手同学很困惑，说：“我就不懂，又能咋样！”今天系统讲解下。</p>
+<p>问题场景：</p>
+<p>小明去面试数据分析师，面试官问：“满减促销活动怎么分析？”</p>
+<p>小明答：“促销分析，无非就是对比。作对比，无非就是ABtest，分为促销组，非促销组，搞掂！”</p>
+<p>小明挂……</p>
+<p>问题出在哪里？？？</p>
+<p id="toc-1"><strong>一、懂业务，从业务场景开始</strong></p>
+<p>小明挂在没有考虑业务场景上。但凡留个心眼，都会多问一句：什么场景的促销？</p>
+<p>是不是所有场景都能上ABtest？当然不是！</p>
+<p>所有线下场景，都无法ABtest：不可能一个客人进来有优惠，另一个没有。线下场景这么搞，轻则被客人大脑门店，重则被举报到工商局，一查一个准。</p>
+<p>线上的大促场景，无法ABtest：促销分大促和精准两种，如果为了冲业绩、甩库存、上新品，是不需要做ABtest的。因为这时候就是All In，就是希望人越多越好。为什么要分B组！妈的A组还嫌人不够呢。</p>
+<p>懂业务的第一层含义，就是懂业务场景。不同场景下，业务有自己本身的运行规律，强行违反规律办事会引发各种问题。不同场景下，能采集的数据、能使用的运营手段也不同，因此必须细致考虑。</p>
+<p id="toc-2"><strong>二、懂业务，要懂业务基本玩法</strong></p>
+<p>注意，即使是线上场景，这个问题里也不会用ABtest。因为“满减”指的是满50减10元，满100减20这种活动。做满减的目的是为了鼓励用户多消费，一般和优质产品捆绑（废话，垃圾产品谁肯买那么多呀，一般垃圾产品都是做折扣）。此时内在的业务逻辑就是要多人知道，因此不需要区分B组。</p>
+<p>这里有一个知识点，就是不同商品生命周期中运营手段。如果把商品销量，从上市到退市做生命周期图，可以看到经常有如下规律（如下图）。</p>
+<p><img class="aligncenter" alt="54 数据分析，到底要懂多少业务？" src="/uploads/allimg/c210618/162402911M5140-1623H.jpg" width="565" height="403" title="数据分析，到底要懂多少业务？" /></p>
+<p>&nbsp;</p>
+<p>在不同阶段，价格运营的手段是不一样的（如下图）。</p>
+<p><img class="aligncenter" alt="613 数据分析，到底要懂多少业务？" src="/uploads/allimg/c210618/162402911Q1930-1K214.jpg" width="565" height="378" title="数据分析，到底要懂多少业务？" /></p>
+<p>&nbsp;</p>
+<p>因此当涉及价格促销的时候，优先问清楚：是什么商品，多大价格力度的促销。商品的价格促销能力，和商品的利润&amp;用户需求刚性两方面有关。</p>
+<p>如果促销的商品，本身利润空间薄，则大幅度的价格促销只会是为了铺货（新品扩大知名度）或者甩货（减少库存成本）；如果促销的商品用户没有刚需，则价格促销也注定不能起到效果。</p>
+<p>所以懂业务的第二步，就是了解基本玩法。这些基本玩法，和第三步有重要关系。</p>
+<p id="toc-3"><strong>三、懂业务，要懂业务目标与现状</strong></p>
+<p>懂业务的第三步就是懂业务目标。数据分析要输出结论，就一定得了解判断标准是啥。</p>
+<p>判断标准+数据=结论。判断标准是根据业务需要得出的，如果不利于当前业务发展，那再合理的标准也不好使。</p>
+<p>有些新手会说：业务目标无非就是赚钱/或者业务目标无非就是AARRR。这样太肤浅了。以商品管理为例，不同品类的目标本身就不同，并非所有产品都得赚钱（如下图）。</p>
+<p><img class="aligncenter" alt="710 数据分析，到底要懂多少业务？" src="/uploads/allimg/c210618/162402911T5910-1YB9.jpg" width="565" height="319" title="数据分析，到底要懂多少业务？" /></p>
+<p>&nbsp;</p>
+<p>综上，在遇到具体问题的时候，要了解清楚：</p>
+<ul>
+<li><span style="color: #888888;">业务模式：toB/toC；</span></li>
+<li><span style="color: #888888;">业务场景：线上/线下；</span></li>
+<li><span style="color: #888888;">业务玩法：具体做的是XX事情；</span></li>
+<li><span style="color: #888888;">业务目标：想达成的目的是……</span></li>
+</ul>
+<p>当然，如果是面试这种场景，是可以直接问面试官的：“有没有具体分析场景”。如果面试官说有，就按面试官的分析。如果面试官没说，可以引用一个自己刚刚参加过的/刚刚见过的活动举例子。</p>
+<p>而本案例场景里，如果多问一句，会发现面试官是有具体场景的：线下门店，6月中旬至7月上旬，少儿图书、玩具，会员专享，满200元9折，300元8折，500元7折……</p>
+<p>这个背景交代已经很详细了。线下门店6月下旬开始冲少儿图书/玩具，显然是为了蹭一波假期消费的热度，但是还是少了目标。</p>
+<p>因为背景里有“会员”二字，所以还是得确认下，到底这么做是为了提升会员指标，还是商品指标。</p>
+<p>如果是提升会员指标，是为了通过给一个很大力度的优惠，提升新会员注册率，还是拉升老会员消费。</p>
+<p>注意：就算有目标，还不能直接完事，因为业务现状不一样，直接导致目标达成难度不同（如下图）。</p>
+<p><img class="aligncenter" alt="812 数据分析，到底要懂多少业务？" src="/uploads/allimg/c210618/162402911W4560-195G8.jpg" width="565" height="308" title="数据分析，到底要懂多少业务？" /></p>
+<p>&nbsp;</p>
+<p>目标脱离现状，会失败；目标有机会达成，但缺少配套支持，也会失败。这些分析必须结合当前实际情况进行，因此清理现状非常重要。</p>
+<p id="toc-4"><strong>四、懂业务，懂业务流程与业务套路</strong></p>
+<p>很有可能目标一样，做法一样，但具体操作流程不同，导致的效果完全不同。</p>
+<p>比如同样是会员办卡，就有三种常见形式：</p>
+<ol>
+<li><span style="color: #888888;">不需要预充，通过报手机号办卡；</span></li>
+<li><span style="color: #888888;">不需要预充，通过扫码微信卡包/下载APP注册；</span></li>
+<li><span style="color: #888888;">需要预充，比如：预充200/300/500成为银卡/金卡/白金卡会员。</span></li>
+</ol>
+<p>如果有预充，且预充金额与活动可叠加，则能极大拉升新会员注册动力。</p>
+<p>如果有预充，但预充特权不与活动重叠，则会形成相互抵消的作用。活动设计不合理，未与现有权益形成合力，也是活动失败的重要原因。</p>
+<p>如果有微信卡包/APP则可以在CRM系统做领券减。</p>
+<p>如果在CRM系统做先领券再减，就可以给各个门店分配专属二维码，从而掌握有多少用户扫码参与，从而推断出：如果参与人数不足，到底是某个店没有做好，还是海报做的太烂了（如下图）。</p>
+<p><img class="aligncenter" alt="99 数据分析，到底要懂多少业务？" src="/uploads/allimg/c210618/162402911951160-202314.jpg" width="565" height="347" title="数据分析，到底要懂多少业务？" /></p>
+<p>&nbsp;</p>
+<p>如果只有手机号预留的会员卡，则可以根据手机号到店频率，区分轻中重用户，对于重度且未到店用户主动短信提醒、外呼，从而提升效果。</p>
+<p>如果发现有的莱昂的重度会员到店且消费临近门槛未达标，那就是店员没有做好培训，连引导都做不好。操作流程的差异、执行力度高低、直接导致了不同的效果。</p>
+<p>而不同操作流程，留下的数据形式也不同，如何从分析中，解读出原因的方法也不同。因此了解操作细节，不但对推导分析结论很重要，而且对于下一次开展业务也有指导意义。选择数字化方法，加强数字化能力，本身就意味着向高效率执行落地靠拢。</p>
+<p id="toc-5"><strong>五、懂业务，懂业务的好处</strong></p>
+<p>当我们懂了业务以后，即使看到同样的数据，也能做出不同解读。我们给到的分析结论，能非常地丰富。比如通过回顾目标，发现活动最终未达标，那么给出来的解读，就可以是：</p>
+<ul>
+<li><span style="color: #888888;">因为消费门槛设得太高；</span></li>
+<li><span style="color: #888888;">因为没有与现有预充权益结合；</span></li>
+<li><span style="color: #888888;">因为门店执行没有做到位；</span></li>
+<li><span style="color: #888888;">因为没有通知到老会员。</span></li>
+</ul>
+<p>而不是简简单单一句：“因为参与活动人数太少，建议搞多”。</p>
+<p>这只是一个很简单的小例子，但同学们能看到：数字是业务的反映，数据产生于业务流程之中。</p>
+<p>想基于数据对业务做出判断，就得深入了解业务。不只是一句简单的：“问问业务在干啥”而是深入细致的，从业务场景，到业务目标、业务现状、业务流程，再到数据采集，这些部分分属不同的人，因此要充分得与各方沟通，做好前期分析才行（如下图）。</p>
+<p><img class="aligncenter" alt="101 数据分析，到底要懂多少业务？" src="/uploads/allimg/c210618/162402912031D0-21R19.jpg" width="565" height="278" title="数据分析，到底要懂多少业务？" /></p>
+<p>&nbsp;</p>
+<p>当然本篇信息量非常巨大，可能同学们需要一点时间消化，因此可以先记得：不要遇事说“无非”，多了解具体情况，具体问题具体分析哈。</p>
+<p><strong>#专栏作家#</strong></p>
+<p>接地气的陈老师，微信公众号：接地气学堂。资深咨询顾问，在互联网，金融，快消，零售，耐用，美容等15个行业有丰富数据相关经验。</p>
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+<p style="color:#C0C0C0">免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！ </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href='/a/ganhuo/3405.html' class='prev has-background'><span>上一篇：</span><h4>0门槛、月赚10万的“美少女零食铺直播”新玩法，搞起来！</h4></a> </div>
+                        <div class="next-post"><a href='/a/ganhuo/3407.html' class='nextv has-background'><span>下一篇：</span><h4>从两个知名品牌案例拆解，看私域的分层运营玩法！</h4></a> </div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                            <li>
+                                <div class="item">
+                                    <a href="/a/yygh/3492.html" title="数据分析不落地？一个案例教会你！">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210823/1629D40H95c0-G040.jpg" alt="数据分析不落地？一个案例教会你！">
+                                        <h4><span>数据分析不落地？一个案例教会你！</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3391.html" title="数据分析报告，建议就该这么写！">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210615/1623I42J51030-24J30.jpg" alt="数据分析报告，建议就该这么写！">
+                                        <h4><span>数据分析报告，建议就该这么写！</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/dianshang/3276.html" title="天猫开店 淘小铺创始人是谁？他在阿里巴巴还负责其它业务吗？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/210122/1_01221032503919.png" alt="天猫开店 淘小铺创始人是谁？他在阿里巴巴还负责其它业务吗？">
+                                        <h4><span>天猫开店 淘小铺创始人是谁？他在阿里巴巴还负责其它业务吗？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/dianshang/3259.html" title="中山电商培训 在第三方支付中，跨境支付业务的开通流程是怎么样的？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/210122/1_01221032412495.jpg" alt="中山电商培训 在第三方支付中，跨境支付业务的开通流程是怎么样的？">
+                                        <h4><span>中山电商培训 在第三方支付中，跨境支付业务的开通流程是怎么</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/dianshang/3046.html" title="外贸b2b 供应链金融业务有哪些风险">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/210121/1_012115592XU3.jpg" alt="外贸b2b 供应链金融业务有哪些风险">
+                                        <h4><span>外贸b2b 供应链金融业务有哪些风险</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="sidebar col-xs-12 col-sm-4 col-md-4"><div class="widget widget_suxingme_postlist"><h3><span>随便看看</span></h3><ul class="recent-posts-widget"> <li class="one"><a href="/dianshang/157.html" target="_blank" title="小白运营拼多多店铺必须学习的三个技巧"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/c200615/1592202W24S20-4B56.jpg" alt="小白运营拼多多店铺必须学习的三个技巧"/><div class="title"><span>2020-06-15</span><h4>小白运营拼多多店铺必须学习的三个技巧</h4></div></a></li>
+ <li class="others"><div class="image"><a href="/a/yx/282.html" target="_blank" title="鲁班，你还是放弃吧！"><img data-original="/uploads/allimg/c200724/15955594Z20Q0-2931K.jpg" alt="鲁班，你还是放弃吧！" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/a/yx/282.html" title="鲁班，你还是放弃吧！">鲁班，你还是放弃吧！</a></h4><span>2020-07-24</span></div></li>
+<li class="others"><div class="image"><a href="/a/youhua/133.html" target="_blank" title="推荐两款本地PHP环境一键集成软件"><img data-original="/images/defaultpic.gif" alt="推荐两款本地PHP环境一键集成软件" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/a/youhua/133.html" title="推荐两款本地PHP环境一键集成软件">推荐两款本地PHP环境一键集成软件</a></h4><span>1970-01-01</span></div></li>
+<li class="others"><div class="image"><a href="/dianshang/3154.html" target="_blank" title="华为手机网店运营计划 市场营销计划中4P指的是什么？"><img data-original="/uploads/allimg/210121/1_012116002942L.jpg" alt="华为手机网店运营计划 市场营销计划中4P指的是什么？" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/dianshang/3154.html" title="华为手机网店运营计划 市场营销计划中4P指的是什么？">华为手机网店运营计划 市场营销计划中4P指的是什么？</a></h4><span>2021-01-21</span></div></li>
+ </ul></div><div class="widget widget_suxingme_hotpost"><h3><span>热门文章</span></h3><ul class="widget_suxingme_post"> <li><a href="/gzhyy/2173.html" target="_blank" title="微信公众号条漫图文怎么制作？"><div class="overlay"></div><img class="thumbnail lazy" data-original="https://static.getgetai.com/img/115bb7bb065b44d1bb8150ffc3303281/20201211165415545.png" alt="微信公众号条漫图文怎么制作？"/><div class="title"><div class="entry-meta"><span>2020-12-11</span></div><h4>微信公众号条漫图文怎么制作？</h4></div></a></li>
+<li><a href="/a/yx/241.html" target="_blank" title="抖音视频为什么不能保存下载？分享2个免费下载"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/c200710/15943DF45WP-35K15.jpg" alt="抖音视频为什么不能保存下载？分享2个免费下载"/><div class="title"><div class="entry-meta"><span>2020-07-10</span></div><h4>抖音视频为什么不能保存下载？分享2个免费下载</h4></div></a></li>
+<li><a href="/a/yygh/360.html" target="_blank" title="案例拆解：学而思9元领秋季语文特训班"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/c200908/15c544NV13Z-1L62.jpg" alt="案例拆解：学而思9元领秋季语文特训班"/><div class="title"><div class="entry-meta"><span>2020-09-08</span></div><h4>案例拆解：学而思9元领秋季语文特训班</h4></div></a></li>
+ </ul></div><div class="widget suxingme_tag"><h3><span>热门标签</span></h3><div class="widge_tags"><div class="tag-items">  <a href="/tags.php?/31/">运营</a>  <a href="/tags.php?/54/">京东</a>  <a href="/tags.php?/57/">电商</a>  <a href="/tags.php?/30/">织梦二次开发</a>  <a href="/tags.php?/189/">918</a>  <a href="/tags.php?/42/">社群运营</a>  <a href="/tags.php?/50/">摆摊</a>  <a href="/tags.php?/25/">情感</a>  <a href="/tags.php?/33/">摆地摊</a>  <a href="/tags.php?/2/">聪明</a>  <a href="/tags.php?/20/">景点推荐</a>  <a href="/tags.php?/29/">网站公告</a>  <a href="/tags.php?/35/">技巧</a>  <a href="/tags.php?/39/">产品经理</a>  <a href="/tags.php?/40/">能力提升</a>  <a href="/tags.php?/41/">新媒体运营</a>  <a href="/tags.php?/3/">乌鸦</a>  <a href="/tags.php?/15/">水果</a>  <a href="/tags.php?/16/">吃货</a>  <a href="/tags.php?/21/">海滩</a>  <a href="/tags.php?/22/">游泳</a>  <a href="/tags.php?/23/">美景</a>  <a href="/tags.php?/27/">手表</a>  <a href="/tags.php?/28/">时尚潮物</a>  <a href="/tags.php?/37/">B端产品</a>  <a href="/tags.php?/38/">产品运营</a>  <a href="/tags.php?/48/">时间</a>  <a href="/tags.php?/8/">充电</a>  <a href="/tags.php?/9/">照明</a>  <a href="/tags.php?/12/">云南</a>  </div></div></div><div class="widget suxingme_social"><h3><span>关注我们 么么哒！</span></h3><div class="attentionus"><ul class="items clearfix"><span class="social-widget-link social-link-qq"><span class="social-widget-link-count"><i class="fa fa-weixin"></i>十一记实录</span><span class="social-widget-link-title">公众号</span><a id="tooltip-s-weixin" href="javascript:void(0);"></a></span><span class="social-widget-link social-link-email"><span class="social-widget-link-count"><i class="fa fa-envelope"></i>1812215600@qq.com</span><span class="social-widget-link-title">邮箱</span><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" target="_blank" rel="nofollow"></a></span><span class="social-widget-link social-link-wechat"><span class="social-widget-link-count"> 运营贩</span><span class="social-widget-link-title">百家号</span><a id="tooltip-s-weixin" href="javascript:void(0);"></a></span></ul></div></div><div class="widget widget_suxingme_postlist"><h3><span>最新内容</span></h3><ul class="recent-posts-widget"> <li class="one"><a href="/a/yygh/3621.html" target="_blank" title="引起6000w人围观的#疼痛穿搭 究竟是什么?"><div class="overlay"></div><img class="thumbnail lazy" data-original="/images/defaultpic.gif" alt="引起6000w人围观的#疼痛穿搭 究竟是什么?"/><div class="title"><span>2021-09-01</span><h4>引起6000w人围观的#疼痛穿搭 究竟是什么?</h4></div></a></li>
+ <li class="others"><div class="image"><a href="/a/yygh/3539.html" target="_blank" title="怎样的营销方案能落地？" rel="nofollow"><img data-original="/uploads/allimg/c210830/163031461PE20-13118.jpg" alt="怎样的营销方案能落地？" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yygh/3539.html" target="_blank" title="怎样的营销方案能落地？">怎样的营销方案能落地？</a></h4><span>2021-08-30</span></div></li>
+<li class="others"><div class="image"><a href="/a/yygh/3540.html" target="_blank" title="B2B企业打造品牌的三种路径" rel="nofollow"><img data-original="/uploads/allimg/c210830/1630314621522F-2VF.jpg" alt="B2B企业打造品牌的三种路径" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yygh/3540.html" target="_blank" title="B2B企业打造品牌的三种路径">B2B企业打造品牌的三种路径</a></h4><span>2021-08-30</span></div></li>
+<li class="others"><div class="image"><a href="/a/yygh/3541.html" target="_blank" title="万字总结：从0到1，SOP构建和策略设计" rel="nofollow"><img data-original="/uploads/allimg/c210830/1630314632Z3P-203I5.jpg" alt="万字总结：从0到1，SOP构建和策略设计" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yygh/3541.html" target="_blank" title="万字总结：从0到1，SOP构建和策略设计">万字总结：从0到1，SOP构建和策略设计</a></h4><span>2021-08-30</span></div></li>
+<li class="others"><div class="image"><a href="/a/yygh/3542.html" target="_blank" title="一套完整的获客方案sop，必看！" rel="nofollow"><img data-original="/uploads/allimg/c210830/1630314640E240-3294I.jpg" alt="一套完整的获客方案sop，必看！" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yygh/3542.html" target="_blank" title="一套完整的获客方案sop，必看！">一套完整的获客方案sop，必看！</a></h4><span>2021-08-30</span></div></li>
+ </ul></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                
+                <a href="/a/ganhuo/">干货分享</a>
+                
+                <a href="/a/qgzt/">文案</a>
+                
+                <a href="/news/">互联网资讯</a>
+                
+                <a href="/gushici/">神回复</a>
+                
+              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <p>Copyright &copy;     备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">京ICP备19036021号-1</a></p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <form class="sidebar-search" method="get" action="/search.php">
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript">jQuery(document).ready(function($) {$(".fancybox").fancybox()});</script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+
+</body>
+</html>

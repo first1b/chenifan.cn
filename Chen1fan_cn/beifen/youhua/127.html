@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>前端开发：Chrome开发者工具详解</title>
+<meta content="前端,开发,Chrome,开发者,工具,详解,作为,一个" name="keywords" />
+<meta content="作为一个前端开发人员，熟练运用各种浏览器中的开发者工具是必备的技能之一，接下来介绍主流浏览器Chrome的开发者工具Chrome开发者工具面板 面板上包含了Elements面板，Console面板，Sources面板，Network面板，Timeline面板，Profiles面板，Application面板，Security面板，Audits面板等这些面板功能。 这些按钮的功能点如下： Elements:查找网页源代码HTML中的任一元素,手动修改任一元素的属性和" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h1 class="logo">
+            <a href="/" title="{dede:global.cfg_webname/}" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h1>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/ganhuo">干货分享</a>
+                                                <ul>                             <li><a href="http://blog.chenifan.cn/jishu">IT技术</a></li>
+                                                        <li><a href="http://blog.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="http://blog.chenifan.cn/yx">网络营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/qgzt">文案</a>
+                                                <ul>                             <li><a href="http://blog.chenifan.cn/life">极致生活</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/index.php?c=category&id=13">互联网资讯</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/gushici">神回复</a>
+                                            </li>
+                                    </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="http://blog.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+                                前端,开发,Chrome,开发者,工具,详解,作为,一个                            </div>
+                            <h1 class="title">前端开发：Chrome开发者工具详解</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>小澈</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="{dede:field.typeurl /}">SEO</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2020-06-15</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_127">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=127", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_127").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script> </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            
+		<p><strong>作为一个前端开发人员，熟练运用各种浏览器中的开发者工具是必备的技能之一，接下来介绍主流浏览器Chrome的开发者工具Chrome开发者工具面板</strong></p><p>面板上包含了Elements面板，Console面板，Sources面板，Network面板，Timeline面板，Profiles面板，Application面板，Security面板，Audits面板等这些面板功能。</p><p><img alt="前端开发：Chrome开发者工具详解  第1张" src="https://www.fengyan.cc/zb_users/upload/2016/12/201612211482294623179069.jpg"/></p><p>这些按钮的功能点如下：<br/>Elements:查找网页源代码HTML中的任一元素,手动修改任一元素的属性和样式且能实时在浏览器里面得到反馈。</p><p>Console:记录开发者开发过程中的日志信息，且可以作为与JS进行交互的命令行Shell。</p><p>Sources:断点调试JS。</p><p>Network:从发起网页页面请求Request后分析HTTP请求后得到的各个请求资源信息（包括状态、资源类型、大小、所用时间等），可以根据这个进行网络性能优化。</p><p>Timeline:记录并分析在网站的生命周期内所发生的各类事件，以此可以提高网页的运行时间的性能。</p><p>Profiles:如果你需要Timeline所能提供的更多信息时，可以尝试一下Profiles,比如记录JS CPU执行时间细节、显示JS对象和相关的DOM节点的内存消耗、记录内存的分配细节。</p><p>Application:记录网站加载的所有资源信息，包括存储数据（Local Storage、Session Storage、IndexedDB、Web SQL、Cookies）、缓存数据、字体、图片、脚本、样式表等。</p><p>Security:判断当前网页是否安全。</p><p>Audits:对当前网页进行网络利用情况、网页性能方面的诊断，并给出一些优化建议。比如列出所有没有用到的CSS文件等。注： 这一篇主要讲解前三个面板Elements、Console、Sources。</p><p><strong>lements面板</strong></p><p><strong>实时编辑DOM节点和CSS样式</strong></p><p>双击DOM树视图里面的节点，可以实时编辑标签属性，修改的效果会立刻反应在浏览器里面</p><p><img alt="前端开发：Chrome开发者工具详解  第2张" src="https://www.fengyan.cc/zb_users/upload/2016/12/201612211482294727842283.jpg"/></p><p>点击右侧的Style面板，可以实时修改Css的属性值,在这里的所有样式Name和Value都是可以编辑的，在属性后面单击可以添加新的样式，如图：</p><p><img alt="前端开发：Chrome开发者工具详解  第3张" src="https://www.fengyan.cc/zb_users/upload/2016/12/201612211482294753884348.jpg"/></p><p><img alt="前端开发：Chrome开发者工具详解  第4张" src="https://www.fengyan.cc/zb_users/upload/2016/12/201612211482294778763891.jpg"/></p><p>点击右侧的Computed面板，可以编辑左侧选中的盒子模型参数，所有的值都是可以修改的；点击不同的位置（top,bottom,left,right）就可以修改元素的padding,border,margin属性值。</p><p><img alt="前端开发：Chrome开发者工具详解  第5张" src="https://www.fengyan.cc/zb_users/upload/2016/12/201612211482294804721724.jpg"/></p><p><strong>查看网页的本地修改历史</strong></p><p style="padding: 9.5px; font-family: Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; font-size: 13px; color: rgb(101, 123, 131); border-radius: 4px; margin-top: 0px; margin-bottom: 20px; line-height: 20px; word-break: break-all; word-wrap: normal; border: 1px solid rgba(0, 0, 0, 0.14902); overflow: auto; background-color: rgb(253, 246, 227);">点击Styles面板中修改过属性的文件名，会跳转到Source面板
+ 在文件位置右击选择Localmodifications,可以查看本地的所有修改记录</p><p><strong><img alt="前端开发：Chrome开发者工具详解  第6张" src="https://www.fengyan.cc/zb_users/upload/2016/12/201612211482294900761745.jpg"/></strong><br/></p><p><strong>Console面板</strong></p><p><strong>控制台输出日志</strong></p><p>通过JS代码或者命令行console.log(),console.warn(),console.error()可以将日志信息输出到控制台</p><p>console.log()显示一般的基本日志信息，当要显示的基本日志太多时可以使用console.group将相关的日志进行分组。<br/>console.warn()显示带有黄色小图标的警告信息。<br/>console.error()显示带有红色小图标的红色的错误的信息。</p><p><img alt="前端开发：Chrome开发者工具详解  第7张" src="https://www.fengyan.cc/zb_users/upload/2016/12/201612211482294960498638.jpg"/></p><p style="text-align: right;"><strong>文／编程小飞侠（简书作者）</strong></p>					
+	<p style="color:#C0C0C0">免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！ </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="http://blog.chenifan.cn/youhua/88.html" class="prev has-background"><span>上一篇：</span><h4>seo网站系统都有哪些？哪种网站系统最适合优化？</h4></a></div>
+                        <div class="next-post"><a href="http://blog.chenifan.cn/youhua/128.html" class="nextv has-background"><span>下一篇：</span><h4>防止网站被别人通过iframe框架引用的两种实用方法</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/youhua/3465.html" title="mate标签优化之：referrer属性的作用是什么？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="http://blog.chenifan.cn/uploads/allimg/210816/1-210Q6151K32P-lp.jpg" alt="HTMLmeta标签name=referrer属性主要用于控制网页发送给服务器的referrer信息，可以告诉服务器端用户是从哪个页面来到当前网页的。 什么是referrer？ referrer有引用页面或来源页面的意思，用来指定当前页面是从哪个页面跳转过来的，也就是说HTTP请求报头中的referrer包含了跳转至当前页面的上一个页面的url地址； 比如，你点击A页面中链接到B页面的URL地址，当你从浏览器进入B页面时，会">
+                                        <h4><span>mate标签优化之：referrer属性的作用是什么？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/youhua/134.html" title="浅谈如何提升网站的收录,让关键词排名稳定">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="http://blog.chenifan.cn/static/assets/images/nopic.gif" alt="前言 我想对于许多站长来说最关心的莫过于是如何提升网站的关键词排名，如何让网站排名靠前的关键词排名更加稳定呢？那么，首先我们先来简单地说一下，网站关键词排名主要取决于哪些因素，网站关键词要想获得排名，主要的因素有：网站权重的高低、网页标题关键词、关键词出现的频率、文章内容的质量、网站内链的建设等。接下来我们再来看一下，如何更好的提升网">
+                                        <h4><span>浅谈如何提升网站的收录,让关键词排名稳定</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/youhua/133.html" title="推荐两款本地PHP环境一键集成软件">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="http://blog.chenifan.cn/static/assets/images/nopic.gif" alt="今天烽烟给大家分享两款本地PHP环境一键集成软件：APMServ和XAMPP，对于建网站的同学来说不在本地搭建一个网站怎么能说的过去呢，无论是测试模板还是修改模板这些都需要在本地操作才比较安全，要不直接在线修改模板测试代码，万一代码错误导致网站打不开就不好了。 APMServ 5.2.6 介绍 APMServ 5.2.6 是一款拥有图形界面的快速搭建Apache 2.2.9、PHP 5.2.6、MySQL 5.1.28＆4.0.26、Nginx 0.7.1">
+                                        <h4><span>推荐两款本地PHP环境一键集成软件</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/youhua/87.html" title="网站建设系统对比参照表">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="http://blog.chenifan.cn/uploads/allimg/200611/1053314324-0-lp.jpg" alt="市面上有很多的网站建设系统，本人不是专业的网站建设开发者，所以不能全面的剖析网站建设系统的方方面面，我只站在seo的角度来分析一下网站建设系统的对比，若有不当，还请指教，一定纠正。 序号 网站建设系统名称 数据承载量 系统操作体验 程序上手难度 安全性 备注 1 dedecms 10w以内最佳，数据再多，生成的效率就很慢，并且生成中容易出错 星级：★★★★★ 理由：操">
+                                        <h4><span>网站建设系统对比参照表</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/youhua/88.html" title="seo网站系统都有哪些？哪种网站系统最适合优化？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="http://blog.chenifan.cn/uploads/allimg/200611/1052501c9-0-lp.jpg" alt="说到seo网站系统，大家和我一样想到的肯定是cms系统，的确是的，市面上有很多seo建站系统，并且都是非常利于优化的，但是作为大部分seoer来说，会seo不一定会程序，或者说会的不多，仅是皮毛。 在这里，我就和大家分享一下市面上的一些seo网站系统有哪些?哪些网站系统最适合seo你? 1、seo网站系统都有哪些? 常见的网站系统主要包括：dedecms、帝国cms、phpcms、zblog、wordpress、me">
+                                        <h4><span>seo网站系统都有哪些？哪种网站系统最适合优化？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/youhua/130.html" title="基础建站教程 之 IIS绑定域名及创建站点">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="http://blog.chenifan.cn/static/assets/images/nopic.gif" alt="域名绑定是指域名与主机（即某个服务器）的空间绑定,其实就是在域名注册查询上设置或者WEB服务器上设置，使一个域名被指导向一特定空间，访问者访问你的域名的时候就会打开你存放在该空间上的网页，简单来说其实就是把域名解析到服务器IP，然后在服务器上设置该域名有权限访问的过程。可以简单的这样理解：在一个文件系统中，文件名被绑定给文件。在DNS中，一个IP地">
+                                        <h4><span>基础建站教程 之 IIS绑定域名及创建站点</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="http://blog.chenifan.cn/dianshang/3050.html" target="_blank" title="乐其电商 服务运营专员 淘宝店铺搜不到"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="http://blog.chenifan.cn/uploads/allimg/210121/1_01211559306412.jpg" alt=" 违规了，肯定是屏蔽店铺之类的处罚了，先遵守规定踏实待些时候吧 回 ，没把主账号给 答 拉黑封号就算便宜了。现在对违规违法行为的打击力度很大，而且人工智能的威力很大，几乎没有侥幸成功的可能，还是规矩地做事来得长久。 乐其电商 服务运营专员 举个简单的例子给你说明吧，网站建设就是盖房子网站推广就是卖房子一个网站不是只有建站与推广两个方面企业网站建" />
+       <div class="title ">
+        <span>2021-01-21</span>
+        <h4>乐其电商 服务运营专员 淘宝店铺搜不到</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]"><img data-original=" https://nimg.ws.126.net/?url=http%3A%2F%2Fcms-bucket.ws.126.net%2F2020%2F1102%2F42128831j00qj57wv001tc000jg00b2c.jpg&thumbnail=660x2147483647&quality=80&type=jpg" alt=" [field: fulltitle / ]" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" [field: arcurl / ]" title=" [field: fulltitle / ]">利润低，盘子小，手机厂商为何还要扎堆做电视？|电视|机顶盒|互联网电视|手机|智能电视|tcl</a></h4>
+       <span>2020-11-02</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]"><img data-original=" https://www.ruzw.com/uploads/allimg/201908/15660236448021.jpg" alt=" [field: fulltitle / ]" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" [field: arcurl / ]" title=" [field: fulltitle / ]">怎么优化宝贝关键词</a></h4>
+       <span>2020-12-30</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]"><img data-original=" http://blog.chenifan.cn/static/assets/images/nopic.gif" alt=" [field: fulltitle / ]" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" [field: arcurl / ]" title=" [field: fulltitle / ]">抖音服务市场，万千商业机会，邀您共享生态繁荣</a></h4>
+       <span>2021-09-04</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="http://blog.chenifan.cn/uploadfile/thumb/c4ca4238a0b923820dcc509a6f75849b/200x200_auto.jpg" alt=" [field: fulltitle / ]" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2021-10-20</span>
+        </div>
+        <h4>我悄悄把你设置成了置顶，想让你知道，但又不想让你知道</h4>
+       </div></a></li>  
+     <li><a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="http://blog.chenifan.cn/uploads/allimg/c211009/1633LA532I60-QA3.jpg" alt=" [field: fulltitle / ]" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2021-10-09</span>
+        </div>
+        <h4>一个人怎么运营微信公众号？</h4>
+       </div></a></li>  
+     <li><a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="http://blog.chenifan.cn/uploads/allimg/c211009/1633LA4543R0-12N5.jpg" alt=" [field: fulltitle / ]" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2021-10-09</span>
+        </div>
+        <h4>抖店闭环攻略（抖品牌篇），3个月从0到1000万月销增长案例</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>热门标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="http://blog.chenifan.cn/ganhuo">干货分享</a>
+                 
+                <a href="http://blog.chenifan.cn/qgzt">文案</a>
+                 
+                <a href="http://blog.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="http://blog.chenifan.cn/index.php?c=category&id=13">互联网资讯</a>
+                 
+                <a href="http://blog.chenifan.cn/gushici">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">{dede:global.cfg_beian/}</a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+</body>
+</html>

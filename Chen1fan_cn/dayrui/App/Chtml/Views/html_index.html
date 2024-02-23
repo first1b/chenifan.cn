@@ -1,0 +1,83 @@
+{template "header.html"}
+
+{template "api_list_date_search.html"}
+
+<div class="note note-danger">
+    <p>{dr_lang('确保网站目录必须有可写权限')}</p>
+</div>
+{php $first=current($module);}
+<div class="portlet bordered light form-horizontal">
+    <div class="portlet-title tabbable-line">
+        <ul class="nav nav-tabs" style="float:left;">
+            {loop $module $i $mod}
+            <li class="{if $i == $first.dirname}active{/if}">
+                <a href="#tab_{$i}" data-toggle="tab"> <i class="{$mod.icon}"></i> {dr_lang($mod.name)} </a>
+            </li>
+            {/loop}
+        </ul>
+    </div>
+    <div class="portlet-body">
+        <div class="tab-content" style="padding-top: 10px">
+
+
+            {loop $module $i $mod}
+            <div class="tab-pane {if $i == $first.dirname}active{/if}" id="tab_{$i}">
+
+                <form id="myform{$i}">
+                    <div class="form-group ">
+                        <label class="col-md-2 control-label">{dr_lang('每页生成数量')}</label>
+                        <div class="col-md-9">
+                            <label><input type="text" placeholder="{dr_lang('建议不要太多')}" class="form-control" value="{$pagesize}" name="pagesize"></label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">{dr_lang('按内容ID范围')}</label>
+                        <div class="col-md-9">
+                            <div class="input-group">
+                                <div class="input-group  input-daterange " >
+                                    <input type="text" placeholder="{dr_lang('按ID开始')}" class="form-control" value="{$param.id_form}" name="id_form">
+                                    <span class="input-group-addon"> {dr_lang('到')} </span>
+                                    <input type="text" placeholder="{dr_lang('按ID结束')}" class="form-control" value="{$param.id_to}" name="id_to">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">{dr_lang('按发布时间范围')}</label>
+                        <div class="col-md-9">
+                            <div class="input-group">
+                                <div class="input-group date-picker input-daterange " data-date="" data-date-format="yyyy-mm-dd">
+                                    <input type="text" placeholder="{dr_lang('按发布时间范围')}" class="form-control" value="{$param.date_form}" name="date_form">
+                                    <span class="input-group-addon"> {dr_lang('到')} </span>
+                                    <input type="text" placeholder="{dr_lang('按发布时间范围')}" class="form-control" value="{$param.date_to}" name="date_to">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">{dr_lang('按所选栏目')}</label>
+                        <div class="col-md-9">
+                            {php echo \Phpcmf\Service::L('category', 'module')->select($mod.dirname, 0, 'name=\'catids[]\' multiple style=\'width:370px;height:200px\'', dr_lang('全部栏目'));}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">{dr_lang('生成内容页面')}</label>
+                        <div class="col-md-9">
+                            <label><button type="button" onclick="dr_bfb('{dr_lang('生成内容页面')}', 'myform{$i}', '{dr_url('chtml/html/show_index')}&app={$mod.dirname}')" class="btn dark"> <i class="fa fa-th-large"></i> {dr_lang('开始生成静态')} </button></label>
+                            <label><button type="button" onclick="dr_bfb('{dr_lang('生成内容页面')}', 'myform{$i}', '{dr_url('chtml/html/show_point_index')}&app={$mod.dirname}')" class="btn red"> <i class="fa fa-th-large"></i> {dr_lang('上次未执行完毕时继续执行')} </button></label>
+                            <label><button type="button" onclick="dr_iframe_show('{dr_lang('批量更新全部内容URL')}', '{dr_url('api/update_url')}&mid={$mod.dirname}')" class="btn default"> <i class="fa fa-link"></i> {dr_lang('批量更新全部内容URL')} </button></label>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+            {/loop}
+
+
+        </div>
+    </div>
+</div>
+
+
+{template "footer.html"}

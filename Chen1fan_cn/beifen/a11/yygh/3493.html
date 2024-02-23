@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>终于有人把用户画像的流程、方法讲明白了 - 运营 - 澈逆凡博客</title>
+<meta name="description" content="导读：用户标签是个性化推荐、计算广告、金融征信等众多大数据业务应用的基础，它是原始的用户行为数据和大数据应用之间的桥梁，本文会介绍用户标签的构建方法，也就是用户画像技术。 一、用户画像概述1. 什么是…"/>
+<meta name="keywords" content="周推荐, 用户画像,"/>
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script type="text/javascript" charset="utf-8">$(function(){$("img.lazy").lazyload({effect: "fadeIn"});});</script>
+<script>
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('2 5=5||[];(b(){2 1=4.c("6");1.9="8://1.7.g/1.h?f";2 3=4.d("6")[0];3.e.a(1,3)})();',18,18,'|hm|var|s|document|_0|script|baidu|https|src|insertBefore|function|createElement|getElementsByTagName|parentNode|ae86b9f95e6431d72b52a53c0ca66253|com|js'.split('|'),0,{}))
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h1 class="logo">
+            <a href="/" title="澈逆凡博客" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h1>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="/a/ganhuo/">干货分享</a>
+                        <ul class="sub-menu">
+                            
+                            <li><a href="/a/yygh/">运营</a></li>
+                            
+                            <li><a href="/a/jishu/">IT技术</a></li>
+                            
+                            <li><a href="/a/yx/">网络营销</a></li>
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/a/qgzt/">文案</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/news/">互联网资讯</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/gushici/">神回复</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                        <li class="first">
+                            <span class="time">20-06-05</span>
+                            <a target="_blank" href="/hd/14.html" title="网站公告：澈逆凡博客上线了！">网站公告：澈逆凡博客上线了！</a>
+                        </li>
+
+                    </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>
+    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+                                
+                            </div>
+                            <h1 class="title">终于有人把用户画像的流程、方法讲明白了</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i></span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="/a/yygh/">运营</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2021-08-23 14:28</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><script src="/plus/count.php?view=yes&aid=3493&mid=1" type='text/javascript' language="javascript"></script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <tbody><tr>
+                            <td>
+                                                                <span class="span-img"><img src="/uploads/allimg/c210823/1629D40914A50-14b02.jpg" alt="终于有人把用户画像的流程、方法讲明白了"></span>
+                                                                
+
+                                	<p><strong>导读：用户标签是个性化推荐、计算广告、金融征信等众多大数据业务应用的基础，它是原始的用户行为数据和大数据应用之间的桥梁，本文会介绍用户标签的构建方法，也就是用户画像技术。 </strong></p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>一、用户画像概述</strong></span></p>
+<p><strong>1. 什么是用户画像</strong></p>
+<p>现代交互设计之父Alan Cooper很早就提出了Persona的概念：Persona是真实用户的虚拟代表，是建立在一系列真实数据之上的目标用户模型，用于产品需求挖掘与交互设计。</p>
+<p>通过调研和问卷去了解用户，根据他们的目标、行为和观点的差异，将他们区分为不同的类型，然后从每种类型中抽取出典型特征，赋予名字、照片、人口统计学要素、场景等描述，就形成了一个Persona。<strong>Persona就是最早对用户画像的定义，随着时代的发展，用户画像早已不再局限于早期的这些维度，但用户画像的核心依然是真实用户的虚拟化表示。</strong></p>
+<p>在大数据时代，用户画像尤其重要。<strong>我们通过一些手段，给用户的习惯、行为、属性贴上一系列标签，抽象出一个用户的全貌，为广告推荐、内容分发、活动营销等诸多互联网业务提供了可能性。</strong>它是计算广告、个性化推荐、智能营销等大数据技术的基础，毫不夸张地说，用户画像是大数据业务和技术的基石。</p>
+<p style="text-align: center;"><strong>用户画像的核心工作就是给用户打标签，标签通常是人为规定的高度精炼的特征标识，如年龄、性别、地域、兴趣等</strong>。由这些标签集合能抽象出一个用户的信息全貌，如图10-1所示是某个用户的标签集合，每个标签分别描述了该用户的一个维度，各个维度相互联系，共同构成对用户的一个整体描述。<br />
+<img class="aligncenter" alt="41 终于有人把用户画像的流程、方法讲明白了" src="/uploads/allimg/c210823/1629D40922b40-15T09.jpg" width="565" height="497" title="终于有人把用户画像的流程、方法讲明白了" /><br />
+▲图10-1 用户标签集合</p>
+<p><strong>2. 为什么需要用户画像</strong></p>
+<p><strong>Cooper最初建立Persona的目的是让团队成员将产品设计的焦点放在目标用户的动机和行为上，从而避免产品设计人员草率地代表用户。</strong>产品设计人员经常不自觉地把自己当作用户代表，根据自己的需求设计产品，导致无法抓住实际用户的需求。往往对产品做了很多功能的升级，用户却觉得体验变差了。</p>
+<p><strong>在大数据领域，用户画像的作用远不止于此。</strong>如图10-2所示，用户的行为数据无法直接用于数据分析和模型训练，我们也无法从用户的行为日志中直接获取有用的信息。而将用户的行为数据标签化以后，我们对用户就有了一个直观的认识。同时计算机也能够理解用户，将用户的行为信息用于个性化推荐、个性化搜索、广告精准投放和智能营销等领域。</p>
+<p style="text-align: center;"><img alt="42 终于有人把用户画像的流程、方法讲明白了" src="/uploads/allimg/c210823/1629D4093J4Z-164F4.jpg" width="565" height="230" title="终于有人把用户画像的流程、方法讲明白了" /><br />
+▲图10-2 用户标签化</p>
+<p>对于一个产品，尤其是互联网产品，建立完善的用户画像体系，有着重大的战略意义。基于用户画像能够构建一套分析平台，用于产品定位、竞品分析、营收分析等，为产品的方向与决策提供数据支持和事实依据。在产品的运营和优化中，根据用户画像能够深入用户需求，从而设计出更适合用户的产品，提升用户体验。</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>二、用户画像流程</strong></span></p>
+<p><strong>用户画像的核心工作就是给用户打“标签”，构建用户画像的第一步就是搞清楚需要构建什么样的标签，</strong>而构建什么样的标签是由业务需求和数据的实际情况决定的。下面介绍构建用户画像的整体流程和一些常用的标签体系。</p>
+<p><strong>1. 整体流程</strong></p>
+<p>对构建用户画像的方法进行总结归纳，发现用户画像的构建一般可以分为目标分析、标签体系构建、画像构建三步，下面详细介绍每一步的工作。</p>
+<p><strong>1）目标分析</strong></p>
+<p>用户画像构建的目的不尽相同，有的是实现精准营销，增加产品销量；有的是进行产品改进，提升用户体验。明确用户画像的目标是构建用户画像的第一步，也是设计标签体系的基础。</p>
+<p>目标分析一般可以分为业务目标分析和可用数据分析两步。目标分析的结果有两个：</p>
+<ul>
+<li>一个是画像的目标，也就是画像的效果评估标准；</li>
+<li>另一个是可用于画像的数据。</li>
+</ul>
+<p>画像的目标确立要建立在对数据深入分析的基础上，脱离数据制定的画像目标是没有意义的。</p>
+<p><strong>2）标签体系构建</strong></p>
+<p>分析完已有数据和画像目标之后，还不能直接进行画像建模工作，在画像建模开始之前需要先进行标签体系的制定。<strong>对于标签体系的制定，既需要业务知识，也需要大数据知识，因此在制定标签体系时，最好有本领域的专家和大数据工程师共同参与。</strong></p>
+<p>在制定标签体系时，可以参考业界的标签体系，尤其是同行业的标签体系。用业界已有的成熟方案解决目标业务问题，不仅可以扩充思路，技术可行性也会比较高。</p>
+<p><strong>此外，需要明确的一点是：标签体系不是一成不变的，随着业务的发展，标签体系也会发生变化。</strong>例如电商行业的用户标签，最初只需要消费偏好标签，GPS标签既难以刻画也没有使用场景。随着智能手机的普及，GPS数据变得易于获取，而且线下营销也越来越注重场景化，因此GPS标签也有了构建的意义。</p>
+<p><strong>3）画像构建</strong></p>
+<p><strong>基于用户基础数据，根据构建好的标签体系，就可以进行画像构建的工作了。用户标签的刻画是一个长期的工作，不可能一步到位，需要不断地扩充和优化。</strong>一次性构建中如果数据维度过多，可能会有目标不明确、需求相互冲突、构建效率低等问题，因此在构建过程中建议将项目进行分期，每一期只构建某一类标签。</p>
+<p style="text-align: center;">画像构建中用到的技术有数据统计、机器学习和自然语言处理技术（NLP）等，如图10-3所示。具体的画像构建方法会在本文后面的部分详细介绍。<br />
+<img alt="43 终于有人把用户画像的流程、方法讲明白了" src="/uploads/allimg/c210823/1629D409501b0-1M037.jpg" width="416" height="266" title="终于有人把用户画像的流程、方法讲明白了" /><br />
+▲图10-3 用户画像的构建技术</p>
+<p><strong>2. 标签体系</strong></p>
+<p><strong>目前主流的标签体系都是层次化的，如图10-4所示。首先标签分为几个大类，每个大类再进行逐层细分。在构建标签时，只需要构建最下层的标签，就能够映射出上面两级标签。</strong></p>
+<p>上层标签都是抽象的标签集合，一般没有实用意义，只有统计意义。例如我们可以统计有人口属性标签的用户比例，但用户有人口属性标签，这本身对广告投放没有任何意义。</p>
+<p style="text-align: center;"><img alt="44 终于有人把用户画像的流程、方法讲明白了" src="/uploads/allimg/c210823/1629D40952I50-1W938.jpg" width="565" height="323" title="终于有人把用户画像的流程、方法讲明白了" /><br />
+▲图10-4 互联网大数据领域常用标签体系</p>
+<p>用于广告投放和精准营销的一般是底层标签，对于底层标签有两个要求：<strong>一个是每个标签只能表示一种含义，避免标签之间的重复和冲突，便于计算机处理；另一个是标签必须有一定的语义，方便相关人员理解每个标签的含义。</strong></p>
+<p>此外，标签的粒度也是需要注意的，标签粒度太粗会没有区分度，粒度过细会导致标签体系太过复杂而不具有通用性。</p>
+<p>下文列举了各个大类常见的底层标签。</p>
+<ul>
+<li>人口标签：性别、年龄、地域、教育水平、出生日期、职业、星座</li>
+<li>兴趣特征：兴趣爱好、使用App/网站、浏览/收藏内容、互动内容、品牌偏好、产品偏好</li>
+<li>社会特征：婚姻状况、家庭情况、社交/信息渠道偏好</li>
+<li>消费特征：收入状况、购买力水平、已购商品、购买渠道偏好、最后购买时间、购买频次</li>
+</ul>
+<p>最后介绍一下构建各类标签的优先级。对此需要综合考虑业务需求、构建难易程度等，业务需求各有不同，这里介绍的优先级排序方法主要依据构建的难易程度和各类标签的依存关系，优先级如图10-5所示。</p>
+<p style="text-align: center;"><img alt="45 终于有人把用户画像的流程、方法讲明白了" src="/uploads/allimg/c210823/1629D409594150-195G2.jpg" width="565" height="374" title="终于有人把用户画像的流程、方法讲明白了" /><br />
+▲图10-5 各类标签的构建优先级</p>
+<p><strong>1）事实标签</strong></p>
+<p>基于原始数据首先构建的是事实标签，事实标签可以从数据库直接获取（如注册信息），或通过简单的统计得到。这类标签构建难度低、实际含义明确，且部分标签可用作后续标签挖掘的基础特征（如产品购买次数可用来作为用户购物偏好的输入特征数据）。</p>
+<p>事实标签的构造过程，也是对数据加深理解的过程。对数据进行统计的同时，不仅完成了数据的处理与加工，也对数据的分布有了一定的了解，为高级标签的构造做好了准备。</p>
+<p><strong>2）模型标签</strong></p>
+<p><strong>模型标签是标签体系的核心，也是用户画像中工作量最大的部分，大多数用户标签的核心都是模型标签。</strong>模型标签的构建大多需要用到机器学习和自然语言处理技术，下文介绍的标签构建主要指的是模型标签构建，具体的构造算法会在下文中详细介绍。</p>
+<p><strong>3）高级标签</strong></p>
+<p>最后构造的是高级标签，高级标签是基于事实标签和模型标签进行统计建模得出的，它的构造多与实际的业务指标紧密联系。只有完成基础标签的构建，才能够构造高级标签。构建高级标签使用的模型，可以是简单的数据统计模型，也可以是复杂的机器学习模型。</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>三、构建用户画像</strong></span></p>
+<p>我们把标签分为三类，这三类标签有较大的差异，构建时所用技术的差别也很大。</p>
+<ul>
+<li>第一类是人口属性，这一类标签比较稳定，一旦建立很长一段时间基本不用更新，标签体系也比较固定；</li>
+<li>第二类是兴趣属性，这类标签随时间变化很快，标签有很强的时效性，标签体系也不固定；</li>
+<li>第三类是地理属性，这一类标签的时效性跨度很大，如GPS轨迹标签需要做到实时更新，而常住地标签一般可以几个月不用更新，所用的挖掘方法和前面两类也大有不同，如图10-6所示。</li>
+</ul>
+<p style="text-align: center;"><img class="aligncenter" alt="46 终于有人把用户画像的流程、方法讲明白了" src="/uploads/allimg/c210823/1629D40962b50-203302.jpg" width="565" height="341" title="终于有人把用户画像的流程、方法讲明白了" /><br />
+▲图10-6 三类标签属性</p>
+<p><strong>1. 人口属性画像</strong></p>
+<p><strong>人口属性包括年龄、性别、学历、人生阶段、收入水平、消费水平、所属行业等。</strong>这些标签基本是稳定的，构建一次可以很长一段时间不用更新，标签的有效期都在一个月以上。同时标签体系的划分也比较固定，表10-2是中国无线营销联盟对人口属性的一个划分。</p>
+<p>大部分主流的人口属性标签都和这个体系类似，有些在分段上有一些区别。</p>
+<p>▼表10-2 人口标签<br />
+<img class="aligncenter" alt="47 终于有人把用户画像的流程、方法讲明白了" src="/uploads/allimg/c210823/1629D409A3E0-214D5.jpg" width="533" height="565" title="终于有人把用户画像的流程、方法讲明白了" /></p>
+<p>&nbsp;</p>
+<p>很多产品（如QQ、Facebook等）都会引导用户填写基本信息，这些信息就包括年龄、性别、收入等大多数的人口属性，<strong>但完整填写个人信息的用户只占很少一部分。对于无社交属性的产品（如输入法、团购App、视频网站等），用户信息的填充率非常低，有的甚至不足5%。</strong></p>
+<p>在这种情况下，一般会用填写了信息的用户作为样本，把用户的行为数据作为特征训练模型，对无标签的用户进行人口属性的预测。这种模型把有标签用户的标签传给与他行为相似的用户，可以认为是对人群进行了标签扩散，因此常被称为标签扩散模型。</p>
+<p>下面使用视频网站性别年龄画像的例子来说明标签扩散模型是如何构建的。</p>
+<p>某个视频网站希望了解自己的用户组成，于是对用户的性别进行画像。通过数据统计，有大约30%的用户在注册时填写了个人信息，将这30%的用户作为训练集，以构建全量用户的性别画像，所用数据如表10-3所示。</p>
+<p style="text-align: center;">▼表10-3 视频网站用户数据<br />
+<img class="aligncenter" alt="48 终于有人把用户画像的流程、方法讲明白了" src="/uploads/allimg/c210823/1629D40a3930-229616.jpg" width="565" height="102" title="终于有人把用户画像的流程、方法讲明白了" /></p>
+<p>&nbsp;</p>
+<p>下面来构建特征。通过分析发现男性和女性对于影片的偏好是有差别的，因此使用用户观看的影片列表预测用户性别有一定的可行性。此外，还可以考虑用户的观看时间、浏览器、观看时长等，为了简化，这里只使用用户观看的影片特征。<br />
+由于观看影片特征是稀疏特征，所以可以调用MLlib，使用LR、线性SVM等模型进行训练。考虑到注册用户填写的用户信息的准确性不高，所以可以从30%的样本集中提取准确性较高的部分（如用户信息填写较完备的）用于训练，因此整体的训练流程如图10-7所示。</p>
+<p>对于预测性别这样的二分类模型，如果行为的区分度较好，一般准确率和覆盖率都可以达到70%左右。</p>
+<p style="text-align: center;"><img alt="49 终于有人把用户画像的流程、方法讲明白了" src="/uploads/allimg/c210823/1629D40a64560-23H41.jpg" width="312" height="418" title="终于有人把用户画像的流程、方法讲明白了" /><br />
+▲图10-7 训练流程</p>
+<p><strong>对于人口属性标签，只要有一定的样本标签数据，并找到能够区分标签类别的用户行为特征，就可以构建标签扩散模型。</strong>其中使用的技术方法主要是机器学习中的分类技术，常用的模型有LR、FM、SVM、GBDT等。</p>
+<p><strong>2. 兴趣画像</strong></p>
+<p><strong>兴趣画像是互联网领域中使用最广泛的画像，互联网广告、个性化推荐、精准营销等领域最核心的标签都是兴趣标签。</strong>兴趣画像主要是从用户海量的行为日志中进行核心信息抽取、标签化和统计，因此在构建用户兴趣画像之前需要先对用户有行为的内容进行内容建模。</p>
+<p>内容建模需要注意粒度，过细的粒度会导致标签没有泛化能力和使用价值，过粗的粒度会导致标签没有区分度。</p>
+<ul>
+<li>例如用户在购物网上点击查看了一双“Nike AIR MAX跑步鞋”，如果用单个商品作为粒度，画像的粒度就过细，结果是只知道用户对“Nike AIR MAX跑步鞋”有兴趣，在进行商品推荐时，也只能给用户推荐这双鞋；</li>
+<li>而如果用大品类作为粒度，如“运动户外”，将无法发现用户的核心需求是买鞋，从而会给用户推荐所有的运动用品，如乒乓球拍、篮球等，这样的推荐缺乏准确性，用户的点击率就会很低。</li>
+</ul>
+<p>为了保证兴趣画像既有一定的准确性又有较好的泛化性，我们会构建层次化的兴趣标签体系，其中同时用几个粒度的标签去匹配用户兴趣，既保证了标签的准确性，又保证了标签的泛化性。下面以用户的新闻兴趣画像举例，介绍如何构建层次化的兴趣标签。</p>
+<p>新闻兴趣画像的处理难度要比购物兴趣画像困难，购物标签体系基本固定，如图10-8所示，京东页面已经有成熟的三级类目体系。</p>
+<p style="text-align: center;"><img alt="50 终于有人把用户画像的流程、方法讲明白了" src="/uploads/allimg/c210823/1629D40aY210-24E21.jpg" width="565" height="231" title="终于有人把用户画像的流程、方法讲明白了" /><br />
+▲图10-8 三级类目体系</p>
+<p><strong>1）内容建模</strong></p>
+<p>新闻数据本身是非结构化的，首先需要人工构建一个层次化的标签体系。考虑如图10-9所示的一篇新闻，看看哪些内容可以表示用户的兴趣。</p>
+<p style="text-align: center;"><img alt="541 终于有人把用户画像的流程、方法讲明白了" src="/uploads/allimg/c210823/1629D410034G0-2522U.jpg" width="477" height="156" title="终于有人把用户画像的流程、方法讲明白了" /><br />
+▲图10-9 新闻例子</p>
+<p><strong>首先，这是一篇体育新闻，体育这个新闻分类可以表示用户兴趣，但是这个标签太粗了，因为用户可能只对足球感兴趣，所以体育这个标签就显得不够准确。</strong></p>
+<p><strong>其次，可以使用新闻中的关键词，</strong>尤其是里面的专有名词（人名、机构名），如“桑切斯”“阿森纳”“厄齐尔”，这些词也表示了用户的兴趣。关键词的主要问题在于粒度太细，如果某天的新闻里没有这些关键词，就无法给用户推荐内容。</p>
+<p><strong>最后，我们希望有一个中间粒度的标签，既有一定的准确度，又有一定的泛化能力。</strong>于是我们尝试对关键词进行聚类，把一类关键词当成一个标签，或者拆分一个分类下的新闻，生成像“足球”这种粒度介于关键词和分类之间的主题标签。我们可以使用文本主题聚类完成主题标签的构建。</p>
+<p>至此，就完成了对新闻内容从粗到细的“分类-主题-关键词”三层标签体系的内容建模，新闻的三层标签如表10-4所示。</p>
+<p style="text-align: center;">▼表10-4 三层标签体系<br />
+<img class="aligncenter" alt="511 终于有人把用户画像的流程、方法讲明白了" src="/uploads/allimg/c210823/1629D4100JO0-2614I.jpg" width="565" height="117" title="终于有人把用户画像的流程、方法讲明白了" /></p>
+<p>&nbsp;</p>
+<p>可能读者会有疑问，既然主题的准确度和覆盖率都不错，我们只使用主题不就可以了吗？为什么还要构建分类和关键词这两层标签呢？这么做是为了针对用户进行尽可能精确和全面的内容推荐。</p>
+<p><strong>当用户的关键词命中新闻时，显然能够给用户更准确的推荐，这时就不需要再使用主题标签；</strong>而对于比较小众的主题（如体育类的冰上运动主题），若当天没有新闻覆盖，就可以根据分类标签进行推荐。层次标签兼顾了刻画用户兴趣的覆盖率和准确性。</p>
+<p><strong>2）兴趣衰减</strong></p>
+<p>在完成内容建模以后，就可以根据用户点击，计算用户对分类、主题、关键词的兴趣，得到用户兴趣标签的权重。最简单的计数方法是，用户点击一篇新闻，就把用户对该篇新闻的所有标签兴趣值上加1，用户对每个词的兴趣计算使用如下的公式：</p>
+<p>scorei+1=scorei+ C×weight</p>
+<p>其中，词在这次浏览的新闻中出现，则C=1，否则C=0, weight表示词在这篇新闻中的权重。</p>
+<p>这样做有两个问题：一个是用户的兴趣累加是线性的，数值会非常大，老的兴趣权重会特别高；另一个是用户的兴趣有很强的时效性，对一篇新闻昨天的点击要比一个月之前的点击重要的多，线性叠加无法突出用户的近期兴趣。</p>
+<p>为了解决这个问题，需要对用户兴趣得分进行衰减，可使用如下的方法对兴趣得分进行次数衰减和时间衰减。</p>
+<p>次数衰减的公式如下：</p>
+<p>scorei+1=α×scorei+ C×weight, 0&lt;α&lt;1</p>
+<p>其中，α是衰减因子，每次都对上一次的分数做衰减，最终得分会收敛到一个稳定值，α取0.9时，得分会无限接近10。</p>
+<p>时间衰减的公式如下：</p>
+<p>scoreday+1=scoreday×β, 0&lt;β&lt;1</p>
+<p>它表示根据时间对兴趣进行衰减，这样做可以保证时间较早期的兴趣会在一段时间以后变得非常弱，同时近期的兴趣会有更大的权重。根据用户兴趣变化的速度、用户活跃度等因素，也可以对兴趣进行周级别、月级别或小时级别的衰减。</p>
+<p><strong>3. 地理位置画像</strong></p>
+<p><strong>地理位置画像一般分为两部分：一部分是常驻地画像；一部分是GPS画像。</strong>这两类画像的差别很大，常驻地画像比较容易构造且标签比较稳定，GPS画像需要实时更新。</p>
+<p>常驻地包括国家、省份、城市三级，一般只细化到城市粒度。在常驻地挖掘中，对用户的IP地址进行解析，并对应到相应的城市，再对用户IP出现的城市进行统计就可以得到常驻城市标签。用户的常驻城市标签不仅可以用来统计各个地域的用户分布，还可以根据用户在各个城市之间的出行轨迹识别出差人群、旅游人群等。</p>
+<p>GPS数据一般从手机端收集，但很多手机App没有获取用户GPS信息的权限。能够获取用户GPS信息的主要是百度地图、滴滴打车等出行导航类App，此外收集到的用户GPS数据比较稀疏。</p>
+<p>百度地图使用该方法并结合时间段数据，构建了用户公司和家的GPS标签。此外百度地图还基于GPS信息，统计各条路上的车流量，进行路况分析，图10-10所示是北京市某天的实时路况图，红色表示拥堵线路。</p>
+<p style="text-align: center;"><img alt="521 终于有人把用户画像的流程、方法讲明白了" src="/uploads/allimg/c210823/1629D4100c160-2O514.jpg" width="565" height="414" title="终于有人把用户画像的流程、方法讲明白了" /><br />
+▲图10-10 北京的实时路况图</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>四、用户画像评估和使用</strong></span></p>
+<p><strong>人口属性画像的相关指标比较容易评估，而兴趣画像的标签比较模糊，所以人为评估比较困难，对于兴趣画像的常用评估方法是设计小流量的A/B测试进行验证。</strong></p>
+<p>可以筛选一部分打了标签的用户，给这部分用户进行和标签相关的推送，看他们对相关内容是否有更好的反馈。例如，在新闻推荐中，我们给用户构建了兴趣画像，从体育类兴趣用户中选取一小批用户，给他们推送体育类新闻，如果这批用户对新闻的点击率和阅读时长明显高于平均水平，就说明标签是有效的。</p>
+<p><strong>1. 效果评估</strong></p>
+<p>评估使用用户画像的效果最直接的方法就是，看其提升了多少实际业务，如在互联网广告投放中，用户画像的使用效果主要是看它提升了多少点击率和收入，在精准营销过程中，主要是看使用用户画像后销量提升了多少等。</p>
+<p>但是如果把一个没有经过效果评估的模型直接用在线上，风险是很大的，因此我们需要一些在上线前可计算的指标来衡量用户画像的质量。</p>
+<p>用户画像的评估指标主要是准确率、覆盖率、时效性等。（篇幅有限，这里不详细介绍，有需要的同学可以看《Spark机器学习进阶实战》一书第10.4.1节）</p>
+<p><strong>2. 用户画像使用</strong></p>
+<p><strong>构建好用户画像并做了评估之后，就可以在业务中使用它。</strong>对此，一般需要一个可视化平台，对标签进行查看和检索。用户画像的可视化过程中，一般使用饼图、柱状图等对标签的覆盖人数、覆盖比例等指标做形象的展示，如图10-11所示是用户画像的一个可视化界面。</p>
+<p style="text-align: center;"><img alt="531 终于有人把用户画像的流程、方法讲明白了" src="/uploads/allimg/c210823/1629D41014b0-2VC4.jpg" width="565" height="263" title="终于有人把用户画像的流程、方法讲明白了" /></p>
+<p style="text-align: center;">▲图10-11 用户画像的可视化界面</p>
+<p>此外，对于所构建的用户画像，还可以使用不同维度的标签，进行高级的组合分析，产出高质量的分析报告。用户画像可以应用在智能营销、计算广告、个性化推荐等领域，具体的使用方法与应用领域紧密结合，在此不再详细介绍。</p>
+<p>来源 | 大数据DT（ID：hzdashuju）</p>
+<p>作者 | 马海平 于俊等</p>
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+<p style="color:#C0C0C0">免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！ </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href='/a/yygh/3492.html' class='prev has-background'><span>上一篇：</span><h4>数据分析不落地？一个案例教会你！</h4></a> </div>
+                        <div class="next-post"><a href='/a/yygh/3494.html' class='nextv has-background'><span>下一篇：</span><h4>【HMW分析法】运营思路拆解，手把手教你制定产品拉新引流策略</h4></a> </div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                            <li>
+                                <div class="item">
+                                    <a href="/a/yygh/3536.html" title="一文讲透微博、小红书、抖音、B站怎么玩">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210830/1630314591A350-B222.jpg" alt="一文讲透微博、小红书、抖音、B站怎么玩">
+                                        <h4><span>一文讲透微博、小红书、抖音、B站怎么玩</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3501.html" title="6次分销活动，裂变了123万，我总结的8个关键点（坑）">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210823/1629D415BD60-1c27.jpg" alt="6次分销活动，裂变了123万，我总结的8个关键点（坑）">
+                                        <h4><span>6次分销活动，裂变了123万，我总结的8个关键点（坑）</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3500.html" title="4000字方法论：如何搭建私域会员体系？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210823/1629D414Y1S0-2Y618.jpg" alt="4000字方法论：如何搭建私域会员体系？">
+                                        <h4><span>4000字方法论：如何搭建私域会员体系？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3495.html" title="5000字方法论：私域中如何做好用户分层、标签体系">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210823/1629D412334910-356421.jpg" alt="5000字方法论：私域中如何做好用户分层、标签体系">
+                                        <h4><span>5000字方法论：私域中如何做好用户分层、标签体系</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3492.html" title="数据分析不落地？一个案例教会你！">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210823/1629D40H95c0-G040.jpg" alt="数据分析不落地？一个案例教会你！">
+                                        <h4><span>数据分析不落地？一个案例教会你！</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3490.html" title="万字解读丨如何成为一名品牌策略总监？（工作手册梳理）">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210823/1629D40519C60-12CX.jpg" alt="万字解读丨如何成为一名品牌策略总监？（工作手册梳理）">
+                                        <h4><span>万字解读丨如何成为一名品牌策略总监？（工作手册梳理）</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3489.html" title="如何用一个周了解一个行业?">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210823/1629D404a04Z-V010.jpg" alt="如何用一个周了解一个行业?">
+                                        <h4><span>如何用一个周了解一个行业?</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3485.html" title="教你1招，写出客户看完默默下单的吸金朋友圈">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210823/1629D403N3M0-122B6.jpg" alt="教你1招，写出客户看完默默下单的吸金朋友圈">
+                                        <h4><span>教你1招，写出客户看完默默下单的吸金朋友圈</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3484.html" title="抖音电商金句200条，条条干货，句句扎心！">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210823/1629D403550630-114b0.jpg" alt="抖音电商金句200条，条条干货，句句扎心！">
+                                        <h4><span>抖音电商金句200条，条条干货，句句扎心！</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3481.html" title="带货达人都在用的8种短视频成交脚本">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210823/1629D402434450-1FY.jpg" alt="带货达人都在用的8种短视频成交脚本">
+                                        <h4><span>带货达人都在用的8种短视频成交脚本</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="sidebar col-xs-12 col-sm-4 col-md-4"><div class="widget widget_suxingme_postlist"><h3><span>随便看看</span></h3><ul class="recent-posts-widget"> <li class="one"><a href="/dianshang/197.html" target="_blank" title="淘宝电商运营申请规蜜审核技巧"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/c200617/15923Y2963bZ-210a.jpg" alt="淘宝电商运营申请规蜜审核技巧"/><div class="title"><span>2020-06-17</span><h4>淘宝电商运营申请规蜜审核技巧</h4></div></a></li>
+ <li class="others"><div class="image"><a href="/a/yygh/1813.html" target="_blank" title="这些台词文案，值得三刷！"><img data-original="https://qnssl.niaogebiji.com/13037489655edf50c59349f4.65951181.png" alt="这些台词文案，值得三刷！" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/a/yygh/1813.html" title="这些台词文案，值得三刷！">这些台词文案，值得三刷！</a></h4><span>2020-06-09</span></div></li>
+<li class="others"><div class="image"><a href="/a/yygh/3502.html" target="_blank" title="用户分群模型，这么建才有用_用户运营"><img data-original="/uploads/allimg/c210823/1629D41Bc120-212O9.jpg" alt="用户分群模型，这么建才有用_用户运营" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/a/yygh/3502.html" title="用户分群模型，这么建才有用_用户运营">用户分群模型，这么建才有用_用户运营</a></h4><span>2021-08-23</span></div></li>
+<li class="others"><div class="image"><a href="/dianshang/2650.html" target="_blank" title="站内关键词怎么优化"><img data-original="https://www.ruzw.com/uploads/allimg/201910/15714790857183.jpg" alt="站内关键词怎么优化" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/dianshang/2650.html" title="站内关键词怎么优化">站内关键词怎么优化</a></h4><span>2019-10-19</span></div></li>
+ </ul></div><div class="widget widget_suxingme_hotpost"><h3><span>热门文章</span></h3><ul class="widget_suxingme_post"> <li><a href="/gzhyy/2173.html" target="_blank" title="微信公众号条漫图文怎么制作？"><div class="overlay"></div><img class="thumbnail lazy" data-original="https://static.getgetai.com/img/115bb7bb065b44d1bb8150ffc3303281/20201211165415545.png" alt="微信公众号条漫图文怎么制作？"/><div class="title"><div class="entry-meta"><span>2020-12-11</span></div><h4>微信公众号条漫图文怎么制作？</h4></div></a></li>
+<li><a href="/a/yygh/360.html" target="_blank" title="案例拆解：学而思9元领秋季语文特训班"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/c200908/15c544NV13Z-1L62.jpg" alt="案例拆解：学而思9元领秋季语文特训班"/><div class="title"><div class="entry-meta"><span>2020-09-08</span></div><h4>案例拆解：学而思9元领秋季语文特训班</h4></div></a></li>
+<li><a href="/dianshang/34.html" target="_blank" title="京东多种店铺类型分别怎么运营？"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/200609/0012001106-0.jpg" alt="京东多种店铺类型分别怎么运营？"/><div class="title"><div class="entry-meta"><span>2020-06-09</span></div><h4>京东多种店铺类型分别怎么运营？</h4></div></a></li>
+ </ul></div><div class="widget suxingme_tag"><h3><span>热门标签</span></h3><div class="widge_tags"><div class="tag-items">  <a href="/tags.php?/31/">运营</a>  <a href="/tags.php?/54/">京东</a>  <a href="/tags.php?/57/">电商</a>  <a href="/tags.php?/30/">织梦二次开发</a>  <a href="/tags.php?/189/">918</a>  <a href="/tags.php?/42/">社群运营</a>  <a href="/tags.php?/50/">摆摊</a>  <a href="/tags.php?/25/">情感</a>  <a href="/tags.php?/33/">摆地摊</a>  <a href="/tags.php?/2/">聪明</a>  <a href="/tags.php?/20/">景点推荐</a>  <a href="/tags.php?/29/">网站公告</a>  <a href="/tags.php?/35/">技巧</a>  <a href="/tags.php?/39/">产品经理</a>  <a href="/tags.php?/40/">能力提升</a>  <a href="/tags.php?/41/">新媒体运营</a>  <a href="/tags.php?/3/">乌鸦</a>  <a href="/tags.php?/15/">水果</a>  <a href="/tags.php?/16/">吃货</a>  <a href="/tags.php?/21/">海滩</a>  <a href="/tags.php?/22/">游泳</a>  <a href="/tags.php?/23/">美景</a>  <a href="/tags.php?/27/">手表</a>  <a href="/tags.php?/28/">时尚潮物</a>  <a href="/tags.php?/37/">B端产品</a>  <a href="/tags.php?/38/">产品运营</a>  <a href="/tags.php?/48/">时间</a>  <a href="/tags.php?/8/">充电</a>  <a href="/tags.php?/9/">照明</a>  <a href="/tags.php?/12/">云南</a>  </div></div></div><div class="widget suxingme_social"><h3><span>关注我们 么么哒！</span></h3><div class="attentionus"><ul class="items clearfix"><span class="social-widget-link social-link-qq"><span class="social-widget-link-count"><i class="fa fa-weixin"></i>十一记实录</span><span class="social-widget-link-title">公众号</span><a id="tooltip-s-weixin" href="javascript:void(0);"></a></span><span class="social-widget-link social-link-email"><span class="social-widget-link-count"><i class="fa fa-envelope"></i>1812215600@qq.com</span><span class="social-widget-link-title">邮箱</span><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" target="_blank" rel="nofollow"></a></span><span class="social-widget-link social-link-wechat"><span class="social-widget-link-count"> 运营贩</span><span class="social-widget-link-title">百家号</span><a id="tooltip-s-weixin" href="javascript:void(0);"></a></span></ul></div></div><div class="widget widget_suxingme_postlist"><h3><span>最新内容</span></h3><ul class="recent-posts-widget"> <li class="one"><a href="/a/yygh/3621.html" target="_blank" title="引起6000w人围观的#疼痛穿搭 究竟是什么?"><div class="overlay"></div><img class="thumbnail lazy" data-original="/images/defaultpic.gif" alt="引起6000w人围观的#疼痛穿搭 究竟是什么?"/><div class="title"><span>2021-09-01</span><h4>引起6000w人围观的#疼痛穿搭 究竟是什么?</h4></div></a></li>
+ <li class="others"><div class="image"><a href="/a/yygh/3539.html" target="_blank" title="怎样的营销方案能落地？" rel="nofollow"><img data-original="/uploads/allimg/c210830/163031461PE20-13118.jpg" alt="怎样的营销方案能落地？" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yygh/3539.html" target="_blank" title="怎样的营销方案能落地？">怎样的营销方案能落地？</a></h4><span>2021-08-30</span></div></li>
+<li class="others"><div class="image"><a href="/a/yygh/3540.html" target="_blank" title="B2B企业打造品牌的三种路径" rel="nofollow"><img data-original="/uploads/allimg/c210830/1630314621522F-2VF.jpg" alt="B2B企业打造品牌的三种路径" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yygh/3540.html" target="_blank" title="B2B企业打造品牌的三种路径">B2B企业打造品牌的三种路径</a></h4><span>2021-08-30</span></div></li>
+<li class="others"><div class="image"><a href="/a/yygh/3541.html" target="_blank" title="万字总结：从0到1，SOP构建和策略设计" rel="nofollow"><img data-original="/uploads/allimg/c210830/1630314632Z3P-203I5.jpg" alt="万字总结：从0到1，SOP构建和策略设计" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yygh/3541.html" target="_blank" title="万字总结：从0到1，SOP构建和策略设计">万字总结：从0到1，SOP构建和策略设计</a></h4><span>2021-08-30</span></div></li>
+<li class="others"><div class="image"><a href="/a/yygh/3542.html" target="_blank" title="一套完整的获客方案sop，必看！" rel="nofollow"><img data-original="/uploads/allimg/c210830/1630314640E240-3294I.jpg" alt="一套完整的获客方案sop，必看！" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yygh/3542.html" target="_blank" title="一套完整的获客方案sop，必看！">一套完整的获客方案sop，必看！</a></h4><span>2021-08-30</span></div></li>
+ </ul></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                
+                <a href="/a/ganhuo/">干货分享</a>
+                
+                <a href="/a/qgzt/">文案</a>
+                
+                <a href="/news/">互联网资讯</a>
+                
+                <a href="/gushici/">神回复</a>
+                
+              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <p>Copyright &copy;     备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">京ICP备19036021号-1</a></p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <form class="sidebar-search" method="get" action="/search.php">
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript">jQuery(document).ready(function($) {$(".fancybox").fancybox()});</script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+
+</body>
+</html>

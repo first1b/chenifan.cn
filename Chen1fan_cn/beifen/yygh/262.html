@@ -1,0 +1,558 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>增长玩法设计中的N类魔鬼细节（附自检清单）</title>
+<meta content="增长玩法" name="keywords" />
+<meta content="这是一篇关于增长的内容。为什么说是N类魔鬼细节呢？因为玩法设计里的魔鬼细节有非常多，以下总结的魔鬼细节更多是基于目前我个人所看到过的活动案例+团队小伙伴的裂变增长实战项目总结得出。也算是自己在玩法设…" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h1 class="logo">
+            <a href="/" title="{dede:global.cfg_webname/}" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h1>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/ganhuo">干货分享</a>
+                                                <ul>                             <li><a href="http://blog.chenifan.cn/jishu">IT技术</a></li>
+                                                        <li><a href="http://blog.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="http://blog.chenifan.cn/yx">网络营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/qgzt">文案</a>
+                                                <ul>                             <li><a href="http://blog.chenifan.cn/life">极致生活</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/index.php?c=category&id=13">互联网资讯</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/gushici">神回复</a>
+                                            </li>
+                                    </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="http://blog.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+                                增长玩法                            </div>
+                            <h1 class="title">增长玩法设计中的N类魔鬼细节（附自检清单）</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>小澈</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="{dede:field.typeurl /}">运营</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2020-07-13</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_262">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=262", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_262").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script> </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <tbody><tr>
+                            <td>
+                                                                <span class="span-img"><img src="/uploads/allimg/c200713/159461M1216320-151946.jpg" alt="增长玩法设计中的N类魔鬼细节（附自检清单）"></span>
+                                                                
+
+                                	<p>这是一篇关于增长的内容。</p>
+<p><strong>为什么说是N类魔鬼细节呢？</strong></p>
+<p>因为玩法设计里的魔鬼细节有非常多，以下总结的魔鬼细节更多是基于目前我个人所看到过的活动案例+团队小伙伴的裂变增长实战项目总结得出。</p>
+<p>也算是自己在玩法设计里总结的可复用经验清单，其中也附上联想到的相关增长经验，供大家参考。</p>
+<p>另外，这里的N类也是代表着未完成，无穷尽的含义，<strong>在做增长的路上需要一直保持好奇心不断去钻研探索。</strong></p>
+<p style="text-align: center;">如果懒得看文章，看这份自检清单就好</p>
+<section>
+<section>
+<section><img class="aligncenter" alt="12 增长玩法设计中的N类魔鬼细节（附自检清单）" src="/uploads/allimg/c200713/159461M122T40-164J7.jpg" width="565" height="413" title="增长玩法设计中的N类魔鬼细节（附自检清单）" /> </section>
+</section>
+<p style="text-align: center;">
+</section>
+<section>
+<section><span style="color: #ff0000;"><strong>关于玩法设计的看法</strong></span></section>
+<section></section>
+<section>其实很多玩法表层看起来是一样的，但通过每个细节的效率优化，最终的效果也是会有很大的差异。基于现阶段的个人看法，其实玩法设计可以概括为3个元素和1个目标。3个元素指的是：诱饵，包装和载体，1个目标为业务目标。<strong>诱饵：</strong>在现有资源的前提条件下，需要根据用户调研筛选符合目标群体的奖励，也相当于玩法设计中的钩子。核心关键：获客成本控制、目标人群吸引力。</p>
+<p><strong>包装：</strong>需要结合用户场景，品牌势能等，相当于玩法设计的外壳。核心关键：节日氛围、产品调性。</p>
+<p><strong>载体：</strong>根据不同产品对应的活动流程，玩法形式而决定的，也是我们经常说的玩法，比如拼团、砍价、抽奖、小程序/H5等等，相当于玩法的内核；核心关键：流程顺畅度、玩法耐受度。</p>
+<p>最终这些都是为了达成我们的业务目标，其中也会分主目标和次目标。</p>
+</section>
+</section>
+<section>
+<section><img class="aligncenter" alt="21 增长玩法设计中的N类魔鬼细节（附自检清单）" src="/uploads/allimg/c200713/159461M124140-1H023.jpg" width="565" height="211" title="增长玩法设计中的N类魔鬼细节（附自检清单）" />举个例子，比如金融行业的拉新玩法</p>
+<ul>
+<li>诱饵侧：很多都是以现金红包，话费等形式（与钱相关），同时比较有普适性 ；</li>
+<li>包装侧：结合用户日常使用产品的场景，加入像摇钱树，印钞机等游戏化的玩法；</li>
+<li>载体侧：一般是站内以App的H5形式，站外以小程序/H5的形式传播，大多为邀请有礼的玩法；</li>
+<li>最终的主目标为开户、入金、促活等。</li>
+</ul>
+<p>在负责一个活动的时候，我们可以基于业务目标，再回顾一下诱饵、包装、载体是否都考虑到位。如果有一个环节是有问题的，那么活动效果也是会大打折扣。</p>
+<p><span style="color: #ff0000;">— 2 —</span></p>
+<p><span style="color: #ff0000;"><strong>常见的6类魔鬼细节</strong></span></p>
+</section>
+</section>
+<section>
+<section>基于目前市面上看到的活动，下面分享一下常见的6类魔鬼细节，也可以用来当作增长活动的自检清单。<img class="aligncenter" alt="31 增长玩法设计中的N类魔鬼细节（附自检清单）" src="/uploads/allimg/c200713/159461M124940-1X5J.jpg" width="565" height="204" title="增长玩法设计中的N类魔鬼细节（附自检清单）" /></section>
+<section><strong>#1 低门槛引导</strong></p>
+<p><strong>降低分享门槛，让用户分享行为更易发生。</strong></p>
+<p>一般会应用在邀请类的玩法中，常见的形式会有3种：利他性、额外奖励引导、损失厌恶引导。</p>
+<p><strong>利他性：</strong>引导给好友发福利，而不是消耗自己的人脉资源，让好友帮自己助力。</p>
+<p><strong>额外奖励引导：</strong>首次分享就可以获得更多的奖励，让用户迈出第一步。</p>
+<p><strong>损失厌恶引导：</strong>离提现还差一点点了，再分享一下就可以了。<br />
+<img class="aligncenter" alt="41 增长玩法设计中的N类魔鬼细节（附自检清单）" src="/uploads/allimg/c200713/159461M125W50-1b032.jpg" width="565" height="351" title="增长玩法设计中的N类魔鬼细节（附自检清单）" /></p>
+<p>&nbsp;</p>
+<p><strong>相关经验：</strong></p>
+<p>如果是邀请类的活动，核心点一般有3个：</p>
+<ul>
+<li>邀请者奖励（无上限奖励/阶梯奖励/排行榜&#8230;）</li>
+<li>被邀请者福利（新用户福利/惊喜奖励/限量特权&#8230;）</li>
+<li>邀请素材赋能（文案/海报/转化流程&#8230;）</li>
+</ul>
+<p>这三者的紧密结合才能使邀请类活动可以高效转起来。</p>
+<p><strong>#2 多版本测试</strong></p>
+<p><strong>文案、页面设计和流程进行AB测试，随时迭代。</strong></p>
+<p>一般常见的可配置内容，会有分享话术/海报、分享按钮文案、关键页面流程，如果是涉及奖励的话，会考虑不同用户看到多个版本的奖励，测试对应的分享率、裂变率、完成率。</p>
+<p><img class="aligncenter" alt="52 增长玩法设计中的N类魔鬼细节（附自检清单）" src="/uploads/allimg/c200713/159461M12FA0-204256.jpg" width="565" height="285" title="增长玩法设计中的N类魔鬼细节（附自检清单）" /></p>
+<p><img class="aligncenter" alt="61 增长玩法设计中的N类魔鬼细节（附自检清单）" src="/uploads/allimg/c200713/159461M12R4Z-214323.jpg" width="565" height="305" title="增长玩法设计中的N类魔鬼细节（附自检清单）" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>相关经验：</strong></p>
+<p>即使无法做到多个版本同时AB测试，至少可提前在开发时设置好可配置的内容，上线时随时调整修改。</p>
+<p><strong>#3 实时反馈</strong></p>
+<p><strong>用户完成特定行为后，立刻给到反馈，引导用户再继续完成更多操作。</strong></p>
+<p>这个小细节大家都知道，但是真正做得好的活动却比较少，这个细节的优化可能会给活动带来翻倍的效率提升。</p>
+<p>一般常见的形式会有3种：实时奖励、进度通知、操作提示</p>
+<p><strong>实时奖励：</strong>分销活动中常用的实时到账，促进用户再次分享传播，赚取更多佣金。</p>
+<p><strong>进度通知：</strong>邀请活动中通过公众号/App/小程序等反馈实时进度，提醒用户再次传播。</p>
+<p><strong>操作提示：</strong>用户完成分享行为时，再展示小提示引导去通知好友，可促进邀请；或引导用户下一步的操作。</p>
+<p><img class="aligncenter" alt="7 增长玩法设计中的N类魔鬼细节（附自检清单）" src="/uploads/allimg/c200713/159461M1294050-225229.jpg" width="565" height="330" title="增长玩法设计中的N类魔鬼细节（附自检清单）" /></p>
+<p>&nbsp;</p>
+<p><strong>相关经验：</strong></p>
+<p>如果是发放现金红包奖励，可通过微信直接打钱至用户的零钱，让用户获得奖励的实时反馈（如最近618京东叠蛋糕活动，邀请第1个队友就有微信实时到账奖励）</p>
+<p>反之，利用好微信退款也可通过微信支付很好的召回用户，如拼多多的1分钱抽奖、生鲜平台缺少克数退款提醒。</p>
+<p><strong>#4 进一步引导</strong></p>
+<p><strong>用户完成特定行为后，立刻给到下一步引导，提高活动的转化率。</strong></p>
+<p><strong>不同路径再次引导：</strong>用户转发分享完，再次引导用户分享朋友圈，成功率会更高。</p>
+<p><strong>赠送奖励再次激活：</strong>用户未获得奖励时，再提供小奖励，促进用户再次参与活动。</p>
+<p><strong>挽留弹窗：</strong>用户返回按钮时，触发弹窗，引导用户留下，一般会有利益点刺激用户。</p>
+<p><img class="aligncenter" alt="81 增长玩法设计中的N类魔鬼细节（附自检清单）" src="/uploads/allimg/c200713/159461M1303Y0-235262.jpg" width="565" height="335" title="增长玩法设计中的N类魔鬼细节（附自检清单）" /></p>
+<p>&nbsp;</p>
+<p><strong>相关经验：</strong></p>
+<p>通过加入挽留弹窗可提升20%~50%的转化率；技术开发可在用户点击某个按钮，或回到活动页面时触发即可。</p>
+<p>今年小程序的服务通知推送需要用户勾选同意才可发送，因此通过动图提示，可引导用户双勾选方便后续推送消息。（可自行参考拼多多小程序）</p>
+<p><strong>#5 多变奖励</strong></p>
+<p><strong>通过必得或随机最高的奖励，提升诱饵吸引力，促进用户传播。</strong></p>
+<p>在这个细节里其实比较讲究，会有比较多的小技巧，所以我们会看到很多红包活动形式差不多，但获客成本和传播效果会差别很大。</p>
+<p>其中提炼了几种类型的多变奖励和大家分享 。</p>
+<p>一般来说会分为：随机奖励、阶梯奖励、惊喜奖励、必得与随机奖励。</p>
+<p><strong>随机奖励：</strong>给出区间值或随机金额，引导用户完成任务领取。如第一张图上的红包文案为0.5~5元，实际上完成任务时都是发放0.5~0.6元的，但5元的最高上限会给用户愿景，让用户觉得自己可能领到大红包，于是分享动力就更足了。</p>
+<p>表面通过最高的确定值<strong>吸引用户传播</strong>，背后的奖励逻辑是最低限度的奖励金额<strong>控制获客成本</strong>。</p>
+<p><strong>阶梯奖励：</strong>对于不同的邀请人数提供阶梯的奖励，引导用户多邀请多得。对于不同的邀请人数提供阶梯的奖励，引导用户多邀请多得，对于发挥头部KOL拉新的效果比较好，通过额外的刺激可将整体活动传播量提升2~3倍，但对于每个拉新的获客成本均摊下来是差不多的，一般邀请类的活动都会增加阶梯式的奖励。</p>
+<p><strong>惊喜奖励：</strong>当用户完成特定动作时触发，引导用户完成任务获得奖励。一般会作为活动中的隐藏支线活动，使部分的用户转化到下单，或分享传播，从而完成更多的业务目标。</p>
+<p><strong>必得与随机奖励：</strong>设置低门槛积分可参加抽奖，高门槛积分则可直接兑换固定奖励。</p>
+<p><img class="aligncenter" alt="9 增长玩法设计中的N类魔鬼细节（附自检清单）" src="/uploads/allimg/c200713/159461M1315C0-245518.jpg" width="565" height="264" title="增长玩法设计中的N类魔鬼细节（附自检清单）" /></p>
+<p>&nbsp;</p>
+<p><strong>相关经验：</strong></p>
+<p>对于目前常见的抽奖类活动，其实很多用户都已免疫了，对用户吸引力并不大，因为感觉随机抽基本都抽不中自己；所以对于抽奖类玩法，或者说是「随机」型的活动，建议可以加入<strong>必得</strong>的活动奖励，给用户确定感，更有利用户完成活动任务。</p>
+<p>如支付宝转转卡，其实设置了两档的奖励，第一档可通过较少的转转卡就可以抽奖去中大奖，第二档可通过较多的固定数量的转转卡，直接领一个红包。</p>
+<p>另外对于红包/数值奖励类活动，在文案包装上，建议都可用<strong>区间值或最高金额值</strong>，如展示的文案为可得0.5~10元，可得最高88元等，具体奖励给用户的金额是可以根据活动传播情况和获客成本情况随时调控的，从而控制整体活动的效果。</p>
+<p><strong>好的活动都是需要具备可迭代和调控的配置，不断测试和调整，才有可能增加更多成功的概率。</strong></p>
+<p><img class="aligncenter" alt=" 增长玩法设计中的N类魔鬼细节（附自检清单）" src="/uploads/allimg/c200713/159461M132I20-25Q21.jpg" width="565" height="539" title="增长玩法设计中的N类魔鬼细节（附自检清单）" /></p>
+<p>&nbsp;</p>
+<p><strong>#6 动效设计</strong></p>
+<p><strong>潜移默化影响用户行为的小细节，都是提前设计好的。</strong></p>
+<p><strong>从众引导 ：</strong>别人都已经拿到了，你还不赶紧参加么。</p>
+<p><strong>获得感体验：</strong>金额动态增加，进度条伸长，离拿到奖励不远了。</p>
+<p><strong>加强引导：</strong>常见的会增加跳动的元素，如图上的小手指，不断指向按钮，强引导用户去点击按钮，适用于单一路径的引导，效果会比按钮缩放的动效更好。另外的稍复杂的路径，则可通过动图的形式去教育用户如何操作，比纯文字的展示方式好更多。</p>
+<p><strong>音效反馈：</strong>比如拼多多的金猪储蓄罐活动，每次收取金币时会听到金币掉进储蓄罐的声音，让用户有上瘾的游戏体验。在日常的活动比较少见，多在创意类H5里有加入。</p>
+<p><img class="aligncenter" alt="112 增长玩法设计中的N类魔鬼细节（附自检清单）" src="/uploads/allimg/c200713/159461M1341230-2E136.jpg" width="565" height="231" title="增长玩法设计中的N类魔鬼细节（附自检清单）" /></p>
+<p><img class="aligncenter" alt="121 增长玩法设计中的N类魔鬼细节（附自检清单）" src="/uploads/allimg/c200713/159461M1351a0-2J432.jpg" width="565" height="348" title="增长玩法设计中的N类魔鬼细节（附自检清单）" /></p>
+<p>&nbsp;</p>
+<p><strong>相关经验：</strong></p>
+<p>合理运用动效设计，可提升各环节20%~30%的转化率，一般必备的动效设计会有按钮缩放、从众跑马灯。</p>
+<p>以上就是裂变增长玩法中6类魔鬼细节的总结，随着各类规则的改变，可能当大家看到这篇文章的时候，有很多小技巧已经过时了。</p>
+<p>但也没有关系，做增长/运营的小伙伴，<strong>都是需要保持对新玩法的敏锐触觉，未来也会挖掘和探索出更多新的技巧。</strong></p>
+<section>作者：阿浩</section>
+<p>来源：增长小报（growing34）</p>
+</section>
+</section>
+                                
+                            </td>
+                        </tr>
+                    </tbody><p style="color:#C0C0C0">免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！ </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="http://blog.chenifan.cn/yygh/261.html" class="prev has-background"><span>上一篇：</span><h4>四个关键词，看一个运营人的两年成长路</h4></a></div>
+                        <div class="next-post"><a href="http://blog.chenifan.cn/yygh/263.html" class="nextv has-background"><span>下一篇：</span><h4>运营该如何搭建留存率模型？</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/yygh/3628.html" title="玩转小程序直播能力">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="http://blog.chenifan.cn/static/assets/images/nopic.gif" alt="限定分享带你玩转小程序直播能力自小程序上线直播能力来，我们在不断优化开播工具的基础上，与各垂类的开发者共同探索小程序直播玩法，打造了数个百万DAU的优质案例。本文将带你360度了">
+                                        <h4><span>玩转小程序直播能力</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/yygh/1800.html" title="9大模型教你快速掌握内容营销	">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="http://blog.chenifan.cn/uploads/allimg/201120/1_1120105220bP.png" alt="互联网时代，随着微信、微博、抖音、B站、小红书的兴起，我们会发现任意一个社交平台都充斥着各种内容营销，就连淘宝当红主播薇娅和李佳琪，也在不断挖掘品牌内容。 难怪有很多营销界">
+                                        <h4><span>9大模型教你快速掌握内容营销	</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/yygh/358.html" title="私域引流：请寄给客户这6张卡！">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="http://blog.chenifan.cn/uploads/allimg/c200908/15c544N354320-30O09.jpg" alt="自从私域流量火了以后，许多商家对如何把用户添加到微信（个人/企业）里，十分感兴趣。其中个别商家通过手机短信、在线私聊做引导转化。但其实最有效的方法之一，就是在向用户发货的包裹里，添加微信的引导卡片…">
+                                        <h4><span>私域引流：请寄给客户这6张卡！</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/dianshang/3116.html" title="临海哪里免费培训开网店 硒游纪新零售这个创业平台现在做的怎么样？？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="http://blog.chenifan.cn/uploads/allimg/210121/1_012116000TG2.jpg" alt="目前还不算非常大的平台，用户量还有一定的局限性吧，但是上面的产品质量和服务都还不错，挺看好的 临海哪里免费培训开网店 推广 ，换句话就是做广告。 把自己的产品、服务、技术、文化、事迹等等通过传统的四大媒体（报刊、广播、电视、网络）广告让更多的人和组织机构等了解、接受，从而达到宣传、普及的目的。 在互联网上，我们往往采用seo的方式来推广网站、店">
+                                        <h4><span>临海哪里免费培训开网店 硒游纪新零售这个创业平台现在做的怎么样？？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/dianshang/1556.html" title="在网店运营中想要打造爆款需要注意的误区的！">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="http://blog.chenifan.cn/static/assets/images/nopic.gif" alt="网上商店经营中制造爆款宝贝需要注意的误区有哪些？ 1.爆款时期 爆炸品并不意味着你想什么时候出货，什么时候出货？其实爆款在时间上有他自己的要求，所以想要打造爆款需要一个长远的规划，而不能盲目的选择。 爆炸宝贝，网店经营。 或许你听到有人说，他们的爆款制作只花了很短的时间，那么你有没有想过，在很短的时间内，商品就能成为爆款，这背后有多么强大的团">
+                                        <h4><span>在网店运营中想要打造爆款需要注意的误区的！</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/dianshang/3134.html" title="店商 什么是360搜索推广?">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="http://blog.chenifan.cn/uploads/allimg/210121/1_012116001L948.jpg" alt="360搜索推广是基于360搜索平台，通过360特有的 匹配 技术，对网民的搜索词进行匹配，定 回 位目标用户 答 从而精确展现企业的推广信息的营销产品。 360搜索平台每日有数亿次的网民搜索行为，拥有海量的优质流量，其中一部分搜索词具有明确的商业需求信息，企业通过匹配关键词技术进行精细化投放，不仅能够准确快速的锁定用户群体，覆盖整个投放流程，还能让有需求的潜">
+                                        <h4><span>店商 什么是360搜索推广?</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="http://blog.chenifan.cn/dianshang/3148.html" target="_blank" title="企业电商培训班讲话稿 淘宝那家羊皮堂男鞋专营店为什么一直不给我发货啊！"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="http://blog.chenifan.cn/uploads/allimg/210121/1_01211600231b9.jpg" alt=" 第一，你要跟客服说清楚，他们到底承诺的是什么时候发货，如果是预定那种的，一个月发货就很正常了 第二，如果你和客服不能达成发货共识，可以申请退款，如果店家不给你退钱，你可以投诉·· 企业电商培训班讲话稿 最好满足下面几个条件： 1： 你有 兴趣！ 2：你有经验！ 3：你有资金！ 4：你有渠道！ 大市场，前景行业，无非是能源、通信、金融行业。但是这些行业，小" />
+       <div class="title ">
+        <span>2021-01-21</span>
+        <h4>企业电商培训班讲话稿 淘宝那家羊皮堂男鞋专营店为什么一直不给我发货啊！</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]"><img data-original=" https://nimg.ws.126.net/?url=http%3A%2F%2Fcms-bucket.ws.126.net%2F2020%2F1110%2F2ca5c86cj00qjjykg006ec0012m00qcc.jpg&thumbnail=660x2147483647&quality=80&type=jpg" alt=" [field: fulltitle / ]" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" [field: arcurl / ]" title=" [field: fulltitle / ]">10亿美元！传软银拟出售波士顿动力，韩国现代接手|波士顿|软银|现代公司|机器人|日本软银集团</a></h4>
+       <span>2020-11-10</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]"><img data-original=" https://nimg.ws.126.net/?url=http%3A%2F%2Fcms-bucket.ws.126.net%2F2021%2F0103%2F53dcc275j00qmcnlu004hc000it00zjc.jpg&thumbnail=660x2147483647&quality=80&type=jpg" alt=" [field: fulltitle / ]" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" [field: arcurl / ]" title=" [field: fulltitle / ]">蔚来12月交付7007辆创历史新高 全年交付4.37万台</a></h4>
+       <span>2021-01-04</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]"><img data-original=" https://static.ws.126.net/163/f2e/product/post_nodejs/static/logo.png" alt=" [field: fulltitle / ]" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" [field: arcurl / ]" title=" [field: fulltitle / ]">推特封杀特朗普账号，欧盟多国发声：这有问题|唐纳德·特朗普|默克尔|美国总统</a></h4>
+       <span>2021-01-12</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="http://blog.chenifan.cn/uploadfile/thumb/c4ca4238a0b923820dcc509a6f75849b/200x200_auto.jpg" alt=" [field: fulltitle / ]" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2021-10-20</span>
+        </div>
+        <h4>我悄悄把你设置成了置顶，想让你知道，但又不想让你知道</h4>
+       </div></a></li>  
+     <li><a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="http://blog.chenifan.cn/uploads/allimg/c211009/1633LA532I60-QA3.jpg" alt=" [field: fulltitle / ]" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2021-10-09</span>
+        </div>
+        <h4>一个人怎么运营微信公众号？</h4>
+       </div></a></li>  
+     <li><a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="http://blog.chenifan.cn/uploads/allimg/c211009/1633LA4543R0-12N5.jpg" alt=" [field: fulltitle / ]" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2021-10-09</span>
+        </div>
+        <h4>抖店闭环攻略（抖品牌篇），3个月从0到1000万月销增长案例</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>热门标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="http://blog.chenifan.cn/ganhuo">干货分享</a>
+                 
+                <a href="http://blog.chenifan.cn/qgzt">文案</a>
+                 
+                <a href="http://blog.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="http://blog.chenifan.cn/index.php?c=category&id=13">互联网资讯</a>
+                 
+                <a href="http://blog.chenifan.cn/gushici">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">{dede:global.cfg_beian/}</a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+</body>
+</html>

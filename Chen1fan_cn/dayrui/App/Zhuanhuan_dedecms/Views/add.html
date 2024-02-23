@@ -1,0 +1,152 @@
+{template "header.html"}
+
+
+<div class="note note-danger">
+    DEDE数据库转移为迅睿CMS，转移前需要保证迅睿CMS是一个全新安装空白的网站
+</div>
+
+
+
+<div class="portlet bordered light ">
+    <div class="portlet-title tabbable-line">
+        <div class="caption">
+            <span class="caption-subject">
+            1、数据表导入
+            </span>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <div class="form-body">
+            <table class="table table-mtotal table-nomargin table-bordered table-striped table-bordered table-advance">
+                <thead>
+                <tr>
+                    <th width="120">名称</th>
+                    <th width="150">数据表</th>
+                    <th width="100">内容数</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {loop $table $i $t}
+                <tr>
+                    <td>{$t.name}</td>
+                    <td>{$i}</td>
+                    <td>{$t.total}</td>
+                    <td style="text-align: left">
+                        <label>
+                            <a class="btn btn-xs red" href="{dr_url(APP_DIR.'/home/edit')}&st=0"> <i class="fa fa-sign-in"></i> 立即转入</a>
+                        </label>
+                    </td>
+                </tr>
+                {/loop}
+                </tbody>
+            </table>
+        </div>
+
+        <p>此工具用于把dedecms的数据转为迅睿cms数据，导入成功后，需要自定义url规则和前端展示模板</p>
+        <p>存在外链栏目和单页栏目，需要手动在迅睿栏目管理中修改栏目属性</p>
+
+    </div>
+</div>
+
+<div class="portlet bordered light ">
+    <div class="portlet-title tabbable-line">
+        <div class="caption">
+            <span class="caption-subject">
+            2、数据模块转入
+            </span>
+        </div>
+    </div>
+    <div class="portlet-body">
+            <div class="form-body">
+                <table class="table table-mtotal table-nomargin table-bordered table-striped table-bordered table-advance">
+                    <thead>
+                    <tr>
+                        <th width="120">模块</th>
+                        <th width="150">主表</th>
+                        <th width="150">附表</th>
+                        <th width="100">内容数</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {loop $module $t}
+                    <tr>
+                        <td>{$t.typename}</td>
+                        <td>{$t.maintable}</td>
+                        <td>{$t.addtable}</td>
+                        <td>{$t.total}</td>
+                        <td style="text-align: left">
+
+                            <label>
+                                <a class="btn btn-xs red" target="_blank" href="{dr_url(APP_DIR.'/home/edit')}&st={$t.id}"> <i class="fa fa-sign-in"></i> 立即转入</a>
+                                遇到故障可以重复转入，id序列保持原站相同
+                            </label>
+                        </td>
+                    </tr>
+                    {/loop}
+                    </tbody>
+                </table>
+            </div>
+
+        <p>把dedecms的数据转为迅睿cms数据，需要进入编辑界面，把一些自定义字段属性改成迅睿的字段，方法是：设置-模块管理-选择某个模块-模块字段-修改已有的字段，修改合适的类别</p>
+
+    </div>
+</div>
+
+
+
+<div class="portlet bordered light ">
+    <div class="portlet-title tabbable-line">
+        <div class="caption">
+            <span class="caption-subject">
+            3、模板界面转入
+            </span>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <p>删除系统的模板：template/pc/defult目录，然后打开根目录的index.php文件开启开发模式is_dev设置为1，就可以方便做模板了</p>
+        模板标签生成器工具：https://www.xunruicms.com/doc/code/index.html<br>
+        前端界面替换教程：https://www.xunruicms.com/book/3/<br>
+        模板制作教程：https://www.xunruicms.com/doc/template.html<br>
+        DEDECMS模板标签对应说明：https://www.xunruicms.com/doc/1168.html<br>
+        新手入门操作：https://www.xunruicms.com/book/4/<br>
+        <table class="table table-mtotal table-nomargin table-bordered table-striped table-bordered table-advance">
+            <thead>
+            <tr>
+                <th width="120">模块</th>
+                <th style="text-align: left">内容循环标签：module参数写法</th>
+            </tr>
+            </thead>
+            <tbody>
+            {loop $module $t}
+            <tr>
+                <td>{$t.typename}</td>
+
+                <td style="text-align: left">
+
+                   <?php echo "{mod"."ule module=".str_replace("dede_addon", "", $t.addtable)." }";?>
+
+                </td>
+            </tr>
+            {/loop}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="portlet bordered light ">
+    <div class="portlet-title tabbable-line">
+        <div class="caption">
+            <span class="caption-subject">
+            4、URL结构定义
+            </span>
+        </div>
+    </div>
+    <div class="portlet-body">
+       自定义URL教程：https://www.xunruicms.com/doc/580.html
+    </div>
+</div>
+
+
+{template "footer.html"}

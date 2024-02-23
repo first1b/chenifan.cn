@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>一文看懂抖音、快手、B站的广告投放原理 - 网络营销 - 澈逆凡博客</title>
+<meta name="description" content="今天我想和大家一起聊聊广告投放的基本原理，满满干货哦~（本文节选自《信息流广告入门》） 一条广告最终能够展现出来，幕后需要经历选定广告投放的人群、准备广告投放的物料和与其他广告主PK这3个步骤，这也是一个广告主投放广告必须经历的3个步骤，我们称作“广告投放三部曲”。 广告主投放广告是为了和目标用户沟通，而产品有相应的核心受众，比如中老年奶粉的"/>
+<meta name="keywords" content="一文,看懂,抖音,、,快手,站的,广告投放,原理,"/>
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script type="text/javascript" charset="utf-8">$(function(){$("img.lazy").lazyload({effect: "fadeIn"});});</script>
+<script>
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('2 5=5||[];(b(){2 1=4.c("6");1.9="8://1.7.g/1.h?f";2 3=4.d("6")[0];3.e.a(1,3)})();',18,18,'|hm|var|s|document|_0|script|baidu|https|src|insertBefore|function|createElement|getElementsByTagName|parentNode|ae86b9f95e6431d72b52a53c0ca66253|com|js'.split('|'),0,{}))
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h1 class="logo">
+            <a href="/" title="澈逆凡博客" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h1>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="/a/ganhuo/">干货分享</a>
+                        <ul class="sub-menu">
+                            
+                            <li><a href="/a/yygh/">运营</a></li>
+                            
+                            <li><a href="/a/jishu/">IT技术</a></li>
+                            
+                            <li><a href="/a/yx/">网络营销</a></li>
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/a/qgzt/">文案</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/news/">互联网资讯</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/gushici/">神回复</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                        <li class="first">
+                            <span class="time">20-06-05</span>
+                            <a target="_blank" href="/hd/14.html" title="网站公告：澈逆凡博客上线了！">网站公告：澈逆凡博客上线了！</a>
+                        </li>
+
+                    </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>
+    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+                                
+                                <a target="_blank" href='/tags.php?/60/'>抖音</a>
+                                
+                                <a target="_blank" href='/tags.php?/2393/'>广告投放</a>
+                                
+                                <a target="_blank" href='/tags.php?/2382/'>周推荐</a>
+                                
+                                <a target="_blank" href='/tags.php?/880/'>b站</a>
+                                
+                                <a target="_blank" href='/tags.php?/469/'>快手</a>
+                                
+                            </div>
+                            <h1 class="title">一文看懂抖音、快手、B站的广告投放原理</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>澈逆凡博客</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="/a/yx/">网络营销</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2021-01-26 16:27</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><script src="/plus/count.php?view=yes&aid=3329&mid=1" type='text/javascript' language="javascript"></script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <span class="span-img"><img src="/uploads/allimg/210126/162S45506-0.jpg" alt="一文看懂抖音、快手、B站的广告投放原理"></span>
+                                                                
+
+                                	<p>今天我想和大家一起聊聊广告投放的基本原理，满满干货哦~（本文节选自《信息流广告入门》）</p>
+<p>一条广告最终能够展现出来，幕后需要经历选定广告投放的人群、准备广告投放的物料和与其他广告主PK这3个步骤，这也是一个广告主投放广告必须经历的3个步骤，我们称作“广告投放三部曲”。</p>
+<p>广告主投放广告是为了和目标用户沟通，而产品有相应的核心受众，比如中老年奶粉的核心受众是中老年群体，考研资料的核心受众是大学生群体等。广告要重点投给核心受众看，这就是<strong>投放广告的第一步:选定广告投放的人群，即解决“选定广告给谁看”的问题。</strong></p>
+<p><img class="aligncenter" alt="34 一文看懂抖音、快手、B站的广告投放原理" src="/uploads/allimg/210126/162S42533-1.jpg" width="586" height="394" title="一文看懂抖音、快手、B站的广告投放原理" /></p>
+<p>&nbsp;</p>
+<p>每一类用户有相应的喜好，要用用户喜欢的方式来和他们沟通。比如用户都喜欢看短视频，那么广告也要做成短视频;用户喜欢轻松搞笑的内容，那么广告也要做得好玩，这就是<strong>投放广告的第二步:准备广告投放的物料，即解决“给用户看什么”的问题。</strong></p>
+<p>假设一个人要买房，各家房产公司都希望他买自家的房子，那么就需要房产公司之间PK，看谁家的房子好、价格低。广告也一样，媒体知道一个人愿意买奶粉，那么让他看到谁家的奶粉广告呢?这就需要广告之间的竞争，也就是<strong>投放广告的第三步:与其他广告主PK，也就是“广告之间的PK”。</strong></p>
+<p>接下来，我们沿着“广告投放三部曲”来看看广告投放的基本原理。</p>
+<p>下面我们先从一个故事开始。</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>一个卖鸡肉的摊位</strong></span></p>
+<p>从前有一个卖鸡肉的摊位，鸡肉供不应求，于是摊主决定拍卖鸡肉!来买鸡肉的人告诉摊主买鸡翅还是买鸡腿，一个愿意出多少钱，一共打算买多少个，摊主一一登记后按照价格高低来卖，价高者得，售完为止。</p>
+<p>这天店里只剩下6个鸡翅、2个鸡腿了，同时进来了3个人。</p>
+<p>咯咯咯要买4个鸡翅，出价40元/个。</p>
+<p>喔喔喔要买6个鸡翅，出价20元/个。</p>
+<p>叽叽叽要买2个鸡腿、2个鸡翅，均出价5元/个。</p>
+<p>我们从店主的角度来看一下要怎么卖:鸡翅是最抢手的，最高出价是40块，那一定先把4个鸡翅卖给出价最高的，然后剩下2个卖给第二位的，鸡腿今天生意不好，只有1个人想买，没得选就卖给他了。</p>
+<p>为了简化理解，这里我们没有按“广义第二计费”机制计价，直接按照出价来计费，售卖结果如下。</p>
+<p><strong>【鸡翅】</strong></p>
+<p>咯咯咯排第1名，买到了4个鸡翅，40元/个。</p>
+<p>喔喔喔排第2名，买到了2个鸡翅，20元/个。</p>
+<p>叽叽叽排第3名，没买到鸡翅。</p>
+<p><strong>【鸡腿】</strong></p>
+<p>叽叽叽排第1名，买到了2个鸡腿，5元/个。</p>
+<p>买家来摊位买鸡肉和广告主去一家媒体投广告很相似:</p>
+<ul>
+<li>广告主是买家，媒体是摊主;</li>
+<li>摊主卖的是鸡翅和鸡腿，媒体卖的是“广告曝光”;</li>
+<li>摊主登记的地方就是广告的“后台”，在这里说明白你想要什么、要多少;</li>
+<li>告诉摊主“自己想鸡翅还是鸡腿”也就是“选择广告给谁看”，在广告里也叫“定向”;</li>
+<li>买家说“一个愿意出多少钱”也就是广告里的“出价”，“打算买多少个”是“预算”，这两者共同决定了你打算花多少钱。</li>
+<li>店主决定卖给谁的依据就是“谁出的价格高”。媒体卖曝光也一样，广告里衡量曝光价格的指标叫作CPM，也就是1000次曝光多少钱，媒体也希望把曝光卖给出价最高的人。</li>
+</ul>
+<p>“治大国若烹小鲜”，在媒体投广告和去一个小摊位买东西的逻辑居然很相似。</p>
+<p>在这个故事里，我们看到了买家和摊主，也就是广告主和媒体之间的关系，在实际的广告投放中，还会加上“用户”角色。用户不是听你任意摆布的，尤其在信息流这样的环境下，他们遇到不愿意看的内容，就直接滑过去了，所以还要有“给用户看什么”这一项。</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>定向——选定广告给谁看</strong></span></p>
+<p>接下来，我们看看在广告里每一步是怎样进行的。</p>
+<p>产品一般会对自己的目标用户有一个用户画像，包括年龄、性别和几线城市等。媒体提供人群划分维度供广告主选择，支持定位到用户的性别、地域和婚恋状况等。这是媒体的定向能力。</p>
+<p>“选定广告给谁看”就是将这两者做匹配——用媒体支持的方式圈出自己想要的用户。</p>
+<p>信息流广告也称作效果广告，这在很大程度上是因为广告能够精准地投放给目标人群，大大节省广告费用。定向就是其中关键的一环。本节中，我们来了解媒体常见的定向功能。</p>
+<p><strong>1、产品的用户画像</strong></p>
+<p>每一个产品都有自己的定位，主要面向什么样的用户群，也就是用户画像。产品的用户画</p>
+<p>像一般可以从年龄、性别、地域和收入情况这几个方面进行概括。</p>
+<p>下图是快手的用户画像:以二、三、四线城市及以下为主，“90后”占绝大多数。</p>
+<p><img class="aligncenter" alt="351 一文看懂抖音、快手、B站的广告投放原理" src="/uploads/allimg/210126/162S43061-2.jpg" width="565" height="299" title="一文看懂抖音、快手、B站的广告投放原理" /></p>
+<p>&nbsp;</p>
+<p style="text-align: center;">（数据来源:快手商业化资料）</p>
+<p>但如果我们没有直接找到这样的资料，有哪些方式可以简单地了解一个产品的用户画像呢?</p>
+<p>优化师对用户画像的了解可以直接来自于广告主，广告主一般会根据产品的特点给到目标用户画像。如果没给也没关系，自己也可以进行一些了解。这里有几个简单的方法，下面我们以快手App为例来看一下。</p>
+<p>首先，你得下载一个App，体验一下这个产品，这是最直接的。左图是快手App的界面截图，简单浏览一下，我们就能大概知道它的内容。</p>
+<p>然后在应用商店里搜索这个App，重点关注简介和用户的评论，比如下面右图这样。</p>
+<p><img class="aligncenter" alt="36 一文看懂抖音、快手、B站的广告投放原理" src="/uploads/allimg/210126/162S44460-3.jpg" width="391" height="364" title="一文看懂抖音、快手、B站的广告投放原理" /></p>
+<p>&nbsp;</p>
+<p>可以看到，介绍部分包括了不少综艺节目的介绍，那么肯定也有不少明星和节目的粉丝聚集在这里。此外，我们也可以在网上搜索相关信息，进一步了解快手。比如直接在百度搜索“快手用户画像”，能找到一些专门机构做的用户画像分析。</p>
+<p><img class="aligncenter" alt="371 一文看懂抖音、快手、B站的广告投放原理" src="/uploads/allimg/210126/162S44D9-4.jpg" width="565" height="538" title="一文看懂抖音、快手、B站的广告投放原理" /></p>
+<p>&nbsp;</p>
+<p>这样用不了20分钟，你就能对产品的用户画像有个大概的了解。知道要投广告给什么样的人以后，我们来看一下媒体能够怎样帮你找到这些人，也就是媒体支持的定向。</p>
+<p><strong>2、媒体支持的定向</strong></p>
+<p>定向，从字面上理解就是“确定方向”。定向了哪些人，就意味着只有这部分人能看到广告，其余的人被排除在外。</p>
+<p>定向的本质是找人，媒体帮助广告主找到投广告给哪些人或者排除哪些人。比如一个广告主只想把广告投给男性，媒体能不能区分出男女用户呢?广告主想把广告投给年轻人，媒体能不能区分出用户的年龄段呢?如果不能，那么广告的很多曝光就浪费了。比如某共享单车广告，因为只在一些城市有自行车，所以肯定希望区分地域来投广告。这一系列区分的过程就是配合广告主“确定广告方向”，也就是“定向”。</p>
+<p>那么，媒体都支持什么定向呢?常见的有如下几个。</p>
+<ul>
+<li>用户基本情况:性别、年龄和地域。</li>
+<li>兴趣:用户对什么感兴趣。</li>
+<li>自定义人群:可以对人群做更灵活的处理，也支持广告主自己上传一些人群数据，一般称为人群包。</li>
+</ul>
+<p>首先是用户基本情况。性别、年龄和地域是三大基础定向，也是对用户最基本的区分。</p>
+<p>性别会分为男性、女性和不限。有一些产品有明显的性别倾向，比如汽车，那就可以只投男性;再比如美妆，就可以只投女性。也有一些没有明显限制，比如社交软件，可以不做限制。</p>
+<p>年龄一般按年龄段区分，比如字节跳动将用户分成了6个年龄段，18岁以下、18~23岁、24~30岁、31~40岁、41~49岁和50岁以上。也有的平台可以自己选择年龄范围，比如腾讯可以自定义任意年龄范围，例如25~35岁。</p>
+<p>需要注意的是，定向中的年龄和用户的实际年龄不一定完全一致，有的是媒体基于用户阅读、社交等行为分析出来的推断年龄。</p>
+<p>地域定向是对用户的地理位置做区分。比如，你选择了北京、上海和深圳，那么其他地方的用户不会看到你的广告;再比如你是做电商的，有一些地方没办法送货，那你就可以把不能送货的地域排除掉。</p>
+<p><strong>兴趣定向用来区分用户对什么东西感兴趣。</strong>比如用户经常看减肥相关的文章，有过点击或者收藏，那么系统就会认为这个用户对减肥感兴趣。媒体会提前准备好兴趣的分类，其中包含了各个行业，从粗到细做好了划分，供广告主选择。</p>
+<p>比如要给奔驰车做推广，我们可以选择具有什么兴趣的人群?</p>
+<p>首先，奔驰汽车属于汽车大类，再往下分，为高档汽车，那么你可以选择对“奔驰”本身感兴趣的人，也可以往外拓展选择对“汽车”或“高档汽车”感兴趣的人。只选择“奔驰”肯定精准，但是用户范围很少，拓展到“汽车”就是一个不错的选择。</p>
+<p>上面这几个定向都是媒体给广告主提供的，帮助广告主找到他想要的人。</p>
+<p>那广告主可能想我不用你帮我找，我知道自己想要什么样的人，就想让这些用户看我的广告。媒体能不能实现呢?可以，这就是自定义人群，也就是“广告主自己定义人群”的意思。</p>
+<p>高档一点的说法是“将媒体数据和广告主数据进行打通”，但其实就是媒体对广告主说:“你自己说想要投给谁、不投给谁，把名单给我。”广告主将用户的设备号或手机号上传到媒体后台，然后媒体看看这些用户有多少在我的平台上，广告只投给重合的这部分用户或者屏蔽这些人。</p>
+<p>举一个只投放给这部分人的例子。</p>
+<p>一个电商网站，提供了一个浏览过网站但是没下单的人群名单，在媒体上只投放这部分人群，因为这部分人是感兴趣的，让他们再看见广告相当于“推他们一把”，促进下单，能有效提升购买率。这种方式也叫作再营销。</p>
+<p>再举一个屏蔽的例子，比如高德地图。</p>
+<p>由于产品现有用户量非常大，所以如果想获得新用户，必须要排除现有用户，否则大部分看到广告的人是已经下载过高德地图的，造成广告重复曝光，新用户的获取成本提高。如果广告主自己上传已经激活过的用户设备号，那么广告投放就会精准很多，极大地节省广告成本。</p>
+<p><strong>设备号是什么?</strong></p>
+<p>每一台手机都会有一个设备号，在安卓系统叫IMEI号，在iOS系统叫IDFA号。一般以IMEI号或IDFA号作为用户设备的唯一标识。比如想看一台手机有没有激活过某个App，就可以让广告主查找已激活名单中有没有这台手机的设备号。</p>
+<p><strong>3、把它们做匹配</strong></p>
+<p>对人群的定向在媒体的数据分析中会有非常复杂的运算，但是在广告主使用的后台中，就会做成一个个清晰的按钮，你只要做简单的勾选，就可以圈出自己想要的人群，非常简单、方便。</p>
+<p>这里我们介绍两种常见的按钮，看一下要怎样操作。</p>
+<ul>
+<li>单选按钮。只能选择其中一个选项，比如下图对于性别的设置，有“不限”“男”“女”3个选项。“不限”的意思就是男女都可以，在性别上没有区分。</li>
+</ul>
+<ul>
+<li>复选框。可以选择任意个选项，比如地域定向。我国有这么多的城市，像“性别”那种方式都展示出来，一个屏幕都放不下，怎么办呢?这时就出现了另一种方式，叫“复选框”。</li>
+</ul>
+<p><img class="aligncenter" alt="38 一文看懂抖音、快手、B站的广告投放原理" src="/uploads/allimg/210126/162S410E-5.jpg" width="565" height="264" title="一文看懂抖音、快手、B站的广告投放原理" /></p>
+<p>&nbsp;</p>
+<p>你想把广告投到哪儿，在图中位置①处选择就行了，这里可以同时选择多个，位置③处还会出现你选中的地域列表。</p>
+<p>如果想排除某一个地方，怎么办呢?</p>
+<p>媒体后台不能直接选“不投放什么地方”，但是可以选“投什么地方”。你把所有地域都选中（“省份”a第一个选项就是“全选”），然后勾选掉“不投放的地方”就可以啦!大家要注意选中与排除的设置，千万不要弄反了。</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>创意——给用户看什么</strong></span></p>
+<p>定向帮助我们找到了目标用户，接下来就该考虑给用户看什么。这里我们不讨论什么样的内容能够吸引用户，先看一下用户从看到广告到转化为广告主的用户的流程，从而了解在这个过程中用户能看到哪些内容，也就是广告都包括什么。</p>
+<p>本节中，我们按照两种最常见的投放方式来看一下。</p>
+<p><strong>1、投放App下载</strong></p>
+<p>假设广告主在微博上投放了App下载广告，我们看一下用户从看到App广告到激活这个App的步骤，这中间用户看到了什么?</p>
+<p><img class="aligncenter" alt="391 一文看懂抖音、快手、B站的广告投放原理" src="/uploads/allimg/210126/162S452A-6.jpg" width="565" height="254" title="一文看懂抖音、快手、B站的广告投放原理" /></p>
+<p>&nbsp;</p>
+<p style="text-align: center;">（a）用户看到广告(b)进入广告详细页面(c)安装App(d)进入App首页</p>
+<p>可以从图a中看到，这条广告最显眼的是中间的视频，然后是视频上方的文案。广告文案+视频（或者是图片）就是一条广告最重要的组成部分，可以把它称作广告创意，在广告里也叫“素材”。广告创意好不好，决定了用户会不会点击这条广告。</p>
+<p><strong>说明:</strong></p>
+<p><strong>素材指广告投放过程中用到的广告文案（或标题）、图片和视频，也称为创意，一般不包含落地页。</strong></p>
+<p>如果用户对这条广告感兴趣，就会点击进入广告详细页面。如图b所示，页面可以分成上下两部分，上面的视频会继续播放，下面会出现一个类似于“应用商店”的界面，有图片和对这个App的一些介绍。</p>
+<p>因此，这个应用介绍的页面就是关键，如果介绍比较吸引用户，那么用户就会点击“下载”按钮。在等待下载完成的过程中，一定会有部分用户不耐烦中断下载，但如果刚才的广告创意足够好，就能持续吸引他，直到下载完成，打开App。</p>
+<p>进入App之后，广告的使命就结束了，剩下要看产品本身是否吸引用户。</p>
+<p><strong>2、前端行为和后端行为</strong></p>
+<p>在信息流广告里，对用户行为有“前端”和“后端”之分。前端指媒体端，后端指广告主端。一般将媒体能直接收集到的行为算作前端行为，将媒体收集不到的行为算作后端行为。投放App下载，媒体能收集到的最后一步行为是安装完成。常见的前端行为有展示、点击、下载和安装等，常见的后端行为有激活、注册和付费等。</p>
+<p>因此，投放App下载的时候，广告展现给用户的是“广告文案+视频/图片”和“应用介绍页面”。</p>
+<p><strong>3、投放落地页</strong></p>
+<p>不是所有的广告主都有App，广告主投广告自然也不都是为了吸引用户下载。广告主投广告还有一个非常常见的目的:获得销售线索或者直接卖东西。广告主花钱是为了让用户看到一个页面，我们把这个页面统称为落地页。</p>
+<p>假设广告主在知乎上投放了落地页广告，我们看一下用户从看到广告到转化完成的步骤，了解这中间用户看到了什么，如图所示。</p>
+<p><img class="aligncenter" alt="40 一文看懂抖音、快手、B站的广告投放原理" src="/uploads/allimg/210126/162S41014-7.jpg" width="565" height="334" title="一文看懂抖音、快手、B站的广告投放原理" /></p>
+<p>&nbsp;</p>
+<p>这条广告只有文字，没有图片或视频，还有这样的广告?是的，的确有这样的广告，信息流广告要和内容融为一体嘛，知乎上的内容以文字问答为主，所以广告也会做成只有文字的样式。因此，这里的几行广告文案就非常重要，它直接决定了用户会不会点击。</p>
+<p>如果用户点击了，就会进入落地页。用户思考的逻辑和看见一个App下载的广告一样，虽然点击之前内容页面上的广告能介绍的信息很少，但用户比较感兴趣，就会点进去看看“到底是怎么回事”。因此，落地页的设计也非常关键。落地页的加载速度怎么样?页面设计是否突出重点?内容上是否和前面的页面承接?</p>
+<p>所以，无论投放App下载还是投放落地页，我们准备给用户看的内容都包含两部分:用户首先看到的“广告创意”和点击之后的“详细页面”。</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>竞价——广告之间的PK</strong></span></p>
+<p>知道了想把广告投给什么样的人，也准备好了广告内容，你的广告就一定能出现在用户的手机上吗?不是，因为还存在竞争对手。</p>
+<p>随着技术的发展，广告的售卖已经能够支持实时竞价和动态竞争，也就是媒体一直能把广告卖给对自己收益最高的人。所以广告之间需要实时进行PK。</p>
+<p>在PK的过程中，对广告主而言有两个关键指标——预算（广告主打算花多少钱）和出价(能不能PK过别人，把钱花出去)。除此之外，还需要了解一下媒体的规则——媒体是怎么决定把广告卖给谁的呢?</p>
+<p><strong>1、预算</strong></p>
+<p>出门买东西得看兜里带多少钱，广告花多少钱得看自己有多少钱。你不能把所有的钱都用来投广告，你打算花的钱就叫“预算”——预先算好了要花的钱。预算相当于“你打算花的钱”，你可以买几件东西，但总额不能超过你打算花的钱。</p>
+<p>设置预算最大的作用就是“不会花超了”。媒体会严格遵守预算的设置金额，让“实际花费≤预算”，比如今天预算是300元，那么媒体就不会让今天的广告花费超过300元。</p>
+<p>预算分为日预算和总预算，日预算就是每天打算花多少钱，今天花完了这些预算，明天又有这些钱;总预算是一共只打算花多少钱，花光了广告就自动下线。假如设置日预算为3000元，广告投放1周，那么媒体认为你每天的预算都是3000元。</p>
+<p>如果当天花完3000元，广告就会下线，相当于游戏里“今天的能量用完了”。在第2天0点，仍会从0元开始计算花费，花完3000元广告下线。即使前一天没有花完3000元，今天也只有3000元的预算。</p>
+<p>假如设置的总预算为21000元，广告投放1周，那么媒体会累计每天的花费，达到21000元广告下线。我们有可能在第1天就花完全部的21000元，也有可能在第5天或者第6天花完。</p>
+<p>预算可以实时调整，开始不知道广告效果，就可以先少投点，比如设置预算为300元;投放过程中如果发现效果还可以，想再投一点，就可以把预算提升到500元、1000元或者更多，这个由广告主自己决定。</p>
+<p>预算是广告主投放广告非常重要的指标，也可以说是生命线，钱一旦花出去就要不回来了，所以一定要格外小心。</p>
+<p><strong>2、出价</strong></p>
+<p>决定广告主花多少钱的因素除了预算以外，还有出价。一个广告主的预算是300元，实际可能只花出去了50元、100元，这是什么原因呢?因为媒体把广告卖给了别人。</p>
+<p>在2.5.3节中我们知道，实际的计费一般会低于出价，也就是说无论你出多少钱，媒体的扣费一般都不会超过出价。如果使用的是转化出价，那么广告投放的风险就会很低——想花多少钱就出多少钱。也就是说转化出价直接决定了你广告投放的成本。出价越低，成本就越低。</p>
+<p>那么，是不是意味着广告主可以随意出价，价格越低越好呢?当然不是。就像3.1节故事里的“叽叽叽”一样，别人出40元、20元买一个鸡翅，而他只出5元，结果就是他没有买到鸡翅。</p>
+<p>所以广告主有自己决定出价的自由，但也要考虑媒体卖不卖给你广告。媒体是如何决定广告卖给谁的呢?这是广告主之间的比赛，媒体是裁判。我们想要赢得比赛，就要先了解裁判的规则。</p>
+<p><strong>3、媒体的流量分配逻辑</strong></p>
+<p>媒体是做生意的，做生意一定要赚钱，并且是赚得越多越好。摊主决定把鸡肉卖给谁的依据就是“谁出的价格高”，媒体卖曝光也一样，谁的出价高就卖给谁。</p>
+<p>我们知道，常见的出价方式有3种:按展示出价、按点击出价和按转化出价。无论是哪种出价方式，媒体卖的都是广告展示数。所以媒体关心的是每一个曝光能有多少收益，即CPM。</p>
+<p>但在用户看见广告之前，大家并不知道真实的CPM是多少，所以广告后台会对CPM进行预估，我们平时看到的eCPM基本上是CPM的预估值。对应地，计算eCPM的过程中也需要使用预估点击率和预估转化率。但因为我们平时较少接触到预估的点击率和转化率，所以下文就简化写成“点击率”和“转化率”了。</p>
+<p>媒体是怎么将广告曝光价格和广告主的出价联系在一起的呢?媒体会通过算法将出价换算成曝光价格。可以简单理解成广告主提供自己的产品名称、人群定向和广告创意，媒体就能预估出这部分用户会不会转化，这个转化的概率有多大，从而换算出CPM是多少，能获取多少收益。</p>
+<p>我们来看一下各种出价方式下eCPM的计算方式。</p>
+<p><img class="aligncenter" alt="411 一文看懂抖音、快手、B站的广告投放原理" src="/uploads/allimg/210126/162S43059-8.jpg" width="565" height="151" title="一文看懂抖音、快手、B站的广告投放原理" /></p>
+<p>&nbsp;</p>
+<p>按转化出价需要看对转化的定义是什么，我们上面定义了转化率=转化数/展示数。但是点击行为是用户主动的行为，能够帮助我们更好地分析用户，所以我们也常定义转化率=转化数/点击数，这时在按转化计算出价的时候，就需要考虑点击率，即eCPM=转化出价×点击率×转化率×1000。其实两种计算方式是一样的，展开就是:</p>
+<p style="text-align: center;"><img alt="432 一文看懂抖音、快手、B站的广告投放原理" src="/uploads/allimg/210126/162S46158-9.jpg" width="468" height="124" title="一文看懂抖音、快手、B站的广告投放原理" /></p>
+<p><img class="aligncenter" alt="422 一文看懂抖音、快手、B站的广告投放原理" src="/uploads/allimg/210126/162S45N0-10.jpg" width="520" height="124" title="一文看懂抖音、快手、B站的广告投放原理" /></p>
+<p>&nbsp;</p>
+<p><strong>说明:</strong></p>
+<p>在信息流广告里，常把点击率叫作CTR，转化率叫作CVR，转化率可以指点击到转化，也可以指展示到转化，没有特殊说明的话一般指点击到转化。因此，计算eCPM的公式常写作:eCPM=转化出价×CTR×CVR×1000。</p>
+<p>知道了eCPM的计算公式，我们来看一个案例。</p>
+<p>广告主小B按转化出价，每个转化出价10元，点击率是1%，转化率是5%;广告主小C也按转化出价，每个转化出价3元，点击率是3%，转化率是10%。那么他们各自的eCPM是多少呢?</p>
+<p><strong>小B:eCPM=10×1%×5%×1000=5</strong></p>
+<p><strong>小C:eCPM=3×3%×10%×1000=9</strong></p>
+<p>可以发现，虽然小B的每个转化出价更高，但是媒体还是更愿意把流量分配给出价更低的小C，这是为什么呢?因为小C的eCPM远高于小B!</p>
+<p>转化出价可以等同于获取用户的成本，说明在投放广告时，可以通过优化广告创意、落地页和人群定向等方式来提升点击率和转化率，进而提升eCPM，最终用比较低的成本获得用户。如果你的创意、落地页和人群定向做得不好，就意味着你要在出价上让步，通过提升出价来提升eCPM，获取用户的成本就会提升!</p>
+<p>因此，了解信息流广告投放的“门道”可以帮助广告主节省获取用户的成本，这是实实在在地省钱。更不要提这些获得的用户能够给企业带来的收益。接下来，我们从几个主要的信息流媒体开始，走进信息流广告的实际投放，开启优化师之旅……</p>
+<p>本文来自于微信公众号 鸟哥笔记（ID:niaoge8），作者:宁阿姨</p>
+<p style="color:#C0C0C0">免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！ </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href='/a/yx/3328.html' class='prev has-background'><span>上一篇：</span><h4>【运营实操案例拆解】如何从0开始，设计一套高转化率的训练营课程？</h4></a> </div>
+                        <div class="next-post"><a href='/a/yx/3330.html' class='nextv has-background'><span>下一篇：</span><h4>盘点短视频的17个素材来源，让你也能轻松做出高质量内容！</h4></a> </div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                            <li>
+                                <div class="item">
+                                    <a href="/a/youhua/3531.html" title="从百度一下到抖音搜索，挖掘用户需求流量新机会！">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210823/1629D412334910-356421.jpg" alt="从百度一下到抖音搜索，挖掘用户需求流量新机会！">
+                                        <h4><span>从百度一下到抖音搜索，挖掘用户需求流量新机会！</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yx/3428.html" title="抖音如何引流私域流量的11种方法，最后两条一定要看">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210709/1625Pc12ZR0-391c.jpg" alt="抖音如何引流私域流量的11种方法，最后两条一定要看">
+                                        <h4><span>抖音如何引流私域流量的11种方法，最后两条一定要看</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yx/3420.html" title="四个月涨粉千万，名郑言顺的职业揭秘，凭什么斩获抖音涨粉No.1？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210709/1625Pc6000940-313933.jpg" alt="四个月涨粉千万，名郑言顺的职业揭秘，凭什么斩获抖音涨粉No.1？">
+                                        <h4><span>四个月涨粉千万，名郑言顺的职业揭秘，凭什么斩获抖音涨粉</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yx/3324.html" title="为什么抖音头部主播都停播了？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/210126/1_0126162R615b.jpg" alt="为什么抖音头部主播都停播了？">
+                                        <h4><span>为什么抖音头部主播都停播了？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yx/390.html" title="哪些年入千万的抖音「段子手工厂」，是怎么做到的？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c200911/15cO1S2G5F-1P36.jpg" alt="哪些年入千万的抖音「段子手工厂」，是怎么做到的？">
+                                        <h4><span>哪些年入千万的抖音「段子手工厂」，是怎么做到的？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yx/336.html" title="以史为鉴，如果抖音、快手有一天进入衰退期，">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c200804/159A2b11D550-59133.jpg" alt="以史为鉴，如果抖音、快手有一天进入衰退期，">
+                                        <h4><span>以史为鉴，如果抖音、快手有一天进入衰退期，</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yx/279.html" title="聊聊抖音的广告生意">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c200724/15955594Q614F-V954.jpg" alt="聊聊抖音的广告生意">
+                                        <h4><span>聊聊抖音的广告生意</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yx/274.html" title="内嵌的「视频号」，能打败抖音快手吗？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c200724/15955594H3E0-2C94.jpg" alt="内嵌的「视频号」，能打败抖音快手吗？">
+                                        <h4><span>内嵌的「视频号」，能打败抖音快手吗？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yx/241.html" title="抖音视频为什么不能保存下载？分享2个免费下载">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c200710/15943DF45WP-35K15.jpg" alt="抖音视频为什么不能保存下载？分享2个免费下载">
+                                        <h4><span>抖音视频为什么不能保存下载？分享2个免费下载</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yx/235.html" title="你蹭的抖音热点，99%都是无用功！">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c200710/15943DE096040-1021H.jpg" alt="你蹭的抖音热点，99%都是无用功！">
+                                        <h4><span>你蹭的抖音热点，99%都是无用功！</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="sidebar col-xs-12 col-sm-4 col-md-4"><div class="widget widget_suxingme_postlist"><h3><span>随便看看</span></h3><ul class="recent-posts-widget"> <li class="one"><a href="/a/yx/3426.html" target="_blank" title="7天涨粉超百万，这些账号都做了什么？"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/c210709/1625Q000V1310-14629.jpg" alt="7天涨粉超百万，这些账号都做了什么？"/><div class="title"><span>2021-07-09</span><h4>7天涨粉超百万，这些账号都做了什么？</h4></div></a></li>
+ <li class="others"><div class="image"><a href="/a/yx/3340.html" target="_blank" title="电商平台的产品，都包含哪些价格策略？"><img data-original="/uploads/allimg/210126/1_0126162Z15945.jpg" alt="电商平台的产品，都包含哪些价格策略？" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/a/yx/3340.html" title="电商平台的产品，都包含哪些价格策略？">电商平台的产品，都包含哪些价格策略？</a></h4><span>2021-01-26</span></div></li>
+<li class="others"><div class="image"><a href="/a/yx/3333.html" target="_blank" title="2020年，关于B站营销的12个方向建议"><img data-original="/uploads/allimg/210126/1_0126162T5a22.jpg" alt="2020年，关于B站营销的12个方向建议" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/a/yx/3333.html" title="2020年，关于B站营销的12个方向建议">2020年，关于B站营销的12个方向建议</a></h4><span>2021-01-26</span></div></li>
+<li class="others"><div class="image"><a href="/a/yx/3424.html" target="_blank" title="从花西子、蕉内爆红背后，看初创品牌如何靠内容营销实现冷启动？"><img data-original="/uploads/allimg/c210709/1625Pc950F40-2454R.jpg" alt="从花西子、蕉内爆红背后，看初创品牌如何靠内容营销实现冷启动？" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/a/yx/3424.html" title="从花西子、蕉内爆红背后，看初创品牌如何靠内容营销实现冷启动？">从花西子、蕉内爆红背后，看初创品牌如何靠内容营销实现冷启动？</a></h4><span>2021-07-09</span></div></li>
+ </ul></div><div class="widget widget_suxingme_hotpost"><h3><span>热门文章</span></h3><ul class="widget_suxingme_post"> <li><a href="/a/yx/241.html" target="_blank" title="抖音视频为什么不能保存下载？分享2个免费下载"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/c200710/15943DF45WP-35K15.jpg" alt="抖音视频为什么不能保存下载？分享2个免费下载"/><div class="title"><div class="entry-meta"><span>2020-07-10</span></div><h4>抖音视频为什么不能保存下载？分享2个免费下载</h4></div></a></li>
+<li><a href="/a/yx/3345.html" target="_blank" title="案例拆解：微淼商学院线上分销体系"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/210126/1_012616291335c.jpg" alt="案例拆解：微淼商学院线上分销体系"/><div class="title"><div class="entry-meta"><span>2021-01-26</span></div><h4>案例拆解：微淼商学院线上分销体系</h4></div></a></li>
+<li><a href="/a/yx/425.html" target="_blank" title="借势营销到底要怎么做呢？？"><div class="overlay"></div><img class="thumbnail lazy" data-original="https://cdn.yunyingdog.cn/wp-content/uploads/member/avatars/16147490575f6033de52ae90.31338769-1.png" alt="借势营销到底要怎么做呢？？"/><div class="title"><div class="entry-meta"><span>2020-09-15</span></div><h4>借势营销到底要怎么做呢？？</h4></div></a></li>
+ </ul></div><div class="widget suxingme_tag"><h3><span>热门标签</span></h3><div class="widge_tags"><div class="tag-items">  <a href="/tags.php?/31/">运营</a>  <a href="/tags.php?/54/">京东</a>  <a href="/tags.php?/57/">电商</a>  <a href="/tags.php?/30/">织梦二次开发</a>  <a href="/tags.php?/189/">918</a>  <a href="/tags.php?/42/">社群运营</a>  <a href="/tags.php?/50/">摆摊</a>  <a href="/tags.php?/25/">情感</a>  <a href="/tags.php?/33/">摆地摊</a>  <a href="/tags.php?/2/">聪明</a>  <a href="/tags.php?/20/">景点推荐</a>  <a href="/tags.php?/29/">网站公告</a>  <a href="/tags.php?/35/">技巧</a>  <a href="/tags.php?/39/">产品经理</a>  <a href="/tags.php?/40/">能力提升</a>  <a href="/tags.php?/41/">新媒体运营</a>  <a href="/tags.php?/3/">乌鸦</a>  <a href="/tags.php?/15/">水果</a>  <a href="/tags.php?/16/">吃货</a>  <a href="/tags.php?/21/">海滩</a>  <a href="/tags.php?/22/">游泳</a>  <a href="/tags.php?/23/">美景</a>  <a href="/tags.php?/27/">手表</a>  <a href="/tags.php?/28/">时尚潮物</a>  <a href="/tags.php?/37/">B端产品</a>  <a href="/tags.php?/38/">产品运营</a>  <a href="/tags.php?/48/">时间</a>  <a href="/tags.php?/8/">充电</a>  <a href="/tags.php?/9/">照明</a>  <a href="/tags.php?/12/">云南</a>  </div></div></div><div class="widget suxingme_social"><h3><span>关注我们 么么哒！</span></h3><div class="attentionus"><ul class="items clearfix"><span class="social-widget-link social-link-qq"><span class="social-widget-link-count"><i class="fa fa-weixin"></i>十一记实录</span><span class="social-widget-link-title">公众号</span><a id="tooltip-s-weixin" href="javascript:void(0);"></a></span><span class="social-widget-link social-link-email"><span class="social-widget-link-count"><i class="fa fa-envelope"></i>1812215600@qq.com</span><span class="social-widget-link-title">邮箱</span><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" target="_blank" rel="nofollow"></a></span><span class="social-widget-link social-link-wechat"><span class="social-widget-link-count"> 运营贩</span><span class="social-widget-link-title">百家号</span><a id="tooltip-s-weixin" href="javascript:void(0);"></a></span></ul></div></div><div class="widget widget_suxingme_postlist"><h3><span>最新内容</span></h3><ul class="recent-posts-widget"> <li class="one"><a href="/a/youhua/3531.html" target="_blank" title="从百度一下到抖音搜索，挖掘用户需求流量新机会！"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/c210823/1629D412334910-356421.jpg" alt="从百度一下到抖音搜索，挖掘用户需求流量新机会！"/><div class="title"><span>2021-08-28</span><h4>从百度一下到抖音搜索，挖掘用户需求流量新机会！</h4></div></a></li>
+ <li class="others"><div class="image"><a href="/a/yx/3530.html" target="_blank" title="2021年Q2媒体广告收入及投放趋势" rel="nofollow"><img data-original="https://www.27sem.com/files/ue/image/20210828/5d96f088a5ae6b5ae515b75c1e86f95b.jpg" alt="2021年Q2媒体广告收入及投放趋势" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yx/3530.html" target="_blank" title="2021年Q2媒体广告收入及投放趋势">2021年Q2媒体广告收入及投放趋势</a></h4><span>2021-08-28</span></div></li>
+<li class="others"><div class="image"><a href="/a/yx/3515.html" target="_blank" title="百度ocpc二阶成本高怎么优化?需掌握3个技巧！" rel="nofollow"><img data-original="/uploads/allimg/c210709/1625Pc340K0-12S7.jpg" alt="百度ocpc二阶成本高怎么优化?需掌握3个技巧！" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yx/3515.html" target="_blank" title="百度ocpc二阶成本高怎么优化?需掌握3个技巧！">百度ocpc二阶成本高怎么优化?需掌握3个技巧！</a></h4><span>2021-08-26</span></div></li>
+<li class="others"><div class="image"><a href="/a/youhua/3513.html" target="_blank" title="WordPress如何让每篇博客文章背景不一样？" rel="nofollow"><img data-original="/uploads/allimg/210826/1-210R61159433Q.jpg" alt="WordPress如何让每篇博客文章背景不一样？" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/youhua/3513.html" target="_blank" title="WordPress如何让每篇博客文章背景不一样？">WordPress如何让每篇博客文章背景不一样？</a></h4><span>2021-08-26</span></div></li>
+<li class="others"><div class="image"><a href="/a/youhua/3465.html" target="_blank" title="mate标签优化之：referrer属性的作用是什么？" rel="nofollow"><img data-original="/uploads/allimg/210816/1-210Q6151K32P.jpg" alt="mate标签优化之：referrer属性的作用是什么？" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/youhua/3465.html" target="_blank" title="mate标签优化之：referrer属性的作用是什么？">mate标签优化之：referrer属性的作用是什么？</a></h4><span>2021-08-16</span></div></li>
+ </ul></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                
+                <a href="/a/ganhuo/">干货分享</a>
+                
+                <a href="/a/qgzt/">文案</a>
+                
+                <a href="/news/">互联网资讯</a>
+                
+                <a href="/gushici/">神回复</a>
+                
+              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <p>Copyright &copy;     备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">京ICP备19036021号-1</a></p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <form class="sidebar-search" method="get" action="/search.php">
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript">jQuery(document).ready(function($) {$(".fancybox").fancybox()});</script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+
+</body>
+</html>

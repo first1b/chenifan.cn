@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>轮播图</title>
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="canonical" href="https://www.chenifan.cn" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+    
+    <link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='carousel-css' href='/skin/css/owl.carousel.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+    <script type='text/javascript' src='/skin/js/jquery.js'></script>
+    <script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+    <script type="text/javascript" src="/skin/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript">var is_mobile_cms = '';</script>
+<script src="https://www.chenifan.cn/api/language/zh-cn/lang.js" type="text/javascript"></script>
+<script src="https://www.chenifan.cn/static/assets/js/cms.js" type="text/javascript"></script>
+</head>
+<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_1582902_u0zm91pv15i.css">
+<style type="text/css">
+    body{
+        margin: 0;
+        padding: 0px;
+    }
+    #carousel{
+        margin: auto; /* 居中 */
+        width: 600px; /* 设置宽度 */
+        position: relative; /* 相对定位 */
+        overflow: hidden; /* 超出隐藏 */
+    }
+    #carousel img{
+        position: absolute; /* 绝对定位 使图片堆叠 */
+        width: 600px; /* 设定大小 按比例缩放 */
+        transition: all .6s; /* 动画 */
+        opacity: 0; /* 隐藏 */
+    }
+    .imgActive{
+        opacity: 1 !important; /* 显示图片 最高优先级 */
+    }
+
+    /* 控制按钮的样式 */
+    #leftArrow,
+    #rightArrow{
+        position: absolute;
+        left: 5px;
+        top: 43%;
+        width: 25px;
+        height: 30px;
+        background-color: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.7;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    #rightArrow{
+        left: auto;
+        right: 5px;
+    }
+    #sliderBtn{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+        justify-content: flex-end;
+        z-index: 1000;
+    }
+    .unitBtn{
+        width: 10px;
+        height: 10px;
+        background-color: #eee;
+        border-radius: 10px;
+        margin: 10px;
+        cursor: pointer;
+    }
+    .btnActive{
+        background-color: #4C98F7;
+    }
+</style>
+<body class="home blog off-canvas-nav-left">
+    <!-- 轮播图容器 -->
+    <div class="row">
+                    <div id="slideBox" class="slideBox">
+                        <div class="hd">
+                            <ul>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                            </ul>
+                        </div>
+                        <div class="bd" id="carousel">
+                            <ul>                                     <li>
+                                        <a href="https://www.chenifan.cn/gushici/3811.html" target="_blank" title="能够结伴而行的，通常都是要去同一个地方的人">
+                                         <div class="img" style="background-image:url( https://www.chenifan.cn/uploadfile/thumb/c81e728d9d4c2f636f067f89cc14862c/200x200_auto.jpg)"></div>
+                                        <div class="banner_title">
+                                            <h3>能够结伴而行的，通常都是要去同一个地方的人</h3></div>
+                                             </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.chenifan.cn/hwfx/3468.html" target="_blank" title="我悄悄把你设置成了置顶，想让你知道，但又不想让你知道">
+                                         <div class="img" style="background-image:url( https://www.chenifan.cn/uploadfile/thumb/c4ca4238a0b923820dcc509a6f75849b/200x200_auto.jpg)"></div>
+                                        <div class="banner_title">
+                                            <h3>我悄悄把你设置成了置顶，想让你知道，但又不想让你知道</h3></div>
+                                             </a>
+                                    </li>
+                                 
+                            </ul>
+                        </div>
+                    </div>
+    <div id="carousel">
+        <img src="http://www.sdust.edu.cn/__local/9/7A/B1/F29B84DEF72DD329997E8172ABA_664BA3EF_32466.jpg">
+        <img src="http://www.sdust.edu.cn/__local/B/F3/E4/693AB931C9FFB84646970D53BFE_C506394A_4282CA.jpg">
+        <img src="http://www.sdust.edu.cn/__local/F/7A/AA/E1459849AA8AB0C89854A41BD41_BF3BD857_BC0D8.jpg">
+        <img src="http://www.sdust.edu.cn/__local/1/95/CB/EDC1450B8FD1B8A25FAAC726AA4_A36D4253_16C91.jpg">
+        <!-- 按钮组 -->
+        <div id="leftArrow" class="iconfont icon-arrow-lift"></div> <!-- 左箭头切换按钮 -->        
+        <div id="rightArrow" class="iconfont icon-arrow-right"></div> <!-- 右箭头切换按钮 --> 
+        <div id="sliderBtn"></div> <!-- 切换按钮组 -->
+    </div>
+</body>
+    <script type="text/javascript">
+        var imgArr = []; // 图片数组
+        var curIndex = 0; // 当前显示图片
+        var timer = null; // 定时器
+        var btnList = []; // 右下角切换按钮组
+        
+        function slide(targetIndex = curIndex + 1){
+            curIndex = targetIndex % imgArr.length; // 获取当前index
+            imgArr.forEach((v) => v.className = "" ); // 设置其他图片隐藏
+            imgArr[curIndex] .className = "imgActive"; // 设置当前index图片显示
+            btnList.forEach(v => v.className = "unitBtn") // 设置其他按钮为灰色
+            btnList[curIndex] .className = "unitBtn btnActive"; // 设置当前按钮为蓝色
+        }
+
+        function createBtnGroup(carousel,config){
+            document.getElementById("leftArrow").addEventListener('click',(e) => { 
+                clearInterval(timer); // 清除定时器，避免手动切换时干扰
+                slide(curIndex-1); // 允许点击则切换上一张
+                timer = setInterval(() => {slide()},config.interval); // 重设定时器
+            }) 
+            document.getElementById("rightArrow").addEventListener('click',(e) => {
+                clearInterval(timer); // 清除定时器，避免手动切换时干扰
+                slide(curIndex+1); // 允许点击则切换下一张
+                timer = setInterval(() => {slide()},config.interval); // 重设定时器
+            }) 
+            var sliderBtn = document.getElementById("sliderBtn"); // 获取按钮容器的引用
+            imgArr.forEach((v,i) => {
+                let btn = document.createElement("div"); // 制作按钮
+                btn.className = i === 0 ?  "unitBtn btnActive" : "unitBtn"; // 初设蓝色与灰色按钮样式
+                btn.addEventListener('click',(e) => {
+                    clearInterval(timer); // 清除定时器，避免手动切换时干扰
+                    slide(i); // // 允许点击则切换
+                    timer = setInterval(() => {slide()},config.interval); // 重设定时器
+                }) 
+                btnList.push(btn); // 添加按钮到按钮组
+                sliderBtn.appendChild(btn); // 追加按钮到按钮容器
+            })
+        }
+
+        function eventDispose(carousel,config){
+            document.addEventListener('visibilitychange',function(){ // 浏览器切换页面会导致动画出现问题，监听页面切换
+                if(document.visibilityState=='hidden') clearInterval(timer); // 页面隐藏清除定时器
+                else timer = setInterval(() => {slide()},config.interval); // 重设定时器
+            });
+            carousel.addEventListener('mouseover',function(){ // 鼠标移动到容器则不切换动画，停止计时器
+                clearInterval(timer); // 页面隐藏清除定时器
+            });
+            carousel.addEventListener('mouseleave',function(){ // 鼠标移出容器则开始动画
+                timer = setInterval(() => {slide()},config.interval); // 重设定时器
+            });
+        }
+
+
+        (function start() {
+            var config = {
+                height: "300px", // 配置高度
+                interval: 5000 // 配置轮播时间间隔
+            }
+            var carousel = document.getElementById("carousel"); //获取容器对象的引用
+            carousel.style.height = config.height; // 将轮播容器高度设定
+            document.querySelectorAll("#carousel img").forEach((v,i) => {
+                imgArr.push(v); // 获取所有图片组成数组
+                v.className = i === 0 ?  "imgActive" : "";
+            }); 
+            eventDispose(carousel,config); // 对一些浏览器事件处理
+            createBtnGroup(carousel,config); // 按钮组的处理
+            timer = setInterval(() => {slide()},config.interval); // 设置定时器定时切换
+        })();
+    </script>
+</html>

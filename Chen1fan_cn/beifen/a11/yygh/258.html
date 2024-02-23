@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>针对用户流失，如何做好预警和召回机制 - 运营 - 澈逆凡博客</title>
+<meta name="description" content="在介绍具体方法前，首先我们来看看什么是用户流失？流失用户一般指的是一段时间内未访问或登录过网站 /APP 的用户，一般流失用户都是对于那些需要注册、提供应用服务的网站而言的，比如微博、邮箱、电子商务类网站…"/>
+<meta name="keywords" content="召回, 用户流失, 预警,用户运营"/>
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script type="text/javascript" charset="utf-8">$(function(){$("img.lazy").lazyload({effect: "fadeIn"});});</script>
+<script>
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('2 5=5||[];(b(){2 1=4.c("6");1.9="8://1.7.g/1.h?f";2 3=4.d("6")[0];3.e.a(1,3)})();',18,18,'|hm|var|s|document|_0|script|baidu|https|src|insertBefore|function|createElement|getElementsByTagName|parentNode|ae86b9f95e6431d72b52a53c0ca66253|com|js'.split('|'),0,{}))
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h1 class="logo">
+            <a href="/" title="澈逆凡博客" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h1>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="/a/ganhuo/">干货分享</a>
+                        <ul class="sub-menu">
+                            
+                            <li><a href="/a/yygh/">运营</a></li>
+                            
+                            <li><a href="/a/jishu/">IT技术</a></li>
+                            
+                            <li><a href="/a/yx/">网络营销</a></li>
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/a/qgzt/">文案</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/news/">互联网资讯</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/gushici/">神回复</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                        <li class="first">
+                            <span class="time">20-06-05</span>
+                            <a target="_blank" href="/hd/14.html" title="网站公告：澈逆凡博客上线了！">网站公告：澈逆凡博客上线了！</a>
+                        </li>
+
+                    </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>
+    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+                                
+                                <a target="_blank" href='/tags.php?/102/'>用户运营</a>
+                                
+                                <a target="_blank" href='/tags.php?/99/'>召回</a>
+                                
+                                <a target="_blank" href='/tags.php?/100/'>用户流失</a>
+                                
+                                <a target="_blank" href='/tags.php?/101/'>预警</a>
+                                
+                                <a target="_blank" href='/tags.php?/98/'>用户</a>
+                                
+                            </div>
+                            <h1 class="title">针对用户流失，如何做好预警和召回机制</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i></span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="/a/yygh/">运营</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2020-07-13 13:24</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><script src="/plus/count.php?view=yes&aid=258&mid=1" type='text/javascript' language="javascript"></script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <tbody><tr>
+                            <td>
+                                                                <span class="span-img"><img src="/uploads/allimg/c200713/159461M0HO60-12555.jpg" alt="针对用户流失，如何做好预警和召回机制"></span>
+                                                                
+
+                                	<p>在介绍具体方法前，首先我们来看看什么是用户流失？</p>
+<p>流失用户一般指的是一段时间内未访问或登录过网站 /APP 的用户，一般流失用户都是对于那些需要注册、提供应用服务的网站而言的，比如微博、邮箱、电子商务类网站等。</p>
+<p>不同网站对于流失的定义可能各不相同，对于微博和邮箱这类用户几乎每天登录查看的网站而言，可能用户未登录超过 1 个月，我们就可以认为用户可能已经流失了。而对于电子商务而言，可能 3 个月未登录或者半年内没有任何购买行为的用户可以被认定是流失用户。</p>
+<p>下面的分析主要是基于网站的注册用户的，因为这类用户更容易识别，而且分析这类用户的流失情况对网站而言可能更有意义。</p>
+<p>本文将从用户流失原因，如何判断用户流失，以及在用户流失前如何建立预警机制，流失后如何召回展开论述。</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><b>01</b></span></p>
+<p style="text-align: center;"><span style="color: #ff0000;"><b>用户流失的原因</b></span></p>
+<p>针对用户流失主要有以下 4 类原因：</p>
+<p><b>1. 自然流失</b></p>
+<p>每个产品都有其生命周期、有其盛衰，自然流失必不可少，而这件事对开发者而言其实有两点意义：</p>
+<p>第一，我们必须审视我们的产品与竞品之间，在流失率的基础上有没有显著差异。若差异显著，我们该如何延长产品吸引力？如何延长产品生命周期？延长多少才能让每位用户的终身价值能够大于其获取成本。</p>
+<p>第二，标杆作用。在深入研究流失原因前，必须辨别流失纯粹出于产品生命周期自然结束、还是有其它的因素？若判定为非常态现象，必须深入进行比对与分析。</p>
+<p><b>2. 初次体验不佳导致的流失</b></p>
+<p>显而易见，初次体验不佳可能导致的就是用户不想再用你的产品，糟糕的用户体验带来糟糕的效果。</p>
+<p>数据分析公司 Preact 的一项调查报告中显示，初次体验不佳是导致用户流失最主要的原因，占总体的 22.9%。其次才是产品性能不佳、沟通不善等。</p>
+<p>若要了解初次体验不佳背后成因为何，不妨问问自己以下三个问题：</p>
+<p>新用户引导环节是否设计地简单易懂 ?</p>
+<p>登陆页设计 ( Landing Page ) 是否能让用户快速找到并完成想完成的任务 ?</p>
+<p>若要进行会员登入 / 注册，流程是否简单方便 ?</p>
+<p><b>3. 易用性障碍导致的流失</b></p>
+<p>易用性障碍其实就是产品给人带来不好用的感觉，所谓障碍，指的就是使用户无法便捷使用的错误因素，易用性障碍可分为三大层面：技术、交互与服务，以下将逐一解释：</p>
+<p><strong>技术层面：</strong></p>
+<p>较直观，以宕机与访问速度过慢两个问题为主。</p>
+<p><strong>交互设计层面：</strong></p>
+<p>常见问题有广告太多、功能键或返回键设计不明显 ( 导致用户没发现关键功能 ) 、要求用户手动输入太多资料、图片吸引力不足等，但详细原因仍须通过深入地用户研究找出。</p>
+<p><strong>服务相关层面：</strong></p>
+<p>除了产品本身的易用性障碍外，有一部分流失是顾客关系经营不善所导致的，其一原因是没有定期地与用户互动 ( 如推送更新通知、定期举办活动等 ) ，其二是当用户产生疑问时，服务方未能提供最即时、最完善的客户服务，而这两点往往是纯开发团队会很困扰的问题。</p>
+<p><b>4. 竞品拉力导致的流失</b></p>
+<p>其他竞品太强也会导致问题的发生，除了自身产品或服务体系出了问题外，若仍看到流失率长期不见好转，可能是因为竞品吸引力太强，导致有需求的用户进行移转——这点特别在工具型的 App 常见到，因为通常用户只会使用一种工具产品来提高生活效率。</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><b>02</b></span></p>
+<p style="text-align: center;"><span style="color: #ff0000;"><b>如何判断用户流失</b></span></p>
+<p>在知道用户流失原因后，我们该如何判断我们平台的用户是否流失呢？</p>
+<p>我们可认为新用户注册后就完成首次登陆，那么简单地定义新用户流失，就是用户在注册后一段时间内都没有登录过网站，即：</p>
+<p><strong>当前时间点 – 用户注册时间点 &gt; 流失临界时间间隔</strong></p>
+<p>比如我们定义用户的流失临界时间间隔为 1 个月，也就是在注册后的一个月内未登录的用户意味着已经流失，那么就可以计算每天的新用户流失数。即注册时间为 1 个月前的那一天，而从注册到当前没有登录过的用户数。</p>
+<p>这个用户数与 1 个月前的那一天的总注册用户数的比例就是新用户的流失率：</p>
+<p>当天的新用户流失数 / 当天的总注册用户数 = 新用户流失率</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><b>03</b></span></p>
+<p style="text-align: center;"><span style="color: #ff0000;"><b>如何建立预警机制</b></span></p>
+<p>在用户流失之前，我们该怎么样做好我们的预警机制呢？主要有以下四个步骤：</p>
+<p>四大步骤剖析：</p>
+<p>&nbsp;</p>
+<img class="aligncenter size-full wp-image-107083" alt="1022 针对用户流失，如何做好预警和召回机制" src="/uploads/allimg/c200713/159461M0IU60-2W64.jpg" width="565" height="126" title="针对用户流失，如何做好预警和召回机制" /><b><strong>1. 定义流失用户</strong></b>
+<p>首先我们要明确流失的定义，使得分析的目标更符合业务理解及分析要求。</p>
+<p>明确怎么样的用户为流失用户，划分依据是什么？</p>
+<p>比方说，在银行的 VIP 客群划分中，上月 AUM（月日均或月末时点）大于 20 万元，当月的 AUM（月日均或月末时点）下降 20% 以上即可算作是流失的 VIP 用户。在产品中，我们可以依据如下的用户标签体系，从多维度刻画流失用户，例如：</p>
+<p><strong>用户画像信息：</strong>ID、性别、年龄、地域、会员类型、用户来源</p>
+<p><strong>用户行为数据：</strong>登录天数、在线时长、登录频次、注册天数</p>
+<p><strong>用户消费数据：</strong>近一单距今天数、累计单量、累计消费金额、客单价</p>
+<p>尽可能多的分析用户产品使用行为及内容偏好，挖掘用户使用习惯及兴趣点，针对不同类型的用户分别搭建流失预警模型。</p>
+<p><b>2. 分析用户行为特征</b></p>
+<p>在定义好流失用户后，我们可以通过数据分析用户的产品使用行为，锁定一批用户，观察其在后续业务使用方面的持续沉默天数，滚动考察用户持续沉默环比，着手构建建模分析样本，洞察所有流失用户的数据寻找一些共性行为特征。</p>
+<p>比如，你发现 3 成用户可能都是注册过后基本就再也没有访问过了，发现 2 成左右的用户大约在第一次使用过后半年前后的时间内出现流失，以及发现又有 15% 左右的用户都是在使用过某功能后就再也没有访问过你的产品了，则 &#8221; 注册过后 &#8220;、&#8221; 注册后半年前后 &#8221; 以及 &#8221; 使用某个功能过后 &#8221; 都是流失高发节点。</p>
+<p>这里罗列了流失分析可能需要考虑的三个维度：动因、程度和去向。不同业务场景下流失分析可能需要综合考虑多个维度，以制定最为合理的分析目标。</p>
+<p><strong>1）流失的直接原因</strong></p>
+<p><strong>客户主动流失（VOLUNTARY CHURN）</strong></p>
+<p>客户主动销户或者改变当前的服务模式；</p>
+<p><strong>客户被动流失（INVOLUNTARY CHURN）</strong></p>
+<p>客户因为违规或欺诈等行为被停止服务及强行关闭帐户等行为。</p>
+<p><strong>2）流失程度</strong></p>
+<p>完全流失——客户发生关闭所有与企业服务相关帐户和交易等不可恢复或者很难恢复的行为；</p>
+<p>部分流失（PARTIAL CHURN）——客户并未关闭帐户但是交易水平突减到一定水平之下，例如在产品使用场景下用户使用频率突降了 50% 等等。</p>
+<p><strong>3）流失去向</strong></p>
+<p><strong>外部</strong>：客户关闭或减少了在当前机构的业务而转向了其它竞争对手；</p>
+<p><strong>内部</strong>：客户关闭或减少了在当前机构的部分业务而转向了当前机构的其它业务。</p>
+<p>梳理流失行为高发节点流失客户特征分析：通过决策数算法，分析流失客户特征，然后通过这些特征得到当前在网客户中匹配流失概率高的客户数据。</p>
+<p><b>3. 分析用户流失原因</b></p>
+<p>结合用户访谈、调查问卷、用户行为数据分析等各种手段定义出用户流失的原因。比如，注册后即流失很可能是因为用户没有看懂产品是干什么的，也没有很好的引导，不知道怎么使用。</p>
+<p><b>4. 制定节流策略</b></p>
+<p>定义出一系列手段用于降低流失的可能性，包括但不限于特殊福利折扣，优化流程、引导文案，设置用户流失预警机制等等。</p>
+<p>定义节流策略通过客户流失分析获得流失客户数据和潜在流失客户数据，从而将这些数据分配给客户服务部门，整合销售服务资源，根据客户的需求，设计个性化的营销策略，快速反应，以此达到召回流失客户，挽留流失概率高的客户，实现对客户的守护。</p>
+<p>常见的策略有：</p>
+<p><strong>细分策略</strong>：通过建立细分模型将具有流失倾向用户分成若干群组，分析得出流失可能性较高群组特征，并制定针对性的营销措施进行挽留。</p>
+<p><strong>评分策略</strong>：将频道高价值客户单独分群，对高价值客户的流失可能性进行建模评分，频道对流失得分较高的高价值用户给予格外关注，设计合适的挽留活动进行挽留。</p>
+<p>细分策略是全量用户的分群运营，需要频道针对每个群组设计针对性的营销活动，这种策略指导下如果频道预算充足又有足够的精力来做可以采用。</p>
+<p>评分策略只针对部分高价值用户进行预测评分，对评分较高的高价值用户采取挽留营销措施，相对来说可以用低的营销成本达到出类拔萃的营销效果。</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><b>04</b></span></p>
+<p style="text-align: center;"><span style="color: #ff0000;"><b>如何对流失用户进行召回</b></span></p>
+<p>传统召回方式当然，有时候预警机制并不完善，我们的用户还是有可能从我们平台流失，这个时候就需要我们对流失用户进行召回。</p>
+<p>首先我们来看看召回的方式，用户回归路径的起点是召回消息的发放，即召回方式的选择。</p>
+<p>以拼多多为例，这是疫情期间本人收到的一个召回短信，召回文案简洁，重点突出福利优惠，希望凭借福利唤醒用户的消费，开始剁手。短信召回是当前市场上最通用的召回方式，但除此之外，还有很多选择。</p>
+<p>一般来说业界使用召回用户的手段还是比较单一的，当前常用的用户召回方式有 8 种，那现在来对比一下这几种方式的优劣：</p>
+<p><strong>短信：</strong>可批量发放，到达率高，成本也高；但易被当成垃圾短信，并引发投诉；适用于普通用户。</p>
+<p><strong>邮件：</strong>低成本，可大量发送，但点击率低；用于普通用户。</p>
+<p><strong>push：</strong>效果较好，但取决于用户安装中是否选择允许推送；</p>
+<p><strong>微信通知：</strong>即微信服务号的用户通知模板，效果取决于用户是否关注相关微信号；</p>
+<p><strong>电话回访：</strong>成本高，无法批量操作，容易影响客户好感度，主要适用于 VIP 用户。</p>
+<p><strong>礼物召回：</strong>包括赠送纪念品、周边、伴手礼等，适用于种子用户。</p>
+<p><strong>福利召回：</strong>含优惠券，现金红包、体验金等福利。</p>
+<p><strong>活动召回：</strong>取决于用户需求和活动类型及宣传渠道。</p>
+<p>实战应用中，这 8 种召回方式都有各自的优缺点和适用场景。运营需要结合产品业务类型、现有资源情况、以及流失用户特征等因素来分析，选择与用户属性最匹配的召回方式。</p>
+<p>此外，如果不知选择哪种召回方式，可以在小范围内测试一下不同召回方式，迅速验证效果确定最佳方式后再大规模展开行动。</p>
+<p>策略召回方式六大方案要考虑策略式召回和推送能够更精准和有效的促发用户的消费行为，策略式召回大概需要思考 6 个方面的问题，这些问题也是人性惯性思维的底层逻辑，大致总结了如下：</p>
+<p>思考用户加入平台的动机（购物，撩妹，写笔记）；</p>
+<p>APP 里面是否可以获得用户的好友，关系链；</p>
+<p>APP 里面是否有用户消费，领福利这样的动机；</p>
+<p>能否获取一些关于用户的重要信息；</p>
+<p>用户的核心需求，核心痛点的刺激信息；</p>
+<p>产品内是否形成大量用户围观讨论的内容。</p>
+<p>针对于以上 6 个方面，进行一下解刨：</p>
+<p><strong>第一个方面：</strong></p>
+<p>思考下平台主营业务，比如：探探，给您的第一映射，可能是撩妹。如果这个 APP 给你推送撩妹，妹子关注你的信息，匹配成功的信息，我想你打开的几率非常大，你打开了，他的召回也就成功了。</p>
+<p><strong>第二个方面：</strong></p>
+<p>假设平台可以获取好友的关系链，是否可以推送与用户和好友相关的密切状态。</p>
+<p>比如：你的好友智远在 QQ 空间发表了一篇说说提到了你，点击戳～</p>
+<p>这种的都可以作为机制式的唤醒，制作成固定模板，定期获取权限推送即可。</p>
+<p><strong>第三个方面：</strong></p>
+<p>可以思考下，平台里面是不是有不定期的领福利，一元购这样的活动，限时秒杀。</p>
+<p>如果有，是否就可以推送这样的语句：你的好友智远邀请你一起拼购加湿器，价格低至 xxx 元，你确定不来和他拼一下吗？这种的可以人肉推，也可以机制式推送。</p>
+<p><strong>第四个方面：</strong></p>
+<p>也可以设置为机制化推送，比如现在较多的平台，都可以通过数据分析的形式，获取用户的生日，重要节日，纪念日，那么只要用户到自己的纪念日，是否可以推送一些准备好的 &#8221; 内容 &#8220;。</p>
+<p>比如招商银行通常在生日的时间会推送：智远先生，x 月 x 号是您的生日，招行 xx 积分送给您，专属礼品抽奖请戳～</p>
+<p><strong>第五个方面：</strong></p>
+<p>找到用户的核心需求，我举一个简单的例子。</p>
+<p>比如探探，他每次推送的信息基本都是：哟，探探又有妹子在喜欢你，距离您 2.7KM，赶紧戳～</p>
+<p>要么是：老王，隔壁有个妹子 2 小时之前给您点了心动，赶紧戳开了解～</p>
+<p>这些其实都是掌握人心理，运用人性，去做内容，短信的唤醒和召回动作。</p>
+<p><strong>第六个方面：</strong></p>
+<p>社会出现了大量用户讨论的内容，比如微博的热搜，微信中的搜一搜，新氧 APP 的热门，电商 APP 发现里面的社区话题等，当社会主流有一定的社会话题，或者站外有一定的爆品时候，就可以采用这样的策略。</p>
+<p>借助热点话题去做推送，比如：电商类：你关注的抖音同款垃圾袋，限时只要 9.9 元就能秒杀～快来抢，还有 1000 件～</p>
+<p>通过用 6 个方面的问题，去做对应化的定制（物料，内容），去做 APP 的 PUSH ，短信的 PUSH，小程序和公众号的 PUSH。</p>
+<p>假设平台用户能够做精细化的数据分析，以上的这些推送（召回，激活）动作，都可以设计为机制化，不用 人肉推送 &#8221; 就可以 &#8221; 定向推送 &#8220;，按照男女，兴趣爱好等～</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><b>05</b></span></p>
+<p style="text-align: center;"><span style="color: #ff0000;"><b>结语</b></span></p>
+<p>通过对流失用户的阐述，风险预警机制的建立过程和企业现在对流失用户的召回方法的介绍，大家应该有了一个全面的认识。</p>
+<p>但是实践出真知，最重要的还是建立客户对我们的产品的信任。</p>
+<p>作者：行僧</p>
+<p>微信公众号：习惯打造核心竞争力</p>
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+<p style="color:#C0C0C0">免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！ </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href='/a/yygh/257.html' class='prev has-background'><span>上一篇：</span><h4>如何高效提升转化率？这是我看过最透彻的分析</h4></a> </div>
+                        <div class="next-post"><a href='/a/yygh/259.html' class='nextv has-background'><span>下一篇：</span><h4>案例拆解：得到转介绍体系</h4></a> </div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                            
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="sidebar col-xs-12 col-sm-4 col-md-4"><div class="widget widget_suxingme_postlist"><h3><span>随便看看</span></h3><ul class="recent-posts-widget"> <li class="one"><a href="/dianshang/197.html" target="_blank" title="淘宝电商运营申请规蜜审核技巧"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/c200617/15923Y2963bZ-210a.jpg" alt="淘宝电商运营申请规蜜审核技巧"/><div class="title"><span>2020-06-17</span><h4>淘宝电商运营申请规蜜审核技巧</h4></div></a></li>
+ <li class="others"><div class="image"><a href="/dianshang/2650.html" target="_blank" title="站内关键词怎么优化"><img data-original="https://www.ruzw.com/uploads/allimg/201910/15714790857183.jpg" alt="站内关键词怎么优化" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/dianshang/2650.html" title="站内关键词怎么优化">站内关键词怎么优化</a></h4><span>2019-10-19</span></div></li>
+<li class="others"><div class="image"><a href="/a/yygh/3502.html" target="_blank" title="用户分群模型，这么建才有用_用户运营"><img data-original="/uploads/allimg/c210823/1629D41Bc120-212O9.jpg" alt="用户分群模型，这么建才有用_用户运营" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/a/yygh/3502.html" title="用户分群模型，这么建才有用_用户运营">用户分群模型，这么建才有用_用户运营</a></h4><span>2021-08-23</span></div></li>
+<li class="others"><div class="image"><a href="/a/yygh/1813.html" target="_blank" title="这些台词文案，值得三刷！"><img data-original="https://qnssl.niaogebiji.com/13037489655edf50c59349f4.65951181.png" alt="这些台词文案，值得三刷！" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/a/yygh/1813.html" title="这些台词文案，值得三刷！">这些台词文案，值得三刷！</a></h4><span>2020-06-09</span></div></li>
+ </ul></div><div class="widget widget_suxingme_hotpost"><h3><span>热门文章</span></h3><ul class="widget_suxingme_post"> <li><a href="/gzhyy/2173.html" target="_blank" title="微信公众号条漫图文怎么制作？"><div class="overlay"></div><img class="thumbnail lazy" data-original="https://static.getgetai.com/img/115bb7bb065b44d1bb8150ffc3303281/20201211165415545.png" alt="微信公众号条漫图文怎么制作？"/><div class="title"><div class="entry-meta"><span>2020-12-11</span></div><h4>微信公众号条漫图文怎么制作？</h4></div></a></li>
+<li><a href="/a/yygh/360.html" target="_blank" title="案例拆解：学而思9元领秋季语文特训班"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/c200908/15c544NV13Z-1L62.jpg" alt="案例拆解：学而思9元领秋季语文特训班"/><div class="title"><div class="entry-meta"><span>2020-09-08</span></div><h4>案例拆解：学而思9元领秋季语文特训班</h4></div></a></li>
+<li><a href="/dianshang/34.html" target="_blank" title="京东多种店铺类型分别怎么运营？"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/200609/0012001106-0.jpg" alt="京东多种店铺类型分别怎么运营？"/><div class="title"><div class="entry-meta"><span>2020-06-09</span></div><h4>京东多种店铺类型分别怎么运营？</h4></div></a></li>
+ </ul></div><div class="widget suxingme_tag"><h3><span>热门标签</span></h3><div class="widge_tags"><div class="tag-items">  <a href="/tags.php?/31/">运营</a>  <a href="/tags.php?/54/">京东</a>  <a href="/tags.php?/57/">电商</a>  <a href="/tags.php?/30/">织梦二次开发</a>  <a href="/tags.php?/189/">918</a>  <a href="/tags.php?/42/">社群运营</a>  <a href="/tags.php?/50/">摆摊</a>  <a href="/tags.php?/25/">情感</a>  <a href="/tags.php?/33/">摆地摊</a>  <a href="/tags.php?/2/">聪明</a>  <a href="/tags.php?/20/">景点推荐</a>  <a href="/tags.php?/29/">网站公告</a>  <a href="/tags.php?/35/">技巧</a>  <a href="/tags.php?/39/">产品经理</a>  <a href="/tags.php?/40/">能力提升</a>  <a href="/tags.php?/41/">新媒体运营</a>  <a href="/tags.php?/3/">乌鸦</a>  <a href="/tags.php?/15/">水果</a>  <a href="/tags.php?/16/">吃货</a>  <a href="/tags.php?/21/">海滩</a>  <a href="/tags.php?/22/">游泳</a>  <a href="/tags.php?/23/">美景</a>  <a href="/tags.php?/27/">手表</a>  <a href="/tags.php?/28/">时尚潮物</a>  <a href="/tags.php?/37/">B端产品</a>  <a href="/tags.php?/38/">产品运营</a>  <a href="/tags.php?/48/">时间</a>  <a href="/tags.php?/8/">充电</a>  <a href="/tags.php?/9/">照明</a>  <a href="/tags.php?/12/">云南</a>  </div></div></div><div class="widget suxingme_social"><h3><span>关注我们 么么哒！</span></h3><div class="attentionus"><ul class="items clearfix"><span class="social-widget-link social-link-qq"><span class="social-widget-link-count"><i class="fa fa-weixin"></i>十一记实录</span><span class="social-widget-link-title">公众号</span><a id="tooltip-s-weixin" href="javascript:void(0);"></a></span><span class="social-widget-link social-link-email"><span class="social-widget-link-count"><i class="fa fa-envelope"></i>1812215600@qq.com</span><span class="social-widget-link-title">邮箱</span><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" target="_blank" rel="nofollow"></a></span><span class="social-widget-link social-link-wechat"><span class="social-widget-link-count"> 运营贩</span><span class="social-widget-link-title">百家号</span><a id="tooltip-s-weixin" href="javascript:void(0);"></a></span></ul></div></div><div class="widget widget_suxingme_postlist"><h3><span>最新内容</span></h3><ul class="recent-posts-widget"> <li class="one"><a href="/a/yygh/3621.html" target="_blank" title="引起6000w人围观的#疼痛穿搭 究竟是什么?"><div class="overlay"></div><img class="thumbnail lazy" data-original="/images/defaultpic.gif" alt="引起6000w人围观的#疼痛穿搭 究竟是什么?"/><div class="title"><span>2021-09-01</span><h4>引起6000w人围观的#疼痛穿搭 究竟是什么?</h4></div></a></li>
+ <li class="others"><div class="image"><a href="/a/yygh/3539.html" target="_blank" title="怎样的营销方案能落地？" rel="nofollow"><img data-original="/uploads/allimg/c210830/163031461PE20-13118.jpg" alt="怎样的营销方案能落地？" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yygh/3539.html" target="_blank" title="怎样的营销方案能落地？">怎样的营销方案能落地？</a></h4><span>2021-08-30</span></div></li>
+<li class="others"><div class="image"><a href="/a/yygh/3540.html" target="_blank" title="B2B企业打造品牌的三种路径" rel="nofollow"><img data-original="/uploads/allimg/c210830/1630314621522F-2VF.jpg" alt="B2B企业打造品牌的三种路径" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yygh/3540.html" target="_blank" title="B2B企业打造品牌的三种路径">B2B企业打造品牌的三种路径</a></h4><span>2021-08-30</span></div></li>
+<li class="others"><div class="image"><a href="/a/yygh/3541.html" target="_blank" title="万字总结：从0到1，SOP构建和策略设计" rel="nofollow"><img data-original="/uploads/allimg/c210830/1630314632Z3P-203I5.jpg" alt="万字总结：从0到1，SOP构建和策略设计" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yygh/3541.html" target="_blank" title="万字总结：从0到1，SOP构建和策略设计">万字总结：从0到1，SOP构建和策略设计</a></h4><span>2021-08-30</span></div></li>
+<li class="others"><div class="image"><a href="/a/yygh/3542.html" target="_blank" title="一套完整的获客方案sop，必看！" rel="nofollow"><img data-original="/uploads/allimg/c210830/1630314640E240-3294I.jpg" alt="一套完整的获客方案sop，必看！" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yygh/3542.html" target="_blank" title="一套完整的获客方案sop，必看！">一套完整的获客方案sop，必看！</a></h4><span>2021-08-30</span></div></li>
+ </ul></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                
+                <a href="/a/ganhuo/">干货分享</a>
+                
+                <a href="/a/qgzt/">文案</a>
+                
+                <a href="/news/">互联网资讯</a>
+                
+                <a href="/gushici/">神回复</a>
+                
+              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <p>Copyright &copy;     备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">京ICP备19036021号-1</a></p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <form class="sidebar-search" method="get" action="/search.php">
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript">jQuery(document).ready(function($) {$(".fancybox").fancybox()});</script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+
+</body>
+</html>

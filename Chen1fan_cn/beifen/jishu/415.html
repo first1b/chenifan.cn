@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>如何学习嵌入式硬件？</title>
+<meta content="嵌入式硬件,嵌入式" name="keywords" />
+<meta content="如何学习嵌入式硬件？学习嵌入式硬件需要有一定的硬件基础，熟练使用一种原理图PCB绘制，软件熟练掌握各种元器件的原理及电气特性，并依据此综合特性、成本、供应等各个方面进行器件选" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h1 class="logo">
+            <a href="/" title="{dede:global.cfg_webname/}" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h1>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/ganhuo">干货分享</a>
+                                                <ul>                             <li><a href="http://blog.chenifan.cn/jishu">IT技术</a></li>
+                                                        <li><a href="http://blog.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="http://blog.chenifan.cn/yx">网络营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/qgzt">文案</a>
+                                                <ul>                             <li><a href="http://blog.chenifan.cn/life">极致生活</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/index.php?c=category&id=13">互联网资讯</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/gushici">神回复</a>
+                                            </li>
+                                    </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="http://blog.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+                                嵌入式硬件,嵌入式                            </div>
+                            <h1 class="title">如何学习嵌入式硬件？</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>小澈</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="{dede:field.typeurl /}">IT技术</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2020-09-14</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_415">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=415", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_415").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script> </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <p>
+	<span style="font-family: 微软雅黑; line-height: 2;">　　如何学习嵌入式硬件？学习嵌入式硬件需要有一定的硬件基础，熟练使用一种原理图PCB绘制，软件熟练掌握各种元器件的原理及电气特性，并依据此综合特性、成本、供应等各个方面进行器件选型等。硬件学习的范围很大，你需要学习的知识有很多，需要了解的面也有很多。</span></p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-family: 微软雅黑; line-height: 2;"><img alt="学习嵌入式硬件" src="https://file.boxuegu.com/f730c63023514f07ae95caaa49b86fd2.png" style="display: block; margin-left: auto; margin-right: auto; width: 500px; height: 288px;" /></span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　大体可以分为两部分：硬件和软件。</span></p>
+<p>
+	<br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　1、硬件基础</span></p>
+<p>
+	<br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　学习嵌入式硬件，首先你需要有一定的硬件基础。基本的电磁物理定律，电路，数电，模电等需要了解。</span></p>
+<p>
+	<br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　学会使用一种单片机，不论是8位、16位或者是32位，学习单片机接口的应用，向UART、IIC、SPI、USB、CAN、RS232、RS485等。</span></p>
+<p>
+	<br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　应当熟练使用一种原理图PCB绘制软件，目前常用的软件有Altium Designer、PADS、OrCAD/Allegro，只要掌握其中的一种即可。</span></p>
+<p>
+	<br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　熟练掌握各种元器件的原理及电气特性，并依据此综合特性、成本、供应等各个方面进行器件选型。</span></p>
+<p>
+	<br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　最好有一定的英语基础，会看各种芯片的数据手册（datasheet），会使用翻译软件看懂也是可以的。</span></p>
+<p>
+	<br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　还要有良好的动手能力，熟练使用各种调试仪器如万用表、示波器、逻辑分析仪等，还要会使用EMC测试仪器如雷击浪涌发生器、脉冲群发生器、静电枪等。一个硬件产品，各种电磁兼容实验是要过的。</span></p>
+<p>
+	<br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　还需要知道一些标准，这个就要要看你从事什么行业了，一般是看国际标准/国家标准，行业标准标，企业标准等。</span></p>
+<p>
+	<br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　2、软件基础</span></p>
+<p>
+	<br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　软件的要求稍微简单了就。一般嵌入式硬件所使用的是C语言，所以需要会用C言调试你的硬件。如果是驱动方面，还要了解各种硬件接口的协议。</span></p>
+<p>
+	<br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　以上就是有关如何学习嵌入式问题的答案，你可以选择自己感兴趣的方向，再深入学习。</span></p>
+<p style="color:#C0C0C0">免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！ </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="http://blog.chenifan.cn/jishu/414.html" class="prev has-background"><span>上一篇：</span><h4>学Linux没出路吗？薪资到底如何？</h4></a></div>
+                        <div class="next-post"><a href="http://blog.chenifan.cn/jishu/416.html" class="nextv has-background"><span>下一篇：</span><h4>嵌入式培训可靠吗？</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/410.html" title="为什么要做网络安全工程师？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/a2492e2b136e4f7cb0170744612c774e.png" alt="为什么要做网络安全工程师？你是否留意过你在互联网上留下的每一处个人信息？你知道你的信息随时都有被暴露的可能性吗？你知道是谁在保护千万互联网网民的隐私信息吗？这类重要工作就">
+                                        <h4><span>为什么要做网络安全工程师？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/421.html" title="计算机网络安全课程学习路线分享">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/47af49f5306b463fb1630fb8f9504a14.png" alt="掌握计算机网络安全课程学习路线学习过程中少走弯路，从事企业网络管理员或计算机网络安全工作的学生需要掌握计算机网络安全相关知识。按照计算机通信分层思想讲解网络安全，物理层面">
+                                        <h4><span>计算机网络安全课程学习路线分享</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/417.html" title="零基础Linux培训课程有哪些内容？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/b29c8d2d385a46c2b15414225bb04dd9.jpg" alt="零基础Linux培训课程有哪些内容？Linux培训主要学习网络基础，计算机网络、云计算网络，配备有企业级项目实战：IP地址配置与DNS解析；Linux基础，包括Linux操作系统及Linux高级管理；云数据中心">
+                                        <h4><span>零基础Linux培训课程有哪些内容？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/419.html" title="分析Linux 进程的方法有哪些？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/ebce94307d6e470b8928846df919e472.png" alt="分析Linux 进程的方法有哪些？ps查看进程id，看进程还在不在以及进程状态，在的话strace、psstack看下进程当前信息，是不是卡死在哪个位置，对比各帧最后调用信息找到异常点，如进程不在有">
+                                        <h4><span>分析Linux 进程的方法有哪些？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/409.html" title="网络运维工程师是做什么的？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/55129a6862dc49249fb1db591495cf3e.png" alt="运维作为互联网公司技术部门的三大支柱之一，其岗位职责和工作内容都是相当重要的。可以说，整个公司的服务器的稳定运行和数据的可靠安全都全靠运维保障。可能有人要问了，网络运维工">
+                                        <h4><span>网络运维工程师是做什么的？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/415.html" title="如何学习嵌入式硬件？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/f730c63023514f07ae95caaa49b86fd2.png" alt="如何学习嵌入式硬件？学习嵌入式硬件需要有一定的硬件基础，熟练使用一种原理图PCB绘制，软件熟练掌握各种元器件的原理及电气特性，并依据此综合特性、成本、供应等各个方面进行器件选">
+                                        <h4><span>如何学习嵌入式硬件？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="http://blog.chenifan.cn/yygh/109.html" target="_blank" title="一文带你全面了解内容运营及其发展趋势"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="http://blog.chenifan.cn/static/assets/images/nopic.gif" alt=" 单说 运营 ，很多小伙伴们可能都一头雾水，标题太大。它分为 内容运营 、产品运营、用户运营、活动运营、社区运营、数据运营、电商运营等等。我们今天说的是内容运营，随着互联网的不断发展， 网站运营 工作也随之不断的细分。这是一个内容为王的年代，这是我一贯的观点。谁能做出符合用户需求的优质内容，谁就能长久发展。 内容运营是一种运营策略，基于产品的内" />
+       <div class="title ">
+        <span>2020-06-12</span>
+        <h4>一文带你全面了解内容运营及其发展趋势</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]"><img data-original=" https://nimg.ws.126.net/?url=http%3A%2F%2Fcms-bucket.ws.126.net%2F2020%2F1228%2F360aec0cj00qm0xsw0049c0019000u0c.jpg&thumbnail=660x2147483647&quality=80&type=jpg" alt=" [field: fulltitle / ]" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" [field: arcurl / ]" title=" [field: fulltitle / ]">遥感三十三号卫星成功发射，2020中国航天完美收官|科学试验|酒泉卫星发射中心|长征系列运载火箭</a></h4>
+       <span>2020-12-28</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]"><img data-original=" https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2020%2F1118%2Fb87d8f17j00qjyya300ejc000s600e3c.jpg&thumbnail=660x2147483647&quality=80&type=jpg" alt=" [field: fulltitle / ]" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" [field: arcurl / ]" title=" [field: fulltitle / ]">预见未来：段树民院士将出席2020网易未来大会|人工智能|浙江大学</a></h4>
+       <span>2020-11-18</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]"><img data-original=" http://blog.chenifan.cn/static/assets/images/nopic.gif" alt=" [field: fulltitle / ]" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" [field: arcurl / ]" title=" [field: fulltitle / ]">“濒临破产”到“月入十万”，达人阿探的增长秘诀</a></h4>
+       <span>2021-09-04</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="http://blog.chenifan.cn/uploadfile/thumb/c4ca4238a0b923820dcc509a6f75849b/200x200_auto.jpg" alt=" [field: fulltitle / ]" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2021-10-20</span>
+        </div>
+        <h4>我悄悄把你设置成了置顶，想让你知道，但又不想让你知道</h4>
+       </div></a></li>  
+     <li><a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="http://blog.chenifan.cn/uploads/allimg/c211009/1633LA532I60-QA3.jpg" alt=" [field: fulltitle / ]" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2021-10-09</span>
+        </div>
+        <h4>一个人怎么运营微信公众号？</h4>
+       </div></a></li>  
+     <li><a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="http://blog.chenifan.cn/uploads/allimg/c211009/1633LA4543R0-12N5.jpg" alt=" [field: fulltitle / ]" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2021-10-09</span>
+        </div>
+        <h4>抖店闭环攻略（抖品牌篇），3个月从0到1000万月销增长案例</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>热门标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="http://blog.chenifan.cn/ganhuo">干货分享</a>
+                 
+                <a href="http://blog.chenifan.cn/qgzt">文案</a>
+                 
+                <a href="http://blog.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="http://blog.chenifan.cn/index.php?c=category&id=13">互联网资讯</a>
+                 
+                <a href="http://blog.chenifan.cn/gushici">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">{dede:global.cfg_beian/}</a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+</body>
+</html>

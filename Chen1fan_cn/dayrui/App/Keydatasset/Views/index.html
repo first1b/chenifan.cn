@@ -1,0 +1,88 @@
+{template "header.html"}
+
+<div class="portlet bordered light myfbody">
+
+    <form action="" class="form-horizontal" method="post" name="myform" id="myform">
+        {$form}
+        <div class="portlet-body">
+            <div class="tab-content">
+                <div class="tab-pane {if $page==0}active{/if}" id="tab_0">
+                    <div class="form-body">
+                    	
+                    <div class="form-group">	
+											<tr>
+						            <td width="15%">网站发布地址为:</td>
+						            <td width="85%"><input size="36" type="text" id="homeUrl"  name="homeUrl" class="config-input" readonly value="{$domain}" />（采集和发布数据请到 <a href="http://dash.keydatas.com" target="_blank">简数控制台</a>）
+						            
+						            </td>
+						          </tr>
+						        </div>  
+						          
+						        <div class="form-group">  
+						          <tr>
+						            <td width="15%">发布密码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						            <td width="85%"><input size="36" type="text" name="data[kds_password]" class="config-input" value="{htmlspecialchars($data.kds_password)}" />（请注意修改并保管好,到 <a href="http://dash.keydatas.com" target="_blank">简数控制台</a>发布需要用到）
+						            </td>
+						          </tr>
+						        </div>
+						        	  
+						        <div class="form-group">  
+								  		<tr>
+												<td width="15%">根据标题去重:&nbsp;&nbsp;&nbsp;</td>
+												<td width="85%"><input type="checkbox" name="data[titleUnique]" value="true" {if $data['titleUnique']}checked{/if} />存在相同标题，则不插入
+												</td>
+											</tr>
+										</div>
+
+
+
+                            <div class="form-group ">
+                                <label class="col-md-2 control-label"></label>
+                                <div class="col-md-9">
+                                    <button type="button" class="btn green" onclick="dr_ajax_submit('{dr_now_url()}', 'myform', '2000')">{dr_lang('保存')}</button>
+                                </div>
+                            </div>
+                            
+														<div class="line"></div>
+														<div class="info-box">
+														    <h3>简介和使用教程</h3>
+														    <div>
+														      <table width="100%" class="config-table">
+														        <tr>
+														          <td width="15%">简数官网:</td>
+														          <td><a href="http://www.keydatas.com" target="_blank">www.keydatas.com</a> &nbsp;&nbsp;&nbsp;&nbsp;QQ交流群：542942789</td>
+														        </tr>		
+														        <tr>
+														          <td>采集和发布教程：</td>
+														          <td><a href="http://doc.keydatas.com/getting-started.html" target="_blank" title="数据采集快速入门">网站采集快速入门</a>
+																  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																  <a href="http://doc.keydatas.com/shuju-fabu-daochu/xunruicms.html" target="_blank">发布到迅睿CMS教程</a>
+														        </td>
+																</tr>
+														        <tr>
+														          <td>平台主要功能特性：</td>
+														          <td>
+																  <div class="feature">1.采集不需安装任何客户端，<strong>在线可视化点选</strong>；</div>
+																  <div class="feature">2.集成智能提取引擎(国内独家),自动识别数据和规则，包括：翻页、标题，作者，发布日期，内容等,<strong>甚至不需修改即可开始采集</strong>;</div>
+																  <div class="feature">3.图片下载支持存储到：阿里云OSS、七牛云、腾讯云;（支持水印、压缩等）</div>
+																  <div class="feature">4.<strong>全自动化：定时采集+自动发布</strong>;</div>
+																  <div class="feature">5.提供强大的<a href="http://doc.keydatas.com/task/seo.html" target="_blank" >SEO工具</a>，包括：<a href="http://doc.keydatas.com/task/seo/seo-tool/insert-dynamic-para.html" target="_blank" >正文插入动态段落(强烈推荐)</a>、正文插入段落及标题自动关键词、自动内链、同义词替换、简繁体转换、翻译等；</div>
+																  <div class="feature">6.与迅睿CMS系统无缝结合，点击几下就可以发布到迅睿CMS系统中。</div>
+																  <div class="feature">7.支持关键词泛采集(通过搜索引擎)；</div>
+																  </td>
+														        </tr>		
+														      </table>
+														    </div>
+														  </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </form>
+</div>
+
+<script type="text/javascript">
+
+</script>
+{template "footer.html"}

@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>微信小程序开发过程需要注意哪些事情？</title>
+<meta content="微信,小程序" name="keywords" />
+<meta content="这一阶段，不少盆友都想根据自己的喜好来制作小程序，但是很多 小程序都是由专业技术人员来制作的，那么自己在制作小程序的整个过程中，如果不注意一些细节，很容易就会造成一些多余的不便。今天我就来为大家介绍一下手机微信小程序开发设计全过程中需要关注的问题。 小程序名称可以 由汉字，数字，英文，空格和一些特殊字符组成。长度在4到30个字符之间，一个汉子" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h1 class="logo">
+            <a href="/" title="{dede:global.cfg_webname/}" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h1>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/ganhuo">干货分享</a>
+                                                <ul>                             <li><a href="http://blog.chenifan.cn/jishu">IT技术</a></li>
+                                                        <li><a href="http://blog.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="http://blog.chenifan.cn/yx">网络营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/qgzt">文案</a>
+                                                <ul>                             <li><a href="http://blog.chenifan.cn/life">极致生活</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/index.php?c=category&id=13">互联网资讯</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/gushici">神回复</a>
+                                            </li>
+                                    </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="http://blog.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+                                微信,小程序                            </div>
+                            <h1 class="title">微信小程序开发过程需要注意哪些事情？</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>小澈</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="{dede:field.typeurl /}">IT技术</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2020-09-17</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_431">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=431", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_431").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script> </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <p>
+	<span style="font-size:14px;">这一阶段，不少盆友都想根据自己的喜好来制作小程序，但是很多 小程序都是由专业技术人员来制作的，那么自己在制作小程序的整个过程中，如果不注意一些细节，很容易就会造成一些多余的不便。今天我就来为大家介绍一下手机微信小程序开发设计全过程中需要关注的问题。</span><br />
+	&nbsp;</p>
+<p style="text-align: center;">
+	<span style="font-size:14px;"><img alt="微信小程序开发" src="https://ns-strategy.cdn.bcebos.com/ns-strategy/upload/fc_big_pic/part-00523-2175.jpg" style="width: 1036px; height: 584px;" /></span></p>
+<p>
+	<br />
+	<span style="font-size:14px;">小程序名称可以 由汉字，数字，英文，空格和一些特殊字符组成。长度在4到30个字符之间，一个汉子等于两个字符。</span></p>
+<p>
+	<span style="font-size:14px;">二、小程序名称不能重复使用现有的微信订阅号、微信服务号(微信公众号台子上的小程序名称是惟一的，且属于同一行为主体，可以 同名)。如果提示同名，则请拆换名称以执行设置。</span></p>
+<p>
+	<span style="font-size:14px;">小程序一般可以通过 从小程序名中按序抽取字符来建立。长度在4到10个字符之间，一个汉子等于两个字符。</span></p>
+<p>
+	<span style="font-size:14px;">四、拆除名称展开设置。假使企业商标、机构名等名称被侵权，可以按照侵权举报步骤通过微信公众号进行举报，收回名称所有权。</span></p>
+<p>
+	<span style="font-size:14px;">五、小程序通用名称在微信公众帐号上并非唯一，可以 同名。但是对于故意的情况，如假冒、侵权等，服务平台仍然会做出相关处罚。开发者还可以通过举报侵权来维护自身的合法权益。</span></p>
+<p style="color:#C0C0C0">免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！ </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="http://blog.chenifan.cn/jishu/423.html" class="prev has-background"><span>上一篇：</span><h4>学Linux没出路吗？薪资到底如何</h4></a></div>
+                        <div class="next-post"><a class="nextv has-background"><span>下一篇：</span><h4>没有了</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/76.html" title="小白福音：Linux自动磁盘挂载工具 BT-Panel 1.0">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="http://blog.chenifan.cn/uploads/allimg/200610/14024113L-0-lp.png" alt="最近发现很多用户反馈的一些问题与磁盘挂载有关， 1、安装完面板后发现磁盘容量与实际购买容量不符 2、重启服务器后面板无法访问，网站、数据库文件丢失 以上都是因为未挂载磁盘，或挂载操作不当引起的，为解决这个问题，我们制作了磁盘自动挂载工具，支持Centos、Ubuntu、Debian、Fedora 说明： 1：本工具默认将数据盘挂载到/www目录 2：若服务器上已存在/www目录，为了您的数">
+                                        <h4><span>小白福音：Linux自动磁盘挂载工具 BT-Panel 1.0</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/414.html" title="学Linux没出路吗？薪资到底如何？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/d25c08b1ad3b4fc79d3010e3a2e5401f.png" alt="学Linux没出路吗？薪资到底如何？网上说学Linux没出路，做Linux运维必死的，大多都不了解Linux运维真正做什么，更别说知道Linux所处行业发展了。Linux作为当今中高端服务器的主要操作系统，其作">
+                                        <h4><span>学Linux没出路吗？薪资到底如何？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/409.html" title="网络运维工程师是做什么的？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/55129a6862dc49249fb1db591495cf3e.png" alt="运维作为互联网公司技术部门的三大支柱之一，其岗位职责和工作内容都是相当重要的。可以说，整个公司的服务器的稳定运行和数据的可靠安全都全靠运维保障。可能有人要问了，网络运维工">
+                                        <h4><span>网络运维工程师是做什么的？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/417.html" title="零基础Linux培训课程有哪些内容？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/b29c8d2d385a46c2b15414225bb04dd9.jpg" alt="零基础Linux培训课程有哪些内容？Linux培训主要学习网络基础，计算机网络、云计算网络，配备有企业级项目实战：IP地址配置与DNS解析；Linux基础，包括Linux操作系统及Linux高级管理；云数据中心">
+                                        <h4><span>零基础Linux培训课程有哪些内容？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/423.html" title="学Linux没出路吗？薪资到底如何">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/b463cc53f1754035a292f8371faf0b03.png" alt="Linux性能优化一直都是老生常谈的话题，相信大家对于优化的措施多多少少都有一定的了解。但是如何进行Linux性能调优，又从哪些方面入手，这背后的深层原理是什么，为什么要这么操作，却">
+                                        <h4><span>学Linux没出路吗？薪资到底如何</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/411.html" title="如何成为运维工程师？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/938e23ccadbd4b37a2b3eea9057fcb3c.png" alt="如何成为运维工程师？作为一个低调的互联网幕后英雄，互联网运维师可能并不是那么广为人知。但运维师的工作对于整个互联网服务的运行是相当重要的，掌握着能够为用户提供不间断互联网">
+                                        <h4><span>如何成为运维工程师？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="http://blog.chenifan.cn/dianshang/1468.html" target="_blank" title="淘宝爆款销量下降原因"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="https://www.ruzw.com/uploads/allimg/201907/15634583952022.jpg" alt=" 淘宝的商家朋友一直以来都对销量很关注，尤其是店铺在打造了爆款之后，对于爆款的销量更加关注。下面小编就来为大家介绍一下淘宝爆款销量的相关内容，希望会给大家带来帮助。 淘宝爆款销量为什么会下降？ 爆款真正的生命力在于用户基数，如果积累足够的用户基数，真的谁都灭不了它，什么屏蔽降权都阻挡不了，除非被淘宝删除。所以大多数爆款的问题症结其实是用户" />
+       <div class="title ">
+        <span>2020-11-06</span>
+        <h4>淘宝爆款销量下降原因</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]"><img data-original=" https://nimg.ws.126.net/?url=http%3A%2F%2Fcms-bucket.ws.126.net%2F2020%2F1123%2Fd011fb17j00qk8fih0043c000u001m8c.jpg&thumbnail=660x2147483647&quality=80&type=jpg" alt=" [field: fulltitle / ]" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" [field: arcurl / ]" title=" [field: fulltitle / ]">BOSS直聘的＂情色招聘＂陷阱：招助理实为“拉皮条”|应聘者|求职|东哥</a></h4>
+       <span>2020-11-23</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]"><img data-original=" https://nimg.ws.126.net/?url=http%3A%2F%2Fcms-bucket.ws.126.net%2F2020%2F1230%2F7142e4cej00qm5lm7001hc000k000dvc.jpg&thumbnail=660x2147483647&quality=80&type=jpg" alt=" [field: fulltitle / ]" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" [field: arcurl / ]" title=" [field: fulltitle / ]">商品不正当价格被罚，唯品会：将按要求全面整改</a></h4>
+       <span>2020-12-31</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]"><img data-original=" https://nimg.ws.126.net/?url=http%3A%2F%2Fcms-bucket.ws.126.net%2F2020%2F1103%2F271cb1edj00qj82i70027c000zk00k0c.jpg&thumbnail=660x2147483647&quality=80&type=jpg" alt=" [field: fulltitle / ]" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" [field: arcurl / ]" title=" [field: fulltitle / ]">投行人士：蚂蚁上市暂缓不是取消批文 只是时间问题|上市|蚂蚁|投行|注册制</a></h4>
+       <span>2020-11-04</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="http://blog.chenifan.cn/uploadfile/thumb/c4ca4238a0b923820dcc509a6f75849b/200x200_auto.jpg" alt=" [field: fulltitle / ]" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2021-10-20</span>
+        </div>
+        <h4>我悄悄把你设置成了置顶，想让你知道，但又不想让你知道</h4>
+       </div></a></li>  
+     <li><a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="http://blog.chenifan.cn/uploads/allimg/c211009/1633LA532I60-QA3.jpg" alt=" [field: fulltitle / ]" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2021-10-09</span>
+        </div>
+        <h4>一个人怎么运营微信公众号？</h4>
+       </div></a></li>  
+     <li><a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="http://blog.chenifan.cn/uploads/allimg/c211009/1633LA4543R0-12N5.jpg" alt=" [field: fulltitle / ]" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2021-10-09</span>
+        </div>
+        <h4>抖店闭环攻略（抖品牌篇），3个月从0到1000万月销增长案例</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>热门标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="http://blog.chenifan.cn/ganhuo">干货分享</a>
+                 
+                <a href="http://blog.chenifan.cn/qgzt">文案</a>
+                 
+                <a href="http://blog.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="http://blog.chenifan.cn/index.php?c=category&id=13">互联网资讯</a>
+                 
+                <a href="http://blog.chenifan.cn/gushici">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">{dede:global.cfg_beian/}</a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+</body>
+</html>

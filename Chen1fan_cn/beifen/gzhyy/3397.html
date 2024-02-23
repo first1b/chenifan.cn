@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>一个案例，看懂用户画像怎么做 - 公众号运营 - 澈逆凡博客</title>
+<meta name="description" content="01 一个活生生的用户画像实例前段时间，天高气爽，凉风微抚，爸比带着Coco出去玩，在某个湖边看到好多人在放风筝。突发奇想：我们也去放吧！Coco表示：嗯！于是俩人一起去走鬼（广东话，"/>
+<meta name="keywords" content="周推荐, 用户画像,"/>
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script type="text/javascript" charset="utf-8">$(function(){$("img.lazy").lazyload({effect: "fadeIn"});});</script>
+<script>
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('2 5=5||[];(b(){2 1=4.c("6");1.9="8://1.7.g/1.h?f";2 3=4.d("6")[0];3.e.a(1,3)})();',18,18,'|hm|var|s|document|_0|script|baidu|https|src|insertBefore|function|createElement|getElementsByTagName|parentNode|ae86b9f95e6431d72b52a53c0ca66253|com|js'.split('|'),0,{}))
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h1 class="logo">
+            <a href="/" title="澈逆凡博客" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h1>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="/a/ganhuo/">干货分享</a>
+                        <ul class="sub-menu">
+                            
+                            <li><a href="/a/yygh/">运营</a></li>
+                            
+                            <li><a href="/a/jishu/">IT技术</a></li>
+                            
+                            <li><a href="/a/yx/">网络营销</a></li>
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/a/qgzt/">文案</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/news/">互联网资讯</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/gushici/">神回复</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                        <li class="first">
+                            <span class="time">20-06-05</span>
+                            <a target="_blank" href="/hd/14.html" title="网站公告：澈逆凡博客上线了！">网站公告：澈逆凡博客上线了！</a>
+                        </li>
+
+                    </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>
+    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+                                
+                            </div>
+                            <h1 class="title">一个案例，看懂用户画像怎么做</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i></span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="/gzhyy/">公众号运营</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2021-06-15 13:19</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><script src="/plus/count.php?view=yes&aid=3397&mid=1" type='text/javascript' language="javascript"></script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <span class="span-img"><img alt="一个案例，看懂用户画像怎么做" src="/uploads/allimg/c210615/1623I430P0060-295L8.jpg" /></span>
+<p style="text-align: center;">
+	<span style="color: #ff0000;"><em><strong>01&nbsp;</strong></em></span></p>
+<p style="text-align: center;">
+	<span style="color: #ff0000;"><strong>一个活生生的用户画像实例</strong></span></p>
+<p>
+	前段时间，天高气爽，凉风微抚，爸比带着Coco出去玩，在某个湖边看到好多人在放风筝。</p>
+<p>
+	突发奇想：我们也去放吧！Coco表示：嗯！于是俩人一起去走鬼（广东话，指无证流窜小摊贩）大叔那买风筝。</p>
+<p>
+	<img alt="311 一个案例，看懂用户画像怎么做" class="aligncenter" height="442" src="/uploads/allimg/c210615/1623I430Sb50-30P14.jpg" title="一个案例，看懂用户画像怎么做" width="438" /></p>
+<p>
+	&nbsp;</p>
+<p>
+	看到coco喜欢，爸比就准备掏钱了，然而峰回路转，没想到又有下边一段：</p>
+<p>
+	<img alt="321 一个案例，看懂用户画像怎么做" class="aligncenter" height="462" src="/uploads/allimg/c210615/1623I430XV10-31VG.jpg" title="一个案例，看懂用户画像怎么做" width="435" /></p>
+<p>
+	&nbsp;</p>
+<p>
+	然后爸比就和coco愉快地放风筝去了。可事后一想：我勒个大槽，这不就是基于用户画像的，用推荐系统提升交易的完整流程吗！数据采集-打标签-产品推荐-向上销售一气呵成，还做了二次推荐，把成交率和客单价分开提升，真是巧妙。</p>
+<p>
+	<img alt="331 一个案例，看懂用户画像怎么做" class="aligncenter" height="386" src="/uploads/allimg/c210615/1623I43093C30-3215E.jpg" title="一个案例，看懂用户画像怎么做" width="565" /></p>
+<p>
+	&nbsp;</p>
+<p>
+	虽然大叔没有啥大数据系统，也不懂写代码，可这办事的思路，却远远胜过还在到处问&ldquo;推荐风筝的算法有哪些&rdquo;&ldquo;BAT是怎么卖风筝的？&rdquo;&ldquo;我是互联网风筝行业的，有没有懂互联网风筝问题的大佬&rdquo;的新人了，毕竟实践出真知，抄袭降智商。</p>
+<p>
+	然而仔细一想，事情并没有这么简单：卖玩具的多了去了，为什么偏偏是风筝呢？</p>
+<p style="text-align: center;">
+	<span style="color: #ff0000;"><em><strong>02</strong></em></span></p>
+<p style="text-align: center;">
+	<span style="color: #ff0000;"><strong>&nbsp;用户画像的真正用途</strong></span></p>
+<p>
+	常溜娃的家长都很熟悉，在公园、池塘、草地附近，都有小摊贩卖泡泡棒、玩具枪、魔法棒、挖沙工具、风筝一类玩具。看似都是卖玩具，可细细品来，不同玩具的差异非常明显。</p>
+<p>
+	<strong>玩具枪、魔法棒：</strong></p>
+<p>
+	这一类玩具款式非常重要！是不是巴啦啦小魔仙的魔法棒，是不是吃鸡的98K，直接决定了小朋友买不买。这是典型的：爆款驱动。爆款是可以人为创造的。这里考的就是业务设计、推广能力。选款不行，一切白费。再好的推荐系统也帮不上忙。</p>
+<p>
+	<strong>泡泡棒：</strong></p>
+<p>
+	这一类玩具卖点很突出：漫天泡泡飞啊飞。所以丫根本不需要推荐。你只需要埋伏在路边，等着一群小朋友走过来，然后往天上一呼，哗啦啦好多泡泡向小朋友方向飞去。</p>
+<p>
+	然后就十有八九有小朋友想买。这是典型的：体验驱动。这里考的是销售能力，让用户体验到效果。不然不让体验，光叨逼叨推荐，还是会丢掉。</p>
+<p>
+	<strong>挖沙桶：</strong></p>
+<p>
+	这玩意同质化程度非常高（一个方头铲、一个尖头铲、一个耙子，一个小铲，一个贝壳模型，一个海星模型，一个小桶，全国同款）。而且功能非常明确、单一：挖沙！</p>
+<p>
+	对家长而言，没啥好说的，便宜就买，贵了就不买，典型的：价格驱动。这里考的是定价，价格贵了，再推荐，家长也不当冤大头。</p>
+<p>
+	相比之下，风筝非常独特：</p>
+<section data-role="list">
+	<ul>
+		<li>
+			<span style="color: #808080;">风筝撑开的话体积太大，不容易陈列，不容易供客户挑选。</span></li>
+		<li>
+			<span style="color: #808080;">风筝的花色、尺寸、图形，确实很多人会在意。你还不能不让人家挑。</span></li>
+		<li>
+			<span style="color: #808080;">风筝单价相对较高，卖贵了，大人分分钟掉头走人，卖便宜了不挣钱。</span></li>
+	</ul>
+</section>
+<p>
+	特别是对于走鬼大叔，真要是把风筝都摊在地上，估计城管来了跑都跑不掉！而且摊几十个风筝在地上，卖相也很差，家长挑选也很辛苦。</p>
+<p>
+	要知道，很少家长是心甘情愿带着孩子去小摊上买东买西的。大部分都是怕/被孩子又哭又闹的苟且之计。所以多增加一点选择负担，就多一点损失客户的几率。因此推荐系统在这里就很好用。</p>
+<p>
+	对比这四个品类，我们发现：推荐系统只是商品管理的一个辅助工具而已，适用于非爆款、品类间有一定差异的产品。</p>
+<p>
+	但是，商品管理的每一种战术，都和用户画像有关，理解用户，才能精准地满足需求。所以不要一提用户画像就想到推荐上去了，还有更多工作可以做呢（如下图所示）</p>
+<p>
+	<img alt="341 一个案例，看懂用户画像怎么做" class="aligncenter" height="308" src="/uploads/allimg/c210615/1623I430c40-33S04.jpg" title="一个案例，看懂用户画像怎么做" width="565" /></p>
+<p>
+	&nbsp;</p>
+<p style="text-align: center;">
+	<span style="color: #ff0000;"><em><strong>03&nbsp;</strong></em></span></p>
+<p style="text-align: center;">
+	<span style="color: #ff0000;"><strong>有用的用户画像为什么难做！</strong></span></p>
+<p>
+	既然用户画像这么好用。那为什么我们总觉得，用户画像是搞了一堆数据堆在那，最后屁用没有呢？因为想做出有用的用户画像，需要规避太多的坑了。</p>
+<p>
+	<strong>坑点一：没有明确干什么</strong></p>
+<p>
+	如果走鬼大叔见了家长，不问人家买什么，在那谈天说地瞎聊天。他还能卖出风筝吗？当然不行，可能扯淡是扯个爽的。这就是有目标和无目标的区别。对应到工作中，很多人做用户画像是基于：&ldquo;领导要求做&rdquo;&ldquo;我看人家都在做&rdquo;。</p>
+<p>
+	至于：</p>
+<section data-role="list">
+	<ul>
+		<li>
+			<span style="color: #888888;">做了干啥？</span></li>
+		<li>
+			<span style="color: #888888;">哪个部门用？</span></li>
+		<li>
+			<span style="color: #888888;">用在什么场景？</span></li>
+		<li>
+			<span style="color: #888888;">提升什么指标？</span></li>
+		<li>
+			<span style="color: #888888;">这个指标当前是多少？</span></li>
+		<li>
+			<span style="color: #888888;">预计提升多少？</span></li>
+		<li>
+			<span style="color: #888888;">提升指标需要什么配套？</span></li>
+	</ul>
+</section>
+<p>
+	完全没想过，这要是做出来有用，就见鬼了。╮(╯▽╰)╭</p>
+<p>
+	<strong>坑点二：数据质量没保障</strong></p>
+<p>
+	注意，大叔明明看到了一个爸比+一个小朋友走过来，可他还是问了：&ldquo;大人放还是小孩放？&rdquo;没有想当然，这是专业性的表现。</p>
+<p>
+	因为玩具是一个典型的使用者和购买者分离的场景，特别是风筝，大人小孩都可以玩。这时候确认真实性是很重要的。</p>
+<p>
+	对应到工作中，就是我们常说的数据质量。数据质量是一切分析的前提，而很多公司是低估了数据采集的严谨性的。</p>
+<p>
+	在所谓&ldquo;标签扩散法&rdquo;出来以后，更有一帮做数据的新人，自己都以为不要采集，只要有算法就能算出真实数据了，这就真的是自断生路了。数据质量，永远都是越高越好。</p>
+<p>
+	<strong>坑点三：不打标签只捞数</strong></p>
+<p>
+	注意，大叔问的是一个标签，不是一个原始数据。比如大人也可能有身高150，小孩也可能身高150。那为什么要问标签，而不是一个具体数值呢？一来问标签数据采集难度小，二来孩子这个标签不但代表了身高，也代表了审美，作用远比原始数据丰富。</p>
+<p>
+	这就是标签作用的直观体现：含义丰富，使用方便。这也是为啥采集了数据，还得继续打标签的原因。标签是经过提炼，有含义的数据分类，比原始数据要有用的多。</p>
+<p>
+	<strong>坑点四：效果缺少验证，更没有迭代</strong></p>
+<p>
+	说到标签有用，于是就有人患上了标签狂热症，疯狂打标，不管丫有用没用，有多大用，总之标签越多越好。可没有验证过效果的标签，跟没有一样。更不要提基于初级标签，再制作更复杂的二级，三级标签了。</p>
+<p>
+	有意思的是，走鬼大叔就用了二级标签的策略。注意，如果一开始就说：普通风筝20，儿童风筝30，那很有可能家长就直接选20的了。如果一开始说：风筝30，有可能把家长吓跑。</p>
+<p>
+	但是先确认家长愿意买，再推荐一个&ldquo;不伤手&rdquo;的贵点的绕线轮，成功率就大大提升。</p>
+<p>
+	因为已经确认了：这个家长肯迁就孩子，那肯迁就孩子的家长，肯定大概率会买个贵的。实际上，不完全统计，现场有一半都是&ldquo;不伤手&rdquo;的绕线轮，嘿嘿，其中滋味，你品，你细品。</p>
+<p style="text-align: center;">
+	<span style="color: #ff0000;"><strong><em>04&nbsp;</em></strong></span></p>
+<p style="text-align: center;">
+	<span style="color: #ff0000;"><strong>小&nbsp; &nbsp;结</strong></span></p>
+<p>
+	当然，以上只是陈老师的借题发挥。大叔可能仅仅是够机灵，根本没有思考这么多。</p>
+<p>
+	但是这种直观的例子，是非常适合大家记忆的。当你下次迷茫在&ldquo;到底用户画像有啥用？？？？&rdquo;的时候，可以再回味一下哈。</p>
+<p>
+	这里还有一个小问题，看起来这个过程很简单呀，为啥还需要专业的数据分析师来做呢？业务人员自己也能总结呀。</p>
+<p>
+	答：两个原因，一来实际商业场景中数据量大，维度多，处理起来非常耗费时间，需要专业人员来做。如果你看到你的运营不是在设计方案、选礼品、调查用户，而是一天8小时在搞数据，那这公司离倒闭也不远了。</p>
+<p>
+	二来，业务人员的经验很容易被短期效应打脸，进而做出错误判断（如下图所示）。业务人员KPI挂帅，容易选择短期见效的，忽视长期效应。这时候就需要数据分析师，沉住气，长期观察，沉淀经验。才能更好指导业务。</p>
+<p>
+	<img alt="351 一个案例，看懂用户画像怎么做" class="aligncenter" height="231" src="/uploads/allimg/c210615/1623I43104XP-349618.jpg" title="一个案例，看懂用户画像怎么做" width="565" /></p>
+<p>
+	所以，做数据分析的同学要对自己有信心。数据的价值绝不止于一个复杂的模型，基础工作，方法沉淀，经验总结，反哺业务，都是我们能做的。</p>
+<p>
+	方法并不是越难越好，而是越有用越好。切记切记。</p>
+<p>
+	文章来源于接地气学堂&nbsp;，作者接地气的陈老师</p>
+
+<p style="color:#C0C0C0">免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！ </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href='/gzhyy/3362.html' class='prev has-background'><span>上一篇：</span><h4>关于微信公众号编辑，新手不可忽视的6大技巧！</h4></a> </div>
+                        <div class="next-post"><a class='nextv has-background'><span>下一篇：</span><h4>没有了</h4></a> </div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                            
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="sidebar col-xs-12 col-sm-4 col-md-4"><div class="widget widget_suxingme_postlist"><h3><span>随便看看</span></h3><ul class="recent-posts-widget"> <li class="one"><a href="/gzhyy/2033.html" target="_blank" title="怎样提取微信公众号封面图？如何拿到别人公众号的文章封面图？"><div class="overlay"></div><img class="thumbnail lazy" data-original="https://static.getgetai.com/img/115bb7bb065b44d1bb8150ffc3303281/20201203143513066.png" alt="怎样提取微信公众号封面图？如何拿到别人公众号的文章封面图？"/><div class="title"><span>2020-12-03</span><h4>怎样提取微信公众号封面图？如何拿到别人公众号的文章封面图？</h4></div></a></li>
+ <li class="others"><div class="image"><a href="/gzhyy/2005.html" target="_blank" title="公众号涨粉须知：如何快速开通流量主功能？"><img data-original="https://static.getgetai.com/img_for_copy/1606891538722_553.png" alt="公众号涨粉须知：如何快速开通流量主功能？" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/gzhyy/2005.html" title="公众号涨粉须知：如何快速开通流量主功能？">公众号涨粉须知：如何快速开通流量主功能？</a></h4><span>2020-12-02</span></div></li>
+<li class="others"><div class="image"><a href="/gzhyy/1941.html" target="_blank" title="如何排版设计出高大上的公众号图文【365编辑器】"><img data-original="https://static.getgetai.com/img/115bb7bb065b44d1bb8150ffc3303281/20201127145335663.png" alt="如何排版设计出高大上的公众号图文【365编辑器】" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/gzhyy/1941.html" title="如何排版设计出高大上的公众号图文【365编辑器】">如何排版设计出高大上的公众号图文【365编辑器】</a></h4><span>2020-11-27</span></div></li>
+<li class="others"><div class="image"><a href="/gzhyy/2871.html" target="_blank" title="公众号文章添加样式，让图文更美丽！"><img data-original="https://static.getgetai.com/img/115bb7bb065b44d1bb8150ffc3303281/20210104153336305.png" alt="公众号文章添加样式，让图文更美丽！" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/gzhyy/2871.html" title="公众号文章添加样式，让图文更美丽！">公众号文章添加样式，让图文更美丽！</a></h4><span>2021-01-04</span></div></li>
+ </ul></div><div class="widget widget_suxingme_hotpost"><h3><span>热门文章</span></h3><ul class="widget_suxingme_post"> <li><a href="/gzhyy/2173.html" target="_blank" title="微信公众号条漫图文怎么制作？"><div class="overlay"></div><img class="thumbnail lazy" data-original="https://static.getgetai.com/img/115bb7bb065b44d1bb8150ffc3303281/20201211165415545.png" alt="微信公众号条漫图文怎么制作？"/><div class="title"><div class="entry-meta"><span>2020-12-11</span></div><h4>微信公众号条漫图文怎么制作？</h4></div></a></li>
+<li><a href="/gzhyy/2463.html" target="_blank" title="怎样更改公众号文章字体颜色？"><div class="overlay"></div><img class="thumbnail lazy" data-original="https://static.getgetai.com/img/115bb7bb065b44d1bb8150ffc3303281/20201224162834776.png" alt="怎样更改公众号文章字体颜色？"/><div class="title"><div class="entry-meta"><span>2020-12-24</span></div><h4>怎样更改公众号文章字体颜色？</h4></div></a></li>
+<li><a href="/gzhyy/2586.html" target="_blank" title="(公众号运营）元旦公众号图文怎么排版更吸引人？"><div class="overlay"></div><img class="thumbnail lazy" data-original="https://static.getgetai.com/img/115bb7bb065b44d1bb8150ffc3303281/20201228163101042.png" alt="(公众号运营）元旦公众号图文怎么排版更吸引人？"/><div class="title"><div class="entry-meta"><span>2020-12-29</span></div><h4>(公众号运营）元旦公众号图文怎么排版更吸引人？</h4></div></a></li>
+ </ul></div><div class="widget suxingme_tag"><h3><span>热门标签</span></h3><div class="widge_tags"><div class="tag-items">  <a href="/tags.php?/31/">运营</a>  <a href="/tags.php?/54/">京东</a>  <a href="/tags.php?/57/">电商</a>  <a href="/tags.php?/30/">织梦二次开发</a>  <a href="/tags.php?/189/">918</a>  <a href="/tags.php?/42/">社群运营</a>  <a href="/tags.php?/50/">摆摊</a>  <a href="/tags.php?/25/">情感</a>  <a href="/tags.php?/33/">摆地摊</a>  <a href="/tags.php?/2/">聪明</a>  <a href="/tags.php?/20/">景点推荐</a>  <a href="/tags.php?/29/">网站公告</a>  <a href="/tags.php?/35/">技巧</a>  <a href="/tags.php?/39/">产品经理</a>  <a href="/tags.php?/40/">能力提升</a>  <a href="/tags.php?/41/">新媒体运营</a>  <a href="/tags.php?/3/">乌鸦</a>  <a href="/tags.php?/15/">水果</a>  <a href="/tags.php?/16/">吃货</a>  <a href="/tags.php?/21/">海滩</a>  <a href="/tags.php?/22/">游泳</a>  <a href="/tags.php?/23/">美景</a>  <a href="/tags.php?/27/">手表</a>  <a href="/tags.php?/28/">时尚潮物</a>  <a href="/tags.php?/37/">B端产品</a>  <a href="/tags.php?/38/">产品运营</a>  <a href="/tags.php?/48/">时间</a>  <a href="/tags.php?/8/">充电</a>  <a href="/tags.php?/9/">照明</a>  <a href="/tags.php?/12/">云南</a>  </div></div></div><div class="widget suxingme_social"><h3><span>关注我们 么么哒！</span></h3><div class="attentionus"><ul class="items clearfix"><span class="social-widget-link social-link-qq"><span class="social-widget-link-count"><i class="fa fa-weixin"></i>十一记实录</span><span class="social-widget-link-title">公众号</span><a id="tooltip-s-weixin" href="javascript:void(0);"></a></span><span class="social-widget-link social-link-email"><span class="social-widget-link-count"><i class="fa fa-envelope"></i>1812215600@qq.com</span><span class="social-widget-link-title">邮箱</span><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" target="_blank" rel="nofollow"></a></span><span class="social-widget-link social-link-wechat"><span class="social-widget-link-count"> 运营贩</span><span class="social-widget-link-title">百家号</span><a id="tooltip-s-weixin" href="javascript:void(0);"></a></span></ul></div></div><div class="widget widget_suxingme_postlist"><h3><span>最新内容</span></h3><ul class="recent-posts-widget"> <li class="one"><a href="/gzhyy/3397.html" target="_blank" title="一个案例，看懂用户画像怎么做"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/c210615/1623I430P0060-295L8.jpg" alt="一个案例，看懂用户画像怎么做"/><div class="title"><span>2021-06-15</span><h4>一个案例，看懂用户画像怎么做</h4></div></a></li>
+ <li class="others"><div class="image"><a href="/gzhyy/3362.html" target="_blank" title="关于微信公众号编辑，新手不可忽视的6大技巧！" rel="nofollow"><img data-original="/images/defaultpic.gif" alt="关于微信公众号编辑，新手不可忽视的6大技巧！" class="thumbnail"/></a></div><div class="title"><h4><a href="/gzhyy/3362.html" target="_blank" title="关于微信公众号编辑，新手不可忽视的6大技巧！">关于微信公众号编辑，新手不可忽视的6大技巧！</a></h4><span>2021-01-27</span></div></li>
+<li class="others"><div class="image"><a href="/gzhyy/2955.html" target="_blank" title="怎样做好公众号内容排期？如何规划公众号内容运营？" rel="nofollow"><img data-original="https://static.getgetai.com/img/115bb7bb065b44d1bb8150ffc3303281/20210113151615812.jpg" alt="怎样做好公众号内容排期？如何规划公众号内容运营？" class="thumbnail"/></a></div><div class="title"><h4><a href="/gzhyy/2955.html" target="_blank" title="怎样做好公众号内容排期？如何规划公众号内容运营？">怎样做好公众号内容排期？如何规划公众号内容运营？</a></h4><span>2021-01-13</span></div></li>
+<li class="others"><div class="image"><a href="/gzhyy/2954.html" target="_blank" title="公众号运营-内容即灵魂，排版即躯体" rel="nofollow"><img data-original="https://static.getgetai.com/img/115bb7bb065b44d1bb8150ffc3303281/20210112111520957.png" alt="公众号运营-内容即灵魂，排版即躯体" class="thumbnail"/></a></div><div class="title"><h4><a href="/gzhyy/2954.html" target="_blank" title="公众号运营-内容即灵魂，排版即躯体">公众号运营-内容即灵魂，排版即躯体</a></h4><span>2021-01-12</span></div></li>
+<li class="others"><div class="image"><a href="/gzhyy/2913.html" target="_blank" title="利用365微信编辑器排版文章后怎么发布？" rel="nofollow"><img data-original="/uploads/allimg/210106/1_0106151G44S2.png" alt="利用365微信编辑器排版文章后怎么发布？" class="thumbnail"/></a></div><div class="title"><h4><a href="/gzhyy/2913.html" target="_blank" title="利用365微信编辑器排版文章后怎么发布？">利用365微信编辑器排版文章后怎么发布？</a></h4><span>2021-01-06</span></div></li>
+ </ul></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                
+                <a href="/a/ganhuo/">干货分享</a>
+                
+                <a href="/a/qgzt/">文案</a>
+                
+                <a href="/news/">互联网资讯</a>
+                
+                <a href="/gushici/">神回复</a>
+                
+              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <p>Copyright &copy;     备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">京ICP备19036021号-1</a></p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <form class="sidebar-search" method="get" action="/search.php">
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript">jQuery(document).ready(function($) {$(".fancybox").fancybox()});</script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+
+</body>
+</html>

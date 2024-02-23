@@ -1,0 +1,408 @@
+{template "header.html"}
+<script src="/static/assets/js/vue.global.prod.js"></script>
+<form action="" class="form-horizontal" method="post" name="myform" id="myform">
+    {$form}
+    <div class="row myfbody" id="App">
+        <div class="col-md-12">
+
+            <div class="portlet light bordered">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <span class="caption-subject font-green sbold ">{dr_lang('内容')}</span>
+                    </div>
+
+                    <div class="actions">
+                        <div class="btn-group">
+                            <a class="btn" href="{$reply_url}"> <i class="fa fa-mail-reply"></i> {dr_lang('返回列表')}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <div class="form-body">
+                        <div class="form-group" rs="is_admin" id="dr_row_rulename">
+                            <label class="control-label col-md-2">规则名称</label>
+                            <div class="col-md-10">
+                                <input class="form-control  " type="text" name="data[rulename]" id="dr_rulename"
+                                    value="{$rulename}" style="width:600px;" />
+                                <span class="help-block" id="dr_rulename_tips">请填写规则名称</span>
+                            </div>
+                        </div>
+                        <div class="form-group" rs="is_admin" id="dr_row_moduleid">
+                            <label class="control-label col-md-2">关联内容模型</label>
+                            <div class="col-md-10">
+                                <label>
+                                    <select class=" form-control" v-model="moduleid" name="data[moduleid]"
+                                        id="dr_moduleid">
+                                        <option value="">请选择内容模型</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group" rs="is_admin" id="dr_row_status">
+                            <label class="control-label col-md-2">
+                                <span class="required" aria-required="true"> * </span>启用</label>
+                            <div class="col-md-10">
+                                <div class="mt-radio-inline">
+                                    <label class="mt-radio mt-radio-outline">
+                                        <input type="radio" name="data[status]" value="1" {if $status==1}checked{/if} />
+                                        启用 <span></span>
+                                    </label>
+                                    <label class="mt-radio mt-radio-outline">
+                                        <input type="radio" name="data[status]" value="0" {if $status==0}checked{/if} />
+                                        禁用 <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">栏目地址</label>
+                            <div class="col-md-10">
+                                <div class="input-group" style="width: 650px;">
+                                    <input class="form-control" type="text" :value="categoryslink" disabled>
+                                    <span class="input-group-btn">
+                                        <button class="btn red" type="button"
+                                            @click="copyText(this.categoryslink)">复制</button>
+                                        <button class="btn btn-success" type="button"
+                                            @click="alertInfo(`如火车头：Web发布模块>>获取栏目列表>>刷新列表页面处`)">说明</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">发布地址</label>
+                            <div class="col-md-10">
+                                <div class="input-group" style="width: 650px;">
+                                    <input class="form-control" type="text" :value="postlink" disabled>
+                                    <span class="input-group-btn">
+                                        <button class="btn red" type="button"
+                                            @click="copyText(this.postlink)">复制</button>
+                                        <button class="btn btn-success" type="button"
+                                            @click="alertInfo(`如火车头：Web发布模块>>内容发布参数>>发表地址后缀`)">说明</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">安全链接</label>
+                            <div class="col-md-10">
+                                <button class="btn btn-success" type="button"
+                                    @click="generateToken()">一键重新生成安全链接</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-10">
+                                <div class="caption font-red-sunglo">
+                                    <i class="icon-settings font-red-sunglo"></i>
+                                    <span class="caption-subject bold uppercase">本模型字段、格式及相关说明参考，不需填充请留空。</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 生成格式化的数据 开始 -->
+                        <div class="form-group" v-for="(item,index) in moduleFields">
+                            <!-- 文本类型 -->
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <label class="control-label col-md-2">{{item.name}}</label>
+                                    <div class="col-md-10">
+                                        <div class="input-group"
+                                            style="width: 650px; background-color: #e9edef; padding: 8px;">
+                                            <div>
+                                                <span class="input-group-btn">
+                                                    <span class="btn btn-success">表单名</span>
+                                                    <span class="btn red"
+                                                        @click="copyText(item.fieldname)">{{item.fieldname}}</span>
+                                                    <!-- <span class="btn btn-success">{{item.fieldtype}}</span> -->
+                                                </span>
+                                            </div>
+                                            <p style="margin: 10px 0; cursor: pointer;" @click="copyText(item.format)"
+                                                v-if="item.format">字段格式：<span>{{item.format}}</span></p>
+                                            <p style="margin: 10px 0;" v-if="item.formatinfo">字段说明：{{item.formatinfo}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 需要格式化的数据模板 -->
+                            <div class="col-md-12" v-if="item.fieldtype ==='Text'">
+
+                            </div>
+                        </div>
+                        <!-- 生成格式化的数据 结束 -->
+                        <!-- 隐藏提交的数据 -->
+                        <input type="hidden" :value="token" name="data[token]">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="portlet-body form myfooter">
+        <div class="form-actions text-center">
+            <label>
+                <button type="button" onclick="dr_ajax_submit('{dr_now_url()}', 'myform', '2000')" class="btn blue">
+                    <i class="fa fa-save"></i> {dr_lang('保存内容')}
+                </button>
+            </label>
+            <label>
+                <button type="button" onclick="dr_ajax_submit('{dr_now_url()}', 'myform', '2000', '{$reply_url}')"
+                    class="btn yellow"> <i class="fa fa-mail-reply-all"></i> {dr_lang('保存并返回')}
+                </button>
+            </label>
+
+        </div>
+    </div>
+</form>
+<script>
+    const FormApp = {
+        data() {
+            return {
+                token: '{$token}', //默认的token值
+                collectorcode: '{$collectorcode}', //api文件标识
+                moduleid: '{$moduleid}',//选择的模型ID
+                moduleFields: {}, //显示的配置信息
+            }
+        },
+        mounted() {
+            this.getModuleInfo();
+        },
+        computed: {
+            // 刷新列表地址
+            categoryslink() {
+                var result = '/api/webcollector.php?action=category&token=' + this.token;
+                return result
+            },
+            // 发表地址后缀
+            postlink() {
+                var result = '/api/webcollector.php?action=post&token=' + this.token;
+                return result
+            },
+        },
+        watch: {
+            //检测内容模型变化
+            moduleid: function () {
+                this.getModuleInfo();
+            }
+        },
+        methods: {
+            generateToken(e) {
+                e = e || 16;
+                var t = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                a = t.length
+                n = ''
+                for (i = 0; i < e; i++) {
+                    n += t.charAt(Math.floor(Math.random() * a));
+                }
+                this.token = n;
+            },
+            // 复制对应内容
+            copyText(e) {
+                var content = e;
+
+                //创建可输入控件，因为execCommand方法只能从input,textarea等可输入控件中复制内容
+                const input = document.createElement('input');
+                //将属性设为只读，防止手机中呼出键盘
+                input.setAttribute('readonly', 'readonly');
+                //将要复制的内容写入控件的value中
+                input.value = content;
+                //input.setAttribute('value', content);
+                document.body.appendChild(input);
+                input.setSelectionRange(0, 9999); //控制输入光标位置
+                input.select(); //选择内容
+                document.execCommand('copy'); //执行复制
+                document.body.removeChild(input);
+                if (content != '') {
+                    //改变按钮颜色并添加复制成功提示
+                    alert("复制成功");
+                }
+            },
+            // 弹出提示框
+            alertInfo(e) {
+                e ? alert(e) : false
+            },
+            // 获取模型字段并转化为setting值
+            async getModuleInfo() {
+                // 新添
+                var setting = new Object();
+                try {
+                    if (this.moduleid) {
+                        const response = await fetch(window.location.pathname+'?s=webcollector&c=api&m=get_module_fields&id=' + this.moduleid);
+                        const json = await response.json();
+                        json.push(
+                            // 插入缩略图
+                            {
+                                "id": "0",
+                                "name": "分类ID",
+                                "displayorder": "0",
+                                "fieldname": "catid",
+                                "fieldtype": "Text",
+                            },
+                            {
+                                "id": "0",
+                                "name": "标题",
+                                "displayorder": "0",
+                                "fieldname": "title",
+                                "fieldtype": "Text",
+                            },
+                            {
+                                "id": "0",
+                                "name": "是否审核",
+                                "displayorder": "0",
+                                "fieldname": "status",
+                                "fieldtype": "Text",
+                            },
+                            {
+                                "id": "0",
+                                "name": "缩略图",
+                                "displayorder": "0",
+                                "fieldname": "thumb",
+                                "fieldtype": "File",
+                            }
+                        );
+                        //console.log(json);
+                        // 过滤不显示的数据：表格，增减量
+                        setting = json.filter(item => (!["Textbtn"].includes(item.fieldtype) && ![""].includes(item.fieldname))).map(item => {
+                            let format = '';  //格式化格式
+                            let formatinfo = ''; //格式化附加说明
+
+                            // 文本
+                            if (item.fieldtype == 'Text') {
+                                formatinfo = '文本字段，请注意字段长度限制';
+                            }
+                            // 单文件
+                            else if (item.fieldtype == 'File') {
+                                format = 'https://www.xxx.com/xxx.jpg';
+                                formatinfo = '单文件字段，需要在火车头补全带http的详细地址。会自动下载并归档对应文件。采集器中不需要设置下载文件。';
+                            }
+                            // 多行文本字段
+                            else if (item.fieldtype == 'Textarea') {
+                                formatinfo = '多行文本字段';
+                            }
+                            // 编辑器字段
+                            else if (item.fieldtype == 'Editor') {
+                                formatinfo = '编辑器字段，如果内容中存在gif,jpg,jpeg,png等格式图片，需要补全其相对地址为绝对地址（带http），会自动下载并进行文件归档。';
+                            }
+                            // 单选按钮，下拉单选及下拉多选
+                            else if (item.fieldtype == 'Radio' || item.fieldtype == 'Select') {
+                                formatinfo = '填入对应的选项名称即可';
+                            }
+                            // 下拉多选及复选框
+                            else if (item.fieldtype == 'Selects' || item.fieldtype == 'Checkbox') {
+                                format = '选项一,选项二';
+                                formatinfo = '填入对应的选项名称即可，以英文逗号隔开';
+                            }
+                            // 联动菜单单选
+                            else if (item.fieldtype == 'Linkage') {
+                                format = '东城区';
+                                formatinfo = '填入对应的联动菜单名称即可';
+                            }
+                            // 联动菜单多选
+                            else if (item.fieldtype == 'Linkages') {
+                                format = '东城区,西城区';
+                                formatinfo = '填入对应的联动菜单名称即可';
+                            }
+                            // 用户ID
+                            else if (item.fieldtype == 'Uid') {
+                                formatinfo = '为后台的用户ID，如果不填，默认为管理员';
+                            }
+                            // 表格
+                            else if (item.fieldtype == 'Ftable') {
+                                format = `[{"1":"文本"}|{"2":"下拉选项"}|{"3":["复选框1","复选框3"]}|{"4":"http://www.xxx.com/xx.jpg"}|{"5":"2023-03-08"}|{"6":"2023-03-08 06:10:08"}|{"9":"隔了一列"}]##[{"1":"文本"}|{"2":"下拉选项"}|{"3":["复选框1","复选框3"]}|{"4":"http://www.xxx.com/xx.jpg"}|{"5":"2023-03-08"}|{"6":"2023-03-08 06:10:08"}|{"9":"隔了一列"}]##`;
+                                formatinfo = `表格可以插入多行，每行的数据用##隔开；每一列中不同的字段使用|隔开；表格中的列字段使用{"列序号","列内容"}包裹；列内容中，会根据预设字段对内容进行自动处理；如果为文件，需在采集插件中补全文件地址[带http]，如果为复选框，数据格式为["选项一","选项二"]，如果为日期，其格式为:2000-01-01，如果为日期带时间，其格式为:2000-01-01 00:00:00`;
+                            }
+                            // 颜色
+                            else if (item.fieldtype == 'Color') {
+                                format = `#111222`;
+                            }
+                            // 多文件上传
+                            else if (item.fieldtype == 'Files' || item.fieldtype == 'Image') {
+                                format = `http://www.xxx.com/xx.jpg,http://www.xxx.com/xx.jpg,http://www.xxx.com/xx.jpg`;
+                                formatinfo = '文件使用逗号隔开，需要补全地址[带http]，会自动下载文件并归档';
+                            }
+                            // 时间
+                            else if (item.fieldtype == 'Time') {
+                                format = `Y-m-d h:m:s；h:m:s；或h:m等形式`;
+                            }
+                            // 日期
+                            else if (item.fieldtype == 'Date') {
+                                format = `Y年m月d日；Y-m-d;Y-m-d h:m:s；`;
+                            }
+                            // 不在内容列中的
+                            else {
+                                formatinfo = '暂无字段处理说明';
+                            }
+                            // 处理特殊字段-缩略图
+                            if (item.fieldname == 'catid') {
+                                formatinfo = `分类ID，必填。没有此字段或设置的栏目不是终级栏目将不会正常发布`;
+                            }
+                            // 处理特殊字段-关键字
+                            if (item.fieldname == 'keywords' || item.fieldname == 'description') {
+                                formatinfo = `一般留空即可，无须在采集器中添加`;
+                            }
+                            // 处理特殊字段-缩略图
+                            if (item.fieldname == 'thumb') {
+                                formatinfo = `可以直接采集，也可以利用迅睿内容管理工具直接生成`;
+                            }
+                            // 处理特殊字段-是否审核
+                            if (item.fieldname == 'status') {
+                                formatinfo = `如果需要审核，创建字段并设置为1；否则删除或不填。`;
+                            }
+                            const itemArray = new Object({
+                                id: item.id,
+                                displayorder: item.displayorder,
+                                name: item.name,
+                                fieldname: item.fieldname,
+                                fieldtype: item.fieldtype,
+                                format: format,
+                                formatinfo: formatinfo
+                                // option: JSON.parse(item.setting).option,
+                            });
+                            // 精简项目
+                            return itemArray
+                        })
+                    }
+                    if (setting.length > 0) {
+                        setting.sort(function (a, b) {
+                            return (a.id - b.id);
+                        }).sort(function (a, b) {
+                            return (a.displayorder - b.displayorder);
+                        })
+                    }
+                    this.moduleFields = setting;
+                    // console.log(this.moduleFields);
+                } catch (err) {
+                    console.error(err);
+                }
+            },
+        },
+    }
+    Vue.createApp(FormApp).mount('#App');
+</script>
+<script>
+    // 初始化菜单
+    $.ajax({
+        url: window.location.pathname + "?s=webcollector&c=api&m=get_module_list_linkage", // 菜单数据文件的 URL
+        type: 'GET',
+        dataType: "json",
+        success: function (res) {
+            var data = res.data;
+            if (data) {
+                for (i = 0; i < data.length; i++) {
+                    var active = '';
+                    if (data[i].id.toString() === "{$moduleid}") {
+                        active = "selected";
+                    }
+                    var html = `<option value="${data[i].id}" ${active}>${data[i].name}</option>`
+                    $("#dr_moduleid").append(html);
+                }
+            }
+        },
+    });
+</script>
+{template "footer.html"}

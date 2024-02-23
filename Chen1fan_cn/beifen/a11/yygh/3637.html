@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>大数据风控体系该怎么搭建？大数据风控模型构建流程 - 运营 - 澈逆凡博客</title>
+<meta name="description" content="风控是金融的心脏，数据则是风控的血液。以前我们主要依靠经验和宏观经济形式来实施风险控制，后来通过数据、评分在进行风控，现在则是运用大数据在做风控。 2014年起，互金行业开始大"/>
+<meta name="keywords" content="产品运营, 大数据, 运营分"/>
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script type="text/javascript" charset="utf-8">$(function(){$("img.lazy").lazyload({effect: "fadeIn"});});</script>
+<script>
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('2 5=5||[];(b(){2 1=4.c("6");1.9="8://1.7.g/1.h?f";2 3=4.d("6")[0];3.e.a(1,3)})();',18,18,'|hm|var|s|document|_0|script|baidu|https|src|insertBefore|function|createElement|getElementsByTagName|parentNode|ae86b9f95e6431d72b52a53c0ca66253|com|js'.split('|'),0,{}))
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h1 class="logo">
+            <a href="/" title="澈逆凡博客" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h1>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="/a/ganhuo/">干货分享</a>
+                        <ul class="sub-menu">
+                            
+                            <li><a href="/a/yygh/">运营</a></li>
+                            
+                            <li><a href="/a/jishu/">IT技术</a></li>
+                            
+                            <li><a href="/a/yx/">网络营销</a></li>
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/a/qgzt/">文案</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/news/">互联网资讯</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li><li class="menu-item-has-children">
+                        <a href="/gushici/">神回复</a>
+                        <ul style="display:none">
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                        <li class="first">
+                            <span class="time">20-06-05</span>
+                            <a target="_blank" href="/hd/14.html" title="网站公告：澈逆凡博客上线了！">网站公告：澈逆凡博客上线了！</a>
+                        </li>
+
+                    </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>
+    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+                                
+                            </div>
+                            <h1 class="title">大数据风控体系该怎么搭建？大数据风控模型构建流程</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>活动盒子</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="/a/yygh/">运营</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2021-09-10 17:08</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><script src="/plus/count.php?view=yes&aid=3637&mid=1" type='text/javascript' language="javascript"></script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <p>
+	原标题：如何从0到1搭建大数据风控体系<br />
+	<br />
+	风控是金融的心脏，数据则是风控的血液。以前我们主要依靠经验和宏观经济形式来实施风险控制，后来通过数据、评分在进行风控，现在则是运用大数据在做风控。</p>
+<p>
+	2014年起，互金行业开始大范围爆发风险事件，很多金融机构开始对传统的风控模式产生质疑。此时，正值大数据技术的发展，凭借其可靠的风控技术手段在互金行业中获得青睐。据《2018年中国大数据风控调研报告》称，2017年中国大数据风控市场规模达140亿人民币。</p>
+<p>
+	目前，各大互联网金融企业均已采用大数据风控这一技术手段，蚂蚁金服、融360、拍拍贷、点融网等均开发有独立的大数据风控系统，大数据是互联网金融乃至传统金融风控的必然趋势，它的发展将会给金融领域带来巨大福音。</p>
+<p>
+	那大数据风控到底是什么？大数据风控要如何搭建？下面盒子菌就给大家一一解答：</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong>一、什么是大数据风控</strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	大数据风控即大数据风险控制，是指通过大数据核心算法建立风险模型，在收集各种维度数据基础上，结合互联网化评分和信用管理模型，提取出对企业有用的数据，再进行分析判断，最终达到风险控制和风险提示的目的。</p>
+<div class="post-image">
+	<img alt="大数据风控体系该怎么搭建？大数据风控模型构建流程" class="size-full wp-image-386 aligncenter" sizes="(max-width: 640px) 100vw, 640px" src="/uploads/allimg/c210907/163100561P02F-AN2.jpg" srcset="/uploads/allimg/c210907/163100561P02F-AN2.jpg 640w, http://www.dobirduser.com/wp-content/uploads/2019/03/2019032517015148-300x225.jpg 300w" style="width: 640px; height: 480px;" /></div>
+<p>
+	大数据风控是互金平台在创新信用管理和风险管理方面的一种新思路。相对于传统风控，大数据风控在建模原理和方法论上并无本质区别，只不过是利用互联网这个时代的特征而已。目前领先的大数据风控使用的还是小数据，围绕客户信息，从财产、安全、守约、消费、社交等多个维度来评估客户的信誉水平，并为其建立客户信誉数据，从而减少风险的来源。</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong>二、为什么要用大数据风控</strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	据统计，目前银行传统的风控模型对市场上70%的客户是有效的，但是对另外30%的客户，其风控模型有效性将大打折扣。而大数据时代的来临丰富传统风控的数据纬度，利用多维度数据来识别借款人风险，包括社交、征信、消费、兴趣等。客户数据越多，信用风险就被揭示的更充分，信用评分就会更加客观。大数据中风控中的数据维度可以作为另外的30%客户风控的有效补充。大数据风控体系该怎么搭建？大数据风控模型构建流程</p>
+<p>
+	大数据风险控制的作用本来就是从原来被拒绝的客户中找到合格客户，识别出已经通过审核的高风险客户和欺诈客户。可以大大提高互金行业的效率和风控能力，有效的控制坏账率，从而让企业盈利。大数据风控是金融行业发展过程中必须结合的一项科技手段。</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong>三、大数据风控的应用场景</strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	大数据风控模型的应用场景非常广泛，只要牵扯互联网金融的行业就少不了大数据风控的存在。</p>
+<p>
+	1.&nbsp;&nbsp; 从资金的角度来看，风控模型是为了评估客户还款能力和还款意愿，反欺诈反作弊，防止客户薅羊毛和保证平台安全等功能。</p>
+<p>
+	2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 从行业维度看，主要包括消费金融、供应链金融、信用借贷、P2P 、大数据征信、第三方支付（第四方聚合支付）等各细分领域，同时还可用于电商、游戏、社交等&ldquo;传统&rdquo;互联网公司。可以说，任何互联网公司都需要风控。大数据风控体系该怎么搭建？大数据风控模型构建流程</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong>四、搭建大数据风控模型三部曲</strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	大数据风控从获客、审批、到贷中的维护、客户价值的提升、再利用、深挖以及到客户的挽留、催收和退出，让金融风控不再是简单的放款回款，而是在完整地维护一个客户的生命周期。</p>
+<p>
+	我们要形成一个完整的闭环，需要分三步：贷前、贷中、贷后。</p>
+<p>
+	1、贷前：望其面目，以绘其形</p>
+<p>
+	贷前主要包括准入授信规则的制定与划分。</p>
+<p>
+	（1）准入</p>
+<p>
+	在贷前阶段，需要对客户的数据进行搜集、清洗、分析、应用，这是一个很长的链条，若运用传统风控费时、费力。但我们现在有大数据技术，可以精准挖掘申请人多维度信息，包括人口属性信息、社交信息、历史消费记录等信息，消费方式、兴趣爱好、社交偏好等相关维度信息大数据风控体系该怎么搭建？大数据风控模型构建流程。</p>
+<p>
+	结合这些信息形成一张用户画像，对客户的贷款资质以及还款意愿、还款能力进行判断，辅助审核决策。不合格的客户在这个阶段直接被挡在外面，这样既防止后期&ldquo;误杀&rdquo;，也保证平台的客户质量，事半功倍。</p>
+<p>
+	（2）授信</p>
+<p>
+	授信是根据一个平台的消费需求制定的，我们可以把消费需求作为一个基数，建立有效的信用模型和评分规则。利用灵活开放的数据导入技术、多维度的信用强弱关系评分项，以及专业的评级模型，对客户还款能力、还款意愿等更深入、更全面的&ldquo;解剖、分析&rdquo;，为平台授信决策做一个整体的评级不同评级的客户：首先，风险系数的调整不同；其次，对于每一个评级的客户群体都要有额度的上限和下限。</p>
+<p>
+	&nbsp;</p>
+<p>
+	2、贷中：由表及里，对症下药</p>
+<p>
+	贷中分为两个部分，一部分反欺诈，另一个部分是额度调整。</p>
+<p>
+	1）反欺诈</p>
+<p>
+	反欺诈，可能很多人比较多地在贷前用到。但实际上反欺诈贯穿整个客户的生命周期，不仅在信贷环节，在帐号登陆、注册环节就要进行反欺诈防护。现行的欺诈手段主要是冒名欺诈、本人蓄意欺诈、以及不良中介诱骗他人间接实施信贷欺诈等。大数据风控体系该怎么搭建？大数据风控模型构建流程</p>
+<p>
+	反欺诈需要做好两件事，一个是信息验证，二是行为分析。在大数据风控系统里，有很多先进的技术做支撑，所以这个方面我们无需多虑。而在行为分析这个过程中，依靠风控经验、客户信息验证、部分行为数据做预测分析，基于客户行为，通过打标签的方法识别不同的客户群体的风险程度。</p>
+<p>
+	2）额度调整</p>
+<p>
+	在这个阶段客户大多有过至少一次的还款行为，那么平台就需要考虑如何调整客户的额度档次和息费，保证优质的客户得到更低的息费和更高的额度，而数据表现较差的客户需要用更高的息费来覆盖风险。</p>
+<p>
+	但不顾风险的一味追求高收益和不求收益的低风险都是没有意义的。额度调整的重点在于对客户需求和风险的合理预估。实则可以看成对资金在不同风险回报的分配，使得在一定的风险下，总体风险收益最大化。</p>
+<p>
+	&nbsp;</p>
+<p>
+	3、贷后：闻其五音，以别其病</p>
+<p>
+	贷后主要是账单催收和贷后监控等。大数据风控体系该怎么搭建？大数据风控模型构建流程</p>
+<p>
+	（1）账单催收</p>
+<p>
+	平台把资金放出去，要确保能收回，所以这时要追踪资金动态，一旦出现逾期则启动催收团队协助完成逾期处理、资产回收的工作。对于催收也讲究一定的策略，首先，针对不同风险的细分客户群体，制订差异化的催收措施。其次，把握催收的时机，因为催收的资源有限，我们需要按照一定的分配规则来分配催收资源。</p>
+<p>
+	（2）贷后监控</p>
+<p>
+	最后进入贷后监控环节。在信贷过程中，即使前中期的风控到位，也并不意味着信贷交易的万无一失，借款人环境变故、还款能力改变、还款意愿动摇等情况时有发生。而利用大数据技术，可以对借款人进行多维度动态事件及市场信息跟踪与监控，能够快速觉察、发现贷后借款人的数据异常情况，大数据风控体系该怎么搭建？大数据风控模型构建流程及时进行贷后预警，有效防范贷款人跑路，信贷机构坏账、死账等情况发生。</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong>五、结语</strong></p>
+<p>
+	从贷前、贷中、贷后三个阶段全程监控、贯穿始终的大数据风控体系，能够有效地把控金融风险。但是，在这里也要提醒大家一点，风控体系的搭建要以自身业务出发，才能发挥其真正的作用哦。</p>
+<p>
+	&nbsp;</p>
+<p>
+	以上，本期对大数据风控的分享就到这里啦，若有不对的地方，还请大家不吝批评指正！</p>
+<p>
+	作者：活动盒子</p>
+
+<p style="color:#C0C0C0">免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！ </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href='/a/yygh/3636.html' class='prev has-background'><span>上一篇：</span><h4>做运营到底需不需要人脉？如何建立自己的运营人脉</h4></a> </div>
+                        <div class="next-post"><a href='/a/yygh/3638.html' class='nextv has-background'><span>下一篇：</span><h4>全栈运营和专家运营那个更好？说说各自的优缺点</h4></a> </div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                            <li>
+                                <div class="item">
+                                    <a href="/a/yygh/3644.html" title="产品运营——借助5W2H分析法进行数据分析更高效">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/210908/1-210ZQ00500T5.png" alt="产品运营——借助5W2H分析法进行数据分析更高效">
+                                        <h4><span>产品运营——借助5W2H分析法进行数据分析更高效</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3642.html" title="溯源管理什么意思？说说溯源管理在生活中的运用示例">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210907/163100562534240-56124.jpg" alt="溯源管理什么意思？说说溯源管理在生活中的运用示例">
+                                        <h4><span>溯源管理什么意思？说说溯源管理在生活中的运用示例</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3641.html" title="运营环节经常犯得错误有哪些？这6点你应该犯过！">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210907/1631005623TG0-46202.jpg" alt="运营环节经常犯得错误有哪些？这6点你应该犯过！">
+                                        <h4><span>运营环节经常犯得错误有哪些？这6点你应该犯过！</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3640.html" title="怎么从零开始打造出一个优质的运营团队">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210907/163100561312140-2S02.png" alt="怎么从零开始打造出一个优质的运营团队">
+                                        <h4><span>怎么从零开始打造出一个优质的运营团队</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3639.html" title="全栈思考能力To 运营，活动策划背后的思考你get到了吗？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210907/163100561312140-2S02.png" alt="全栈思考能力To 运营，活动策划背后的思考你get到了吗？">
+                                        <h4><span>全栈思考能力To 运营，活动策划背后的思考你get到了吗？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3636.html" title="做运营到底需不需要人脉？如何建立自己的运营人脉">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210907/163100561BWP-55109.jpg" alt="做运营到底需不需要人脉？如何建立自己的运营人脉">
+                                        <h4><span>做运营到底需不需要人脉？如何建立自己的运营人脉</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3635.html" title="产品和研发经常“撕逼”产品经理如何化解与研发的矛盾">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210907/163100561312140-2S02.png" alt="产品和研发经常“撕逼”产品经理如何化解与研发的矛盾">
+                                        <h4><span>产品和研发经常“撕逼”产品经理如何化解与研发的矛盾</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3634.html" title="什么是运营？互联网运营到底是做什么的？3分钟带你了解一下">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210907/16310056142V50-31223.jpg" alt="什么是运营？互联网运营到底是做什么的？3分钟带你了解一下">
+                                        <h4><span>什么是运营？互联网运营到底是做什么的？3分钟带你了解一下</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3633.html" title="产品运营如何培养用户习惯？这几个观点，运营人不得不看">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/c210907/16310056129D40-154F.jpg" alt="产品运营如何培养用户习惯？这几个观点，运营人不得不看">
+                                        <h4><span>产品运营如何培养用户习惯？这几个观点，运营人不得不看</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+<li>
+                                <div class="item">
+                                    <a href="/a/yygh/3511.html" title="微信服务号如何进行产品化运营？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="/uploads/allimg/210825/1-210R5093459415.jpg" alt="微信服务号如何进行产品化运营？">
+                                        <h4><span>微信服务号如何进行产品化运营？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="sidebar col-xs-12 col-sm-4 col-md-4"><div class="widget widget_suxingme_postlist"><h3><span>随便看看</span></h3><ul class="recent-posts-widget"> <li class="one"><a href="/dianshang/184.html" target="_blank" title="淘宝店铺如何运营才能爆单？"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/c200617/15923Y304941F-53350.jpg" alt="淘宝店铺如何运营才能爆单？"/><div class="title"><span>2020-06-17</span><h4>淘宝店铺如何运营才能爆单？</h4></div></a></li>
+ <li class="others"><div class="image"><a href="/dianshang/2700.html" target="_blank" title="淘宝店长如何快速在双十二选择爆款推广？"><img data-original="/images/defaultpic.gif" alt="淘宝店长如何快速在双十二选择爆款推广？" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/dianshang/2700.html" title="淘宝店长如何快速在双十二选择爆款推广？">淘宝店长如何快速在双十二选择爆款推广？</a></h4><span>2020-12-14</span></div></li>
+<li class="others"><div class="image"><a href="/dianshang/2706.html" target="_blank" title="淘宝销量是实时更新吗？"><img data-original="/images/defaultpic.gif" alt="淘宝销量是实时更新吗？" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/dianshang/2706.html" title="淘宝销量是实时更新吗？">淘宝销量是实时更新吗？</a></h4><span>2020-12-23</span></div></li>
+<li class="others"><div class="image"><a href="/gzhyy/1962.html" target="_blank" title="公众号广告主和流量主之间有什么关联和区别？"><img data-original="https://static.getgetai.com/img/115bb7bb065b44d1bb8150ffc3303281/20201130151400119.png" alt="公众号广告主和流量主之间有什么关联和区别？" class="thumbnail lazy"/></a></div><div class="title"><h4><a href="/gzhyy/1962.html" title="公众号广告主和流量主之间有什么关联和区别？">公众号广告主和流量主之间有什么关联和区别？</a></h4><span>2020-11-30</span></div></li>
+ </ul></div><div class="widget widget_suxingme_hotpost"><h3><span>热门文章</span></h3><ul class="widget_suxingme_post"> <li><a href="/gzhyy/2173.html" target="_blank" title="微信公众号条漫图文怎么制作？"><div class="overlay"></div><img class="thumbnail lazy" data-original="https://static.getgetai.com/img/115bb7bb065b44d1bb8150ffc3303281/20201211165415545.png" alt="微信公众号条漫图文怎么制作？"/><div class="title"><div class="entry-meta"><span>2020-12-11</span></div><h4>微信公众号条漫图文怎么制作？</h4></div></a></li>
+<li><a href="/a/yygh/360.html" target="_blank" title="案例拆解：学而思9元领秋季语文特训班"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/c200908/15c544NV13Z-1L62.jpg" alt="案例拆解：学而思9元领秋季语文特训班"/><div class="title"><div class="entry-meta"><span>2020-09-08</span></div><h4>案例拆解：学而思9元领秋季语文特训班</h4></div></a></li>
+<li><a href="/dianshang/34.html" target="_blank" title="京东多种店铺类型分别怎么运营？"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/200609/0012001106-0.jpg" alt="京东多种店铺类型分别怎么运营？"/><div class="title"><div class="entry-meta"><span>2020-06-09</span></div><h4>京东多种店铺类型分别怎么运营？</h4></div></a></li>
+ </ul></div><div class="widget suxingme_tag"><h3><span>热门标签</span></h3><div class="widge_tags"><div class="tag-items">  <a href="/tags.php?/31/">运营</a>  <a href="/tags.php?/54/">京东</a>  <a href="/tags.php?/57/">电商</a>  <a href="/tags.php?/30/">织梦二次开发</a>  <a href="/tags.php?/189/">918</a>  <a href="/tags.php?/42/">社群运营</a>  <a href="/tags.php?/50/">摆摊</a>  <a href="/tags.php?/25/">情感</a>  <a href="/tags.php?/33/">摆地摊</a>  <a href="/tags.php?/2/">聪明</a>  <a href="/tags.php?/29/">网站公告</a>  <a href="/tags.php?/20/">景点推荐</a>  <a href="/tags.php?/39/">产品经理</a>  <a href="/tags.php?/41/">新媒体运营</a>  <a href="/tags.php?/35/">技巧</a>  <a href="/tags.php?/40/">能力提升</a>  <a href="/tags.php?/23/">美景</a>  <a href="/tags.php?/3/">乌鸦</a>  <a href="/tags.php?/28/">时尚潮物</a>  <a href="/tags.php?/27/">手表</a>  <a href="/tags.php?/38/">产品运营</a>  <a href="/tags.php?/37/">B端产品</a>  <a href="/tags.php?/15/">水果</a>  <a href="/tags.php?/22/">游泳</a>  <a href="/tags.php?/21/">海滩</a>  <a href="/tags.php?/48/">时间</a>  <a href="/tags.php?/16/">吃货</a>  <a href="/tags.php?/12/">云南</a>  <a href="/tags.php?/14/">中国美食</a>  <a href="/tags.php?/36/">方法</a>  </div></div></div><div class="widget suxingme_social"><h3><span>关注我们 么么哒！</span></h3><div class="attentionus"><ul class="items clearfix"><span class="social-widget-link social-link-qq"><span class="social-widget-link-count"><i class="fa fa-weixin"></i>十一记实录</span><span class="social-widget-link-title">公众号</span><a id="tooltip-s-weixin" href="javascript:void(0);"></a></span><span class="social-widget-link social-link-email"><span class="social-widget-link-count"><i class="fa fa-envelope"></i>1812215600@qq.com</span><span class="social-widget-link-title">邮箱</span><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" target="_blank" rel="nofollow"></a></span><span class="social-widget-link social-link-wechat"><span class="social-widget-link-count"> 运营贩</span><span class="social-widget-link-title">百家号</span><a id="tooltip-s-weixin" href="javascript:void(0);"></a></span></ul></div></div><div class="widget widget_suxingme_postlist"><h3><span>最新内容</span></h3><ul class="recent-posts-widget"> <li class="one"><a href="/a/yygh/3640.html" target="_blank" title="怎么从零开始打造出一个优质的运营团队"><div class="overlay"></div><img class="thumbnail lazy" data-original="/uploads/allimg/c210907/163100561312140-2S02.png" alt="怎么从零开始打造出一个优质的运营团队"/><div class="title"><span>2021-09-10</span><h4>怎么从零开始打造出一个优质的运营团队</h4></div></a></li>
+ <li class="others"><div class="image"><a href="/a/yygh/3639.html" target="_blank" title="全栈思考能力To 运营，活动策划背后的思考你get到了吗？" rel="nofollow"><img data-original="/uploads/allimg/c210907/163100561312140-2S02.png" alt="全栈思考能力To 运营，活动策划背后的思考你get到了吗？" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yygh/3639.html" target="_blank" title="全栈思考能力To 运营，活动策划背后的思考你get到了吗？">全栈思考能力To 运营，活动策划背后的思考你get到了吗？</a></h4><span>2021-09-10</span></div></li>
+<li class="others"><div class="image"><a href="/a/yygh/3637.html" target="_blank" title="大数据风控体系该怎么搭建？大数据风控模型构建流程" rel="nofollow"><img data-original="/uploads/allimg/c210907/163100561312140-2S02.png" alt="大数据风控体系该怎么搭建？大数据风控模型构建流程" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yygh/3637.html" target="_blank" title="大数据风控体系该怎么搭建？大数据风控模型构建流程">大数据风控体系该怎么搭建？大数据风控模型构建流程</a></h4><span>2021-09-10</span></div></li>
+<li class="others"><div class="image"><a href="/a/yygh/3635.html" target="_blank" title="产品和研发经常“撕逼”产品经理如何化解与研发的矛盾" rel="nofollow"><img data-original="/uploads/allimg/c210907/163100561312140-2S02.png" alt="产品和研发经常“撕逼”产品经理如何化解与研发的矛盾" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yygh/3635.html" target="_blank" title="产品和研发经常“撕逼”产品经理如何化解与研发的矛盾">产品和研发经常“撕逼”产品经理如何化解与研发的矛盾</a></h4><span>2021-09-10</span></div></li>
+<li class="others"><div class="image"><a href="/a/yygh/3644.html" target="_blank" title="产品运营——借助5W2H分析法进行数据分析更高效" rel="nofollow"><img data-original="/uploads/allimg/210908/1-210ZQ00500T5.png" alt="产品运营——借助5W2H分析法进行数据分析更高效" class="thumbnail"/></a></div><div class="title"><h4><a href="/a/yygh/3644.html" target="_blank" title="产品运营——借助5W2H分析法进行数据分析更高效">产品运营——借助5W2H分析法进行数据分析更高效</a></h4><span>2021-09-08</span></div></li>
+ </ul></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                
+                <a href="/a/ganhuo/">干货分享</a>
+                
+                <a href="/a/qgzt/">文案</a>
+                
+                <a href="/news/">互联网资讯</a>
+                
+                <a href="/gushici/">神回复</a>
+                
+              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <p>Copyright &copy;     备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">京ICP备19036021号-1</a></p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <form class="sidebar-search" method="get" action="/search.php">
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript">jQuery(document).ready(function($) {$(".fancybox").fancybox()});</script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+{template "header.html"}
+
+<div class="note note-danger">
+    DEDECMS 数据库转移为迅睿CMS
+</div>
+
+<div class="portlet bordered light ">
+    <div class="portlet-title tabbable-line">
+        <div class="caption">
+            <span class="caption-subject">
+            DEDECMS 数据库
+            </span>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <form role="form" id="myform">
+            {$form}
+            <div class="form-body">
+                <p>打开dedecms程序目录中的数据库配置文件：/data/common.inc.php</p>
+                <div class="form-group">
+                    <label>数据库地址$cfg_dbhost：</label>
+                    <label><input type="text" name="data[host]" value="{$data.hostname}" class="form-control input-xlarge" placeholder=""></label>
+                </div>
+                <div class="form-group">
+                    <label>数据库账号$cfg_dbuser：</label>
+                    <label><input type="text" name="data[user]" value="{$data.username}" class="form-control input-xlarge" placeholder=""></label>
+                </div>
+                <div class="form-group">
+                    <label>数据库密码$cfg_dbpwd：</label>
+                    <label><input type="text" name="data[pass]" value="{$data.password}" class="form-control input-xlarge" placeholder=""></label>
+                </div>
+                <div class="form-group">
+                    <label>数据库名称$cfg_dbname：</label>
+                    <label><input type="text" name="data[name]" value="{$data.database}" class="form-control input-xlarge" placeholder=""></label>
+                </div>
+                <div class="form-group">
+                    <label>数据表前缀$cfg_dbprefi：</label>
+                    <label><input type="text" name="data[prefix]" value="{$data.DBPrefix}" class="form-control input-xlarge" placeholder=""></label>
+                </div>
+
+                <p>出现数据库无法链接成功的时候，你可以尝试使用其他MySql客户端软件来链接，例如比较火爆的工具SQLyog：http://www.baidu.com/s?ie=UTF-8&wd=SQLyog</p>
+
+
+            </div>
+            <div class="form-actions right">
+                <button type="button" onclick="dr_ajax_submit('{dr_url(APP_DIR.'/home/index')}', 'myform', 2000)" class="btn green"> 下一步 </button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+
+{template "footer.html"}

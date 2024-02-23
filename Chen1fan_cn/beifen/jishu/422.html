@@ -1,0 +1,533 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Linux性能优化可以从哪些方面入手？</title>
+<meta content="Linux,性能,优化" name="keywords" />
+<meta content="Linux性能优化一直都是老生常谈的话题，相信大家对于优化的措施多多少少都有一定的了解。但是如何进行Linux性能调优，又从哪些方面入手，这背后的深层原理是什么，为什么要这么操作，却" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h1 class="logo">
+            <a href="/" title="{dede:global.cfg_webname/}" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h1>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/ganhuo">干货分享</a>
+                                                <ul>                             <li><a href="http://blog.chenifan.cn/jishu">IT技术</a></li>
+                                                        <li><a href="http://blog.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="http://blog.chenifan.cn/yx">网络营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/qgzt">文案</a>
+                                                <ul>                             <li><a href="http://blog.chenifan.cn/life">极致生活</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/index.php?c=category&id=13">互联网资讯</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="http://blog.chenifan.cn/gushici">神回复</a>
+                                            </li>
+                                    </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="http://blog.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+                                Linux,性能,优化                            </div>
+                            <h1 class="title">Linux性能优化可以从哪些方面入手？</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>小澈</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="{dede:field.typeurl /}">IT技术</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2020-09-14</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_422">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=422", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_422").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script> </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <p style="text-indent: 2em;">
+	<span style="font-family: 微软雅黑; line-height: 2; font-size: 14px;">Linux性能优化一直都是老生常谈的话题，相信大家对于优化的措施多多少少都有一定的了解。但是如何进行Linux性能调优，又从哪些方面入手，这背后的深层原理是什么，为什么要这么操作，却很少有人讲得清楚。下面本文详细为大家分析一下影响Linux性能的三大因素系统硬件、操作系统和操作系统，大家可以从这些思路上得到优化的具体方案。</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<img alt="Linux性能优化" height="288" src="https://file.boxuegu.com/b463cc53f1754035a292f8371faf0b03.png" style="display: block; margin-left: auto; margin-right: auto;" width="499" /></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="line-height: 2; font-family: 微软雅黑; font-size: 14px;">一、系统硬件</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span lang="EN-US" style="line-height: 2; font-family: 微软雅黑; font-size: 14px;"><span style="font-family: 宋体;">1、</span>CPU</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="line-height: 2; font-family: 微软雅黑; font-size: 14px;"><span lang="EN-US">众所周知，操作系统运行的根本就是一个稳定的CPU，它</span>的性能从根本上决定了系统整体的性能，因此Linux性能优化可以首先从CPU入手。一般来讲<span lang="EN-US">CPU</span>数量越多、主频越高，服务器性能也就相对越好。不过也有例外的情况，超线程的处理器可以在同一时间运行多个线程，在<span lang="EN-US">Linux</span>系统下，只有运行<span lang="EN-US">SMP</span>内核才能支持超线程，但是安装的<span lang="EN-US">CPU</span>数量越多，从超线程获得的性能方面的提高就越少。可能出现<span lang="EN-US">CPU</span>瓶颈的应用有<span lang="EN-US">db</span>服务器、动态<span lang="EN-US">Web</span>服务器等，对于这类应用，要把<span lang="EN-US">CPU</span>的配置和性能放在主要位置。</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="font-family: 微软雅黑; line-height: 2; font-size: 14px;">2、内存</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="line-height: 2; font-family: 微软雅黑; font-size: 14px;"><span lang="EN-US">除了CPU之外，</span>内存的大小也是影响<span lang="EN-US">Linux</span>性能的一个重要的方面。如果内存太小，系统进程将被阻塞，应用也将变得缓慢，甚至失去响应；内存太大，导致资源浪费。因此，要使用更大的内存，建议安装<span lang="EN-US">64</span>位的操作系统，同时开启<span lang="EN-US">Linux</span>的大内存内核支持。由于处理器寻址范围的限制，在<span lang="EN-US">32</span>位<span lang="EN-US">Linux</span>操作系统上，应用程序单个进程最大只能使用<span lang="EN-US">4GB</span>的内存，这样以来，即使系统有更大的内存，应用程序也无法<span lang="EN-US">&ldquo;</span>享<span lang="EN-US">&rdquo;</span>用，解决的办法就是使用<span lang="EN-US">64</span>位处理器，安装<span lang="EN-US">64</span>位操作系统。在<span lang="EN-US">64</span>位操作系统下，可以满足所有应用程序对内存的使用需求 ，几乎没有限制。<span lang="EN-US">Linux</span>系统采用了物理内存和虚拟内存两种方式，虚拟内存虽然可以缓解物理内存的不足，但是占用过多的虚拟内存，应用程序的性能将明显下降，要保证应用程序的高性能运行，物理内存一定要足够大；但是过大的物理内存，会造成内存资源浪费。</span></p>
+<p style="text-indent: 2em;">
+	<span lang="EN-US" style="line-height: 2; font-family: 微软雅黑; font-size: 14px;">&nbsp;</span></p>
+<p style="text-indent: 2em;">
+	<span style="line-height: 2; font-family: 微软雅黑; font-size: 14px;">3、磁盘<span lang="EN-US">I/O</span>性能</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="line-height: 2; font-family: 微软雅黑; font-size: 14px;">磁盘的<span lang="EN-US">I/O</span>性能直接影响应用程序的性能，在一个有频繁读写的应用中，如果磁盘<span lang="EN-US">I/O</span>性能得不到满足，就会导致应用停滞。好在现今的磁盘都采用了很多方法来提高<span lang="EN-US">I/O</span>性能，比如常见的磁盘<span lang="EN-US">RAID</span>技术。通过<span lang="EN-US">RAID</span>技术组成的磁盘组，就相当于一个大硬盘，用户可以对它进行分区格式化、建立文件系统等操作，跟单个物理硬盘一模一样，唯一不同的是<span lang="EN-US">RAID</span>磁盘组的<span lang="EN-US">I/O</span>性能比单个硬盘要高很多，同时在数据的安全性也有很大提升。</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="line-height: 2; font-family: 微软雅黑; font-size: 14px;">4、网络宽带</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="line-height: 2; font-family: 微软雅黑; font-size: 14px;"><span lang="EN-US">Linux</span>下的各种应用，一般都是基于网络的，因此网络带宽也是影响性能的一个重要方面，低速的、不稳定的网络将导致网络应用程序的访问阻塞，而稳定、高速的网络带宽，可以保证应用程序在网络上畅通无阻地运行。幸运的是，现在的网络一般都是千兆带宽或光纤网络，带宽问题对应用程序性能造成的影响也在逐步降低。</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="line-height: 2; font-family: 微软雅黑; font-size: 14px;"><span lang="EN-US">二、</span>操作系统</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="font-family: 微软雅黑; line-height: 2; font-size: 14px;">1、安装系统</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="line-height: 2; font-family: 微软雅黑; font-size: 14px;">系统优化可以从安装操作系统开始，当安装<span lang="EN-US">Linux</span>系统时，磁盘的划分，<span lang="EN-US">SWAP</span>内存的分配都直接影响以后系统的运行性能。例如，磁盘分配可以遵循应用的需求。随着内存价格的降低和内存容量的日益增大，对虚拟内存<span lang="EN-US">SWAP</span>的设定，现在已经没有了所谓虚拟内存是物理内存两倍的要求，但是<span lang="EN-US">SWAP</span>的设定还是不能忽略，根据经验，如果内存较小，一般设置<span lang="EN-US">SWAP</span>交换分区大小为内存的<span lang="EN-US">2</span>倍；如果物理内存大于<span lang="EN-US">8GB</span>小于<span lang="EN-US">16GB</span>，可以设置<span lang="EN-US">SWAP</span>大小等于或略小于物理内存即可；如果内存大小在<span lang="EN-US">16GB</span>以上，原则上可以设置<span lang="EN-US">SWAP</span>为<span lang="EN-US">0</span>，但并不建议这么做，因为设置一定大小的<span lang="EN-US">SWAP</span>还是有一定作用的。</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="font-family: 微软雅黑; line-height: 2; font-size: 14px;">2、内核参数</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="line-height: 2; font-family: 微软雅黑; font-size: 14px;">系统安装完成后，优化工作并没有结束，接下来还可以对系统内核参数进行优化，不过内核参数的优化要和系统中部署的应用结合起来整体考虑。例如，如果系统部署的是<span lang="EN-US">Oracle</span>数据库应用，那么就需要对系统共享内存段、系统信号量、文件句柄等参数进行优化设置；如果部署的是<span lang="EN-US">Web</span>应用，那么就需要根据<span lang="EN-US">Web</span>应用特性进行网络参数的优化，例如修改<span lang="EN-US">net.ipv4.ip_local_port_range</span>、<span lang="EN-US">net.ipv4.tcp_tw_reuse、</span><span lang="EN-US">net.core.somaxconn</span>等网络内核参数。</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="font-family: 微软雅黑; line-height: 2; font-size: 14px;">3、文件系统</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="line-height: 2; font-family: 微软雅黑; font-size: 14px;">文件系统的优化也是系统资源优化的一个重点，在<span lang="EN-US">Linux</span>下可选的文件系统有<span lang="EN-US">ext2</span>、<span lang="EN-US">ext3</span>、<span lang="EN-US">ReiserFS</span>、<span lang="EN-US">ext4</span>、<span lang="EN-US">xfs</span>，根据不同的应用，选择不同的文件系统。<span lang="EN-US">Linux</span>标准文件系统是从<span lang="EN-US">VFS</span>开始的，然后是<span lang="EN-US">ext</span>，接着就是<span lang="EN-US">ext2</span>，应该说，<span lang="EN-US">ext2</span>是<span lang="EN-US">Linux</span>上标准的文件系统，<span lang="EN-US">ext3</span>是在<span lang="EN-US">ext2</span>基础上增加日志形成的，从<span lang="EN-US">VFS</span>到<span lang="EN-US">ext4</span>，其设计思想没有太大变化，都是早期<span lang="EN-US">UNIX</span>家族基于超级块和<span lang="EN-US">inode</span>的设计理念。<span lang="EN-US">XFS</span>文件系统是一个高级日志文件系统，<span lang="EN-US">XFS</span>通过分布处理磁盘请求、定位数据、保持<span lang="EN-US">Cache </span>的一致性来提供对文件系统数据的低延迟、高带宽的访问，因此，<span lang="EN-US">XFS</span>极具伸缩性，非常健壮，具有优秀的日志记录功能、可扩展性强、快速写入性能等优点。目前服务器端<span lang="EN-US">ext4</span>和<span lang="EN-US">xfs</span>是主流文件系统，如何选择合适的文件系统，需要根据文件系统的特点加上业务的需求综合来定。</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="line-height: 2; font-family: 微软雅黑; font-size: 14px;">三、应用程序软件</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="line-height: 2; font-family: 微软雅黑; font-size: 14px;"><span lang="EN-US">1、</span>运维</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="line-height: 2; font-family: 微软雅黑; font-size: 14px;">在思考Linux性能优化的过程中，<span lang="EN-US">Linux</span>运维方面承担着很重要的任务。首先，<span lang="EN-US">Linux</span>运维人员要了解和掌握操作系统的当前运行状态，这些信息是检测和判断系统性能的基础和依据；其次，<span lang="EN-US">Linux</span>运维人员还有掌握系统的硬件信息，然后根据这些信息综合评估系统资源的使用情况。作为一名<span lang="EN-US">Linux</span>运维人员，还要掌握应用程序对系统资源的使用情况，更深入的一点就是要了解应用程序的运行效率，通过对系统资源的监控，就能发现应用程序是否存在异常，如果确实是应用程序存在问题，需要把问题立刻反映给程序开发人员，进而改进或升级程序。性能优化本身就是一个复杂和繁琐的过程，<span lang="EN-US">Linux</span>运维人员只有了解了系统硬件信息、网络信息、操作系统配置信息和应用程序信息才能有针对性地的展开对服务器性能优化，这就要求<span lang="EN-US">Linux</span>运维人员有充足的理论知识、丰富的实战经验以及缜密分析问题的头脑。</span></p>
+<p style="text-indent: 2em;">
+	<span lang="EN-US" style="line-height: 2; font-family: 微软雅黑; font-size: 14px;">&nbsp;</span></p>
+<p style="text-indent: 2em;">
+	<span style="line-height: 2; font-family: 微软雅黑; font-size: 14px;"><span lang="EN-US">2、</span>系统架构设计</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="line-height: 2; font-family: 微软雅黑; font-size: 14px;">系统性能优化涉及的第二类人员就是应用程序的架构设计人员。如果在<span lang="EN-US">Linux</span>运维环节经过综合判断后，发现影响性能的是应用程序的执行效率，那么程序架构设计人员就要及时介入，深入了解程序运行状态。首先，系统架构设计人员要跟踪了解程序的执行效率，如果执行效率存在问题，要找出哪里出现了问题；其次，如果真的是架构设计出现了问题，那么就要马上优化或改进系统架构，设计更好的应用系统架构。</span></p>
+<p style="text-indent: 2em;">
+	<span lang="EN-US" style="line-height: 2; font-family: 微软雅黑; font-size: 14px;">&nbsp;</span></p>
+<p style="text-indent: 2em;">
+	<span style="font-family: 微软雅黑; line-height: 2; font-size: 14px;">3、软件开发</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="line-height: 2; font-family: 微软雅黑; font-size: 14px;">系统性能优化最后一个环节涉及的是程序开发人员，在<span lang="EN-US">Linux</span>运维人员或架构设计人员找到程序或结构瓶颈后，程序开发人员要马上介入进行相应的程序修改。修改程序要以程序的执行效率为基准，改进程序的逻辑，有针对性地进行代码优化。系统性能优化一般遵循的流程是：首先<span lang="EN-US">Linux</span>运维人员查看系统的整体状况，如果发现是系统硬件、网络设备或者操作系统配置问题，<span lang="EN-US">Linux</span>运维人员可以根据情况自主解决；如果发现是程序结构问题，就需要提交给程序架构设计人员；如果发现是程序代码执行问题，就交给开发人员进行代码优化。这样就完成了一个系统性能优化的过程。</span></p>
+<p style="text-indent: 2em;">
+	&nbsp;</p>
+<p style="text-indent: 2em;">
+	<span style="font-family: 微软雅黑; line-height: 2; font-size: 14px;">综上所述，Linux性能优化可以主要从系统硬件、操作系统和应用程序软件入手。一般来讲，只要通过这样一步步的仔细检测和排查，找出Linux性能需要优化的地方并马上解决问题，只是一个顺理成章的过程。现在还在为Linux性能优化发愁的朋友，不妨马上动手试一试。</span></p>
+<p style="color:#C0C0C0">免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！ </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="http://blog.chenifan.cn/jishu/421.html" class="prev has-background"><span>上一篇：</span><h4>计算机网络安全课程学习路线分享</h4></a></div>
+                        <div class="next-post"><a href="http://blog.chenifan.cn/jishu/423.html" class="nextv has-background"><span>下一篇：</span><h4>学Linux没出路吗？薪资到底如何</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/71.html" title="微信小程序去掉 button 标签的边框">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="http://blog.chenifan.cn/static/assets/images/nopic.gif" alt="最近在做小程序，因为客服按钮要用button调用，但是添加之后有边框，隐藏border发现竟然不起作用，查了下发现小程序的button边框要用after来设置。 button::after{border:none;} 这样写button边框就可以隐藏了。">
+                                        <h4><span>微信小程序去掉 button 标签的边框</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/74.html" title="phpstudy伪静态设置的问题">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="http://blog.chenifan.cn/uploads/allimg/200610/1402406349-0-lp.png" alt="先说下phpstudy伪静态设置方法 打开phpstudy控制面板，找到php扩展和设置--apache扩展。 在apache扩展菜单里面，找到rewrite_module模块，把它启用勾上。也可以直接打开apache配置文件里面，“/apache/conf/” 下的 httpd.conf 文件，通过查找“LoadModule rewrite_module”，把前面的”#”号删除即可。 然后依次找到面板，打开配置文件 httpd-conf 建议用文本编辑器编辑，查找AllowOverride None，替">
+                                        <h4><span>phpstudy伪静态设置的问题</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/421.html" title="计算机网络安全课程学习路线分享">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/47af49f5306b463fb1630fb8f9504a14.png" alt="掌握计算机网络安全课程学习路线学习过程中少走弯路，从事企业网络管理员或计算机网络安全工作的学生需要掌握计算机网络安全相关知识。按照计算机通信分层思想讲解网络安全，物理层面">
+                                        <h4><span>计算机网络安全课程学习路线分享</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/420.html" title="嵌入式培训学习难吗？应该怎样学习？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/0ae1c5574651404e89a0dd6aa977ac13.png" alt="嵌入式蓬勃发展很多小伙伴们也很想学习嵌入式，成为一名嵌入式开发工程师。可是很多小白会担心，嵌入式好学吗，如何学习嵌入式，今天就和大家分享一下学习经验，希望对大家有所帮助。">
+                                        <h4><span>嵌入式培训学习难吗？应该怎样学习？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/78.html" title="关于设置全站所有链接都在新窗口打开等代码整理">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="http://blog.chenifan.cn/static/assets/images/nopic.gif" alt="一、全站链接在新窗口打开 关于连接在新窗口打开我们平时大多数的用法就是，在a 标签里设置 target 属性，如target=“_blank”在新窗口打开，可是当站内的链接都是在当前窗口打开的话，一但想要全部都修改成新窗口打开的话，一个一个的去修改排查a标签肯定是非常的麻烦跟费事的，那么有没有什么简单的方法来修改全站的链接在新窗口打开呢； 下面我们来看下代码： basetarg">
+                                        <h4><span>关于设置全站所有链接都在新窗口打开等代码整理</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="http://blog.chenifan.cn/jishu/73.html" title="实测iframe自适应高度的两种方法">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="http://blog.chenifan.cn/static/assets/images/nopic.gif" alt="方案一 iframename=myiframeid=myiframesrc=#frameborder=0scrolling=no/iframe scripttype=text/javascriptlanguage=javascript$(window.parent.document).find(#myiframe).load(function(){varmain=$(window.parent.document).find(#myiframe);varthisheight=$(docu">
+                                        <h4><span>实测iframe自适应高度的两种方法</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="http://blog.chenifan.cn/dianshang/320.html" target="_blank" title="拼多多运营低价爆款策略"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="http://blog.chenifan.cn/uploads/allimg/c200802/1596339462I4P-1W16.png" alt=" 拼多多运营低价爆款策略：拼多多发展势头正旺，很多商家也都从淘宝转战拼多多，拼多多之所以能这么快崛起主要还是以低价爆款策略吸引了低消费水平人群，占领了很大部分市场，当然这也少不了背后..." />
+       <div class="title ">
+        <span>2020-08-02</span>
+        <h4>拼多多运营低价爆款策略</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]"><img data-original=" https://nimg.ws.126.net/?url=http%3A%2F%2Fcms-bucket.ws.126.net%2F2020%2F1118%2Fe39ef41bj00qjzh94002cc000m800etc.jpg&thumbnail=660x2147483647&quality=80&type=jpg" alt=" [field: fulltitle / ]" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" [field: arcurl / ]" title=" [field: fulltitle / ]">富士康越南显示器工厂投产 已生产出首批产品|广宁省</a></h4>
+       <span>2020-11-19</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]"><img data-original=" https://www.lifeskill.cn/UpLoadFiles/image/20170702/20170702215850485048.jpg" alt=" [field: fulltitle / ]" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" [field: arcurl / ]" title=" [field: fulltitle / ]">你知道吗？苹果不可以和青菜放在一起！</a></h4>
+       <span>2020-10-30</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]"><img data-original=" http://blog.chenifan.cn/uploads/allimg/210121/1_012115594955W.jpg" alt=" [field: fulltitle / ]" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" [field: arcurl / ]" title=" [field: fulltitle / ]">跨界合作 我想开一个微店,没有经验，希望各位可以帮帮忙</a></h4>
+       <span>2021-01-21</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="http://blog.chenifan.cn/uploadfile/thumb/c4ca4238a0b923820dcc509a6f75849b/200x200_auto.jpg" alt=" [field: fulltitle / ]" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2021-10-20</span>
+        </div>
+        <h4>我悄悄把你设置成了置顶，想让你知道，但又不想让你知道</h4>
+       </div></a></li>  
+     <li><a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="http://blog.chenifan.cn/uploads/allimg/c211009/1633LA532I60-QA3.jpg" alt=" [field: fulltitle / ]" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2021-10-09</span>
+        </div>
+        <h4>一个人怎么运营微信公众号？</h4>
+       </div></a></li>  
+     <li><a href=" [field: arcurl / ]" target="_blank " title=" [field: fulltitle / ]">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="http://blog.chenifan.cn/uploads/allimg/c211009/1633LA4543R0-12N5.jpg" alt=" [field: fulltitle / ]" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2021-10-09</span>
+        </div>
+        <h4>抖店闭环攻略（抖品牌篇），3个月从0到1000万月销增长案例</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>热门标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="http://blog.chenifan.cn/ganhuo">干货分享</a>
+                 
+                <a href="http://blog.chenifan.cn/qgzt">文案</a>
+                 
+                <a href="http://blog.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="http://blog.chenifan.cn/index.php?c=category&id=13">互联网资讯</a>
+                 
+                <a href="http://blog.chenifan.cn/gushici">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">{dede:global.cfg_beian/}</a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+</body>
+</html>

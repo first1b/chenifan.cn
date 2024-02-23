@@ -1,0 +1,181 @@
+{
+    "table": "webcollector_rules",
+    "field": {
+        "rulename": {
+            "name": "规则名称",
+            "fieldtype": "Text",
+            "setting": {
+                "option": {
+                    "fieldtype": "",
+                    "fieldlength": "",
+                    "value": "",
+                    "width": "400",
+                    "css": ""
+                },
+                "validate": {
+                    "required": "0",
+                    "pattern": "",
+                    "errortips": "",
+                    "isedit": "1",
+                    "check": "",
+                    "filter": "",
+                    "formattr": "",
+                    "tips": "请填写规则名称"
+                }
+            },
+            "ismain": 1,
+            "fieldname": "rulename"
+        },
+        "moduleid": {
+            "name": "关联模型ID",
+            "fieldtype": "Text",
+            "setting": {
+                "option": {
+                    "fieldtype": "",
+                    "fieldlength": "",
+                    "value": "",
+                    "width": "",
+                    "css": ""
+                },
+                "validate": {
+                    "required": "0",
+                    "pattern": "",
+                    "errortips": "",
+                    "check": "",
+                    "filter": "",
+                    "formattr": "",
+                    "tips": ""
+                }
+            },
+            "ismember": "1",
+            "ismain": 1,
+            "fieldname": "moduleid"
+        },
+        "status": {
+            "name": "启用",
+            "fieldtype": "Radio",
+            "setting": {
+                "option": {
+                    "options": "启用|1\r\n禁用|0",
+                    "is_field_ld": "0",
+                    "value": "0",
+                    "fieldtype": "",
+                    "fieldlength": "",
+                    "show_type": "0",
+                    "css": ""
+                },
+                "validate": {
+                    "required": "1",
+                    "pattern": "",
+                    "errortips": "",
+                    "check": "",
+                    "filter": "",
+                    "formattr": "",
+                    "tips": ""
+                }
+            },
+            "ismain": 1,
+            "fieldname": "status"
+        },
+        "token": {
+            "name": "token",
+            "fieldname": "token",
+            "ismain": 1,
+            "ismember": 1,
+            "fieldtype": "Text"
+        },
+        "setting": {
+            "name": "配置信息",
+            "fieldtype": "Text",
+            "setting": {
+                "option": {
+                    "fieldtype": "",
+                    "fieldlength": "",
+                    "value": "",
+                    "width": "",
+                    "css": ""
+                },
+                "validate": {
+                    "required": "0",
+                    "pattern": "",
+                    "errortips": "",
+                    "isedit": "1",
+                    "check": "",
+                    "filter": "",
+                    "formattr": "",
+                    "tips": ""
+                }
+            },
+            "ismember": "1",
+            "ismain": 1,
+            "fieldname": "setting"
+        }
+    },
+    "list": {
+        "id": {
+            "name": "",
+            "width": "",
+            "func": ""
+        },
+        "uid": {
+            "name": "添加人",
+            "width": "",
+            "func": ""
+        },
+        "displayorder": {
+            "use": "1",
+            "name": "排序",
+            "width": "65",
+            "func": ""
+        },
+        "moduleid": {
+            "use": "1",
+            "name": "模型ID",
+            "width": "90",
+            "func": ""
+        },
+        "status": {
+            "use": "1",
+            "name": "启用",
+            "width": "65",
+            "func": ""
+        },
+        "rulename": {
+            "use": "1",
+            "name": "规则名称",
+            "width": "400",
+            "func": ""
+        },
+        "apiurl": {
+            "name": "接口地址",
+            "width": "400",
+            "func": ""
+        },
+        "token": {
+            "use": "1",
+            "name": "安全标识符",
+            "width": "200",
+            "func": ""
+        },
+        "setting": {
+            "name": "配置信息",
+            "width": "",
+            "func": ""
+        },
+        "inputtime": {
+            "name": "添加时间",
+            "width": "",
+            "func": ""
+        },
+        "updatetime": {
+            "name": "更新时间",
+            "width": "",
+            "func": ""
+        },
+        "ip": {
+            "name": "添加IP",
+            "width": "",
+            "func": ""
+        }
+    }
+}
