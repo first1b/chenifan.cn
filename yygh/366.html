@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>2年项目复盘：我在头部金融公司的「增长」实践-澈逆凡博客</title>
+<meta content="增长, 复盘" name="keywords" />
+<meta content="两年前，从互联网公司转战到金融领域，从熟悉的流量运营转型到增长领域，不断摸索和思考做了一系列关于增长的项目。这段时间在不断反思和梳理，回头来看，把这两年在增长领域的实践心得做一个总的复盘。转换角色，…" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5981788569352351"
+     crossorigin="anonymous"></script>
+<script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?f0e0b571b86ade20d3587555160941d9079c10b49e1023c464d0a988a3aa98b33d72cd14f8a76432df3935ab77ec54f830517b3cb210f7fd334f50ccb772134a";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h2 class="logo">
+            <a href="/" title="澈逆凡bolg——专注分享优质内容" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h2>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/ziyuanfx">资源分享</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yx">营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/wenan">文案</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/lizhi">励志文案</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="//bk.chenifan.cn" target="_blank">百科</a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="https://www.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="breadcrumbs">
+                        <span itemprop="itemListElement"><i class="fa fa-map-marker"></i></span>
+                        <a href="/">首页</a> >  <a href="https://www.chenifan.cn/ganhuo">个人成长</a>  <a href="https://www.chenifan.cn/yygh">运营</a>  > 2年项目复盘：我在头部金融公司的「增长」实践                    </div>
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+     <a href="/index.php?s=tag&name=zengchang" title="查看更多“增长”相关内容">增长</a>
+                            </div>
+                            <h1 class="title">2年项目复盘：我在头部金融公司的「增长」实践</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>admincyf</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="https://www.chenifan.cn/yygh">运营</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2020-09-08</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_366">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=366", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_366").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <img src="/pic/2年项目复盘：我在头部金融公司的「增长」实践.jpg" alt="2年项目复盘：我在头部金融公司的「增长」实践">
+                            <tbody><tr>
+                            <td>
+                                                                <span class="span-img"><img src="/uploads/allimg/c200908/15c544P120-2F11.jpg" alt="2年项目复盘：我在头部金融公司的「增长」实践"></span>
+                                                                
+
+                                	<p>两年前，从互联网公司转战到金融领域，从熟悉的流量运营转型到<a href="https://www.chenifan.cn/article/search/keyword-%E5%A2%9E%E9%95%BF.html" target="_blank">增长</a>领域，不断摸索和思考做了一系列关于增长的项目。这段时间在不断反思和梳理，回头来看，把这两年在增长领域的实践心得做一个总的<a href="https://www.chenifan.cn/article/search/keyword-%E5%A4%8D%E7%9B%98.html" target="_blank">复盘</a>。转换角色，不仅仅从参与者的角度看待问题，更是从一个旁观者的视角重新审视这段成长历程。</p>
+<p>在分享金融增长项目内容之前，先介绍一下个人工作经历，方便大家理解个人对增长的一些看法和思考内容。</p>
+<p>每个人所写的内容都有TA自己的影子：TA走过的路，遇到过的人，经历过的事，看过的书。从事营销工作7年，2年传统行业一线市场经历，5年互联网项目经历。对个人影响最大的是初次接触互联网，待过的第一家互联网公司。公司BOSS有7年的谷歌工作履历，整体的企业文化非常的互联网化，组织架构比较扁平化，内部推崇的组织氛围是「分享」和「学习」。待过的第二家互联网公司坐落在有“中国硅谷”之称的张江高科，公司整体风格偏工程师文化，在这里让自己对互联网产品有了很多新的认识。</p>
+<p>言归正传，接下来的内容都是关于「增长」系列的思考，不同于只分享技巧层面，更多的是从宏观角度看待「增长」这件事情。</p>
+<p>「增长」概念起源于硅谷的互联网公司，这两年在国内也是如同星星之火，呈现燎原之势。貌似现在哪家公司的运营/营销负责人不谈谈增长就有点落伍的感觉。结合之前做SEM/DSP（互联网流量运营范畴）的经历，其实很多公司对互联网的玩法还是一知半解，真正谈的上知道或者做过这类项目的企业其实并没有大家想象中的那么多。</p>
+<p>很多人对互联网还是非常陌生的，只是我们所处的圈子是在互联网氛围里面的，觉得大家好像都知道，也是受限于我们的认知。</p>
+<p>企业转型，也是很多公司在发展过程中间遇到的阶段难题。其中很多想转型互联网，借助互联网工具为自身赋能的公司，特别需要有真正互联网运营实战经验从业人员的参与。</p>
+<p>回顾过往在金融领域接触到的增长工作，与之前在纯互联网公司的项目相比较有一些相似之处，如果说最大的不同是什么，可能是企业文化上面的迥异。增长工作内容主要有四个模块：项目分析、团队组织、增长实践、项目洞察。</p>
+<p id="toc-1" style="text-align: center;"><span style="color: #ff0000;"><strong>01 项目分析</strong></span></p>
+<p>对于大型公司而言，一个项目本身能否被立项，牵涉到的面非常广的，不同于个体做一个小项目（比如个体写公众号，一个人就可以出内容，做好排版设计，投入相对较少）。</p>
+<p>大公司对于大型项目的判断是基于行业发展趋势，未来几年可能会出现的市场格局做的提前布局。基本类似三年规划、五年战略这种感觉，结合短期效果预计与长远行业地位判断。</p>
+<p>增长工作要从整体视角看待，不只是说“拉新”部分而已，它包含了拉新、活跃、留存、变现等多个环节。个人参与的主要内容集中在“拉新”阶段，包括拉新获客的活动策划、产品优化、渠道对接、费用结算、客诉答疑等工作。总的目标是做活跃，拉新获客作为活跃的基础，其作用不言而喻。</p>
+<p id="toc-2" style="text-align: center;"><span style="color: #ff0000;"><strong>02 团队组织</strong></span></p>
+<p>任何事情的开展离不开人，而单独的个体离不开有战斗力的团队。增长工作更是离不开团队的共同努力。</p>
+<p><strong>2.1 团队成员</strong></p>
+<p>团队组成。团队由个体组成，大家都有着各自不同的成长经历和工作背景，在增长工作中发挥的作用各不相同，只有将大家的技能进行组合才能发挥最大能效。</p>
+<p>项目里面最核心的是团队负责人，领头羊会全局把控和校验整体方向，时刻围绕核心KPI开展工作，避免偏离跑道。常规增长团队需要有营销、产品、工程师、数据分析师、设计人员等。借助平台本身已有的资源，所在增长团队常驻人员有三个：一个组长，两个运营。</p>
+<p>工作分工。团队组长负责类似PMO (项目管理，Project Management Office)的工作，协调各方资源。运营工作内容主要包含活动策划、产品对接、数据分析、商务拓展、部门支持等，侧面也反应出来，其实很多大厂在增长工作中的职责分工其实也并没有大家想象中的那么清晰明了。</p>
+<p>从职责分工这里也延伸出另外一个问题，大厂螺丝钉真的很多么？除非一家公司的增长团队很完善或者预算多的没地方花，特别是针对一些转型期的公司，对于团队成员的要求都不会低，现在很多公司都是处于精兵简政的状态，只会招一些战斗力相对较强的成员。没有战斗力的成员其实也呆不长久，迟早会被高强度的工作氛围拖垮。</p>
+<p>回归主题，增长工作在很多公司都是核心项目，重要性显而易见。常规的增长团队，项目经理、数据分析师、运营算是基本配置。虽然市面上有一些书籍会写增长团队需要这样的人、那样的人，实际每家公司所拥有的资源和条件都是不同的，即使大厂也未必会配置充足的人员。</p>
+<p>学习能力，这项能力是从事增长工作的必备技能。也是个体最重要的能力，增长本身就是一个实践学科，没有固定不变的方法，更多的还是依靠数据测试和经验做判断。</p>
+<p><strong>2.2 例会制度</strong></p>
+<p>开会，很多人都不喜欢，但是却很重要。</p>
+<p>开会可以加强团队成员的内部沟通。个人所处团队比较特殊，团队分开两地，个人在上海负责拉新获客相关工作，项目经理和团队其他运营同事在深圳，长期依靠邮件和电话沟通。日常沟通成本相对较高，所以定期会议显得格外重要。会议主要由晨会和双周会两块内容构成。</p>
+<p>（1）晨会，顾名思义，每天早上的会议</p>
+<p>因为团队是分隔两地沟通，个人对晨会还是比较重视的，这也是个人日常工作内容的一部分。正常上班时间上午9:00，这些年个人工作习惯是早到公司，准备一天的工作议程。到公司先在个人工作笔记本上写下这天的主要工作内容，分出次重点，特别是需要紧急解决的问题。在晨会上和深圳同事及时沟通，需要支持的部分提需求，重点跟进的部分及时解决，不拖延。</p>
+<p>晨会频率比较高，可以把时间控制在半小时内解决。很多大厂的会议室资源是非常紧张的，一般早上10点开始会议室就会处于紧张状态，所以我们团队基本都是9:30—10:00占一个会议室，快速过一下工作内容。比较难解决的事情，会后电话再重点梳理。</p>
+<p>开始晨会之前可以将内容可以列个小提纲，比如本周三个核心工作，当天三个重点事项，尽量做到今日事今日毕。事情是永远也做不完的，但是核心的事情其实并没有很多。抓大放小，集中个人有效时间去处理核心问题。</p>
+<p>（2）双周会，每两周开一次的重要会议</p>
+<p>双周会涉及到的内容较多，除了自己内部团队，还会涉及到其他5-6个部门的领导和同事。</p>
+<p>1）提前预定会议室</p>
+<p>预定会议室是一件很重要事情，特别是涉及多方的会议，因为其他部门其实也是我们团队的服务对象。一定要提前预定好会议室。跨地区的会议，对会议的体验要求是比较高的，如果领导已经准备就位，其他团队如果因为会议室迟迟没有及时到场，势必影响会议进度和效率。</p>
+<p>2）邮件告知</p>
+<p>提前1-2天编辑双周会邮件（内容包括会议的三方号、会议室号、参与方、接收人与抄送人等信息），给大家一些准备材料的时间，避免过于匆忙，让大家临时加班加点制作会议材料（很消耗时间）。</p>
+<p>3）会议纪要</p>
+<p>从会议开始的点名报道，到会议中的笔记记录工作。</p>
+<p>会议结束之后需要第一时间整理会议内容，把核心的工作安排和需要解决的问题全部记录下来，整理成会议纪要，邮件抄送给参会人员。注意会议纪要的格式和排版，一般主要内容是各方团队信息/会上遇到的问题和目前工作进度/对接人/记录日期，具体纪要格式可以在网上搜索一下，自行排版。</p>
+<p>会议纪要的主要作用是为了方便大家在接下来的两周时间内结合具体工作内容，及时对照和校验工作进程，避免做无用功。</p>
+<p><strong>2.3 日常工作内容</strong></p>
+<p>增长工作每天都具体在做什么呢？可能各家公司有所不同，但核心内容肯定还是要围绕年初制定的KPI来推进。以手上增长工作里面的拉新获客为例，主要考核指标是拉新获客数据、入金数据、千元户数据。</p>
+<p>金融类拉新获客考核指标这么多，具体要如何在日常工作中围绕这些目标开展工作呢，需要做以下几件事情。</p>
+<p>（1）数据报表</p>
+<p>从事运营工作，日常必做的一件事情是什么？</p>
+<p>看数据！看数据！看数据！</p>
+<p>互联网营销不是凭感觉做事，需要结合日常数据去分析业务，通过数据驱动业务增长。那怎么获取数据呢？自然离不开大数据团队开发报表。增长工作需要获取前端的PV/UV数据，同时还需要获取后端的实际转化数据。</p>
+<p>从事过SEM (搜索引擎营销，Search Engine Marketing)工作的同学可能会好理解一点，一般媒体方（类似百度、360、搜狗、神马等）都会提供数据报表。如果公司有一定的规模，同时对数据安全比较看重的话，都会依靠大数据团队自己开发报表。个人所在公司属于行业头部，增长类的数据报表设计都是内部自行开发，报表设计这块个人参与较少，主要是在使用层面接触较多。</p>
+<p>报表主要类型包含如下。</p>
+<ul>
+<li>拉新报表：日报、周报、月报、累计报表</li>
+<li>库存数据：库存监控报表</li>
+<li>MOB报表：T+1月留存、T+2月留存……T+12月留存</li>
+<li>offer消耗报表：按日、按时间段查询</li>
+<li>活动数据：各类型的活动汇总报表</li>
+</ul>
+<p>以上主要是偏后端转化报表，前端PV/UV报表有现成可使用的，无需开发。其他后台或者报表类似营销活动配置后台、活动关联平台、数据标签系统等，需要对接的各类平台非常的多。一家大型公司想要做好增长工作，要求是不低的。</p>
+<p>有了数据报表，日常数据又需要关注哪些内容呢？</p>
+<p>有了数据要看什么呢？怎么通过数据分析业务呢？每日必做的包括基础数据，转化日报数据，库存消耗日报等。有了数据，查看数据趋势变化，日变化曲线，周变化趋势，同比/环比这类数据。通过数据来查看和分析业务，进而诊断。数据异常，对不上的问题，需要及时跟大数据同时沟通，尽快排查和解决。</p>
+<p>通过数据来判断和决策日常活动。</p>
+<ul>
+<li>外部渠道数据，清楚知道哪家供应商的渠道质量更优，方便更好的做广告投放优化；</li>
+<li>内部渠道数据，可以判断哪个渠道质量更好，分析渠道权重高低；</li>
+<li>营销活动数据，知道哪个活动的质量更好，数据更优，预判哪类活动适合哪类渠道；</li>
+<li>活动成本数据，依据成本核算，计算出各个渠道的费用消耗，活动的获客成本多少；</li>
+</ul>
+<p>（2）外部渠道拓展</p>
+<p>外部商务拓展工作也是比较消耗时间的一项工作，想接入一家外部渠道商，首先得去找这些供应商资源，如果之前从来没有接触过自然很难找。</p>
+<p>一般常见的找外部供应商的方法。</p>
+<ul>
+<li>参加各类沙龙活动，可以联系到一些渠道商朋友，交流过程中多搜集一些名片；</li>
+<li>互联网平台，有一些互联网公司会提供合作平台，留下自己的联系方式和项目需求；</li>
+<li>行业交流群，时常刷一下存在感，提出自己的业务需求，也可以找到一些合作伙伴；</li>
+<li>朋友推荐，一般找到渠道商之后，大家之间也会相互推荐；</li>
+</ul>
+<p>项目合作是双向的，对于供应商TA有自己的标准，对于项目提供方也有自己的考核要求，只有双方同时满足各自需求的时候才能完成一次合作。一般挑选渠道商需要看一下合作方的规模、资金实力，行业历史经验等。</p>
+<p>确认好合作之后，准备走合同法务流程，后期结算还有财务流程。这中间涉及到见面沟通谈判，项目现状要求，合同细节条款，费用结算周期。总之能完成一次供应商谈判合作是相当耗时耗力的，所以珍惜每一个能合作的渠道商。</p>
+<p>合作过程中间，不要过于依赖单个渠道商，建立一两个核心渠道商，再逐步测试。合作是双向的，甲方也不是baba，遵循合作共赢的原则。</p>
+<p>（3）活动策划</p>
+<p>既然做增长，自然少不了需要一些“抓手”，这里的“抓手”主要是指营销活动。目前APP拉新常见的互联网形式有SEM（搜索引擎营销）、应用市场投放、ASO、社群等，不管哪种形式，最终承载这些流量的载体基本都是营销落地页。</p>
+<p>做好营销落地页，自然需要策划一些活动用来吸引用户参与。不同类型的活动效果千差万别，更加需要结合渠道特性去针对性策划。有针对纯新客的拉新活动，也有针对老客的活动设计。一般常见的新客活动页面就是注册APP送新人礼券这种形式，老带新活动页面设计主要的关键是页面内容整理清楚，礼品展示清楚，活动规则，参与方式等。</p>
+<p>整理好需求文档，跟开发/测试/前端都要提前沟通清楚，将不明白的地方提前归纳好。设计师/交互师都需要提前沟通清楚，页面反复修改，为了减少修改，建议提前想好如何设计页面和策划，这样会减少不必要的时间浪费。拿策划banner图片来说，如果想提升转化率，在策划设计的时候，图片的颜色、文案信息这些都需要花很长时间去思考细节。细节的打磨比想象中要消耗时间和花费精力。</p>
+<p>（4）产品优化</p>
+<p>任何一个活动上线之前一般都需要经过小流量测试，AB测试。用来验证产品本身在投放生产之后是否会有bug出现。即使没有大毛病，在全量投放之后还是需要不断的通过数据反馈和及时优化产品。</p>
+<p>比如，活动曝光不足，是投放渠道不够？还是宣传力度不够？点击量/UV量不足是什么原因造成，宣传物料设计不够吸引人，文案不够突出？礼品的实际核销率是否有提升，如果有提升，提升多少，哪个礼品最受欢迎；如果没有提升，能否通过数据排查出原因，找到核心症结，针对性的解决掉问题。</p>
+<p>产品优化这块主要还是结合实际数据来判断，特别是一些关键节点的数据进行优化，只有提升了关键节点的数据，才能把握好整理的活动效果。</p>
+<p>（5）客诉问题</p>
+<p>不同于乙方侧重在运营效果侧，甲方上线活动之后，在客服端会花费不少精力。</p>
+<p>活动上线之后，出现了客诉问题要怎么处理？是否有完善的机制处理这些问题。客诉问题处理涉及到多方：外部涉及客户，内部涉及客服人员、出现客诉问题的关联方（一般是渠道方）。针对客户的客诉问题，是否有对应的话术、内部排查机制。比如7日内给出答复，实际原因的排查等，及时做好客户安抚工作。</p>
+<p>客服人员，虽然都是内部同事，但未必了解运营手上活动的具体细则，是否在公司内部知识库（相关数据进行有序存储的数据库）上传过活动介绍及对应处理方案。渠道对接人，给出问题解答的截止日期，对应的处理措施。</p>
+<p>针对客诉问题，周期性汇总和排查，从产品的源头去解决和处理，不能只是单点处理问题，只有追踪溯源才能根本上解决问题。</p>
+<p>（6）部门对接</p>
+<p>作为拉新类的活动属主，内部其他部门前期各类问题自然会咨询会比较多，需要很多耐心去解答各团队的疑问。类似活动本身的问题、客诉处理、费用申请。部门对接工作也是一项需要耐心的事情，在沟通上面需要消耗的时间超过我们的想象。也许问题三分钟能说清楚，但是需要花费十分钟才能沟通清楚。</p>
+<p>（7）财务问题</p>
+<p>涉及到费用的问题永远是需要紧绷神经的，不容有半点差池。财务问题分为内外两部分。内部主要是涉及礼品费用核销类的，外部主要涉及渠道商款项结算。</p>
+<p>1）内部礼品费用</p>
+<p>整理好具体的明细数据，做好备份，月度明细，年度总计都需要整理清楚，方便后期内部对账。</p>
+<p>2）外部渠道费用</p>
+<p>每家渠道商的费用函、费用明细、渠道数据、确认邮件、投放截图等都需要整理清楚。外部数据需要跟财务、外部渠道商确认无误之后才能发正式邮件。</p>
+<p id="toc-3" style="text-align: center;"><span style="color: #ff0000;"><strong>03 增长实践</strong></span></p>
+<p><strong>3.1 统一口径</strong></p>
+<p>增长工作牵涉多个团队，所以统一标准就很重要，减少后期扯皮的事情。拉新报表统计口径、外部法务合同模板、财务结算周期、费用申请流程。涉及到费用申请和业绩归属和统计的事情都要提前协商，这是增长工作中大方向上的把控，只有做到总体大盘的不慌不乱才能在后期坚定的执行和反馈。</p>
+<p><strong>3.2 参数追踪</strong></p>
+<p>拉新获客的数据如何统计，需要一套完整的追踪标准。</p>
+<p>（1）参数定义</p>
+<p>从事过SEM广告投放的同学都比较容易理解，一般都是使用UTM（Urchin Tracking Module）参数追踪，设定好UTM参数，即可追踪网站、活动的流量来源，以及不同流量来源所占的比例等。</p>
+<p>UTM参数包括5个参数。</p>
+<ol>
+<li>utm_source，广告来源；</li>
+<li>utm_medium，广告媒介；</li>
+<li>utm_term，广告关键字；</li>
+<li>utm_campaign，广告名称；</li>
+<li>utm_content，广告内容；</li>
+</ol>
+<p>APP使用的参数追踪分为站外路径和站内路径，站外渠道路径使用outerid，渠道子路径使用cid，站内渠道路径使用innerid，对应活动使用campaignid。以上参数追踪形式结合各家实际技术条件做参考。</p>
+<p>（2）材料文档</p>
+<p>对应的参数追踪逻辑和标准都需要整理成完整的word文档，对应的Q&amp;A，数据问题对接人等内容以邮件形式整理和梳理发送给各团队对接人。</p>
+<p><strong>3.3 数据标签</strong></p>
+<p>参数追踪问题解决了，接下来自然涉及到运营和广告投放环节了。</p>
+<p>这里针对裂变营销这块重点梳理一下。有H5活动，这只是其中的流量载体，流量怎么筛选呢？怎么筛选目标客群呢？怎么能确保投放之后就一定会带来效果呢？</p>
+<p>客群选择显得尤为重要，对应到媒体广告平台，可以理解为地域、人群、时段、性别、年龄这些字段，而对于内部存量客群，则可以通过数据标签的形式进行圈定和投放。</p>
+<p>比如裂变拉新，想针对老用户投放，那么可以设置标签：已下载APP+近7天活跃+年龄20-40。</p>
+<p>数据标签设置投放之后也需要依据数据查看实际效果。同个广告位、同个标签、广告素材、广告文案多维度测试和评估，找到转化率最高的组合，在此基础上不断的迭代更新。</p>
+<p><strong>3.4 活动模型</strong></p>
+<p>结合场景思考，这里个人对场景化的拓展方向有两个：一个是时间维度，一个是空间维度。时间维度可以理解为在日常生活中从早上睁开眼睛的那一刻到晚上睡觉闭上眼睛这段时间，都可以在时间维度的场景进行思考和营销。</p>
+<p>而空间维度可能更多的嵌入到潜在意识当中了，有点像电影盗梦空间，多维度在人的潜意识当中起作用，比如坐公交听喜马拉雅，跑步时候听音乐，冥想时候的思考等，属于内在意识里面的作用和影响。</p>
+<p>场景跟活动模型有什么关系呢？这里涉及到一个活动+情景的思考。不是所有的活动模型都适合在所有场景下的推广和营销。举个栗子，拼团类的活动，对于拼多多这样的电商公司是没问题的，大家助力拼个锅，买个电风扇之类的都没有问题。金融理财、贷款这些涉及到个人隐私的部分，依靠助力等拼团玩法就未必合适。不符合场景化的思考。</p>
+<p>结合场景，提供符合行业调性的活动，进行促销和推进。不同行业的玩法剖析和解读会有所不同，同种类型的活动不能100%的复制迁移到另外一个领域，需要依据行业特性进行整改。</p>
+<p>教育行业为了延长转化路径，有0元试听、1元解锁这类玩法，进而推出高客单价的课程；电商领域的低价爆款，更多的是为了引流，再组合包装出售其他高毛利产品；金融领域，有体验金、免息券玩法，让用户多参与产品的体验。</p>
+<p><strong>3.5 数据分析</strong></p>
+<p>产品端-数据端的思考。</p>
+<p>分析各类客群人群属性，类似目标客群集中在哪个年龄段、地域、收入等信息。运营工作的数据分析不同于大数据的分析，更多的是结合日常数据进行业务层面的分析，通过数据驱动，推进业务发展，优化产品。</p>
+<p>看库存数据，知道每日礼品消耗，提前预估和判断，做好准备工作；看转化数据，可以分析成本和产出情况，及时调整，最大化ROI；</p>
+<p>分析数据不仅仅是简单的分析数据表层的问题，更多的还是需要根据数据去洞见背后的本质。运营的数据在一定程度上可以反应出产品端和用户端的一些问题，每天看数据就像经常拆解活动案例一样，可以培养自己的感觉，对数据形成一种敏感度。</p>
+<p><strong>3.6 数据迭代</strong></p>
+<p>增长是一门实践学科，类似在实验室做实验，需要不断的测试和验证。提出一个假设目标，通过实际活动和运营，结合数据不断A/B测试，看最终的结果是否符合预期。</p>
+<p>增长工作中少不了测试这关，活动上线—小流量测试—数据验证—放大投放—数据验证—数据分析—持续优化—迭代更新。</p>
+<p>数字营销领域A/B测试可以说是无处不在，优势在于低成本验证，不用消耗过多开发人力，更多的是在运营层面即可操作。当然也有它的局限性，A/B测试主要是局部验证，很难做到全方位的确认，也比较消耗设计资源。</p>
+<p id="toc-4" style="text-align: center;"><span style="color: #ff0000;"><strong>04 项目洞察</strong></span></p>
+<p><strong>4.1 组织文化</strong></p>
+<p>增长团队是一家公司的重要组成部分，但不是唯一。</p>
+<p>任何一个团队在组织里面都有它的作用和影响力，需要清楚团队的主要职责，在大环境下做好赋予团队的作用。企业的文化氛围，团队的归属感，最终会影响到团队成员的去或留。</p>
+<p>互联网公司呆过比较成熟的大厂，也在创业型互联网公司呆过，传统行业呆过两家处在转型期的公司，不同的公司文化，给人的感觉是各不相同的。对于个人来说，最重要的是有没有自我学习和净化的能力。</p>
+<p>增长工作里面持续学习和敢于创新应该是团队重要的核心竞争力，不管是0-1的团队组建还是产品创造、渠道打磨，如果只是停留在现有基础上的修改，终究是小打小闹，容易局限在当前的状态，很难继续突破。组织内部要有核心元素，超强的学习能力、超强的自我净化、不断的翻新自己。</p>
+<p><strong>4.2 明确职责，争取更多支持</strong></p>
+<p>增长团队不同于传统组织架构，团队本身既是业务属主，同时还需要协调其他团队工作。自然会遇到很多阻力，沟通中间产生矛盾也很正常。很多问题的解决和处理都需要获得领导层的有力支持才能正常进行。</p>
+<p>国内很多增长团队负责人一般都是直接汇报给CEO，需要清晰界定增长团队的职责。明确了各团队的主要职责，这样也可以减少团队之间的一些不必要的摩擦，专注出结果。</p>
+<p><strong>4.3 基础设置建设</strong></p>
+<p>数据的作用在增长工作的影响是非常重要的，很多时候起到了决定作用。</p>
+<p>内部业绩统计，外部渠道商数据对接，增长工作中的数据分析，这些都少不了数据。所以，在做增长这件事情之前，需要投入相当多的人力和资源来完善数据和测试的基础设施。需要定义好各类数据统计口径，做好渠道数据追踪。</p>
+<p>接触过一些比较大规模的公司，基础设施建设很多企业其实并不一定有技术能力做到这点。个人所在的头部公司，增长获客类的报表也是临时开发出来的，并没有从一个长远的角度出发。可想而知，那些技术能力薄弱的公司更难开发如此复杂和庞大的数据系统。</p>
+<p><strong>4.4 产品的作用</strong></p>
+<p>不懂产品的运营不是合格的增长黑客。</p>
+<p>运营的岗位出现的时间其实短于产品岗位，常见的比喻是产品负责生孩子，运营负责养孩子。做运营的前提是得有一个“孩子”。巧妇难为无米之炊，没有一个好的产品，再怎么运营其实也很难做好。</p>
+<p>可能在互联网行业进里面容易忽略产品的作用，主要是现在很多互联网公司的产品都做的比较成熟，见怪不怪。产品在传统行业的影响力还是显得比较突出的，格力的空调、海尔的洗衣机，在选择某类产品的时候，是能够直接吊起我们对某个品牌的认知。</p>
+<p>互联网产品里面，俞军老师的产品方法论能够给到一些启发和思考。其中有两个关于产品的观点印象深刻：用户不是自然人，是某一类需求的集合；产品的价值=新体验-旧体验-迁移成本。</p>
+<p>基于此，可以了解到用户的需求是多层次的，这样就比较好的理解了为什么同一个用户同时下载抖音，也会下载快手，满足了用户的多方面的需求。想让用户多体验产品的价值，新体验就要大于旧体验和迁移成本之和。产品价值的实际体现一方面是产品本身能够提供的核心功能，附加的部分是用户体验部分。</p>
+<p>产品和运营二者是分不开的，越是从事运营工作久了之后，这种感觉越是明显。</p>
+<p><strong>4.5 商业的本质思考，具备洞见能力</strong></p>
+<p>对商业本质的思考，看上去很高大上。往大了说，各种宏观和微观的商业环境对日常生活的影响。简单点，如何在日常运营工作中理解和思考这些问题。</p>
+<p>商业化的思考本质还是创造价值，如何对现有商业活动进行深度思考，探索问题的本质。</p>
+<p>创造价值，最直接的体现就是商业变现。广告投放，花了多少钱，实际带来多少利润。比如日常刷广告经常看到的各类付费学习，我们看到的是广告展示和曝光，再到后期的付费学习这样的流程。</p>
+<p>但是对于投放广告方来说不仅仅需要考虑到用户的整个体验流程，还需要思考更深入的层面。这类项目的市场多大，竞争者多少，怎么才能实现盈利。站在背后去思考问题，多在事物的因上看问题。</p>
+<p>作者：胡先务，笔名文力（个人VX：h934803076）前平安银行总行高级产品运营，喜欢独立思考，专注营销增长实践，热爱跑步和阅读。</p>
+                                
+                            </td>
+                        </tr>
+                    </tbody><br>本文链接：https://www.chenifan.cn/yygh/366.html<br>
+                            
+<p style="color:#C0C0C0">>>免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！</br> >  2年项目复盘：我在头部金融公司的「增长」实践 </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="https://www.chenifan.cn/yygh/365.html" class="prev has-background"><span>上一篇：</span><h4>做ToB运营工作，一定要避免的7个坑</h4></a></div>
+                        <div class="next-post"><a href="https://www.chenifan.cn/yygh/367.html" class="nextv has-background"><span>下一篇：</span><h4>一份活动策划与执行表格模板，帮你理清思路！</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/3052.html" title="零售行业 2020年的实体店未来在哪里，有什么适合开实体店的商机吗，求指教？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210121/1_012115593294I.png" alt="可以选择开一家干洗店，相比较其他行业，干洗店是属于民生的一个行业版，如今网络权对实体店冲击如此之大，干洗这个行业依然屹立。 足以说明，干洗还是一个比较稳定的。 而且，开一家干洗店相比较其他职业，干洗店的前期投入还算是比较低的，开一家小型的干洗店仅需要五万元左右，开一家大型的干洗店在10万元左右！ 零售行业 京东外包从以下方面入手：市场调研结果">
+                                        <h4><span>零售行业 2020年的实体店未来在哪里，有什么适合开实体店的商机吗，求指教？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/gzhyy/2378.html" title="怎么制作对话形式的微信推文？公众号图文排版如何添加对话问答样式？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://yiban.io/blog/wp-content/uploads/2020/12/2020121811012441-480x300.png" alt="今天小编教大家制作问答对话形式的公众号推文，全是干货，建议收藏哦~ 设置公众号排版样式有什么作用 不同类别公众号的排版也会不同，运营者根据 公众号类别、文章内容 ，选择切合公众">
+                                        <h4><span>怎么制作对话形式的微信推文？公众号图文排版如何添加对话问答样式？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yygh/263.html" title="运营该如何搭建留存率模型？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/c200713/159461M15X420-1K00.jpg" alt="几乎所有的业务数据分析和运营工作都是围绕着“拉新”、“留存”、“促活”、“转化”4个环节来开展的。我们常常面临这样的问题，好不容易拉进来一批用户，玩着玩着就都流失了，更别谈转化和变现了。所以，弄明白“留存率”…">
+                                        <h4><span>运营该如何搭建留存率模型？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/3264.html" title="食品类网店营销推广策划书 抖音视频为何无法保存？有什么解决办法？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210122/1_01221032435c4.jpg" alt="抖音视频无法保存是手机内存不够，最好的解决方法就是使用手机管家清理一些没必要的垃圾，让手机更加通畅，一般来说，微信产生的垃圾比较多，你可以微信专清，这是现在比较通用的方法。 食品类网店营销推广策划书 我觉得这样子是挺不方便的，我觉得是侵害了我们的使用权，真的无法理解，怎么会连接不上呢？http://baike.baidu/view/279859.htm 百科医药电子商务 一天三次抽奖">
+                                        <h4><span>食品类网店营销推广策划书 抖音视频为何无法保存？有什么解决办法？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/3089.html" title="天猫淘宝 老板让我做网络推广，无从下手，之前没接触过，求指点">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210121/1_0121155953CG.png" alt="网络推广，顾名思义就是在利用互联网推广自己的产品，在百度一搜，网络推广方法一大堆，仔细一看，真正实用的方法却少之又少，于是很多网络推广人员就开始到处抱怨推广的方法太少，其实，网络处处都能推广，关键是有一双善于发现的眼睛。 很多人面对形形色色的网络推广方式感觉很迷茫，每天接到N个营销电话听对方说半天还是一头雾水，到底选择哪一种推广方式？哪">
+                                        <h4><span>天猫淘宝 老板让我做网络推广，无从下手，之前没接触过，求指点</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/gzhyy/2559.html" title="以「吴晓波频道」为例：如何为公众号确定定位和选题？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/201229/1A9554029-0-lp.jpg" alt="背景目的： 假设我是刚刚加入「吴晓波频道」的内容运营，主要负责公众号的原创内容。现在需要在一周内快速熟悉公众号的专栏内容、原创内容，并尝试找到6个合适的选题。 分析方法： 产品生命周期理论； 积木模型； 匹配度打分表； MECE分析法； 思维导图； 九宫格选题法。 具体步骤： 调研「吴晓波频道」公众号的基本情况和用户画像； 对「吴晓波频道」公众号的存量文">
+                                        <h4><span>以「吴晓波频道」为例：如何为公众号确定定位和选题？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="https://www.chenifan.cn/tougao/4480.html" target="_blank" title="牙签粉是什么意思"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="https://www.chenifan.cn/static/assets/images/nopic.gif" alt=" " />
+       <div class="title ">
+        <span>2023-07-11</span>
+        <h4>牙签粉是什么意思</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/dianshang/3109.html" target="_blank " title="电商企业平台推广收入 国家电网电子商务平台的钥匙被锁定了，要找谁解锁呀？明早就要投标了"><img data-original="/pic/电商企业平台推广收入 国家电网电子商务平台的钥匙被锁定了，要找谁解锁呀？明早就要投标了.jpg" alt="电商企业平台推广收入 国家电网电子商务平台的钥匙被锁定了，要找谁解锁呀？明早就要投标了" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/dianshang/3109.html" title="电商企业平台推广收入 国家电网电子商务平台的钥匙被锁定了，要找谁解锁呀？明早就要投标了">电商企业平台推广收入 国家电网电子商务平台的钥匙被锁定了，要找谁解锁呀？明早就要投标了</a></h4>
+       <span>2021-01-21</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=2095" target="_blank " title="嫦娥五号上升器圆满完成使命，受控离轨落月|月球"><img data-original="/pic/嫦娥五号上升器圆满完成使命，受控离轨落月|月球.jpg" alt="嫦娥五号上升器圆满完成使命，受控离轨落月|月球" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=2095" title="嫦娥五号上升器圆满完成使命，受控离轨落月|月球">嫦娥五号上升器圆满完成使命，受控离轨落月|月球</a></h4>
+       <span>2020-12-08</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=1020" target="_blank " title="Facebook三季度营收215亿美元 净利78亿美元同比增29%|用户数|whatsapp|财年|马克·扎克伯格"><img data-original="/pic/Facebook三季度营收215亿美元 净利78亿美元同比增29%|用户数|whatsapp|财年|马克·扎克伯格.jpg" alt="Facebook三季度营收215亿美元 净利78亿美元同比增29%|用户数|whatsapp|财年|马克·扎克伯格" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=1020" title="Facebook三季度营收215亿美元 净利78亿美元同比增29%|用户数|whatsapp|财年|马克·扎克伯格">Facebook三季度营收215亿美元 净利78亿美元同比增29%|用户数|whatsapp|财年|马克·扎克伯格</a></h4>
+       <span>2020-11-02</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" https://www.chenifan.cn/duanzi/3506.html" target="_blank " title="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎.jpg" alt="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/duanzi/3466.html" target="_blank " title="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/神回复《文言文格式》：乱言无信之人，其生子之股无孔尔.jpg" alt="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>神回复《文言文格式》：乱言无信之人，其生子之股无孔尔</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/xmtyy/5175.html" target="_blank " title="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路.jpg" alt="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-07</span>
+        </div>
+        <h4>抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   <a href="/index.php?s=tag&name=tata" title="点击量：励志文案">塔塔</a>
+<a href="/index.php?s=tag&name=xuanze" title="点击量：励志文案">选择</a>
+<a href="/index.php?s=tag&name=lahei" title="点击量：励志文案">拉黑</a>
+<a href="/index.php?s=tag&name=nenglitisheng" title="点击量：励志文案">能力提升</a>
+<a href="/index.php?s=tag&name=pinzhong" title="点击量：励志文案">品种</a>
+<a href="/index.php?s=tag&name=dali" title="点击量：励志文案">大力</a>
+<a href="/index.php?s=tag&name=qipashuo" title="点击量：励志文案">奇葩说</a>
+<a href="/index.php?s=tag&name=wenyanwenhuifu" title="点击量：励志文案">文言文回复</a>
+<a href="/index.php?s=tag&name=zhanchuang" title="点击量：励志文案">站创</a>
+<a href="/index.php?s=tag&name=lianhe" title="点击量：励志文案">联合</a>
+<a href="/index.php?s=tag&name=zuoyong1" title="点击量：励志文案">坐拥</a>
+<a href="/index.php?s=tag&name=xiaoli" title="点击量：励志文案">效力</a>
+<a href="/index.php?s=tag&name=3999yuanqi" title="点击量：励志文案">3999元起</a>
+<a href="/index.php?s=tag&name=kongjianzhan" title="点击量：励志文案">空间站</a>
+<a href="/index.php?s=tag&name=burenzui" title="点击量：励志文案">不认罪</a>
+<a href="/index.php?s=tag&name=diqu" title="点击量：励志文案">地区</a>
+<a href="/index.php?s=tag&name=span" title="点击量：励志文案">span</a>
+<a href="/index.php?s=tag&name=huanqiu" title="点击量：励志文案">环球</a>
+<a href="/index.php?s=tag&name=chenji" title="点击量：励志文案">趁机</a>
+<a href="/index.php?s=tag&name=yinzai" title="点击量：励志文案">因在</a>
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                 
+                <a href="https://www.chenifan.cn/wenan">文案</a>
+                 
+                <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank"></a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script></body>
+</html>

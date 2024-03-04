@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>抖音开放平台授权回调域升级公告-澈逆凡博客</title>
+<meta content="开放平台,网站升级,https" name="keywords" />
+<meta content="升级公告抖音开放平台授权回调域升级开发者你好，为保证网站的可靠性与安全性，更好的服务用户，抖音开放平台将于2021年8月23日后停止支持HTTP协议的网站授权。请接入抖音授权的开发者，尽快将自己的网站配置成HTTPS协议。到期后，使用HTTP协议的授权回调域将不可访问。如有疑问可通过抖音开放平台客服..." name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5981788569352351"
+     crossorigin="anonymous"></script>
+<script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?f0e0b571b86ade20d3587555160941d9079c10b49e1023c464d0a988a3aa98b33d72cd14f8a76432df3935ab77ec54f830517b3cb210f7fd334f50ccb772134a";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h2 class="logo">
+            <a href="/" title="澈逆凡bolg——专注分享优质内容" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h2>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/ziyuanfx">资源分享</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yx">营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/wenan">文案</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/lizhi">励志文案</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="//bk.chenifan.cn" target="_blank">百科</a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="https://www.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="breadcrumbs">
+                        <span itemprop="itemListElement"><i class="fa fa-map-marker"></i></span>
+                        <a href="/">首页</a> >  <a href="https://www.chenifan.cn/ganhuo">个人成长</a>  <a href="https://www.chenifan.cn/yygh">运营</a>  > 抖音开放平台授权回调域升级公告                    </div>
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+     <a href="/index.php?s=tag&name=kaifangpingtai" title="查看更多“开放平台”相关内容">开放平台</a>
+<a href="/index.php?s=tag&name=https" title="查看更多“https”相关内容">https</a>
+<a href="/index.php?s=tag&name=wangzhanshengji" title="查看更多“网站升级”相关内容">网站升级</a>
+                            </div>
+                            <h1 class="title">抖音开放平台授权回调域升级公告</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>admincyf</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="https://www.chenifan.cn/yygh">运营</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2021-09-04</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_3624">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=3624", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_3624").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <img src="/pic/抖音开放平台授权回调域升级公告.jpg" alt="抖音开放平台授权回调域升级公告">
+                            <strong>升级公告</strong>
+<br>,抖音<a href="https://www.chenifan.cn/article/search/keyword-%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0.html" target="_blank">开放平台</a>授权回调域升级,开发者你好，为保证网站的可靠性与安全性，更好的服务用户，
+<strong>抖音开放平台将于2021年8月23日后停止支持HTTP协议的网站授权</strong>。请接入抖音授权的开发者，尽快将自己的网站配置成
+<strong>HTTPS协议</strong>。到期后，使用HTTP协议的授权回调域将不可访问。如有疑问可通过抖音开放平台客服向我们咨询。感谢你对抖音开放平台的支持！,<br>,<img src="https://www.zhouxiaohui.cn/zb_users/upload/2021/08/20210820183402162945564230992.png" class="aligncenter">,<br>,<br>,<strong>查看</strong>,<br>,<strong>https接入方改造指南</strong>,<br>,<strong>前置判断</strong>,<br>,如果你未使用网站应用接入抖音授权登录，无需任何改动,<br>,如果你的网站应用
+<strong>已接入抖音授权登录</strong>，请遵循以下流程进行修改
+<br>,<br>,<strong>第一步</strong>,<br>,进入开放平台官网-应用管理，选择「网站应用」，查看每个应用的
+<strong>基础信息</strong>，检查配置的授权回调域和JSB安全域名是否支持<a href="https://www.chenifan.cn/article/search/keyword-https.html" target="_blank">https</a>协议,<img src="https://www.zhouxiaohui.cn/zb_users/upload/2021/08/20210820183404162945564498184.png" class="aligncenter">,<br>,<strong>第二步</strong>,<br>,<strong>Web 授权</strong>,<br>,检查你接入抖音Web授权的授权链接，将 redirect_uri参数配置为HTTPS协议的链接,<br>,<strong>举例</strong>,<br>,<strong>https:</strong>//open.douyin.com/xxxxxx,<br>,<br>,<strong>JSB授权</strong>,<br>,检查你接入抖音JSB授权的代码，将config代码中的url参数配置为HTTPS协议的链接,<img src="https://www.zhouxiaohui.cn/zb_users/upload/2021/08/20210820183405162945564524731.png" class="aligncenter">,<br>,<strong>完成检查</strong>,<br>,确认以上改造完成，后续即可正常使用网站应用授权流程,如有对升级通知存在疑问可通过抖音开放平台客服向我们咨询哦~,<br>,<br>,最优质的玩法资讯尽在【抖音开放平台】,<img src="https://www.zhouxiaohui.cn/zb_users/upload/2021/08/20210820183406162945564694007.png" class="aligncenter">,<i></i>标签： 
+<span></span> 
+<span></span> 
+<span></span>,<br>,<p><strong>升级公告</strong><br></p> 
+<p>抖音开放平台授权回调域升级</p> 
+<p>开发者你好，为保证网站的可靠性与安全性，更好的服务用户，<strong>抖音开放平台将于2021年8月23日后停止支持HTTP协议的网站授权</strong>。请接入抖音授权的开发者，尽快将自己的网站配置成<strong>HTTPS协议</strong>。到期后，使用HTTP协议的授权回调域将不可访问。如有疑问可通过抖音开放平台客服向我们咨询。感谢你对抖音开放平台的支持！</p> 
+<p><br></p> 
+<p><img src="https://www.zhouxiaohui.cn/zb_users/upload/2021/08/20210820183402162945564230992.png" class="aligncenter"></p> 
+<p><br></p> 
+<p><br></p> 
+<p><strong>查看</strong></p> 
+<p><br></p> 
+<p><strong>https接入方改造指南</strong></p> 
+<p><br></p> 
+<p><strong>前置判断</strong></p> 
+<p><br></p> 
+<p>如果你未使用网站应用接入抖音授权登录，无需任何改动</p> 
+<p><br></p> 
+<p>如果你的网站应用<strong>已接入抖音授权登录</strong>，请遵循以下流程进行修改<br></p> 
+<p><br></p> 
+<p><strong>第一步</strong></p> 
+<p><br></p> 
+<p>进入开放平台官网-应用管理，选择「网站应用」，查看每个应用的<strong>基础信息</strong>，检查配置的授权回调域和JSB安全域名是否支持HTTPS协议</p> 
+<p><img src="https://www.zhouxiaohui.cn/zb_users/upload/2021/08/20210820183404162945564498184.png" class="aligncenter"></p> 
+<p><br></p> 
+<p><strong>第二步</strong></p> 
+<p><br></p> 
+<p><strong>Web 授权</strong></p> 
+<p><br></p> 
+<p>检查你接入抖音Web授权的授权链接，将 redirect_uri参数配置为HTTPS协议的链接</p> 
+<p><br></p> 
+<p><strong>举例</strong></p> 
+<p><br></p> 
+<p><strong>https:</strong>//open.douyin.com/xxxxxx</p> 
+<p><br></p> 
+<p><br></p> 
+<p><strong>JSB授权</strong></p> 
+<p><br></p> 
+<p>检查你接入抖音JSB授权的代码，将config代码中的url参数配置为HTTPS协议的链接</p> 
+<p><img src="https://www.zhouxiaohui.cn/zb_users/upload/2021/08/20210820183405162945564524731.png" class="aligncenter"></p> 
+<p><br></p> 
+<p><strong>完成检查</strong></p> 
+<p><br></p> 
+<p>确认以上改造完成，后续即可正常使用网站应用授权流程</p> 
+<p>如有对升级通知存在疑问可通过抖音开放平台客服向我们咨询哦~</p> 
+<p><br></p>  
+<p><br></p> 
+<p>最优质的玩法资讯尽在【抖音开放平台】</p> 
+<p><img src="https://www.zhouxiaohui.cn/zb_users/upload/2021/08/20210820183406162945564694007.png" class="aligncenter"></p> 
+<p> <i></i>标签： <span></span> <span></span> <span></span> </p>     
+<strong>本文地址：</strong>   
+<span>版权声明：</span>除非特别标注,本站部分文章,图片资源来源于网络,如有侵权,请联系微信：randian86 删除。<br>本文链接：https://www.chenifan.cn/yygh/3624.html<br>
+                            
+<p style="color:#C0C0C0">>>免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！</br> >  抖音开放平台授权回调域升级公告 </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="https://www.chenifan.cn/yygh/3623.html" class="prev has-background"><span>上一篇：</span><h4>抖音小程序技术沙龙直播，报名开启！</h4></a></div>
+                        <div class="next-post"><a href="https://www.chenifan.cn/yygh/3625.html" class="nextv has-background"><span>下一篇：</span><h4>抖音夏日歌会欧阳娜娜专场倒计时，带你体验不一样的夏天！</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/3025.html" title="天津哪家网店运营培训好 淘宝里的企业店铺是真的吗">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210121/1_01211559191Q9.jpg" alt="是真的，企业店铺必须有营业执照和对公支付宝账户认证才可以开通。 第一步：进入【卖家中心】——选择企业开店 第二部：进行【支付宝企业认证】 第三部：填写【工商注册信息】 第四步：.签署开店相关协议开店成功 淘宝企业店铺是一种介于公司直营和个人卖家之间的店铺，普通个人卖家通过身份认证就可以开店，淘宝企业店铺需要认证企业营业执照。但是不像天猫，它不">
+                                        <h4><span>天津哪家网店运营培训好 淘宝里的企业店铺是真的吗</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yygh/429.html" title="新媒体运营选题灵感怎么找？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/200915/1KT32459-0-lp.jpg" alt="原标题：新媒体运营选题如何找灵感？ 做新媒体运营两大难题跑不掉。 一个是标题、一个是选题。先有标题后有点击，选题方向更在前！ 选题一定是每一个运营日常都要做的事，当然，大概率也是最头疼的一件事。有建立自己选题库的还好，不然就是从早到晚的选题、选题、再选题。 整天都发愁：想不到好选题啊，选题都被别人写了，哪些是用户感兴趣的选题啊......特别对于">
+                                        <h4><span>新媒体运营选题灵感怎么找？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yygh/388.html" title="他竟然连续9个月ROI大于7，月净利翻10倍，究竟是怎么做到的？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/c200911/15cO1K5KG0-2W106.jpg" alt="2020年1月疫情期间，我接手了一个难啃的会员项目；受众面窄、客单价高、产品体验差，几乎就是一个烂摊子。在此之前，已经轮换过好3拨负责人，如果我不能力挽狂澜，30多号人，2年多的心血">
+                                        <h4><span>他竟然连续9个月ROI大于7，月净利翻10倍，究竟是怎么做到的？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/1530.html" title="提升宝贝主图点击率的小技巧">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/static/assets/images/nopic.gif" alt="点击次数是伴随着新产品期、上升期、爆款期的一个重要指标。 怎样做好一张高质量的图片，是电商小伙伴们永远无法回避的话题。 首先是模仿 同辈是我们在接触到新类目时最好的老师。 淘宝网的流量已经从PC端转移到了手机端，因此我们主要参考手机端的数据， 收集高点击率的图片，并将原因标注在表格中：构图，拍摄角度，色调，搭配等等，下一次拍摄或绘制时可以使用">
+                                        <h4><span>提升宝贝主图点击率的小技巧</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/gzhyy/2033.html" title="怎样提取微信公众号封面图？如何拿到别人公众号的文章封面图？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://static.getgetai.com/img/115bb7bb065b44d1bb8150ffc3303281/20201203143513066.png" alt="怎样提取微信公众号封面图？如何拿到别人公众号的文章封面图？一张好看的公众号封面图绝对可以给推文带来不错的点击量，当你被同行的推文封面图深深时，你是否也想把他的封面图扒下来">
+                                        <h4><span>怎样提取微信公众号封面图？如何拿到别人公众号的文章封面图？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/3281.html" title="电商直播带货培训课程表 微赚联盟是什么网站">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210122/1_01221032533139.jpg" alt="类似于传销，只有发展你们这些一无所知的新人，才能维持生存，懂我意思了吧。你想大家支付宝互相打钱，这个收益怎么产生？还不是不断骗新进来的人的钱么？越晚玩这个的风险越大，老人铁定是赚到钱了，但是你敢进去吗？ 电商直播带货培训课程表 区别就是销售的展现形式不同，都是要把东西卖出去，网络营销就是用互联网上的渠道，资源和工具去销售，是顾客感官判断">
+                                        <h4><span>电商直播带货培训课程表 微赚联盟是什么网站</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="https://www.chenifan.cn/tougao/4649.html" target="_blank" title="遮盖液和粉底有什么区别？粉底能遮住白斑吗？(用什么粉底能遮住白斑)"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="https://www.chenifan.cn/static/assets/images/nopic.gif" alt=" " />
+       <div class="title ">
+        <span>2023-07-18</span>
+        <h4>遮盖液和粉底有什么区别？粉底能遮住白斑吗？(用什么粉底能遮住白斑)</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=2082" target="_blank " title="特斯拉一夜疯涨7%，市值已超过3个丰田汽车|电动汽车|马斯克|电动车"><img data-original="/pic/特斯拉一夜疯涨7%，市值已超过3个丰田汽车|电动汽车|马斯克|电动车.jpg" alt="特斯拉一夜疯涨7%，市值已超过3个丰田汽车|电动汽车|马斯克|电动车" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=2082" title="特斯拉一夜疯涨7%，市值已超过3个丰田汽车|电动汽车|马斯克|电动车">特斯拉一夜疯涨7%，市值已超过3个丰田汽车|电动汽车|马斯克|电动车</a></h4>
+       <span>2020-12-08</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=2200" target="_blank " title="进军酒店业务？哈啰关联公司申请“哈啰酒店”商标|洁具|日化|餐饮|厨房"><img data-original="/pic/进军酒店业务？哈啰关联公司申请“哈啰酒店”商标|洁具|日化|餐饮|厨房.jpg" alt="进军酒店业务？哈啰关联公司申请“哈啰酒店”商标|洁具|日化|餐饮|厨房" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=2200" title="进军酒店业务？哈啰关联公司申请“哈啰酒店”商标|洁具|日化|餐饮|厨房">进军酒店业务？哈啰关联公司申请“哈啰酒店”商标|洁具|日化|餐饮|厨房</a></h4>
+       <span>2020-12-15</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=3765" target="_blank " title="征名！我国首颗太阳探测科学技术试验卫星名称由你来定|航天器|中国航天科技集团"><img data-original="/pic/征名！我国首颗太阳探测科学技术试验卫星名称由你来定|航天器|中国航天科技集团.jpg" alt="征名！我国首颗太阳探测科学技术试验卫星名称由你来定|航天器|中国航天科技集团" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=3765" title="征名！我国首颗太阳探测科学技术试验卫星名称由你来定|航天器|中国航天科技集团">征名！我国首颗太阳探测科学技术试验卫星名称由你来定|航天器|中国航天科技集团</a></h4>
+       <span>2021-09-25</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" https://www.chenifan.cn/duanzi/3506.html" target="_blank " title="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎.jpg" alt="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/duanzi/3466.html" target="_blank " title="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/神回复《文言文格式》：乱言无信之人，其生子之股无孔尔.jpg" alt="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>神回复《文言文格式》：乱言无信之人，其生子之股无孔尔</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/xmtyy/5175.html" target="_blank " title="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路.jpg" alt="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-07</span>
+        </div>
+        <h4>抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   <a href="/index.php?s=tag&name=haozuo" title="点击量：励志文案">好做</a>
+<a href="/index.php?s=tag&name=zetian" title="点击量：励志文案">泽天</a>
+<a href="/index.php?s=tag&name=cengwanggou" title="点击量：励志文案">曾网购</a>
+<a href="/index.php?s=tag&name=da" title="点击量：励志文案">达</a>
+<a href="/index.php?s=tag&name=jishang" title="点击量：励志文案">机上</a>
+<a href="/index.php?s=tag&name=nianqian" title="点击量：励志文案">年前</a>
+<a href="/index.php?s=tag&name=youcai" title="点击量：励志文案">有才</a>
+<a href="/index.php?s=tag&name=zhuti" title="点击量：励志文案">主体</a>
+<a href="/index.php?s=tag&name=shuwang" title="点击量：励志文案">书网</a>
+<a href="/index.php?s=tag&name=zaixian" title="点击量：励志文案">在线</a>
+<a href="/index.php?s=tag&name=yonghuxingweifenxi" title="点击量：励志文案">用户行为分析</a>
+<a href="/index.php?s=tag&name=wenda" title="点击量：励志文案">问答</a>
+<a href="/index.php?s=tag&name=kecheng1" title="点击量：励志文案">克成</a>
+<a href="/index.php?s=tag&name=zuigao" title="点击量：励志文案">最高</a>
+<a href="/index.php?s=tag&name=weixinzhegexingongnengweixinchuanshuzhushouwangyeduan" title="点击量：励志文案">微信这个新功能，微信传输助手网页端</a>
+<a href="/index.php?s=tag&name=nu" title="点击量：励志文案">女</a>
+<a href="/index.php?s=tag&name=850yi" title="点击量：励志文案">850亿</a>
+<a href="/index.php?s=tag&name=dou1" title="点击量：励志文案">抖</a>
+<a href="/index.php?s=tag&name=keneng" title="点击量：励志文案">可能</a>
+<a href="/index.php?s=tag&name=yiyou" title="点击量：励志文案">已有</a>
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                 
+                <a href="https://www.chenifan.cn/wenan">文案</a>
+                 
+                <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank"></a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script></body>
+</html>

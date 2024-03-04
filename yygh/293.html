@@ -1,0 +1,624 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>老板问指标下降了，我到底应该怎么分析？-澈逆凡博客</title>
+<meta content="数据分析" name="keywords" />
+<meta content="用数据分析解决问题的过程明确问题通过观察现象，把问题定义清楚。分析原因哪里出现问题？为什么会出现这个问题？1.使用 “多维度拆解分析方法”，对问题进行拆解，将一个复杂的问题细化成各…" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5981788569352351"
+     crossorigin="anonymous"></script>
+<script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?f0e0b571b86ade20d3587555160941d9079c10b49e1023c464d0a988a3aa98b33d72cd14f8a76432df3935ab77ec54f830517b3cb210f7fd334f50ccb772134a";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h2 class="logo">
+            <a href="/" title="澈逆凡bolg——专注分享优质内容" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h2>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/ziyuanfx">资源分享</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yx">营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/wenan">文案</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/lizhi">励志文案</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="//bk.chenifan.cn" target="_blank">百科</a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="https://www.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="breadcrumbs">
+                        <span itemprop="itemListElement"><i class="fa fa-map-marker"></i></span>
+                        <a href="/">首页</a> >  <a href="https://www.chenifan.cn/ganhuo">个人成长</a>  <a href="https://www.chenifan.cn/yygh">运营</a>  > 老板问指标下降了，我到底应该怎么分析？                    </div>
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+     <a href="/index.php?s=tag&name=shujufenxi" title="查看更多“数据分析”相关内容">数据分析</a>
+                            </div>
+                            <h1 class="title">老板问指标下降了，我到底应该怎么分析？</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>admincyf</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="https://www.chenifan.cn/yygh">运营</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2020-07-24</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_293">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=293", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_293").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <img src="/pic/老板问指标下降了，我到底应该怎么分析？.jpg" alt="老板问指标下降了，我到底应该怎么分析？">
+                            <tbody><tr>
+                            <td>
+                                                                <span class="span-img"><img src="/uploads/allimg/c200724/1595559E50bZ-1S61.jpg" alt="老板问指标下降了，我到底应该怎么分析？"></span>
+                                                                
+
+                                	<p style="text-align: center;"><span style="color: #ff0000;"><strong>用数据分析解决问题的过程</strong></span></p>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559E523260-21603.jpg" width="565" height="315" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>明确问题</strong></span></p>
+<p>通过观察现象，把问题定义清楚。</p>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559E5345F-3M60.jpg" width="565" height="291" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>分析原因</strong></span></p>
+<ul>
+<li>哪里出现问题？</li>
+<li>为什么会出现这个问题？</li>
+</ul>
+<p><strong>1.使用 “多维度拆解分析方法”，对问题进行拆解，将一个复杂的问题细化成各个子问题</strong></p>
+<p>按照“多维度拆解分析方法”，我们可以按照 用户、产品、竞品这三个维度来拆解。分别对应公司的三个部门。用户对应运营部、产品对应产品部、竞品对应市场部。</p>
+<ul>
+<li><strong>用户（运营）：</strong> 画出用户使用产品的路径图，然后从AARRR分析方法的5个环节去分析原因。</li>
+<li><strong>产品（产品部）：</strong> 这段时间销售的产品是否满足用户的需求。</li>
+<li><strong>竞品（市场部）：</strong> 竞品是不是在搞什么优惠活动，用户跑到竞争对手那里了</li>
+</ul>
+<p><strong>2.对拆解的每个部分，使用“假设检验分析方法”，找到哪里出现问题。分析的过程可以用对比分析方法等分析方法来辅助完成。</strong></p>
+<p><strong>3.在找到哪里出现问题后， 多问自己几个为什么出现这个问题。然后使用相关性分析找出问题的原因。</strong></p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>决策</strong></span></p>
+<p>找到原因，并给出建议和可以实施的解决方案。</p>
+<p><strong>案例1：汽车销量下降问题分析</strong></p>
+<p><strong>1.明确问题</strong></p>
+<p><strong>问题：</strong>与去年一年的月平均销售额相比，本年度最近一个月的新车销售额降低了大约15%。</p>
+<p>下图是最近2年新车销售额变化</p>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559E544050-45163.jpg" width="565" height="306" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p><strong>2.分析原因</strong></p>
+<p><strong>1)多维度拆解数据层</strong></p>
+<p>按照指标定义，将“新车销售总额”拆解为“新车销售数量”与“平均单价”。</p>
+<p><strong>新车销售额 = 新车销售数量*平均单价</strong></p>
+<p>从“用户是否首次购买”这个维度，将“新车销售数量”拆解为“本品牌首次购买数量”和“本品牌再次购买数量”。</p>
+<p>“本品牌首次购买数量”，可以拆解为“从其他品牌流入”的用户（之前在其他品牌买过车）和“首次购买车辆”的用户。</p>
+<p>“本品牌再次购买数量”拆解为“再次购买时仍然选择了本品牌产品”的老用户，和“转为购买其他品牌用户”的老用户。</p>
+<p>客户忠诚度 = 老用户“再次购买时仍然选择本品牌产品”的车辆数/ “老用户再次购买的车辆总数”。</p>
+<p><strong>这样，“本品牌再次购买数量”= “老用户再次购买车辆总数”* 客户忠诚度。</strong></p>
+<p>如下所示：</p>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559E553H0-55508.jpg" width="565" height="423" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p>根据“多维度拆解”图，我们可以对数据进行清洗，得到拆解后的各个细分数据。</p>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559E5B030-A005.jpg" width="438" height="565" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p><strong>2)假设检验方法，分析原因</strong></p>
+<p>根据以上“多维度拆解图”，下面用 “假设检验方法”对每个部分进行验证。</p>
+<p><strong>a.提出假设：问题出在平均单价</strong></p>
+<p><strong>收集证据：</strong>下图是平均单价的随时间变化的折线图</p>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559E5Q50-I055.jpg" width="565" height="339" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p><strong>得出结论：</strong>从图表可以看出，“平均单价”在这两年期间比较稳定，基本在平均值（200万日元）上下5%的范围内。至少在过去的一年里，没有出现过价格明显下降的情况。</p>
+<p><strong>b.新车销售数量：</strong></p>
+<ul>
+<li><strong>提出假设：</strong> 问题出现在新车销售数量</li>
+<li><strong>收集证据：</strong> 下图是“新车销售数量”随时间变化的折线图</li>
+<li><strong>得出结论：</strong> 从图表中，我们可以看出，“新车销售数量”与销售总额一样，也减少了近15%。由数据可知，问题出现在“新车销售数量”上。</li>
+</ul>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559E592E0-T120.jpg" width="565" height="328" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p><strong>c.收集证据</strong></p>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559E602010-b462.jpg" width="565" height="431" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p><strong>得出结论：</strong>从图表可以看出，本品牌首次购买数量基本维持稳定，而再次购买数量在过去的一年出现了减少。从数据上可以确定，“本品牌再次购买数量”是“新车销售总额”减少的主要原因之一。</p>
+<p><strong>d.接下来对“本品牌内再次购买数量”的拆解对象进行分析</strong></p>
+<ul>
+<li><strong>提出假设：</strong> 问题出现在客户忠诚度上</li>
+<li><strong>收集证据：</strong> 下图是客户忠诚度随时间的变化</li>
+<li><strong>得出结论：</strong> 从图表可以看出，导致“本品牌再次购买数量减少”的是客户忠诚度的下降。也就是老客户中选择了其他品牌人数的比例增加了。</li>
+</ul>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559E6131P-102Q4.jpg" width="565" height="322" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p><strong>e.按某个维度对客户忠诚度进行拆解</strong></p>
+<p>一般拆解的维度可以是用户（年龄、职业、性别等），产品（车型），竞品（研究竞品是不是在搞什么优惠活动，用户跑到竞争对手那里了）。</p>
+<p><strong>从哪个维度来比较客户忠诚度，才能找到问题发生的原因呢？</strong></p>
+<p><strong>作为这个例子的可靠假设，可以展开以下讨论：</strong></p>
+<p>按照不同的客户群体，例如不同年龄层的客户来分析客户忠诚度，会发现对不同的车型来说，人们的评价或喜爱程度并不一定与年龄有关。</p>
+<p><strong>也就是说， 不同的车型更能体现出人们对其评价或喜爱程度的不同。</strong></p>
+<p>根据这一假设，可以从“产品（车型）”的维度来比较不同产品的客户忠诚度，在进行”产品（车型）”的维度来比较不同产品的客户忠诚度“时，我们要用到对比分析方法，下图是比较表格：从产品（车型）维度比较不同产品的客户忠诚度。</p>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559E6231P-113Z2.jpg" width="565" height="347" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p>根据这个比较表格，我们展开对比分析。</p>
+<p><strong>a.衡量整体的大小：平均值</strong></p>
+<p>对不同车型的销售量和忠诚度的平均值进行比较。</p>
+<p>对销售总额这个最根本的问题来说，<strong> 是否存在对其影响较大的车型和并无太大影响的车型呢？</strong></p>
+<p>虽然深入分析是好事，但如果分析的对象对问题整体的影响微不足道，这个工作就不会产生任何意义。根据对 问题影响的大小来决定优先顺序和关注程度，也决定了根据分析结果采取的措施能够对解决问题产生多大贡献。</p>
+<p>我们看下每种车型占销售数量的比较（下图）</p>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559E6342P-1261C.jpg" width="639" height="602" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p>从图表中，我们可以发现只有车型A的比例明显小于其他车型。如果将问题锁定为车型A，即使采取了有效的对策，对解决整体问题的影响仍然是有限的。因此可以暂且降低车型A的优先顺序。</p>
+<p>我们再来比较对不同车型客户忠诚度（下图）</p>
+<p><img class="aligncenter" alt="1220 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559E643B0-139518.jpg" width="565" height="72" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p>从图表中，我们发现只有车型A的客户忠诚度显著偏低，其他车型之间没有太大差别。</p>
+<p><strong>b.衡量波动：变异系数</strong></p>
+<p>接下来对不同车型客户忠诚度的变异系数进行比较，得到下图里的数据。</p>
+<p><img class="aligncenter" alt="1316 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559EA2S0-143601.jpg" width="565" height="72" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p>从图表可以发现，虽然车型A的变异系数明显高于其他车型， <strong>但该车型数量较少，对整体的影响很小，因此在此就不涉及。</strong></p>
+<p>从其他车型来看，车型D的波动较大。车型D的客户忠诚度与车型B、车型C几乎没有差别，所以很难将其认定为直接影响问题的关键。但从波动程度来看，车型D极有可能含有其他问题或风险，需要引起注意。</p>
+<p><strong>c.衡量趋势变化：时间折线图</strong></p>
+<p>根据前面确认的结果，暂且将车型A从比较对象中剔除，对其余3个车型的客户忠诚度随时间变化进</p>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559EB2120-1564I.jpg" width="565" height="436" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p>从图片中可以发现，车型B和车型C的客户忠诚度均自一年前开始逐渐降低。也就是说，转为购买其他公司产品的比例提高了。</p>
+<p>具体数字是最近2年从约80%～90%减至50%～60%，降低了30～40个百分点。可见，拥有本品牌产品但需要再次购买车辆的人中，这2年期间有近30%被其他公司夺走了。</p>
+<p><strong>d.汇总对比分析结果</strong></p>
+<p>我们将前面的比较结果，填到下面的“比较表格”里。</p>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559EC3B0-163936.jpg" width="565" height="404" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p>从上面的分析结果， 车型B与车型C是重点进一步分析的对象。</p>
+<p>分析到这一步，可以问自己一个问题：为什么车型B和车型C的客户忠诚度会出现下降？</p>
+<p><strong>e.下图从“车型B的客户忠诚度为什么会下降“的疑问开始，提出假设，最终将问题归纳为“售后服务”“产品”和“价格”3个因素。</strong></p>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559EDD30-1G3M.jpg" width="565" height="362" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p>在上图中，有一个原因是“因为其他公司推出了具有竞争力的产品”。对这个原因，无论如何深入分析，解决方法也只能是 “开发更有竞争力的产品”等中长期措施，不能成为尽快增加销售的方法。因此，可以暂且将其优先顺序推后。</p>
+<p>也有可能这才是根本原因，所以我们不是无计可施就忽视它的存在，而是因为目前需要优先调查能在短期内采取对策的原因。与那些需要严密调查理论上的所有原因，写成报告的情况不同，工作中需要根据目的、制约条件和实际情况，采取灵活的措施。</p>
+<p>下面我们用 假设检验分析方法来验证上面提出的假设。</p>
+<p><strong>1.假设1</strong></p>
+<p><strong>车型B和车型C的客户忠诚度下降是因为综合满意度下降。两者有相关性。</strong></p>
+<p>证据：那么，根据前面的图，先来看综合满意度（月份平均）与客户忠诚度是否相关。因为没有区分不同车型的满意度数据，只有包括所有车型的综合满意度，所以需要计算.综合满意度与各车型客户忠诚度之间的相关系数。（下图是不同车型客户忠诚度与综合满意度的相关系数）</p>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559EEUZ-1U924.jpg" width="354" height="565" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p>结论从上图可以发现：</p>
+<ul>
+<li>体的客户忠诚度与综合满意度之间的相关系数为0.64，由此可知两者之间存在相关关系。</li>
+<li>再看不同车型客户忠诚度与综合满意度的相关，车型B和车型C与综合满意度的相关系数分别为0.75、0.69，数值较高，可以确认为相关。</li>
+</ul>
+<p>但是如果只分析到这里，只看综合满意度，并不能决定“接下里应该采取哪些措施”。这样的话仍然无法对实际业务产生意义，<strong>所以接下来还要再次 应用相关分析来探讨综合满意度之间和“售后服务”“产品”“价格”之间的相关程度。</strong></p>
+<p><strong>2.假设2</strong></p>
+<p><strong>综合满意度和售后服务、产品、价格的相关。</strong></p>
+<p><strong>1)车型B</strong></p>
+<p>证据：下图是车型B的综合满意度和售后服务、产品、价格的相关系数。</p>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559EG1020-196335.jpg" width="379" height="565" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p>结论：通过上图可以发现，对车型B来说，综合满意度和价格高度相关（相关系数是-0.72），表示价格越高，顾客满意度就会越低。也就是说，与同类产品的价格比（相对而言是贵还是便宜）对综合满意度的影响较大。车型B的用户对价格比较敏感。</p>
+<p>下图是车型B的综合满意度和售后服务、产品、价格的相关系数。</p>
+<p><strong>2)车型C</strong></p>
+<p>证据:下图是车型C的综合满意度和售后服务、产品、价格的相关系数</p>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559EH50-205D1.jpg" width="375" height="565" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p>结论:通过上图可以发现，对车型C来说，综合满意度高度和售后服务满意度高度相关（相关系数是0.59），表示售后服务越高，综合满意度高度也越高。</p>
+<p>同样是综合满意度，车型B的用户与车型C的用户所重视的关键点完全不同。当然，我们也可以越过综合满意度，直接考察每个车型的客户忠诚度与“售后服务”“产品”“价格”等数据的相关系数。</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>总结</strong></span></p>
+<p>我们将前面所有的分析组织起来，就是下面这个图。它体现了对问题进行深入分析的整个过程。</p>
+<p><img class="aligncenter" alt=" 老板问指标下降了，我到底应该怎么分析？" src="/uploads/allimg/c200724/1595559EIS60-213310.jpg" width="565" height="165" title="老板问指标下降了，我到底应该怎么分析？" /></p>
+<p>&nbsp;</p>
+<p>这个图还体现出，分析者并不是只分析了偶然想到的某些项目，而是通过这个构造避免了遗漏或重复，并对那些最终确定并非问题或原因的项目也进行了检验。</p>
+<p>另外，图片里对话框的内容解释了停止深入分析的原因。这样一来，听众就可以明白，分析者说到解决问题、进行分析或企划的目标时， “该工作的最终目的”这一重要始点始终没有动摇。锁定原因之后，接下来就是制定改进（解决）措施了。</p>
+<p>作者：veggieg</p>
+<p>来源：知乎专栏</p>
+                                
+                            </td>
+                        </tr>
+                    </tbody><br>本文链接：https://www.chenifan.cn/yygh/293.html<br>
+                            
+<p style="color:#C0C0C0">>>免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！</br> >  老板问指标下降了，我到底应该怎么分析？ </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="https://www.chenifan.cn/yygh/292.html" class="prev has-background"><span>上一篇：</span><h4>运营思维：面对已知问题和未知问题的解决思路</h4></a></div>
+                        <div class="next-post"><a href="https://www.chenifan.cn/yygh/298.html" class="nextv has-background"><span>下一篇：</span><h4>卖爆品=做品牌？别把卖货叫做品牌</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/2617.html" title="淘宝宝贝关键词优化">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.ruzw.com/uploads/allimg/201908/15661950329842.jpg" alt="商家补单请进入》》 http://bus.tomushow.com 礼品代发，只要1.3元》》 http://www.lipinyu.com 一个好的淘宝标题能够引来成百上千的免费流量，这也是淘宝宝贝初期上架加权重的重点。做好一个标题能够省去很多的麻烦。前提是找一些好的关键词来撑起整个标题。 淘宝宝贝关键词优化 1、符合顾客搜索习惯。符合用户搜索习惯的关键词，被搜索到的概率会大大提升，好的关键词能帮助宝贝">
+                                        <h4><span>淘宝宝贝关键词优化</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/3096.html" title="电商推广广告词 零售行业数据分析的常见指标，以可视化图表展示？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210121/1_012115595J0S.jpg" alt="零售行业由于低毛利的特点，要求必须更加精细化地管理。 零售经营利润=门店数量×均店销售额×毛利率-存货成本-房租成本-人员成本-管理成本 将以上利润指标进行拆解，观远数据相应地从战略计划、门店运营、商品运营、市场营销、顾客关系（会员管理）、全渠道运营、人力资源、财务分析等环节进行流程优化，覆盖目标的制定、实施、评估和分析改善，构建基于数据能力的">
+                                        <h4><span>电商推广广告词 零售行业数据分析的常见指标，以可视化图表展示？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yygh/292.html" title="运营思维：面对已知问题和未知问题的解决思路">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/c200724/1595559E262V0-322031.jpg" alt="做了这么多年运营，见过大大小小数不清的问题，早就练出了一身快速解决问题的本领。在后来的运营中，运营部门基本上已经没有大问题存在了，比如全网曝光量，过去每天几百次，在我的运营下，一天能有几十万次。获…">
+                                        <h4><span>运营思维：面对已知问题和未知问题的解决思路</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/gzhyy/2561.html" title="刷屏级的公众号裂变涨粉活动，背后都藏着这几个关键要点">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/201229/1F00J150-0-lp.jpg" alt="在目前的微信运营圈里，最火的词毫无疑问是：裂变。 每一个运营人员都梦想着能策划一场刷爆朋友圈的裂变活动，实现用户的井喷式增长。 可是一到活动切入的时候，就会陷入迷茫的境地，从活动主题选择，到活动规则的制定，再到礼品的筛选，每一个步骤都很琐碎，不知如何下手。 我在跟很多运营同学接触过程中，发现有以上问题与困扰的小伙伴还真的挺多： 想法很美好">
+                                        <h4><span>刷屏级的公众号裂变涨粉活动，背后都藏着这几个关键要点</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yygh/2138.html" title="双十二电商推文排版素材样式推荐">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://static.getgetai.com/img/115bb7bb065b44d1bb8150ffc3303281/20201210110747044.png" alt="​双十二电商类公众号排版素材推荐（双12图文模板样式） 时光转瞬即逝，转眼就到了12月份了，下一个电商热点-双12已经拉开帷幕，新媒体人是否已经做好准备了呢？小鹰今天跟小伙伴们准备了一大波电商类公众号的排版样式，一起来看看吧。 制作微信公众号双十二推文的时候，很可能涉及到大量图文以及设置价格标签的需求，更好的体验产品卖点、优势、细节等等，充分激发">
+                                        <h4><span>双十二电商推文排版素材样式推荐</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/184.html" title="淘宝店铺如何运营才能爆单？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/c200617/15923Y304941F-53350.jpg" alt="电商法的颁布给很多中小卖家不少压力，许多卖家被迫把自己的店铺升级为企业店铺，虽然企业店铺会受到平台的扶持，但是卖家们要打起12分精神，因为企业店铺的经营更加难。今天分享一下企业店...">
+                                        <h4><span>淘宝店铺如何运营才能爆单？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="https://www.chenifan.cn/tougao/4202.html" target="_blank" title="乌托邦式爱情是什么意思"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="https://www.chenifan.cn/static/assets/images/nopic.gif" alt=" " />
+       <div class="title ">
+        <span>2023-07-09</span>
+        <h4>乌托邦式爱情是什么意思</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=1743" target="_blank " title="40万条快递信息被泄露背后：你的简历也被卖了|申通|信件"><img data-original="/pic/40万条快递信息被泄露背后：你的简历也被卖了|申通|信件.jpg" alt="40万条快递信息被泄露背后：你的简历也被卖了|申通|信件" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=1743" title="40万条快递信息被泄露背后：你的简历也被卖了|申通|信件">40万条快递信息被泄露背后：你的简历也被卖了|申通|信件</a></h4>
+       <span>2020-11-19</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=1938" target="_blank " title="第三代半导体弯道超车 5年后碳化硅市场规模超160亿|半导体材料|砷化镓"><img data-original="/pic/第三代半导体弯道超车 5年后碳化硅市场规模超160亿|半导体材料|砷化镓.jpg" alt="第三代半导体弯道超车 5年后碳化硅市场规模超160亿|半导体材料|砷化镓" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=1938" title="第三代半导体弯道超车 5年后碳化硅市场规模超160亿|半导体材料|砷化镓">第三代半导体弯道超车 5年后碳化硅市场规模超160亿|半导体材料|砷化镓</a></h4>
+       <span>2020-11-27</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=2938" target="_blank " title="携程再传赴港二次上市 回应：不予置评|摩根士丹利|摩根大通|纳斯达克"><img data-original="/pic/携程再传赴港二次上市 回应：不予置评|摩根士丹利|摩根大通|纳斯达克.jpg" alt="携程再传赴港二次上市 回应：不予置评|摩根士丹利|摩根大通|纳斯达克" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=2938" title="携程再传赴港二次上市 回应：不予置评|摩根士丹利|摩根大通|纳斯达克">携程再传赴港二次上市 回应：不予置评|摩根士丹利|摩根大通|纳斯达克</a></h4>
+       <span>2021-01-12</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" https://www.chenifan.cn/duanzi/3506.html" target="_blank " title="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎.jpg" alt="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/duanzi/3466.html" target="_blank " title="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/神回复《文言文格式》：乱言无信之人，其生子之股无孔尔.jpg" alt="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>神回复《文言文格式》：乱言无信之人，其生子之股无孔尔</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/xmtyy/5175.html" target="_blank " title="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路.jpg" alt="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-07</span>
+        </div>
+        <h4>抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   <a href="/index.php?s=tag&name=zhuguan" title="点击量：励志文案">主管</a>
+<a href="/index.php?s=tag&name=cengyin" title="点击量：励志文案">曾因</a>
+<a href="/index.php?s=tag&name=que1" title="点击量：励志文案">缺</a>
+<a href="/index.php?s=tag&name=tuixue" title="点击量：励志文案">退学</a>
+<a href="/index.php?s=tag&name=anli" title="点击量：励志文案">案例</a>
+<a href="/index.php?s=tag&name=huidui" title="点击量：励志文案">会对</a>
+<a href="/index.php?s=tag&name=licheng" title="点击量：励志文案">里程</a>
+<a href="/index.php?s=tag&name=qingda" title="点击量：励志文案">请答</a>
+<a href="/index.php?s=tag&name=feirou" title="点击量：励志文案">肥肉</a>
+<a href="/index.php?s=tag&name=zhengchang" title="点击量：励志文案">正常</a>
+<a href="/index.php?s=tag&name=qingsong" title="点击量：励志文案">轻松</a>
+<a href="/index.php?s=tag&name=zhuanzhengshenqing" title="点击量：励志文案">转正申请</a>
+<a href="/index.php?s=tag&name=feibiao" title="点击量：励志文案">非标</a>
+<a href="/index.php?s=tag&name=qingkuang" title="点击量：励志文案">情况</a>
+<a href="/index.php?s=tag&name=youyici" title="点击量：励志文案">又一次</a>
+<a href="/index.php?s=tag&name=li1" title="点击量：励志文案">力</a>
+<a href="/index.php?s=tag&name=guke" title="点击量：励志文案">顾客</a>
+<a href="/index.php?s=tag&name=yiduiyi" title="点击量：励志文案">一对一</a>
+<a href="/index.php?s=tag&name=duzhu" title="点击量：励志文案">毒株</a>
+<a href="/index.php?s=tag&name=renzui" title="点击量：励志文案">认罪</a>
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                 
+                <a href="https://www.chenifan.cn/wenan">文案</a>
+                 
+                <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank"></a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script></body>
+</html>

@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>推荐两款本地PHP环境一键集成软件-澈逆凡博客</title>
+<meta content="推荐,两款,本地,PHP,环境,一键,集成,软件,今天" name="keywords" />
+<meta content="今天烽烟给大家分享两款本地PHP环境一键集成软件：APMServ和XAMPP，对于建网站的同学来说不在本地搭建一个网站怎么能说的过去呢，无论是测试模板还是修改模板这些都需要在本地操作才比较安全，要不直接在线修改模板测试代码，万一代码错误导致网站打不开就不好了。 APMServ 5.2.6 介绍 APMServ 5.2.6 是一款拥有图形界面的快速搭建Apache 2.2.9、PHP 5.2.6、MySQL 5.1.28＆4.0.26、Nginx 0.7.1" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5981788569352351"
+     crossorigin="anonymous"></script>
+<script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?f0e0b571b86ade20d3587555160941d9079c10b49e1023c464d0a988a3aa98b33d72cd14f8a76432df3935ab77ec54f830517b3cb210f7fd334f50ccb772134a";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h2 class="logo">
+            <a href="/" title="澈逆凡bolg——专注分享优质内容" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h2>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/ziyuanfx">资源分享</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yx">营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/wenan">文案</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/lizhi">励志文案</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="//bk.chenifan.cn" target="_blank">百科</a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="https://www.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="breadcrumbs">
+                        <span itemprop="itemListElement"><i class="fa fa-map-marker"></i></span>
+                        <a href="/">首页</a> >  <a href="https://www.chenifan.cn/ganhuo">个人成长</a>  <a href="https://www.chenifan.cn/yx">营销</a>  > 推荐两款本地PHP环境一键集成软件                    </div>
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+     <a href="/index.php?s=tag&name=bendi" title="查看更多“本地”相关内容">本地</a>
+<a href="/index.php?s=tag&name=tuijian" title="查看更多“推荐”相关内容">推荐</a>
+<a href="/index.php?s=tag&name=huanjing" title="查看更多“环境”相关内容">环境</a>
+<a href="/index.php?s=tag&name=ruanjian" title="查看更多“软件”相关内容">软件</a>
+<a href="/index.php?s=tag&name=jicheng1" title="查看更多“集成”相关内容">集成</a>
+                            </div>
+                            <h1 class="title">推荐两款本地PHP环境一键集成软件</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>未知</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="https://www.chenifan.cn/yx">营销</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2020-06-15</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_133">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=133", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_133").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <img src="/pic/推荐两款本地PHP环境一键集成软件.jpg" alt="推荐两款本地PHP环境一键集成软件">
+                            
+		<p><a href="https://www.chenifan.cn/article/search/keyword-%E4%BB%8A%E5%A4%A9.html" target="_blank">今天</a>烽烟给大家分享<a href="https://www.chenifan.cn/article/search/keyword-%E4%B8%A4%E6%AC%BE.html" target="_blank">两款</a><a href="https://www.chenifan.cn/article/search/keyword-%E6%9C%AC%E5%9C%B0.html" target="_blank">本地</a><a href="https://www.chenifan.cn/article/search/keyword-PHP.html" target="_blank">PHP</a><a href="https://www.chenifan.cn/article/search/keyword-%E7%8E%AF%E5%A2%83.html" target="_blank">环境</a><a href="https://www.chenifan.cn/article/search/keyword-%E4%B8%80%E9%94%AE.html" target="_blank">一键</a><a href="https://www.chenifan.cn/article/search/keyword-%E9%9B%86%E6%88%90.html" target="_blank">集成</a><a href="https://www.chenifan.cn/article/search/keyword-%E8%BD%AF%E4%BB%B6.html" target="_blank">软件</a>：APMServ和XAMPP，对于建网站的同学来说不在本地搭建一个网站怎么能说的过去呢，无论是测试模板还是修改模板这些都需要在本地操作才比较安全，要不直接在线修改模板测试代码，万一代码错误导致网站打不开就不好了。</p><h2>APMServ 5.2.6 介绍</h2><p>APMServ 5.2.6 是一款拥有图形界面的快速搭建Apache 2.2.9、PHP 5.2.6、MySQL 5.1.28
+＆4.0.26、Nginx 0.7.19、Memcached 1.2.4、phpMyAdmin 2.11.9.2、OpenSSL、SQLite、
+ZendOptimizer，以及ASP、CGI、Perl网站服务器平台的绿色软件。无需安装，具有灵活的移动
+性，将其拷贝到其它目录、分区或别的电脑时，均只需点击APMServ.exe中的启动按钮，即可自
+动进行相关设置，将Apache和MySQL安装为系统服务并启动。APMServ集合了Apache稳定安全的
+优点，并拥有跟IIS一样便捷的图形管理界面，同时支持MySQL 5.0 &amp; 4.0两个版本，虚拟主机、
+虚拟目录、端口更改、SMTP、上传大小限制、自动全局变量、SSL证书制作、缓存性能优化等设
+置，只需鼠标一点即可完成。</p><p><img alt="推荐两款本地PHP环境一键集成软件  第1张" class="alignnone size-full wp-image-1191" src="https://www.fengyan.cc/zb_users/upload/2015/12/20151211112917_96356.png" width="599" height="448"/></p><h2>APMServ安装注意事项</h2><p style="text-indent: 0;">1、注意事项：APMServ程序所在路径不能含有汉字和空格。</p><p style="text-indent: 0;">2、MySQL默认用户名：root，密码为空&nbsp;</p><p style="text-indent: 0;">3、MySQL数据库文件存放目录：MySQL5.1\data或MySQL4.0\data&nbsp;</p><p style="text-indent: 0;">4、网站根目录[HTML,PHP]www\htdocs [ASP]www\asp [CGI,Perl]www\cgi-bin&nbsp;</p><p style="text-indent: 0;">5、访问本机请用http://127.0.0.1/或https://127.0.0.1/ (如果开启SSL)&nbsp;</p><p style="text-indent: 0;">6、非默认端口，网址为http://127.0.0.1:端口/或https://127.0.0.1:端口/&nbsp;</p><p style="text-indent: 0;">7、如果在“扩展功能”中选择使用Memcached，它的端口为：11211</p><h2>APMServ集成软件</h2><p>Apache 2.2.9 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[HTTP服务器]</p><p>Nginx 0.7.19 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[HTTP服务器]</p><p>NetBox 2.8 Build 4128 [HTTP服务器＋ASP脚本解释引擎]</p><p>PHP 5.2.6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [PHP脚本解释引擎]</p><p>MiniPerl 5.8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[Perl脚本解释器]</p><p>Memcached 1.2.4 &nbsp; &nbsp; &nbsp; [key-value内存缓存系统]</p><p>MySQL 5.1.28 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[MySQL数据库服务器]</p><p>MySQL 4.0.26 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[MySQL数据库服务器]</p><p>phpMyAdmin 2.11.9.2 &nbsp; [MySQL数据库在线管理工具]</p><p>eAccelerator 0.9.5.3 &nbsp;[PHP脚本加速引擎]</p><p>ZendOptimizer 3.3.3 &nbsp; [PHP脚本加速引擎]</p><p>OpenSSL 0.9.8h &nbsp; &nbsp; &nbsp; &nbsp;[HTTPS(SSL)安全传输协议]</p><h2>APMServ下载</h2><p>网盘下载</p><h2>XAMPP介绍</h2><p>整合型的Apache套件。XAMPP包括Apache、MySQL、PHP、PERL，直接解压缩，没有复杂的安装过程，强烈<a href="https://www.chenifan.cn/article/search/keyword-%E6%8E%A8%E8%8D%90.html" target="_blank">推荐</a>初学者使用。<img alt="推荐两款本地PHP环境一键集成软件  第2张" class="alignnone size-full wp-image-1189" src="https://www.fengyan.cc/zb_users/upload/2015/12/20151211112917_74611.png" width="726" height="470"/></p><h2>XAMPP安装使用</h2><p style="text-indent: 0;">1: 安装程序。&nbsp;</p><p style="text-indent: 0;">2: 然后勾选 服务 那栏下的选窗, 实现安装服务。&nbsp;</p><p style="text-indent: 0;">3: 点击各功能的 start 来启动进程。&nbsp;</p><p style="text-indent: 0;">4: 点击各功能的admin, 来管理功能。</p><h2>XAMPP下载</h2><p>网盘下载</p>					
+	<br>本文链接：https://www.chenifan.cn/yx/133.html<br>
+                            
+<p style="color:#C0C0C0">>>免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！</br> >  推荐两款本地PHP环境一键集成软件 </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="https://www.chenifan.cn/youhua/132.html" class="prev has-background"><span>上一篇：</span><h4>SEO教程:如何正确的做好外链</h4></a></div>
+                        <div class="next-post"><a href="https://www.chenifan.cn/youhua/134.html" class="nextv has-background"><span>下一篇：</span><h4>浅谈如何提升网站的收录,让关键词排名稳定</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yx/3753.html" title="B站的内容营销逻辑｜目前你能看到的最佳解读">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/c210925/163253G960Y30-1T124.jpg" alt="品牌对在知乎做内容营销会有疑虑，因为数据不能马上看到，因为难以建立与销售的明确关系。但在B站做内容营销，我们就不需要问为什么，只需要行动。B站的数据反馈很丰富，很快，投放带来的效果主要在第一周就会确…">
+                                        <h4><span>B站的内容营销逻辑｜目前你能看到的最佳解读</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yx/200.html" title="618来了，海报文案如何做到高转化率？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/c200627/15932HQX2630-15M02.jpg" alt="一、活动海报类型及高转化要素1. 活动banner图（1）活动banner的组成要素Banner一般包括两个方面，一是banner的文案部分，二是banner的背景等配图元素。（2）高转化要素Banner的文案部分，需要至少包…">
+                                        <h4><span>618来了，海报文案如何做到高转化率？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yx/282.html" title="鲁班，你还是放弃吧！">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/c200724/15955594Z20Q0-2931K.jpg" alt="鲁班这个业务，根本不适合小资产电商玩家。笔者手上有客户1000W投资，净利润1.3亿的；遇到过投资100W，净赚400W的；但是从来没有听说过投资2W有挣钱的！鲁班，就是一个做爆品的电商平台。一天上千单，你有货吗？…">
+                                        <h4><span>鲁班，你还是放弃吧！</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yx/3356.html" title="五个步骤带你起盘千单社群成交法">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210126/1_0126162930I32.jpg" alt="社群最终的目的是用来做成交转化、用户留存，因此，做好一次社群发售活动相当重要。 我们假定一款产品来做发售，那么根据产品，首先你要确定 你的用户是谁，用户画像是什么？用户需求和痛点是什么？ 一般我们在做社群的过程中，都需要了解自己的用户，比如： 你的用户是不是有哪些类型的需求，是不是对你的产品感兴趣，有没有下单购买的欲望 。这几点了解清楚，你">
+                                        <h4><span>五个步骤带你起盘千单社群成交法</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yx/209.html" title="直播决定你能卖多少货，品牌决定你能卖多少钱">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/c200627/15932HV0P60-1B29.jpg" alt="不可否认，直播是2020年最火的营销方式，今年，很多广告主都将本来品牌营销的预算拿出来做直播。直播能快速提升销量，能够让投入产出比更加清晰，那么在直播看起来如此有效的情况下，还需不需要做品牌了？繁荣之后…">
+                                        <h4><span>直播决定你能卖多少货，品牌决定你能卖多少钱</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yx/3326.html" title="12个促销绝招儿，给你的滞销品来一针“强心剂”！">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210126/1_0126162R91B3.jpg" alt="上周有个某乎的朋友向宿言提了一个问题：“ 我们公司的**产品还差2个月就要到期了，之前一直卖的不好，现在剩了一大库房的产品，老板天天让我想办法，我是真没招了，有什么方法能尽快把货卖出去吗？ ”。 这个问题其实不是个例，很多公司都有这方面的困扰。产生这种问题的原因有很多，比如公司过于自信，定价过高；比如老板死活不肯降价，怕不赚钱；比如产品价格和">
+                                        <h4><span>12个促销绝招儿，给你的滞销品来一针“强心剂”！</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="https://www.chenifan.cn/tougao/4370.html" target="_blank" title="水表玻璃冻了用热水烫能好吗(热水器的水冻了咋办)"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="https://www.chenifan.cn/static/assets/images/nopic.gif" alt=" " />
+       <div class="title ">
+        <span>2023-07-11</span>
+        <h4>水表玻璃冻了用热水烫能好吗(热水器的水冻了咋办)</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=2289" target="_blank " title="京东集团就京东金融低俗借贷广告一事再次道歉|短视频|致歉信|团队管理"><img data-original="/pic/京东集团就京东金融低俗借贷广告一事再次道歉|短视频|致歉信|团队管理.jpg" alt="京东集团就京东金融低俗借贷广告一事再次道歉|短视频|致歉信|团队管理" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=2289" title="京东集团就京东金融低俗借贷广告一事再次道歉|短视频|致歉信|团队管理">京东集团就京东金融低俗借贷广告一事再次道歉|短视频|致歉信|团队管理</a></h4>
+       <span>2020-12-18</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=2781" target="_blank " title="威马汽车沈晖：国内首个L4级自动驾驶量产车型即将下线|新车"><img data-original="/pic/威马汽车沈晖：国内首个L4级自动驾驶量产车型即将下线|新车.jpg" alt="威马汽车沈晖：国内首个L4级自动驾驶量产车型即将下线|新车" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=2781" title="威马汽车沈晖：国内首个L4级自动驾驶量产车型即将下线|新车">威马汽车沈晖：国内首个L4级自动驾驶量产车型即将下线|新车</a></h4>
+       <span>2021-01-02</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/dianshang/2621.html" target="_blank " title="怎么在淘宝搜索优化排名"><img data-original="/pic/怎么在淘宝搜索优化排名.jpg" alt="怎么在淘宝搜索优化排名" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/dianshang/2621.html" title="怎么在淘宝搜索优化排名">怎么在淘宝搜索优化排名</a></h4>
+       <span>2020-12-30</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" https://www.chenifan.cn/duanzi/3506.html" target="_blank " title="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎.jpg" alt="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/duanzi/3466.html" target="_blank " title="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/神回复《文言文格式》：乱言无信之人，其生子之股无孔尔.jpg" alt="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>神回复《文言文格式》：乱言无信之人，其生子之股无孔尔</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/xmtyy/5175.html" target="_blank " title="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路.jpg" alt="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-07</span>
+        </div>
+        <h4>抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   <a href="/index.php?s=tag&name=meigupan" title="点击量：励志文案">美股盘</a>
+<a href="/index.php?s=tag&name=wangpu" title="点击量：励志文案">网曝</a>
+<a href="/index.php?s=tag&name=tuiquan" title="点击量：励志文案">推券</a>
+<a href="/index.php?s=tag&name=zhang1" title="点击量：励志文案">张</a>
+<a href="/index.php?s=tag&name=youyingyang" title="点击量：励志文案">有营养</a>
+<a href="/index.php?s=tag&name=chigu" title="点击量：励志文案">持股</a>
+<a href="/index.php?s=tag&name=xiadie" title="点击量：励志文案">下跌</a>
+<a href="/index.php?s=tag&name=jinbang" title="点击量：励志文案">金榜</a>
+<a href="/index.php?s=tag&name=meiqian" title="点击量：励志文案">每签</a>
+<a href="/index.php?s=tag&name=zhongqian" title="点击量：励志文案">中签</a>
+<a href="/index.php?s=tag&name=yingyou" title="点击量：励志文案">应由</a>
+<a href="/index.php?s=tag&name=tuishi" title="点击量：励志文案">退市</a>
+<a href="/index.php?s=tag&name=8.3%" title="点击量：励志文案">8.3%</a>
+<a href="/index.php?s=tag&name=gongzhonghaoxiangguanyuedu" title="点击量：励志文案">公众号相关阅读</a>
+<a href="/index.php?s=tag&name=nikang" title="点击量：励志文案">尼康</a>
+<a href="/index.php?s=tag&name=php" title="点击量：励志文案">PHP</a>
+<a href="/index.php?s=tag&name=zhuceziben" title="点击量：励志文案">注册资本</a>
+<a href="/index.php?s=tag&name=biya" title="点击量：励志文案">比亚</a>
+<a href="/index.php?s=tag&name=reliang" title="点击量：励志文案">热量</a>
+<a href="/index.php?s=tag&name=zhengqian" title="点击量：励志文案">挣钱</a>
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                 
+                <a href="https://www.chenifan.cn/wenan">文案</a>
+                 
+                <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank"></a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script></body>
+</html>

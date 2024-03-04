@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户行为分析，就该这么做！-澈逆凡博客</title>
+<meta content="用户行为分析" name="keywords" />
+<meta content="一、用户行为分析的常见错误1. 错误1：乱摆指标，一锅乱炖最典型的就是，把性别、年龄、职业、身高体重，这种用户基础信息往上摆。注意，用户行为要分析的是行为不是基础信息，无关指标太多只会干扰视线，乱上加…" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5981788569352351"
+     crossorigin="anonymous"></script>
+<script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?f0e0b571b86ade20d3587555160941d9079c10b49e1023c464d0a988a3aa98b33d72cd14f8a76432df3935ab77ec54f830517b3cb210f7fd334f50ccb772134a";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h2 class="logo">
+            <a href="/" title="澈逆凡bolg——专注分享优质内容" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h2>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/ziyuanfx">资源分享</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yx">营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/wenan">文案</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/lizhi">励志文案</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="//bk.chenifan.cn" target="_blank">百科</a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="https://www.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="breadcrumbs">
+                        <span itemprop="itemListElement"><i class="fa fa-map-marker"></i></span>
+                        <a href="/">首页</a> >  <a href="https://www.chenifan.cn/ganhuo">个人成长</a>  <a href="https://www.chenifan.cn/yygh">运营</a>  > 用户行为分析，就该这么做！                    </div>
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+     <a href="/index.php?s=tag&name=yonghuxingweifenxi" title="查看更多“用户行为分析”相关内容">用户行为分析</a>
+                            </div>
+                            <h1 class="title">用户行为分析，就该这么做！</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>admincyf</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="https://www.chenifan.cn/yygh">运营</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2021-06-15</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_3395">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=3395", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_3395").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <img src="/pic/用户行为分析，就该这么做！.jpg" alt="用户行为分析，就该这么做！">
+                            <tbody><tr>
+                            <td>
+                                                                <span class="span-img"><img src="/uploads/allimg/c210615/1623I429D9620-2054J.jpg" alt="用户行为分析，就该这么做！"></span>
+                                                                
+
+                                	<p id="toc-1" style="text-align: center;"><span style="color: #ff0000;"><strong>一、用户行为分析的常见错误</strong></span></p>
+<p><strong>1. 错误1：乱摆指标，一锅乱炖</strong></p>
+<p>最典型的就是，把性别、年龄、职业、身高体重，这种用户基础信息往上摆。注意，用户行为要分析的是行为不是基础信息，无关指标太多只会干扰视线，乱上加乱。</p>
+<p><strong>2. 错误2：罗列数据，没有判断</strong></p>
+<p>最典型的就是，罗列了用户登录数、点击数、页面跳转一大堆数据，到底说明啥问题？</p>
+<p>——没结论。这种东西根本不能被称作“分析”，只算是基础数据展示。既然是分析就要有结论，有问题，有解答。</p>
+<p><strong>3. 错误3：望文生义，乱下结论</strong></p>
+<p>最常见的：</p>
+<ul>
+<li><span style="color: #808080;">用户登录少了，所以要搞高；</span></li>
+<li><span style="color: #808080;">这个商品用户买的多，所以要多卖；</span></li>
+<li><span style="color: #808080;">这个内容用户点的多，所以继续出。</span></li>
+</ul>
+<p>基本上就是数据低了就搞高，高了就保持。其结论之无脑，业务部门都看哭了……</p>
+<p>以上种种乱象，主要来自：对不同部门关注的用户行为重点缺乏了解。不知道重点，就可劲拼凑数据，忽视了如何从数据提炼结论，结果反而画蛇添足。想破局，就得从认真思考：到底业务看用户行为能看出啥？</p>
+<p id="toc-2" style="text-align: center;"><span style="color: #ff0000;"><strong>二、用户行为是什么</strong></span></p>
+<p>一个用户ID，在企业内部系统产生的，可记录的动作，都可以称为：用户行为。一个完整的用户行为，包括6要素：</p>
+<ol>
+<li><span style="color: #888888;">时间：何时发生</span></li>
+<li><span style="color: #888888;">地点：在XX渠道/平台/系统发生</span></li>
+<li><span style="color: #888888;">人物：谁发生的</span></li>
+<li><span style="color: #888888;">起因：第一个动作</span></li>
+<li><span style="color: #888888;">经过：所有动作组成的链路</span></li>
+<li><span style="color: #888888;">结果：行为带来的结果</span></li>
+</ol>
+<p>这些要素，在不同平台上表现方式不同，如下图：</p>
+<p><img class="aligncenter" alt="32 用户行为分析，就该这么做！" src="/uploads/allimg/c210615/1623I42a2K60-214020.jpg" width="565" height="322" title="用户行为分析，就该这么做！" /></p>
+<p>&nbsp;</p>
+<p>在不同系统平台，收集的用户行为的方式也不同，常见的有三类：</p>
+<ol>
+<li><span style="color: #888888;">后台记录：用户注册表单、服务请求表单、交易订单等；</span></li>
+<li><span style="color: #888888;">埋点记录：用户在APP、小程序、H5浏览记录；</span></li>
+<li><span style="color: #888888;">业务人员反馈：通过销售、客服、售后工作人员反馈的信息。</span></li>
+</ol>
+<p>总之，这也是为啥用户行为相关指标数据显得很多、很杂、很乱的原因：本来用户行为就有很多种，不结合具体业务需求，就是讲不清楚。</p>
+<p id="toc-3" style="text-align: center;"><span style="color: #ff0000;"><strong>三、不同业务的需求</strong></span></p>
+<p>业务方关注用户行为，有四种情况：</p>
+<p><strong>1. 情况一：一无所知，看看再说</strong></p>
+<p>常见的，比如：</p>
+<ul>
+<li><span style="color: #888888;">新官上任，不清楚情况；</span></li>
+<li><span style="color: #888888;">新业务线，没做过复盘；</span></li>
+<li><span style="color: #888888;">新年伊始，要做各种新计划。</span></li>
+</ul>
+<p>总之，对基础情况不甚了解。这种情况下，宜粗不宜细，宜全不宜精。先给一个整体概貌，让领导/业务同事找找感觉，之后有具体议题了，再深入分析（如下图）。不然一上来鸡毛蒜皮一堆东西，很有可能把人看晕，感慨“这一大堆到底说了啥？”</p>
+<p><img class="aligncenter" alt="33 用户行为分析，就该这么做！" src="/uploads/allimg/c210615/1623I42b46360-2233Q.jpg" width="565" height="343" title="用户行为分析，就该这么做！" /></p>
+<p>&nbsp;</p>
+<p><strong>2. 情况二：心有所指，关注结果</strong></p>
+<p>这种情况，一般出在某个具体业务流程、产品功能点、内容发布以后。业务方目标很明确：看看这东西做的咋样了。</p>
+<p>常见的，比如：</p>
+<ul>
+<li><span style="color: #888888;">内容板块：用户点击、参与讨论、转发动作；</span></li>
+<li><span style="color: #888888;">功能点：用户使用数量、使用频次、使用时长；</span></li>
+<li><span style="color: #888888;">商品：用户浏览、购买、重复购买、一次性大额购买。</span></li>
+</ul>
+<p>此时就不能铺开了说，而是聚焦业务关注的功能点，从大到小展示数据，如下图：</p>
+<p><img class="aligncenter" alt="34 用户行为分析，就该这么做！" src="/uploads/allimg/c210615/1623I42c00J0-23X57.jpg" width="565" height="293" title="用户行为分析，就该这么做！" /></p>
+<p>&nbsp;</p>
+<p>注意！<a href="https://www.chenifan.cn/article/search/keyword-%E7%94%A8%E6%88%B7%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90.html" target="_blank">用户行为分析</a>低一个大坑点，就是：用户行为多不等于业绩好。比如电商业务，运营兴致勃勃的上个一浇水种树领优惠的活动，企图拉一拉活跃人数，结果发现用户都玩游戏去了，都在等优惠，反而下单的人在减少！</p>
+<p>此时，可以用矩阵法、前后对比法、行为关系分析等方法，具体看这个行为对业绩的影响（如下图）。</p>
+<p><strong>3. 情况三：业绩压力，焦头烂额</strong></p>
+<p>这种情况，一般是评价具体业务流程，且该流程是核心流程。比如新用户注册，大型活动参与，交易流程，关键问题投诉等等。</p>
+<p>这时候分析目标非常具体：</p>
+<ul>
+<li><span style="color: #888888;">注册转化率要搞高！</span></li>
+<li><span style="color: #888888;">活动参与率要搞多！</span></li>
+<li><span style="color: #888888;">成交比例要做高！</span></li>
+<li><span style="color: #888888;">关键投诉坚决扑灭！</span></li>
+</ul>
+<p>这种目标清晰的用户行为分析，可以说是最简单轻松了。核心思路就是以下四个模块。</p>
+<p><img class="aligncenter" alt="35 用户行为分析，就该这么做！" src="/uploads/allimg/c210615/1623I43000CP-24U27.jpg" width="565" height="356" title="用户行为分析，就该这么做！" /></p>
+<p>&nbsp;</p>
+<p>这里要注意的是，很多同学会直接插入转化流程分析。这样做呈现的数据太细，容易模糊整体判断。好/坏的判断始终是第一位的。如果连“好”“坏”都判断错了，那后边的原因分析全是错的。所以先对整体形势做判断，看看是否能接受是第一位的。</p>
+<p>还有一点，就是补救措施分析，会被很多同学忽视。用户行为分析的第二大坑点，就是用户行为分析是“知其然、不知其所以然”的分析。</p>
+<p>用户行为是各种因素影响结果，在企业实际中，不可能像实验室一样每个项目都做控制变量研究，即使提前做过ABtest，真正上线时也会因为天时地利有各种差异。</p>
+<p><img class="aligncenter" alt="36 用户行为分析，就该这么做！" src="/uploads/allimg/c210615/1623I430123460-253363.jpg" width="565" height="302" title="用户行为分析，就该这么做！" /></p>
+<p>&nbsp;</p>
+<p>所以真遇到问题的时候，很有可能短时间内分析不出来原因，或者即使大概知道原因，也没办法把活动停掉/渠道换掉。此时的思路，不是纠结：这个到底是用户不喜欢文案还是不喜欢产品，而是：我们还能做什么挽回。</p>
+<p>因此补救措施分析一定不能省，这样比孤零零喊：“这个流程不行啦！”要有价值得多。这也是为啥很多数据明明给了用户转化路径的问题，可业务方还是喊：“没有建设性”的原因。</p>
+<p>没人喜欢报丧鸟天天喊：“要完啦！要完啦！”人们想听：“试试这个！试试这个！”</p>
+<p><strong>4. 情况四：情况不明，疑神疑鬼</strong></p>
+<p>这种情况，一般是某个业务做得不行，业务方又没有明确假设的时候。就想着：“能不能深入挖掘下用户行为？找找原因？”至于挖啥、挖出来啥原因，可能他们自己都不知道……</p>
+<p>这是最难搞的情况。因为分析目标完全不清楚，这里有两个基本思路：</p>
+<ul>
+<li><span style="color: #888888;">思路一：业务方先圈出来自己的目标客户，然后看目标客户在干啥；</span></li>
+<li><span style="color: #888888;">思路二：先找出一个行为的重度客户，然后问业务方：这是你们想要的不。</span></li>
+</ul>
+<p>总之，从极端情况里，更容易找到解决问题的灵感。比如积分兑换，业务方只是觉得这个业务不行，哪里不行又说不上来。此时可以如下图，分两个思路看数据，如下图：</p>
+<p><img class="aligncenter" alt="37 用户行为分析，就该这么做！" src="/uploads/allimg/c210615/1623I4302R0P-2B5X.jpg" width="565" height="311" title="用户行为分析，就该这么做！" /></p>
+<p>&nbsp;</p>
+<p>如果发现高价值用户明显偏好某些礼品兑换，则可以对应设计吸引高价值用户礼品方案。如果发现重度用户明显存在薅羊毛嫌疑，则可以对应修改奖励规则。总之，只要用户群体行为差异足够大，就能产生策略。</p>
+<p id="toc-4" style="text-align: center;"><span style="color: #ff0000;"><strong>四、小结</strong></span></p>
+<p>从上边四大情况可以看出来，即使是同样的数据，面对不同情况，可以有不同展现方法。这就要求同学们在工作中，认真理解业务需求。</p>
+<p>很多同学会说：直接问业务不就好了。问题是，四个情况里，除了情况三是很明确的有KPI压力以外，其他三个情况都很含糊，最后口头表达的需求就是：“做个用户行为分析看看”。</p>
+<p>这就要求做数据的同学们，自己有一定的判断能力。以上四种情况是层层递进的，其逻辑关系如下图，同学们可以剥洋葱般的引导业务，找到真正关心的问题，从而做出有价值的分析。</p>
+<p><img class="aligncenter" alt="38 用户行为分析，就该这么做！" src="/uploads/allimg/c210615/1623I43044H60-2I0A.jpg" width="565" height="279" title="用户行为分析，就该这么做！" /></p>
+<p><strong>#专栏作家#</strong></p>
+<p>接地气的陈老师，微信公众号：接地气学堂。资深咨询顾问，在互联网，金融，快消，零售，耐用，美容等15个行业有丰富数据相关经验。</p>
+                                
+                            </td>
+                        </tr>
+                    </tbody><br>本文链接：https://www.chenifan.cn/yygh/3395.html<br>
+                            
+<p style="color:#C0C0C0">>>免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！</br> >  用户行为分析，就该这么做！ </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="https://www.chenifan.cn/yygh/3394.html" class="prev has-background"><span>上一篇：</span><h4>名创优品会员从0到3000万是如何做增长的？</h4></a></div>
+                        <div class="next-post"><a href="https://www.chenifan.cn/yygh/3396.html" class="nextv has-background"><span>下一篇：</span><h4>掌握这几个思维，让你引流事半功倍</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/2690.html" title="拼多多开店如何优化宝贝标题？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/static/assets/images/nopic.gif" alt="商家补单请进入》》 http://bus.tomushow.com 礼品代发，只要1.3元》》 http://www.lipinyu.com 近些年来，随着拼多多的发展高歌猛进，众多商家争相入驻拼多多平台开设店铺。但是，在日益激烈的竞争压力下，商家的经营更加谨慎，不管是从选品还是标题设置上，都是心中有数。大家都知道，拼多多的标题限制在30个汉字以内(60个字)，因此商家需要对商品的标题进行优化，好的标题可以让">
+                                        <h4><span>拼多多开店如何优化宝贝标题？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yygh/1802.html" title="文案起手怎么写？4套句式教你点石成金荐">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/201120/1_1120112343QV.png" alt="首先要提出两个问题，我们讨论一下。 文案最重要的是什么？ 文案长了好还是短了好？ 如果没有受过专业的训练，每个人会都有一套说法，比如会说：文案最重要的是标题，文案最重要的是内容，文案最重要的是创意，说法可以自成一派，谁也说服不了谁。 如果受过专业训练，只要读过文案大师休格曼的《文案训练手册》，都会有一个统一的认识。 文案，最重要的是第一句，">
+                                        <h4><span>文案起手怎么写？4套句式教你点石成金荐</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/3211.html" title="网上菜市场 如何获取godaddy推广链接，赚取佣金">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210121/1_01211601156132.jpg" alt="你好！ 我手上有一个跟这个是一样的，如果有兴趣的话，可以先了解了解，二四五-三七二-六七七四 仅代表个人观点，不喜勿喷，谢谢。 网上菜市场 是有区别的。 厂货就是授权厂家完成公司">
+                                        <h4><span>网上菜市场 如何获取godaddy推广链接，赚取佣金</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/1555.html" title="如何应用淘宝测款进行爆款推广~">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/static/assets/images/nopic.gif" alt="很多商家在做爆款之前一般都会先做测试，当测试的宝贝各项数据都很好的时候，才有可能把它开发成爆款。今日我们一起来了解一下爆款测试后如何推爆的内容。大家一起看吧！ 淘宝网查数据。 淘宝测完了怎么推爆款。 测款是指首先对该产品进行数据分析，然后选择出适合该产品的价格和测款。我们还需要做一些其他的工作，如果付款后我们想要推动爆款的话。这是关于产品">
+                                        <h4><span>如何应用淘宝测款进行爆款推广~</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yygh/3615.html" title="拒绝无聊夏日！跟着抖音「夏日歌会」开启狂欢模式！">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/static/assets/images/nopic.gif" alt="抖音夏日歌会今日正式官宣啦！7月27日起至9月10日，抖音将以「夏天变了，是我们干的！」为主题，打造多场具有不同主题特色的歌会演出，呈现前所未有的视听盛宴。都说夏天跟音乐更般配，夏天不仅是空调、wifi和西瓜的季节，更应该是耳机一戴，随乐摇摆的肆意狂欢。为了给用户留下别样的夏日记忆，抖音倾情邀请多位...">
+                                        <h4><span>拒绝无聊夏日！跟着抖音「夏日歌会」开启狂欢模式！</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/3202.html" title="网店引流推广纱舜.大将军28 说明利用百度可以开展哪些形式的网络营销?举例说明。">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210121/1_01211601109240.jpg" alt="1.搜索推广 搜索推广是基于搜索引擎，在搜索结果的显著位置展示企业推广信息，并帮助企业把网民有效转化为客户的一种营销方式。 企业可以让推广信息在自己指定时间段、指定地域，根据网民搜索关键词，当网民点击信息打开企业网站再扣取费用，让企业以最低、最合适投入获得最优营销效果，性价比超值。 2网盟推广 网盟推广是在超过70万家网站、APP应用（网盟伙伴）上通">
+                                        <h4><span>网店引流推广纱舜.大将军28 说明利用百度可以开展哪些形式的网络营销?举例说明。</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="https://www.chenifan.cn/tougao/4317.html" target="_blank" title="闷声减大肥是什么意思"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="https://www.chenifan.cn/static/assets/images/nopic.gif" alt=" " />
+       <div class="title ">
+        <span>2023-07-09</span>
+        <h4>闷声减大肥是什么意思</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=3676" target="_blank " title="环球影城官方app挤瘫、售空  去哪儿等平台多日期有余票|度假区|主题乐园|上海迪士尼乐园"><img data-original="/pic/环球影城官方app挤瘫、售空  去哪儿等平台多日期有余票|度假区|主题乐园|上海迪士尼乐园.jpg" alt="环球影城官方app挤瘫、售空  去哪儿等平台多日期有余票|度假区|主题乐园|上海迪士尼乐园" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=3676" title="环球影城官方app挤瘫、售空  去哪儿等平台多日期有余票|度假区|主题乐园|上海迪士尼乐园">环球影城官方app挤瘫、售空  去哪儿等平台多日期有余票|度假区|主题乐园|上海迪士尼乐园</a></h4>
+       <span>2021-09-15</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/yygh/351.html" target="_blank " title="直播半年，人间三年"><img data-original="/pic/直播半年，人间三年.jpg" alt="直播半年，人间三年" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/yygh/351.html" title="直播半年，人间三年">直播半年，人间三年</a></h4>
+       <span>2020-09-08</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/dianshang/3135.html" target="_blank " title="电商推广专员晋升述职报告 衣联网的衣服可靠吗？"><img data-original="/pic/电商推广专员晋升述职报告 衣联网的衣服可靠吗？.jpg" alt="电商推广专员晋升述职报告 衣联网的衣服可靠吗？" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/dianshang/3135.html" title="电商推广专员晋升述职报告 衣联网的衣服可靠吗？">电商推广专员晋升述职报告 衣联网的衣服可靠吗？</a></h4>
+       <span>2021-01-21</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" https://www.chenifan.cn/duanzi/3506.html" target="_blank " title="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎.jpg" alt="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/duanzi/3466.html" target="_blank " title="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/神回复《文言文格式》：乱言无信之人，其生子之股无孔尔.jpg" alt="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>神回复《文言文格式》：乱言无信之人，其生子之股无孔尔</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/xmtyy/5175.html" target="_blank " title="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路.jpg" alt="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-07</span>
+        </div>
+        <h4>抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   <a href="/index.php?s=tag&name=lidianshi" title="点击量：励志文案">锂电池</a>
+<a href="/index.php?s=tag&name=miandui" title="点击量：励志文案">面对</a>
+<a href="/index.php?s=tag&name=guanyu" title="点击量：励志文案">关于</a>
+<a href="/index.php?s=tag&name=shouduan" title="点击量：励志文案">手段</a>
+<a href="/index.php?s=tag&name=hei" title="点击量：励志文案">黑</a>
+<a href="/index.php?s=tag&name=guoyou" title="点击量：励志文案">果又</a>
+<a href="/index.php?s=tag&name=laokuan" title="点击量：励志文案">老款</a>
+<a href="/index.php?s=tag&name=diwai" title="点击量：励志文案">地外</a>
+<a href="/index.php?s=tag&name=faxing" title="点击量：励志文案">发行</a>
+<a href="/index.php?s=tag&name=zhiding" title="点击量：励志文案">置顶</a>
+<a href="/index.php?s=tag&name=nongye" title="点击量：励志文案">农业</a>
+<a href="/index.php?s=tag&name=40ge" title="点击量：励志文案">40个</a>
+<a href="/index.php?s=tag&name=pinkuncun" title="点击量：励志文案">贫困村</a>
+<a href="/index.php?s=tag&name=shangyi" title="点击量：励志文案">尚义</a>
+<a href="/index.php?s=tag&name=chaozha" title="点击量：励志文案">炒炸</a>
+<a href="/index.php?s=tag&name=gen" title="点击量：励志文案">跟</a>
+<a href="/index.php?s=tag&name=dianzichanpin" title="点击量：励志文案">电子产品</a>
+<a href="/index.php?s=tag&name=guli" title="点击量：励志文案">鼓励</a>
+<a href="/index.php?s=tag&name=temai" title="点击量：励志文案">特卖</a>
+<a href="/index.php?s=tag&name=16wan" title="点击量：励志文案">16万</a>
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                 
+                <a href="https://www.chenifan.cn/wenan">文案</a>
+                 
+                <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank"></a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script></body>
+</html>

@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>“直播+群”高转化方案设计逻辑-澈逆凡博客</title>
+<meta content="直播, 社群" name="keywords" />
+<meta content="“直播+群”的应用场景注意：今天提及的直播属私域直播，即微信生态内的直播平台/工具，如视频号、爱逛、看点、群直播等，今天提及的方案设计更多以视频号为主，请知悉。今天探讨的“直播+群”模式非常适合以下4个场…" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5981788569352351"
+     crossorigin="anonymous"></script>
+<script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?f0e0b571b86ade20d3587555160941d9079c10b49e1023c464d0a988a3aa98b33d72cd14f8a76432df3935ab77ec54f830517b3cb210f7fd334f50ccb772134a";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h2 class="logo">
+            <a href="/" title="澈逆凡bolg——专注分享优质内容" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h2>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/ziyuanfx">资源分享</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yx">营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/wenan">文案</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/lizhi">励志文案</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="//bk.chenifan.cn" target="_blank">百科</a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="https://www.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="breadcrumbs">
+                        <span itemprop="itemListElement"><i class="fa fa-map-marker"></i></span>
+                        <a href="/">首页</a> >  <a href="https://www.chenifan.cn/ganhuo">个人成长</a>  <a href="https://www.chenifan.cn/yygh">运营</a>  > “直播+群”高转化方案设计逻辑                    </div>
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+     <a href="/index.php?s=tag&name=zhibo" title="查看更多“直播”相关内容">直播</a>
+                            </div>
+                            <h1 class="title">“直播+群”高转化方案设计逻辑</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>admincyf</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="https://www.chenifan.cn/yygh">运营</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2021-08-30</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_3535">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=3535", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_3535").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <img src="/pic/“直播+群”高转化方案设计逻辑.jpg" alt="“直播+群”高转化方案设计逻辑">
+                            <tbody><tr>
+                            <td>
+                                                                <span class="span-img"><img src="/uploads/allimg/c210830/16303145XN30-2G42.jpg" alt="“直播+群”高转化方案设计逻辑"></span>
+                                                                
+
+                                	<p style="text-align: center;"><span style="color: #ff0000;"><strong>“直播+群”的应用场景</strong></span></p>
+<p>注意：今天提及的<a href="https://www.chenifan.cn/article/search/keyword-%E7%9B%B4%E6%92%AD.html" target="_blank">直播</a>属私域直播，即微信生态内的直播平台/工具，如视频号、爱逛、看点、群直播等，今天提及的方案设计更多以视频号为主，请知悉。</p>
+<p>今天探讨的“直播+群”模式非常适合以下4个场景：<strong> </strong></p>
+<p><strong>1.适合企业做品牌宣传</strong></p>
+<p>非带货型企业，建议可以集中资源选择合适时间开展大型直播活动，重点做品牌影响力。譬如各大平台企业老板直播多为此目的。</p>
+<p><strong>2.个人快速塑造IP</strong></p>
+<p>如果想成为IP，且有持续输出高质量内容的能力，建议定期、持续直播。</p>
+<p><strong>3.直播卖货/卖课</strong></p>
+<p>直播互动感、节奏感更强，群更能塑造从众效应、且能影响长尾流量，“直播+群”双管齐下是私域转化利器。</p>
+<p>我们做婚纱门店教育培训的客户通过“直播+群”模式5天即为线下班转化100人。</p>
+<p>同样，这个模式适用于高客单产品。我们操盘手通过这个模式为知名法商培训机构首场即转化超万元客单产品，单群收款15万元。</p>
+<p><strong>4.联动代理卖货</strong></p>
+<p>代理模式企业最头疼的是代理的销售水平参差不齐，整体销货能力差，而总部帮代理销货的又很难实现，原因是没法业绩绑定、代理有客户资产保护的需求。</p>
+<p>这个需要技术支撑，目前很多技术公司已经解决溯源问题。譬如视频号，代理只需要转发直播宣传专属海报，总部负责统一直播转化，所有业绩都可以溯源到对应代理。很多具备直播能力的新生代品牌方，已经开始跑这个模式。</p>
+<p style="text-align: center;"><strong><span style="color: #ff0000;">私域6大场景优劣解析</span></strong></p>
+<p><img class="aligncenter" alt="214 “直播+群”高转化方案设计逻辑" src="/uploads/allimg/c210830/16303145Y05020-31556.jpg" width="565" height="318" title="“直播+群”高转化方案设计逻辑" /></p>
+<p>朋友圈、微信群、私聊、公众号、短视频、直播是私域中最常见的6种转化场景。下面分别讲解下这6种场景的特性：</p>
+<p><strong>1.朋友圈：</strong>是日常维护用户最重要的场所，同时也是门槛最低、效率最高的转化阵地。详细特性可看《干货丨1招写出高静默转化率朋友圈》。朋友圈的打扰性最弱，所以可以较长时间段种草、预热，为了避免用户疲劳，重点要应用剧本式朋友圈。</p>
+<p><strong>2.微信群：</strong>属于有边界的线上圈层，多对多场景，非常利于通过节奏把控激发“从众效应”，引发高转化的效果。</p>
+<p><strong>3.1v1：</strong>互动及触达效果最强的一种方式，但非常重人力，企业需要权衡投入产出比考虑是否选用。需注意的是，很多企业会采用机械群发方式，这种方式特别容易引发投诉，从而造成号被限制、被封的情况。无论1v1还是群发，一定要注意引发回复（互动式内容设置），有一定比例回复腾讯才不容易判定为“恶意营销”，比避免出现风险提示。</p>
+<p><strong>4.公众号：</strong>如果公众号没有重点经营，则不建议作为重要的宣传/转化场所，可简单配置个图文宣传即可。</p>
+<p><strong>5.短视频：</strong>视频号短视频，点赞即相当于转发，是一个非常不错的裂变方式</p>
+<p><strong>6.直播：</strong>高转化场所，但对主播、策划有较高要求</p>
+<p>1-3个场景应用是所有做私域的人必须掌握的，而如果想要策划“群+直播”转化活动，建议讲1-6全部组合应用起来，一举拿下最好的活动效果。</p>
+<p style="text-align: center;"><strong><span style="color: #ff0000;">“直播+群”方案设计逻辑</span></strong></p>
+<section>在设计“直播+群”方案时，可以分为预热期、活动期及收尾期3个阶段，各阶段关键点如下图：</section>
+<section></section>
+<section>
+<section><img class="aligncenter" alt="38 “直播+群”高转化方案设计逻辑" src="/uploads/allimg/c210830/16303145Y35550-43454.jpg" width="565" height="318" title="“直播+群”高转化方案设计逻辑" /> </section>
+</section>
+<section>上图阅读说明：<strong>1.场所：</strong>指触达用户的地方，做活动要学会将多场所有机结合应用。尤其在预热期，很多企业容易把关键点搞混，进群、订阅直播间等所有维度都想宣传，最终导致什么都做不好。虽然活动重点是直播，但预热期第一重点是引导用户进直播群，然后才是引导订阅直播间。原因有二：一是除了微信群，其他方式都会受时效性/人力限制；</p>
+<p>二是微信群便于塑造从众效应</p>
+<p><strong>2.关键点：</strong>指对应场所设置需要关注的关键点，譬如预热期，朋友圈场所需要关注投放时间、用户状态等维度，确保目标结果最优。关于朋友圈撰写关键，点击阅读：干货丨1招写出高静默转化率朋友圈</p>
+<p><strong>3.动作指向：</strong>指不同时间节点、对应场所需引导用户的关键动作，前后指先后顺序。</p>
+<p><strong>4.建议节点：</strong>指对应场所的时间节点。</p>
+</section>
+<section>
+<section><img class="aligncenter" alt="416 “直播+群”高转化方案设计逻辑" src="/uploads/allimg/c210830/16303145Z15Q0-532U.jpg" width="565" height="318" title="“直播+群”高转化方案设计逻辑" /> </section>
+</section>
+<section>上图即为“群+直播”较为完整的路径图。<strong>直播前:</strong>第1步：朋友圈+1v1+公众号重点将用户引导进入微信群矩阵（即多个微信群）；第2步：群内重点引导用户订阅直播间，视频号开播会强提醒订阅用户，相当于又多一个触达渠道；</p>
+<p>第3步：提前准备好直播宣传短视频，群内引导用户点赞、评论短视频。注意，视频号点赞即相当于转发，即通过这个环节设置实现裂变。</p>
+<p><strong>活动中（直播中）：</strong></p>
+<p>第1步：直播转化</p>
+<p>①零售类的在直播间重点做转化，并引导群里接龙/晒单，引导更多人从众购买</p>
+<p>②教育类的直播内容一定要优质，低客单课程可在直播间直接转化；高客单课程可先在直播间种草、颁发政策，接着回到群里接龙转化。</p>
+<p>第2步：裂变</p>
+<p>视频号点赞、评论及打赏可增加热度，便于裂变，可通过活动设计，譬如满多少人发红包等方式驱动传播裂变；同时可设计水军带节奏点赞、打赏，提升直播间总热度，从而带来更多平台流量。</p>
+<p>第3步：引导加微信</p>
+<p>尽量引导直播间的新潜在用户留存在微信中</p>
+<p><strong>直播后：</strong>群氛围要继续烘托，不断通过刺激接龙、倒计时等方式塑造从众、稀缺效应，以此达到更好转化。</p>
+<p><strong>私域运营是精细活，不是粗暴式照搬他人模式即可，懂逻辑，方能举一反三。</strong></p>
+<p>本篇文章更多从设计逻辑出发，下次我会专门拆解一个线上直播卖课的案例文章，会更多涉及到话术、环节设计的等细节，两篇文章结合来看，会更系统。</p>
+</section>
+                                
+                            </td>
+                        </tr>
+                    </tbody><br>本文链接：https://www.chenifan.cn/yygh/3535.html<br>
+                            
+<p style="color:#C0C0C0">>>免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！</br> >  “直播+群”高转化方案设计逻辑 </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="https://www.chenifan.cn/yygh/3534.html" class="prev has-background"><span>上一篇：</span><h4>私域流量的22句真话！</h4></a></div>
+                        <div class="next-post"><a href="https://www.chenifan.cn/yygh/3536.html" class="nextv has-background"><span>下一篇：</span><h4>一文讲透微博、小红书、抖音、B站怎么玩</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yygh/3383.html" title="90%以上的微信群没有必要存在">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/c210615/1623I4230105P-41DF.jpg" alt="相关数据表明，每一天至少有超过500万个微信群被创建，涉及办公、商务、购物、培训等各行各业。我不知道各位现在手上有多少个微信群，每天会在多少个群里面产生互动，以及每天会加入多少个新群。仅笔者个人而言，…">
+                                        <h4><span>90%以上的微信群没有必要存在</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yygh/55.html" title="Vlog平台汇总，Vlog内容运营如何变现？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/200609/1421506123-0-lp.jpg" alt="随着朋友圈和抖音等平台相继开放视频发布时长，Vlog成为时下网络上分享生活的热门方式。今天的两篇文章，我们就聊聊这一新兴的网络短视频形式。 很多小伙伴都在想Vlog运营如何变现的问题，以及都有哪些平台支持Vlog内容呢？ Vlog，由Blog演变而来，即Video Weblog或Video Blog，意思是“视频博客”，也称为“视频网络日记”，是博客的一种。Vlog的创作者以影像代替文字或图片，记">
+                                        <h4><span>Vlog平台汇总，Vlog内容运营如何变现？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/gzhyy/2871.html" title="公众号文章添加样式，让图文更美丽！">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://static.getgetai.com/img/115bb7bb065b44d1bb8150ffc3303281/20210104153336305.png" alt="原标题：怎样给公众号文章加样式？（添加样式，让内容更新颖！） 小伙伴们应该见过不少看起来非常漂亮的公众号文章，不仅内容质量高，而且还有很多漂亮好看的样式，那么这些样式究竟是怎么做的呢？跟随小助手一起看看吧。 怎么制作公众号里的样式 运营当中有一点非常重要即用户体验，公众号运营对应的就是读者的阅读体验，所以任何形式的样式也好，内容也好，都应">
+                                        <h4><span>公众号文章添加样式，让图文更美丽！</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yygh/313.html" title="知+付费推广：我花3W烧出来的投放经验">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/c200802/159633931354520-191939.jpg" alt="你好，我是天枢~互联网捡钱的时代已经过去了，初入这个行业就信步乾坤游戏人生的人，是极少极少数的。你进来就是受苦踩坑，就是不断历练成长，接着爆发成为一把锋利的镰刀。而大部分人，你给他再好的流量红利，…">
+                                        <h4><span>知+付费推广：我花3W烧出来的投放经验</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yygh/42.html" title="抖音运营_抖音雷区_抖音运营工具_抖音新手快速上热门">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/200609/002F06228-0-lp.jpg" alt="抖音运营雷区规避、视频不得包含 1.吸烟、喝酒，或视频中出现香烟和酒有关的物品 2. 视频中出现竖中指、骂人等不文明行为 3. 穿着过于暴漏的服装、裸漏、任何低俗、不雅、色情诱惑性行为 4. 作品中涉及刀具、枪械等器具（仿真玩具也算） 5. 涉政、黄赌毒、血腥暴力行为 6. 盗用他人作品、冒名顶替他人 7. 在他人作品下攻击、诋毁、谩骂 8. 明显的营销、广告类信息 9. 冒充抖">
+                                        <h4><span>抖音运营_抖音雷区_抖音运营工具_抖音新手快速上热门</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/2681.html" title="该怎么写一个好标题？淘宝标题优化">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/static/assets/images/nopic.gif" alt="商家补单请进入》》 http://bus.tomushow.com 礼品代发，只要1.3元》》 http://www.lipinyu.com 一、何时才必须提升你的题目？ 当商品总流量刚开始出現下降的情况下，这时候许多商家的第一反应便是：我想优化标题！殊不知通常在提升完题目以后，你却发觉总流量下降得更了不起。那麼何时优化标题才更为适合呢？ 1.商品不久上架的情况下 有一些商家在上架的情况下，由于急着将商品发布">
+                                        <h4><span>该怎么写一个好标题？淘宝标题优化</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="https://www.chenifan.cn/tougao/5398.html" target="_blank" title="夏至吃什么传统食物,今天夏至适合吃什么食物"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="https://www.chenifan.cn/static/assets/images/nopic.gif" alt=" " />
+       <div class="title ">
+        <span>2023-08-30</span>
+        <h4>夏至吃什么传统食物,今天夏至适合吃什么食物</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=1687" target="_blank " title="美股收盘全线上涨 京东跌逾7% 理想汽车涨近14%|股价|道琼斯指数|中概股|龙头股"><img data-original="/pic/美股收盘全线上涨 京东跌逾7% 理想汽车涨近14%|股价|道琼斯指数|中概股|龙头股.jpg" alt="美股收盘全线上涨 京东跌逾7% 理想汽车涨近14%|股价|道琼斯指数|中概股|龙头股" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=1687" title="美股收盘全线上涨 京东跌逾7% 理想汽车涨近14%|股价|道琼斯指数|中概股|龙头股">美股收盘全线上涨 京东跌逾7% 理想汽车涨近14%|股价|道琼斯指数|中概股|龙头股</a></h4>
+       <span>2020-11-17</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/jishu/3827.html" target="_blank " title="需要的资料在网上找不到怎么办？教你11个方法快速搜集到你需要的资料"><img data-original="/pic/需要的资料在网上找不到怎么办？教你11个方法快速搜集到你需要的资料.jpg" alt="需要的资料在网上找不到怎么办？教你11个方法快速搜集到你需要的资料" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/jishu/3827.html" title="需要的资料在网上找不到怎么办？教你11个方法快速搜集到你需要的资料">需要的资料在网上找不到怎么办？教你11个方法快速搜集到你需要的资料</a></h4>
+       <span>2022-02-24</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=1615" target="_blank " title="NASA正式批准！SpaceX可定期将宇航员送国际空间站|nasa|宇航员|国际空间站|spacex|spacex公司|航天器"><img data-original="/pic/NASA正式批准！SpaceX可定期将宇航员送国际空间站|nasa|宇航员|国际空间站|spacex|spacex公司|航天器.jpg" alt="NASA正式批准！SpaceX可定期将宇航员送国际空间站|nasa|宇航员|国际空间站|spacex|spacex公司|航天器" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=1615" title="NASA正式批准！SpaceX可定期将宇航员送国际空间站|nasa|宇航员|国际空间站|spacex|spacex公司|航天器">NASA正式批准！SpaceX可定期将宇航员送国际空间站|nasa|宇航员|国际空间站|spacex|spacex公司|航天器</a></h4>
+       <span>2020-11-11</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" https://www.chenifan.cn/duanzi/3506.html" target="_blank " title="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎.jpg" alt="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/duanzi/3466.html" target="_blank " title="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/神回复《文言文格式》：乱言无信之人，其生子之股无孔尔.jpg" alt="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>神回复《文言文格式》：乱言无信之人，其生子之股无孔尔</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/xmtyy/5175.html" target="_blank " title="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路.jpg" alt="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-07</span>
+        </div>
+        <h4>抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   <a href="/index.php?s=tag&name=qingshui" title="点击量：励志文案">氢水</a>
+<a href="/index.php?s=tag&name=2.4yi" title="点击量：励志文案">2.4亿</a>
+<a href="/index.php?s=tag&name=diechao" title="点击量：励志文案">跌超</a>
+<a href="/index.php?s=tag&name=haiyou" title="点击量：励志文案">还有</a>
+<a href="/index.php?s=tag&name=jiankang" title="点击量：励志文案">健康</a>
+<a href="/index.php?s=tag&name=louqi" title="点击量：励志文案">漏气</a>
+<a href="/index.php?s=tag&name=weihu" title="点击量：励志文案">维护</a>
+<a href="/index.php?s=tag&name=shouzu" title="点击量：励志文案">受阻</a>
+<a href="/index.php?s=tag&name=zhimeng" title="点击量：励志文案">织梦</a>
+<a href="/index.php?s=tag&name=qiangtengxuntuichukaiyuanmianfeilaozhaopianxiufugongju" title="点击量：励志文案">强！腾讯推出开源免费老照片修复工具！</a>
+<a href="/index.php?s=tag&name=gongzhong" title="点击量：励志文案">公众</a>
+<a href="/index.php?s=tag&name=hong1" title="点击量：励志文案">洪</a>
+<a href="/index.php?s=tag&name=feng" title="点击量：励志文案">锋</a>
+<a href="/index.php?s=tag&name=zhipin" title="点击量：励志文案">直聘</a>
+<a href="/index.php?s=tag&name=fenlei" title="点击量：励志文案">分类</a>
+<a href="/index.php?s=tag&name=shouli" title="点击量：励志文案">受理</a>
+<a href="/index.php?s=tag&name=yunan" title="点击量：励志文案">遇难</a>
+<a href="/index.php?s=tag&name=fawen" title="点击量：励志文案">发文</a>
+<a href="/index.php?s=tag&name=duanxian" title="点击量：励志文案">短线</a>
+<a href="/index.php?s=tag&name=hicar" title="点击量：励志文案">Hicar</a>
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                 
+                <a href="https://www.chenifan.cn/wenan">文案</a>
+                 
+                <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank"></a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script></body>
+</html>

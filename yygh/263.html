@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>运营该如何搭建留存率模型？-澈逆凡博客</title>
+<meta content="留存率, 运营" name="keywords" />
+<meta content="几乎所有的业务数据分析和运营工作都是围绕着“拉新”、“留存”、“促活”、“转化”4个环节来开展的。我们常常面临这样的问题，好不容易拉进来一批用户，玩着玩着就都流失了，更别谈转化和变现了。所以，弄明白“留存率”…" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5981788569352351"
+     crossorigin="anonymous"></script>
+<script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?f0e0b571b86ade20d3587555160941d9079c10b49e1023c464d0a988a3aa98b33d72cd14f8a76432df3935ab77ec54f830517b3cb210f7fd334f50ccb772134a";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h2 class="logo">
+            <a href="/" title="澈逆凡bolg——专注分享优质内容" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h2>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/ziyuanfx">资源分享</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yx">营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/wenan">文案</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/lizhi">励志文案</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="//bk.chenifan.cn" target="_blank">百科</a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="https://www.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="breadcrumbs">
+                        <span itemprop="itemListElement"><i class="fa fa-map-marker"></i></span>
+                        <a href="/">首页</a> >  <a href="https://www.chenifan.cn/ganhuo">个人成长</a>  <a href="https://www.chenifan.cn/yygh">运营</a>  > 运营该如何搭建留存率模型？                    </div>
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+     <a href="/index.php?s=tag&name=liucunlu" title="查看更多“留存率”相关内容">留存率</a>
+                            </div>
+                            <h1 class="title">运营该如何搭建留存率模型？</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>admincyf</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="https://www.chenifan.cn/yygh">运营</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2020-07-13</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_263">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=263", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_263").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <img src="/pic/运营该如何搭建留存率模型？.jpg" alt="运营该如何搭建留存率模型？">
+                            <tbody><tr>
+                            <td>
+                                                                <span class="span-img"><img src="/uploads/allimg/c200713/159461M15X420-1K00.jpg" alt="运营该如何搭建留存率模型？"></span>
+                                                                
+
+                                	<p>几乎所有的业务数据分析和<a href="https://www.chenifan.cn/article/search/keyword-%E8%BF%90%E8%90%A5.html" target="_blank">运营</a>工作都是围绕着“拉新”、“留存”、“促活”、“转化”4个环节来开展的。</p>
+<p>我们常常面临这样的问题，好不容易拉进来一批用户，玩着玩着就都流失了，更别谈转化和变现了。</p>
+<p>所以，弄明白“<a href="https://www.chenifan.cn/article/search/keyword-%E7%95%99%E5%AD%98%E7%8E%87.html" target="_blank">留存率</a>”非常重要，它是衡量产品质量、运营效果的重要指标，也是预估产品盈利能力的重要参考！</p>
+<p><span style="color: #ff0000;"><strong>一、“留存率”是什么？</strong></span></p>
+<p>留存率，留的都是活跃用户（Active User），具体的讲，就是指某一时间段内完成了某种特定行为的用户。例如某内容平台，可以参考打开次数、使用时长、互动情况、内容产出量来制定自己的标准。需要注意的是，单个用户可能多次完成特定行为，统计时需要按照用户维度去重，即只算为1个用户。</p>
+<p>举个例子，某天进来一批新用户，有的用了一下就再也没回来过，有的继续用过几次后也离开了，还有些在一定时间段里，能够一直持续活跃使用，这些一直保持活跃的我们称之为留存用户。留存用户占这批次新增用户的比例，就是留存率。</p>
+<p>考量留存的时间，<strong>一般会有次日、第7日、第30日型等，</strong>分别对应着次日留存率、第7日留存率、第30日留存率。还有按整周、整月的留存率计算形式，比如次月留存率等。</p>
+<p>（7日留存和周留存容易混淆，举个例子说清楚：假如1月1日新增100人，其中20人在1月8日依然活跃，则7日留存是20%，即7日留存是指第一天新增用户在七天后活跃的人数；假如1月1日到第1月7日共新增1000人，其中300人在1月8日到1月14日之间依然活跃，那么周留存就是30%，即周留存是第一周新增总用户在第二周活跃的人数。）</p>
+<p>根据现有的用户留存数量，就可以算出留存率，而根据留存率，又可以预测产品未来的活跃用户量。</p>
+<p>作为一名运营，不要简单地以为用户拉进来就算是你的用户了，也不要总把「用户总数」作为洋洋自得的指标，而<strong>应该更关注活跃用户数和留存率。</strong></p>
+<p>因为，只有真正活跃的用户，才能产生商业价值。</p>
+<p><span style="color: #ff0000;"><strong>二、留存率模型</strong></span></p>
+<p>搞清留存率，本文将祭出一大法宝——「以留存率为基础的产品盈利模型」。</p>
+<p><strong>1.模型1.0</strong></p>
+<p>在1.0版本里，留存率只是个初步模型：（其实就是一个加法公式）</p>
+<p><img class="aligncenter" alt=" 运营该如何搭建留存率模型？" src="/uploads/allimg/c200713/159461M1600Z-24945.jpg" width="565" height="304" title="运营该如何搭建留存率模型？" /></p>
+<p>&nbsp;</p>
+<p>此模型说明了活跃用户数来源于「阶段内新增用户」加上「以往每个阶段的留存用户」。举个例子，假如要算7天的留存用户，那么第7天的活跃总用户数 = 第7天的新增用户数 + 第6天的新增用户数 x 第1天的留存率 + 第5天的新增用户数 x 第2天的留存率 + …… + 第1天的新增用户数 x 第6天的留存率。假如按周、月算，也是一样的道理，所以简单说来，<strong>这个模型就是把每个阶段的留存人数相加的结果。</strong></p>
+<p>我们用案例再来解释一下：</p>
+<p>比如，某产品7月1日的活跃用户量为500，然后拉取这500人接下来7天的每日活跃数，就可以计算出该产品7天的留存率：</p>
+<p><img class="aligncenter" alt=" 运营该如何搭建留存率模型？" src="/uploads/allimg/c200713/159461M1610060-3a40.jpg" width="565" height="71" title="运营该如何搭建留存率模型？" /></p>
+<p style="text-align: center;">（当天留存率 = 该批次剩余活跃用户数 / 7月1日活跃用户量）</p>
+<p>这样，我们就得出了产品的阶段留存率。然后我们可以依据这个留存率来计算每日自然新增的每日留存了，如果7月1日当天的新增用户为1400人，可以继续计算：</p>
+<p style="text-align: center;"><img alt=" 运营该如何搭建留存率模型？" src="/uploads/allimg/c200713/159461M161cP-43308.jpg" width="565" height="114" title="运营该如何搭建留存率模型？" /></p>
+<p style="text-align: center;">（当天剩余活跃用户量 = 当天留存率 * 7月1日新增用户量）</p>
+<p>因此，我们就初步得到了7月1日这批用户在接下来几天里的活跃数变化情况。当然现实情况是每天都有新增用户，因此我们可以计算每天新增用户的留存率，再把历史留存都加起来，就得到了每天的总留存。</p>
+<p>假如7月1日新增用户为500人，并且每日稳定增长500人，那么根据留存率，可以算出7月7日的活跃用户总数：</p>
+<p><img class="aligncenter" alt=" 运营该如何搭建留存率模型？" src="/uploads/allimg/c200713/159461M1631940-55246.jpg" width="565" height="200" title="运营该如何搭建留存率模型？" /></p>
+<p>&nbsp;</p>
+<p><strong>2.模型2.0</strong></p>
+<p>一旦可以算出未来的活跃用户数量，我们就可以粗略的计算未来的收益、销售额等数据。</p>
+<p>而这个模型可以继续优化，增加更多参数，使得计算结果更加接近真实情况。</p>
+<p>需要注意的是，影响模型结果的因素很多，<strong>考虑的越多，模型就越接近于真实情况，精确度就越高。</strong>但同时，因素与因素之间也会互相影响，增加了模型的复杂程度，计算的需要的时间会增加，计算的结果也会更加难以得出。使用模型时，请仔细思考这两点的平衡性。</p>
+<p><img class="aligncenter" alt=" 运营该如何搭建留存率模型？" src="/uploads/allimg/c200713/159461M1643C0-64c5.jpg" width="565" height="239" title="运营该如何搭建留存率模型？" /></p>
+<p>&nbsp;</p>
+<p>那么问题来了，现实中有哪些因素需要考虑？哪些可以增加到这个模型中？</p>
+<ul>
+<li>1.用户来自不同渠道，因此不同渠道需使用不同的留存率；</li>
+<li>2.随着运营活动的开展，每月自然新增也会产生变化；</li>
+<li>3.很多产品每月会做付费推广，这其中需要考虑到推广的转化率；</li>
+<li>4.推广及活动吸引来的用户的留存率，可能和自然新增的用户留存率不同；</li>
+<li>5.考虑到用户生命周期，历史存量用户会有固定的流失率；</li>
+<li>6.总活跃用户中，有一定比例的付费率；</li>
+<li>7.随着产品价值的提升，新增用户的付费转化率每月会增长；</li>
+<li>8.随着产品的精细运营，单个用户在生命周期内的消费能力会逐渐递增；</li>
+<li>9.还可以根据人均贡献率预估出总收益；</li>
+</ul>
+<p>……</p>
+<p>好了，如果把这些参数都添加进去，这个模型已经相当复杂了。但是只要公式正确，结果总归会趋近于真实情况的。</p>
+<p>尽管你可能一时看不懂，但是我们还是YY了一个产品，YY了一些数据，把它的成本测算和收益预估做出来了。</p>
+<p><img class="aligncenter" alt=" 运营该如何搭建留存率模型？" src="/uploads/allimg/c200713/159461M1A2530-J624.jpg" width="565" height="166" title="运营该如何搭建留存率模型？" /></p>
+<p>&nbsp;</p>
+<p><img class="aligncenter" alt=" 运营该如何搭建留存率模型？" src="/uploads/allimg/c200713/159461M1B3940-U964.jpg" width="565" height="168" title="运营该如何搭建留存率模型？" /></p>
+<p>&nbsp;</p>
+<p>可以看出，iOS渠道和安卓渠道分开计算了，并且添加了历史存量用户流失（10%）、每月自然新增逐月递增2%几个参数，重要的是，添加了付费推广的转化率和成本。</p>
+<p><img class="aligncenter" alt=" 运营该如何搭建留存率模型？" src="/uploads/allimg/c200713/159461M1C5C0-94c1.jpg" width="565" height="162" title="运营该如何搭建留存率模型？" /></p>
+<p>&nbsp;</p>
+<p>有了两个渠道的用户、成本后，就可以算更多数据了！先把总成本算出来（蓝底部分），再算用户数据（绿底部分），再然后，可以添加自己的转化数据（黄底部分）进行测算了！GMV都能算出来！</p>
+<p>注意最后一行的红底部分，如果添加了KPI，就可以直接知道是否需要调整策略了！</p>
+<p>当然，这里面的所有数据都是我胡诌的，你要是真以为我们11月可以做到近2000万GMV，那你真是可爱极了。</p>
+<p><span style="color: #ff0000;"><strong>三、这个模型究竟有什么用呢？</strong></span></p>
+<p>主要有2大方面：</p>
+<p><strong>1.对于初创产品，可以预估产品的盈利时间，及时调整策略</strong></p>
+<p>对于初创产品，无论是老板、产品经理还是运营，最怕的除了产品功能不稳定，就是用户不稳和收益不清晰了，有了这个表，就可以轻松测算了。</p>
+<p><strong>2.拆分各个参数的KPI</strong></p>
+<p>对于已经过了启动阶段的产品，可以根据目标KPI，直观的看到当前运营状态下未来的结果，如果达不到目标，就要及时调整了。更重要的是，可以制定各渠道、付费率、客单价、总成本的KPI，拆分后就轻松多了。</p>
+<p>在提升留存的方式上，不存在一个万能的方法，一用就马上能把产品的留存提高，我们更应该关注的是，产品本身是不是很好地满足了用户的需求。而留存率不高，95%的原因是产品本身的需求没有解决好。</p>
+<p>作者：徐洋洋，来源：鸟哥笔记</p>
+                                
+                            </td>
+                        </tr>
+                    </tbody><br>本文链接：https://www.chenifan.cn/yygh/263.html<br>
+                            
+<p style="color:#C0C0C0">>>免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！</br> >  运营该如何搭建留存率模型？ </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="https://www.chenifan.cn/yygh/262.html" class="prev has-background"><span>上一篇：</span><h4>增长玩法设计中的N类魔鬼细节（附自检清单）</h4></a></div>
+                        <div class="next-post"><a href="https://www.chenifan.cn/yygh/264.html" class="nextv has-background"><span>下一篇：</span><h4>中国互联网企业，是否会批量逃离印度？</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yygh/3539.html" title="怎样的营销方案能落地？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/c210830/163031461PE20-13118.jpg" alt="熟悉我们公司的朋友可能知道，我们公司对外的广告语叫“真的懂生意，方案能落地”。那么，营销方案怎么才能叫“能落地”呢？我个人的总结，就是对于营销的目标可以达成，对于中间的环节可以执行，就是“目标可达成，环节…">
+                                        <h4><span>怎样的营销方案能落地？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/2631.html" title="如何做淘宝关键词排名 宝贝标题更改有影响吗">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.ruzw.com/uploads/allimg/201908/15672308444479.jpg" alt="商家补单请进入》》 http://bus.tomushow.com 礼品代发，只要1.3元》》 http://www.lipinyu.com 淘宝关键词对于一个开店铺的店主来说是经常能提到的。优化出几个好的关键词是很不容易的。我们要考虑到很多的方面，然后从各个方面入手来优化关键词。 如何做淘宝关键词排名 1、找准关键词 优化淘宝搜索排名，第一步要找准关键词。首先确定产品的属性和类目，如果不能将宝贝放到准确的">
+                                        <h4><span>如何做淘宝关键词排名 宝贝标题更改有影响吗</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/gzhyy/2378.html" title="怎么制作对话形式的微信推文？公众号图文排版如何添加对话问答样式？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://yiban.io/blog/wp-content/uploads/2020/12/2020121811012441-480x300.png" alt="今天小编教大家制作问答对话形式的公众号推文，全是干货，建议收藏哦~ 设置公众号排版样式有什么作用 不同类别公众号的排版也会不同，运营者根据 公众号类别、文章内容 ，选择切合公众">
+                                        <h4><span>怎么制作对话形式的微信推文？公众号图文排版如何添加对话问答样式？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/191.html" title="淘宝运营提高车图主图点击率关键技巧">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/c200617/15923Y2cP420-3ZR.jpg" alt="淘宝运营做车图的一些经验和心得：创意车图简单好用！ 1.点击率的重要性？ 首先，我们要理解淘宝给的所谓权重，并非直接给的访客，而是更多的曝光机会，即展现量。那么，同等的比如1...">
+                                        <h4><span>淘宝运营提高车图主图点击率关键技巧</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/182.html" title="淘宝运营优化：提高店铺自然搜索流量攻略">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/c200617/15923Y30H05Z-21295.jpg" alt="手淘搜索就是指买家搜索关键词进入宝贝页面或者店铺，这是淘宝独有的免费流量渠道，那如果我们的标题没有用户搜索的词，那么就跟这个流量无缘了，所以我们要想大量获取免费流量，标题得做好！...">
+                                        <h4><span>淘宝运营优化：提高店铺自然搜索流量攻略</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/1537.html" title="爆款详情页面是如何打造的？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/static/assets/images/nopic.gif" alt="宝宝详情页的重要性，相信无论是新手卖家还是老卖家都知道它的重要性， 认为任何消费者在看宝贝的时候都不会去了解宝贝的详细页面，一个好的宝贝详细页面可以让顾客产生消费欲望，促使顾客下订单购买，那么爆款详情页面该怎么做呢？ 一是超全屏设计。 垂直布局，最大化显示图片效果，快速识别放大的产品细节，更直观、更高效。 无线思维下销售商品的六大秘密。 描">
+                                        <h4><span>爆款详情页面是如何打造的？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="https://www.chenifan.cn/lizhi/4007.html" target="_blank" title="初中生励志赠言寄语优选116句"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="https://www.chenifan.cn/static/assets/images/nopic.gif" alt=" 1、要么出众，要么出局。 2、志当存高远。 3、自信虽然不能让你成功，但它能让你不自卑。 4、虚心使人进步，骄傲使人落后。虚心的人学十算一，骄傲的人学一当十。 5、学习时的痛" />
+       <div class="title ">
+        <span>2023-05-21</span>
+        <h4>初中生励志赠言寄语优选116句</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/dianshang/2693.html" target="_blank " title="淘宝关于标题的写法与优化！"><img data-original="/pic/淘宝关于标题的写法与优化！.jpg" alt="淘宝关于标题的写法与优化！" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/dianshang/2693.html" title="淘宝关于标题的写法与优化！">淘宝关于标题的写法与优化！</a></h4>
+       <span>2020-12-30</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=1663" target="_blank " title="印度陷入政治两极化，维基百科相关内容也＂乱了＂|词条|甘地"><img data-original="/pic/印度陷入政治两极化，维基百科相关内容也＂乱了＂|词条|甘地.jpg" alt="印度陷入政治两极化，维基百科相关内容也＂乱了＂|词条|甘地" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=1663" title="印度陷入政治两极化，维基百科相关内容也＂乱了＂|词条|甘地">印度陷入政治两极化，维基百科相关内容也＂乱了＂|词条|甘地</a></h4>
+       <span>2020-11-16</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/dianshang/3196.html" target="_blank " title="电商运营计划制定原则 销售漏斗图有什么作用?数据的依据来自哪里?"><img data-original="/pic/电商运营计划制定原则 销售漏斗图有什么作用?数据的依据来自哪里?.jpg" alt="电商运营计划制定原则 销售漏斗图有什么作用?数据的依据来自哪里?" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/dianshang/3196.html" title="电商运营计划制定原则 销售漏斗图有什么作用?数据的依据来自哪里?">电商运营计划制定原则 销售漏斗图有什么作用?数据的依据来自哪里?</a></h4>
+       <span>2021-01-21</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" https://www.chenifan.cn/duanzi/3506.html" target="_blank " title="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎.jpg" alt="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/duanzi/3466.html" target="_blank " title="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/神回复《文言文格式》：乱言无信之人，其生子之股无孔尔.jpg" alt="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>神回复《文言文格式》：乱言无信之人，其生子之股无孔尔</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/xmtyy/5175.html" target="_blank " title="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路.jpg" alt="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-07</span>
+        </div>
+        <h4>抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   <a href="/index.php?s=tag&name=omg" title="点击量：励志文案">OMG</a>
+<a href="/index.php?s=tag&name=shexiangtou" title="点击量：励志文案">摄像头</a>
+<a href="/index.php?s=tag&name=yiwan" title="点击量：励志文案">亿万</a>
+<a href="/index.php?s=tag&name=zui" title="点击量：励志文案">最</a>
+<a href="/index.php?s=tag&name=yuanlongping" title="点击量：励志文案">袁隆平</a>
+<a href="/index.php?s=tag&name=jingli1" title="点击量：励志文案">经理</a>
+<a href="/index.php?s=tag&name=dbxx" title="点击量：励志文案">dbXX</a>
+<a href="/index.php?s=tag&name=huoshi1" title="点击量：励志文案">或是</a>
+<a href="/index.php?s=tag&name=fanlongduan" title="点击量：励志文案">反垄断</a>
+<a href="/index.php?s=tag&name=wen1" title="点击量：励志文案">温</a>
+<a href="/index.php?s=tag&name=baifen" title="点击量：励志文案">百分</a>
+<a href="/index.php?s=tag&name=huayecai" title="点击量：励志文案">花椰菜</a>
+<a href="/index.php?s=tag&name=naxie" title="点击量：励志文案">那些</a>
+<a href="/index.php?s=tag&name=paizi" title="点击量：励志文案">牌子</a>
+<a href="/index.php?s=tag&name=alai" title="点击量：励志文案">阿来</a>
+<a href="/index.php?s=tag&name=woshi" title="点击量：励志文案">我是</a>
+<a href="/index.php?s=tag&name=jidongrenxin" title="点击量：励志文案">激动人心</a>
+<a href="/index.php?s=tag&name=chuizhineirong" title="点击量：励志文案">垂直内容</a>
+<a href="/index.php?s=tag&name=pinchu" title="点击量：励志文案">频出</a>
+<a href="/index.php?s=tag&name=yan" title="点击量：励志文案">眼</a>
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                 
+                <a href="https://www.chenifan.cn/wenan">文案</a>
+                 
+                <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank"></a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script></body>
+</html>

@@ -1,0 +1,515 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>计算机网络安全课程学习路线分享-澈逆凡博客</title>
+<meta content="计算机,网络安全,课程学习" name="keywords" />
+<meta content="掌握计算机网络安全课程学习路线学习过程中少走弯路，从事企业网络管理员或计算机网络安全工作的学生需要掌握计算机网络安全相关知识。按照计算机通信分层思想讲解网络安全，物理层面" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5981788569352351"
+     crossorigin="anonymous"></script>
+<script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?f0e0b571b86ade20d3587555160941d9079c10b49e1023c464d0a988a3aa98b33d72cd14f8a76432df3935ab77ec54f830517b3cb210f7fd334f50ccb772134a";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h2 class="logo">
+            <a href="/" title="澈逆凡bolg——专注分享优质内容" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h2>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/ziyuanfx">资源分享</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yx">营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/wenan">文案</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/lizhi">励志文案</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="//bk.chenifan.cn" target="_blank">百科</a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="https://www.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="breadcrumbs">
+                        <span itemprop="itemListElement"><i class="fa fa-map-marker"></i></span>
+                        <a href="/">首页</a> >  <a href="https://www.chenifan.cn/ganhuo">个人成长</a>  <a href="https://www.chenifan.cn/jishu">IT技术</a>  > 计算机网络安全课程学习路线分享                    </div>
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+     <a href="/index.php?s=tag&name=kechengxuexi" title="查看更多“课程学习”相关内容">课程学习</a>
+<a href="/index.php?s=tag&name=jisuanji" title="查看更多“计算机”相关内容">计算机</a>
+<a href="/index.php?s=tag&name=wangluoanquan" title="查看更多“网络安全”相关内容">网络安全</a>
+                            </div>
+                            <h1 class="title">计算机网络安全课程学习路线分享</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>未知</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="https://www.chenifan.cn/jishu">IT技术</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2020-09-14</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_421">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=421", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_421").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <img src="/pic/计算机网络安全课程学习路线分享.jpg" alt="计算机网络安全课程学习路线分享">
+                            <p>
+	<span style="font-family: 微软雅黑; line-height: 2;">　&nbsp; 掌握<a href="https://www.chenifan.cn/article/search/keyword-%E8%AE%A1%E7%AE%97%E6%9C%BA.html" target="_blank">计算机</a><a href="https://www.chenifan.cn/article/search/keyword-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8.html" target="_blank">网络安全</a><a href="https://www.chenifan.cn/article/search/keyword-%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0.html" target="_blank">课程学习</a>路线学习过程中少走弯路，从事企业网络管理员或计算机网络安全工作的学生需要掌握计算机网络安全相关知识。按照计算机通信分层思想讲解网络安全，物理层面临的网络安全胁，数据链路层网络安全，网络层安全，传输层安全。</span></p>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="计算机网络安全课程学习路线" src="https://file.boxuegu.com/47af49f5306b463fb1630fb8f9504a14.png" style="display: block; margin-left: auto; margin-right: auto; width: 500px; height: 288px;" /><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　计算机网络安全课程学习路线如下：</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　1.IT运维职位需要掌握的技能</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　2.计算机通信物理层安全</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　3.数据链路层安全[免费试看</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　4.配置交换机端口安全</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　5.配置路由器使用标准ACL控制流量</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　6.路由器使用扩展ACL控制数据流量</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　7.ARP协议面临的安全威胁</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　8.网络执法官</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　9.局域网密码嗅探</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　10.域名解析欺骗</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　11.P2P终结者控制本网段计算机上网带宽</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　12.ARP防火墙防止ARP欺骗</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　13.会话层**--SYN**</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　14.会话层**--LAND**</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　15.拒绝服务**--DOS**</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　16.分布式拒绝服务**DDOS-**网站实战</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　17.网络安全预备知识</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　18.端口扫描准备**</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　19.Windows防火墙拦截**行为</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　20.TCP/IP筛选实现服务器网络安全</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　21.制作木马控制服务器</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　22.IPSec严格控制进出服务器的网络流量</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　23.IPSec实现加密通信-预共享秘钥实现身份验证</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　24.数字证书实现IPSec身份验证</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　25.为域中的计算机设置IPSec--Kerberos身份验证</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　26.IPSec应用案例--配置文件服务器只允许域中计算机能够访问</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　27.使用组策略设置IPSec</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　28.Windows2008R2高级安全防火墙</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　29.防火墙配置文件和出站控制</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　30.WindowsServer2008R2实现IPSec</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　31.Window2008R2高级安全防火墙Kerberos身份验证</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　32.Windows2008R2高级安全防火墙使用数字正式实现身份验证</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　33.实例：企业Web服务器网络安全解决方案</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　34.捕获Wifi蹭网人的登录账户和密码</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　35.配置Windows实现端口转发</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　36.WindowsXP防火墙设置</span><br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　37.Windows7高级安全防火墙</span></p>
+<p>
+	<br />
+	<span style="font-family: 微软雅黑; line-height: 2;">　　按照计算机通信分层思想讲解网络安，学习数据链路层安全VLAN和交换机端口安全，在路由器上实现的网络安全，ARP协议带来的网络安全隐患，网络执法官和P2P终结者，网络密码嗅探软件工作原理和使用方法，利用传输层进行LAND和SYN，端口扫描，DDOS演示，利用Windows防火墙防范远程控制程序，IPSec防范灰鸽子木马。</span></p>
+<br>本文链接：https://www.chenifan.cn/jishu/421.html<br>
+                            
+<p style="color:#C0C0C0">>>免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！</br> >  计算机网络安全课程学习路线分享 </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="https://www.chenifan.cn/jishu/420.html" class="prev has-background"><span>上一篇：</span><h4>嵌入式培训学习难吗？应该怎样学习？</h4></a></div>
+                        <div class="next-post"><a href="https://www.chenifan.cn/jishu/422.html" class="nextv has-background"><span>下一篇：</span><h4>Linux性能优化可以从哪些方面入手？</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/71.html" title="微信小程序去掉 button 标签的边框">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/static/assets/images/nopic.gif" alt="最近在做小程序，因为客服按钮要用button调用，但是添加之后有边框，隐藏border发现竟然不起作用，查了下发现小程序的button边框要用after来设置。 button::after{border:none;} 这样写button边框就可以隐藏了。">
+                                        <h4><span>微信小程序去掉 button 标签的边框</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/74.html" title="phpstudy伪静态设置的问题">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/200610/1402406349-0-lp.png" alt="先说下phpstudy伪静态设置方法 打开phpstudy控制面板，找到php扩展和设置--apache扩展。 在apache扩展菜单里面，找到rewrite_module模块，把它启用勾上。也可以直接打开apache配置文件里面，“/apache/conf/” 下的 httpd.conf 文件，通过查找“LoadModule rewrite_module”，把前面的”#”号删除即可。 然后依次找到面板，打开配置文件 httpd-conf 建议用文本编辑器编辑，查找AllowOverride None，替">
+                                        <h4><span>phpstudy伪静态设置的问题</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/73.html" title="实测iframe自适应高度的两种方法">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/static/assets/images/nopic.gif" alt="方案一 iframename=myiframeid=myiframesrc=#frameborder=0scrolling=no/iframe scripttype=text/javascriptlanguage=javascript$(window.parent.document).find(#myiframe).load(function(){varmain=$(window.parent.document).find(#myiframe);varthisheight=$(docu">
+                                        <h4><span>实测iframe自适应高度的两种方法</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/413.html" title="报班学Linux很贵吗？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/23795329fcf44d3caff16c36651e5a6a.png" alt="报班学Linux很贵吗？Linux运维是目前比较热门的岗位，也很有发展前景。同样的学习内容也比较多，很多小伙伴就会想对于这种热门行业并且有一定技术难度的内容，在培训班学习会不会比较昂">
+                                        <h4><span>报班学Linux很贵吗？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/409.html" title="网络运维工程师是做什么的？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/55129a6862dc49249fb1db591495cf3e.png" alt="运维作为互联网公司技术部门的三大支柱之一，其岗位职责和工作内容都是相当重要的。可以说，整个公司的服务器的稳定运行和数据的可靠安全都全靠运维保障。可能有人要问了，网络运维工">
+                                        <h4><span>网络运维工程师是做什么的？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/76.html" title="小白福音：Linux自动磁盘挂载工具 BT-Panel 1.0">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/200610/14024113L-0-lp.png" alt="最近发现很多用户反馈的一些问题与磁盘挂载有关， 1、安装完面板后发现磁盘容量与实际购买容量不符 2、重启服务器后面板无法访问，网站、数据库文件丢失 以上都是因为未挂载磁盘，或挂载操作不当引起的，为解决这个问题，我们制作了磁盘自动挂载工具，支持Centos、Ubuntu、Debian、Fedora 说明： 1：本工具默认将数据盘挂载到/www目录 2：若服务器上已存在/www目录，为了您的数">
+                                        <h4><span>小白福音：Linux自动磁盘挂载工具 BT-Panel 1.0</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="https://www.chenifan.cn/tougao/5215.html" target="_blank" title="成都社保怎么转移到绵阳 2022成都市养老保险转移注销不用开证明啦!转移手续包括哪些2022"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="https://www.chenifan.cn/static/assets/images/nopic.gif" alt=" " />
+       <div class="title ">
+        <span>2023-08-11</span>
+        <h4>成都社保怎么转移到绵阳 2022成都市养老保险转移注销不用开证明啦!转移手续包括哪些2022</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=1988" target="_blank " title="英国宣布创建5G研究实验室，帮助取代华为技术|爱立信"><img data-original="/pic/英国宣布创建5G研究实验室，帮助取代华为技术|爱立信.jpg" alt="英国宣布创建5G研究实验室，帮助取代华为技术|爱立信" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=1988" title="英国宣布创建5G研究实验室，帮助取代华为技术|爱立信">英国宣布创建5G研究实验室，帮助取代华为技术|爱立信</a></h4>
+       <span>2020-12-02</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/dianshang/3055.html" target="_blank " title="杭州传媒公司网店培训推广 京东pop店铺怎么开？流程和费用是多少"><img data-original="/pic/杭州传媒公司网店培训推广 京东pop店铺怎么开？流程和费用是多少.jpg" alt="杭州传媒公司网店培训推广 京东pop店铺怎么开？流程和费用是多少" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/dianshang/3055.html" title="杭州传媒公司网店培训推广 京东pop店铺怎么开？流程和费用是多少">杭州传媒公司网店培训推广 京东pop店铺怎么开？流程和费用是多少</a></h4>
+       <span>2021-01-21</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/duanzi/5088.html" target="_blank " title="“心灵震撼：30句触动泪点的文字，看哭你的内心”"><img data-original="/pic/“心灵震撼：30句触动泪点的文字，看哭你的内心”.jpg" alt="“心灵震撼：30句触动泪点的文字，看哭你的内心”" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/duanzi/5088.html" title="“心灵震撼：30句触动泪点的文字，看哭你的内心”">“心灵震撼：30句触动泪点的文字，看哭你的内心”</a></h4>
+       <span>2023-08-05</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" https://www.chenifan.cn/duanzi/3506.html" target="_blank " title="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎.jpg" alt="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/duanzi/3466.html" target="_blank " title="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/神回复《文言文格式》：乱言无信之人，其生子之股无孔尔.jpg" alt="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>神回复《文言文格式》：乱言无信之人，其生子之股无孔尔</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/xmtyy/5175.html" target="_blank " title="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路.jpg" alt="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-07</span>
+        </div>
+        <h4>抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   <a href="/index.php?s=tag&name=bianzhi" title="点击量：励志文案">编制</a>
+<a href="/index.php?s=tag&name=laiyuan" title="点击量：励志文案">来源</a>
+<a href="/index.php?s=tag&name=fashequ" title="点击量：励志文案">发射区</a>
+<a href="/index.php?s=tag&name=shoudao" title="点击量：励志文案">收到</a>
+<a href="/index.php?s=tag&name=shuma" title="点击量：励志文案">数码</a>
+<a href="/index.php?s=tag&name=amon" title="点击量：励志文案">Amon</a>
+<a href="/index.php?s=tag&name=banquan" title="点击量：励志文案">版权</a>
+<a href="/index.php?s=tag&name=dingdan" title="点击量：励志文案">订单</a>
+<a href="/index.php?s=tag&name=er" title="点击量：励志文案">儿</a>
+<a href="/index.php?s=tag&name=ren1" title="点击量：励志文案">任</a>
+<a href="/index.php?s=tag&name=yigeren" title="点击量：励志文案">一个人</a>
+<a href="/index.php?s=tag&name=douyingongyinglian" title="点击量：励志文案">抖音供应链</a>
+<a href="/index.php?s=tag&name=oula" title="点击量：励志文案">欧拉</a>
+<a href="/index.php?s=tag&name=yueqiukuaidi" title="点击量：励志文案">月球快递</a>
+<a href="/index.php?s=tag&name=waimao" title="点击量：励志文案">外贸</a>
+<a href="/index.php?s=tag&name=shoukuan" title="点击量：励志文案">首款</a>
+<a href="/index.php?s=tag&name=guanyuan" title="点击量：励志文案">官员</a>
+<a href="/index.php?s=tag&name=suzhi" title="点击量：励志文案">诉至</a>
+<a href="/index.php?s=tag&name=5000wan" title="点击量：励志文案">5000万</a>
+<a href="/index.php?s=tag&name=zoujin" title="点击量：励志文案">走进</a>
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                 
+                <a href="https://www.chenifan.cn/wenan">文案</a>
+                 
+                <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank"></a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script></body>
+</html>

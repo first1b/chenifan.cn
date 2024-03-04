@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>神经网络bp算法可以对样本进行预测，具体是预测什么？(用bp神经网络进行预测能得...-澈逆凡博客</title>
+<meta content="" name="keywords" />
+<meta content="" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5981788569352351"
+     crossorigin="anonymous"></script>
+<script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?f0e0b571b86ade20d3587555160941d9079c10b49e1023c464d0a988a3aa98b33d72cd14f8a76432df3935ab77ec54f830517b3cb210f7fd334f50ccb772134a";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h2 class="logo">
+            <a href="/" title="澈逆凡bolg——专注分享优质内容" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h2>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/ziyuanfx">资源分享</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yx">营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/wenan">文案</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/lizhi">励志文案</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="//bk.chenifan.cn" target="_blank">百科</a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="https://www.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="breadcrumbs">
+                        <span itemprop="itemListElement"><i class="fa fa-map-marker"></i></span>
+                        <a href="/">首页</a> >  <a href="https://www.chenifan.cn/tougao">投稿</a>  > 神经网络bp算法可以对样本进行预测，具体是预测什么？(用bp神经网络进行预测能得到预测值吗)                    </div>
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+     <a href="/index.php?s=tag&name=zuixu" title="查看更多“最需”相关内容">最需</a>
+<a href="/index.php?s=tag&name=jiemi" title="查看更多“揭秘”相关内容">揭秘</a>
+<a href="/index.php?s=tag&name=jingzhan" title="查看更多“精湛”相关内容">精湛</a>
+<a href="/index.php?s=tag&name=tata" title="查看更多“塔塔”相关内容">塔塔</a>
+<a href="/index.php?s=tag&name=shuguo" title="查看更多“蔬果”相关内容">蔬果</a>
+                            </div>
+                            <h1 class="title">神经网络bp算法可以对样本进行预测，具体是预测什么？(用bp神经网络进行预测能得到预测值吗)</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>admin</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="https://www.chenifan.cn/tougao">投稿</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2023-08-08</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_5178">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=news&m=hits&id=5178", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_5178").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <img src="/pic/神经网络bp算法可以对样本进行预测，具体是预测什么？(用bp神经网络进行预测能得到预测值吗).jpg" alt="神经网络bp算法可以对样本进行预测，具体是预测什么？(用bp神经网络进行预测能得到预测值吗)">
+                            
+<h2>神经网络bp算法可以对样本进行预测，具体是预测什么？</h2><p>关于神经网络（matlab）归一化的整理<br>由于采集的各数据单位不一致，因而须对数据进行[-1，1]归一化处理，归一化方法主要有如下几种，供大家参考：（by james）<br>1、线性函数转换，表达式如下：<br>y=(x-MinValue)/(MaxValue-MinValue)<br>说明：x、y分别为转换前、后的值，MaxValue、MinValue分别为样本的最大值和最小值。<br>2、对数函数转换，表达式如下：<br>y=log10(x)<br>说明：以10为底的对数函数转换。<br>3、反余切函数转换，表达式如下：<br>y=atan(x)*2/PI<br>归一化是为了加快训练网络的收敛性，可以不进行归一化处理<br>归一化的具体作用是归纳统一样本的统计分布性。归一化在0-1之间是统计的概率分布，归一化在-1--+1之间是统计的坐标分布。归一化有同一、统一和合一的意思。无论是为了建模还是为了计算，首先基本度量单位要同一，神经网络是以样本在事件中的统计分别几率来进行训练（概率计算）和预测的，归一化是同一在0-1之间的统计概率分布；<br>当所有样本的输入信号都为正值时，与第一隐含层神经元相连的权值只能同时增加或减小，从而导致学习速度很慢。为了避免出现这种情况，加快网络学习速度，可以对输入信号进行归一化，使得所有样本的输入信号其均值接近于0或与其均方差相比很小。<br>归一化是因为sigmoid函数的取值是0到1之间的，网络最后一个节点的输出也是如此，所以经常要对样本的输出归一化处理。所以这样做分类的问题时用[0.9 0.1 0.1]就要比用[1 0 0]要好。<br>但是归一化处理并不总是合适的，根据输出值的分布情况，标准化等其它统计变换方法有时可能更好。<br>关于用premnmx语句进行归一化：<br>premnmx语句的语法格式是：[Pn,minp,maxp,Tn,mint,maxt]=premnmx(P,T)<br>其中P，T分别为原始输入和输出数据，minp和maxp分别为P中的最小值和最大值。mint和maxt分别为T的最小值和最大值。<br>premnmx函数用于将网络的输入数据或输出数据进行归一化，归一化后的数据将分布在[-1,1]区间内。<br>我们在训练网络时如果所用的是经过归一化的样本数据，那么以后使用网络时所用的新数据也应该和样本数据接受相同的预处理，这就要用到tramnmx。<br>下面介绍tramnmx函数：<br>[Pn]=tramnmx(P,minp,maxp)<br>其中P和Pn分别为变换前、后的输入数据，maxp和minp分别为premnmx函数找到的最大值和最小值。<br>（by terry2008）<br>matlab中的归一化处理有三种方法<br>1. premnmx、postmnmx、tramnmx<br>2. restd、poststd、trastd<br>3. 自己编程<br>具体用那种方法就和你的具体问题有关了<br>（by happy）<br>pm=max(abs(p(i,:))); p(i,:)=p(i,:)/pm;<br>和<br>for i=1:27<br>p(i,:)=(p(i,:)-min(p(i,:)))/(max(p(i,:))-min(p(i,:)));<br>end 可以归一到0 1 之间<br>0.1+(x-min)/(max-min)*(0.9-0.1)其中max和min分别表示样本最大值和最小值。<br>这个可以归一到0.1-0.9<br></p><h2>.预测的基本方法有哪三种？</h2><p>1、定性预测：定性预测属于主观判断，它基于估计和评价。常见的定性预测方法包括：一般预测、市场调研法、小组讨论法、历史类比、德尔菲法等。</p><p>2、时间序列分析：时间序列分析是建立在这样一个设定基础上的,与过去需求相关的历史数据可用于预测未来的需求。历史数据可能包含诸如趋势、季节、周期等因素。常见的时间序列分析方法主要有：简单移动平均、加权移动平均、指数平滑、回归分析、鲍克斯·詹金斯法、西斯金时间序列等。</p><p style="text-align:center"></p><p>3、因果联系法：因果联系是假定需求与某些内在因素或周围环境的外部因素有关。常见的因果联系法主要有：回归分析、经济模型、投入产出模型、行指标等。</p><p>4、模拟：模拟模型允许预测人员对预测的条件作一定程度的假设。</p><p>扩展资料</p><p>作用</p><p>1、预测为制订一个切实可行的计划提供科学依据事实；</p><p>2、预测是避免决策片面性和决策失误的重要手段；</p><p>3、预测既是计划的前提条件，又是计划工作的重要组成部分；</p><p>4、是提高管理预见性的一种手段；</p><p>5、向前看，面向未来，做好准备，发现问题集中力量解决，一定程度上决定组织成败。</p><p>参考资料来源：百度百科——预测</p><h2>求高人翻译</h2><p>你好，</p><p>Serial Code        序列号</p><p>Persona           人物角色</p><p>Email  Address       邮箱地址</p><p>Password               密码</p><p>RE-enter  Password       重新输入密码</p><p>Date Of  birth           出生日期</p><p>Country                    国家</p><p>Language                  语言</p><p>Gender                          性别</p><p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~祝你学习进步，更上一层楼！</p><br>本文链接：https://www.chenifan.cn/tougao/5178.html<br>
+                            
+<p style="color:#C0C0C0">>>免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！</br> >  神经网络bp算法可以对样本进行预测，具体是预测什么？(用bp神经网络进行预测能得到预测值吗) </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="https://www.chenifan.cn/tougao/5177.html" class="prev has-background"><span>上一篇：</span><h4>2022洛阳飞机场三期开工吗 2022洛阳养老保险参保条件(洛阳机场三期2021)</h4></a></div>
+                        <div class="next-post"><a href="https://www.chenifan.cn/tougao/5179.html" class="nextv has-background"><span>下一篇：</span><h4>用炒锅煮白米粥的方法？(怎么用锅煮白粥)</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="https://www.chenifan.cn/tougao/4357.html" target="_blank" title="刚怀孕会有什么症状(刚怀孕会有什么症状吗)"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="https://www.chenifan.cn/static/assets/images/nopic.gif" alt=" " />
+       <div class="title ">
+        <span>2023-07-10</span>
+        <h4>刚怀孕会有什么症状(刚怀孕会有什么症状吗)</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/dianshang/322.html" target="_blank " title="拼多多开店要多少钱？拼多多开店后又能赚多少"><img data-original="/pic/拼多多开店要多少钱？拼多多开店后又能赚多少.jpg" alt="拼多多开店要多少钱？拼多多开店后又能赚多少" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/dianshang/322.html" title="拼多多开店要多少钱？拼多多开店后又能赚多少">拼多多开店要多少钱？拼多多开店后又能赚多少</a></h4>
+       <span>2020-08-02</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/dianshang/3290.html" target="_blank " title="跨境电商推广效果评价 微店如何做推广？"><img data-original="/pic/跨境电商推广效果评价 微店如何做推广？.jpg" alt="跨境电商推广效果评价 微店如何做推广？" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/dianshang/3290.html" title="跨境电商推广效果评价 微店如何做推广？">跨境电商推广效果评价 微店如何做推广？</a></h4>
+       <span>2021-01-22</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/yygh/298.html" target="_blank " title="卖爆品=做品牌？别把卖货叫做品牌"><img data-original="/pic/卖爆品=做品牌？别把卖货叫做品牌.jpg" alt="卖爆品=做品牌？别把卖货叫做品牌" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/yygh/298.html" title="卖爆品=做品牌？别把卖货叫做品牌">卖爆品=做品牌？别把卖货叫做品牌</a></h4>
+       <span>2020-07-28</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" https://www.chenifan.cn/tougao/5409.html" target="_blank " title="煮好的银耳可以放几天">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/煮好的银耳可以放几天.jpg" alt="煮好的银耳可以放几天" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-30</span>
+        </div>
+        <h4>煮好的银耳可以放几天</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/tougao/5408.html" target="_blank " title="鱼白是鱼的什么部位">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/鱼白是鱼的什么部位.jpg" alt="鱼白是鱼的什么部位" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-30</span>
+        </div>
+        <h4>鱼白是鱼的什么部位</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/tougao/5407.html" target="_blank " title="糖果怎么做出来的">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/糖果怎么做出来的.jpg" alt="糖果怎么做出来的" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-30</span>
+        </div>
+        <h4>糖果怎么做出来的</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   <a href="/index.php?s=tag&name=bei1" title="点击量：励志文案">贝</a>
+<a href="/index.php?s=tag&name=zongti" title="点击量：励志文案">总体</a>
+<a href="/index.php?s=tag&name=shiyoucai" title="点击量：励志文案">史有才</a>
+<a href="/index.php?s=tag&name=jing1" title="点击量：励志文案">京</a>
+<a href="/index.php?s=tag&name=xianzhi" title="点击量：励志文案">限制</a>
+<a href="/index.php?s=tag&name=yimei" title="点击量：励志文案">亿美</a>
+<a href="/index.php?s=tag&name=fuzi" title="点击量：励志文案">父子</a>
+<a href="/index.php?s=tag&name=shou1" title="点击量：励志文案">首</a>
+<a href="/index.php?s=tag&name=renzheng" title="点击量：励志文案">认证</a>
+<a href="/index.php?s=tag&name=nanshan" title="点击量：励志文案">南山</a>
+<a href="/index.php?s=tag&name=fugang" title="点击量：励志文案">赴港</a>
+<a href="/index.php?s=tag&name=quanbu" title="点击量：励志文案">全部</a>
+<a href="/index.php?s=tag&name=chuncui" title="点击量：励志文案">纯粹</a>
+<a href="/index.php?s=tag&name=xin1" title="点击量：励志文案">新</a>
+<a href="/index.php?s=tag&name=fengzhi" title="点击量：励志文案">峰值</a>
+<a href="/index.php?s=tag&name=shangbiaozhuce" title="点击量：励志文案">商标注册</a>
+<a href="/index.php?s=tag&name=huanjing" title="点击量：励志文案">环境</a>
+<a href="/index.php?s=tag&name=shoudao" title="点击量：励志文案">收到</a>
+<a href="/index.php?s=tag&name=jiandanglika" title="点击量：励志文案">建档立卡</a>
+<a href="/index.php?s=tag&name=liucheng" title="点击量：励志文案">流程</a>
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                 
+                <a href="https://www.chenifan.cn/wenan">文案</a>
+                 
+                <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank"></a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script></body>
+</html>

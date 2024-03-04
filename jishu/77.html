@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>禁止Chrome浏览器缓存页面的图片以及css等资源-澈逆凡博客</title>
+<meta content="禁止,Chrome,浏览器,缓存,页,面的,图片,以及,cs" name="keywords" />
+<meta content="当我们在修改或者写页面的时候用浏览器来预览修改效果的时候发现页面没有任何的变化，无论如何刷新都没有变化的时候是不是会觉得很蛋疼？万一是对自己的技术信心不足的童鞋，这时候可能就会对自己修改的代码产生怀疑了，是不是写的不对啊，不然怎么会没有效果呢？结果查来查去发现是浏览器缓存惹的祸，我想这时候你连砸电脑的心思都有了。 那么接下来我们来看下" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5981788569352351"
+     crossorigin="anonymous"></script>
+<script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?f0e0b571b86ade20d3587555160941d9079c10b49e1023c464d0a988a3aa98b33d72cd14f8a76432df3935ab77ec54f830517b3cb210f7fd334f50ccb772134a";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h2 class="logo">
+            <a href="/" title="澈逆凡bolg——专注分享优质内容" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h2>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/ziyuanfx">资源分享</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yx">营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/wenan">文案</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/lizhi">励志文案</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="//bk.chenifan.cn" target="_blank">百科</a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="https://www.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="breadcrumbs">
+                        <span itemprop="itemListElement"><i class="fa fa-map-marker"></i></span>
+                        <a href="/">首页</a> >  <a href="https://www.chenifan.cn/ganhuo">个人成长</a>  <a href="https://www.chenifan.cn/jishu">IT技术</a>  > 禁止Chrome浏览器缓存页面的图片以及css等资源                    </div>
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+     <a href="/index.php?s=tag&name=tupian" title="查看更多“图片”相关内容">图片</a>
+<a href="/index.php?s=tag&name=jinzhi" title="查看更多“禁止”相关内容">禁止</a>
+<a href="/index.php?s=tag&name=huancun" title="查看更多“缓存”相关内容">缓存</a>
+<a href="/index.php?s=tag&name=chrome" title="查看更多“Chrome”相关内容">Chrome</a>
+<a href="/index.php?s=tag&name=ye" title="查看更多“页”相关内容">页</a>
+                            </div>
+                            <h1 class="title">禁止Chrome浏览器缓存页面的图片以及css等资源</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>未知</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="https://www.chenifan.cn/jishu">IT技术</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2020-06-10</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_77">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=77", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_77").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <img src="/pic/禁止Chrome浏览器缓存页面的图片以及css等资源.jpg" alt="禁止Chrome浏览器缓存页面的图片以及css等资源">
+                            
+		<p>当我们在修改或者写<a href="https://www.chenifan.cn/article/search/keyword-%E9%A1%B5.html" target="_blank">页</a><a href="https://www.chenifan.cn/article/search/keyword-%E9%9D%A2%E7%9A%84.html" target="_blank">面的</a>时候用<a href="https://www.chenifan.cn/article/search/keyword-%E6%B5%8F%E8%A7%88%E5%99%A8.html" target="_blank">浏览器</a>来预览修改效果的时候发现页面没有任何的变化，无论如何刷新都没有变化的时候是不是会觉得很蛋疼？万一是对自己的技术信心不足的童鞋，这时候可能就会对自己修改的代码产生怀疑了，是不是写的不对啊，不然怎么会没有效果呢？结果查来查去发现是浏览器<a href="https://www.chenifan.cn/article/search/keyword-%E7%BC%93%E5%AD%98.html" target="_blank">缓存</a>惹的祸，我想这时候你连砸电脑的心思都有了。<br/></p><p>那么接下来我们来看下<a href="https://www.chenifan.cn/article/search/keyword-Chrome.html" target="_blank">Chrome</a>浏览器该如何设置为<a href="https://www.chenifan.cn/article/search/keyword-%E7%A6%81%E6%AD%A2.html" target="_blank">禁止</a>缓存页面的<a href="https://www.chenifan.cn/article/search/keyword-%E5%9B%BE%E7%89%87.html" target="_blank">图片</a><a href="https://www.chenifan.cn/article/search/keyword-%E4%BB%A5%E5%8F%8A.html" target="_blank">以及</a><a href="https://www.chenifan.cn/article/search/keyword-cs.html" target="_blank">cs</a>s等资源文件呢？</p><p>1.按F12打开控制台，点击右上角的菜单键，点击弹出菜单中的“Settings”选项；</p><p><img alt="禁止Chrome浏览器缓存页面的图片以及css等资源  第1张" src="/uploads/allimg/200610/140242HR-0.png"/></p><p>2.在“Preferences” 栏找到<span style="color: #222222; font-family: &quot;.SFNSDisplay-Regular&quot;, &quot;Helvetica Neue&quot;, &quot;Lucida Grande&quot;, sans-serif; font-size: 14.4px; background-color: #FFFFFF;">Network</span>这项 ，将“Disable cache (while DevTools is open)”这个选项勾选上，这样在打开控制台调试网页的时候浏览器就不会在缓存网页上的资源了。</p><p><img alt="禁止Chrome浏览器缓存页面的图片以及css等资源  第2张" src="/uploads/allimg/200610/1402421210-1.png"/>&nbsp;</p>					
+	<br>本文链接：https://www.chenifan.cn/jishu/77.html<br>
+                            
+<p style="color:#C0C0C0">>>免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！</br> >  禁止Chrome浏览器缓存页面的图片以及css等资源 </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="https://www.chenifan.cn/jishu/76.html" class="prev has-background"><span>上一篇：</span><h4>小白福音：Linux自动磁盘挂载工具 BT-Panel 1.0</h4></a></div>
+                        <div class="next-post"><a href="https://www.chenifan.cn/jishu/78.html" class="nextv has-background"><span>下一篇：</span><h4>关于设置全站所有链接都在新窗口打开等代码整理</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/415.html" title="如何学习嵌入式硬件？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/f730c63023514f07ae95caaa49b86fd2.png" alt="如何学习嵌入式硬件？学习嵌入式硬件需要有一定的硬件基础，熟练使用一种原理图PCB绘制，软件熟练掌握各种元器件的原理及电气特性，并依据此综合特性、成本、供应等各个方面进行器件选">
+                                        <h4><span>如何学习嵌入式硬件？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/422.html" title="Linux性能优化可以从哪些方面入手？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/b463cc53f1754035a292f8371faf0b03.png" alt="Linux性能优化一直都是老生常谈的话题，相信大家对于优化的措施多多少少都有一定的了解。但是如何进行Linux性能调优，又从哪些方面入手，这背后的深层原理是什么，为什么要这么操作，却">
+                                        <h4><span>Linux性能优化可以从哪些方面入手？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/76.html" title="小白福音：Linux自动磁盘挂载工具 BT-Panel 1.0">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/200610/14024113L-0-lp.png" alt="最近发现很多用户反馈的一些问题与磁盘挂载有关， 1、安装完面板后发现磁盘容量与实际购买容量不符 2、重启服务器后面板无法访问，网站、数据库文件丢失 以上都是因为未挂载磁盘，或挂载操作不当引起的，为解决这个问题，我们制作了磁盘自动挂载工具，支持Centos、Ubuntu、Debian、Fedora 说明： 1：本工具默认将数据盘挂载到/www目录 2：若服务器上已存在/www目录，为了您的数">
+                                        <h4><span>小白福音：Linux自动磁盘挂载工具 BT-Panel 1.0</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/417.html" title="零基础Linux培训课程有哪些内容？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/b29c8d2d385a46c2b15414225bb04dd9.jpg" alt="零基础Linux培训课程有哪些内容？Linux培训主要学习网络基础，计算机网络、云计算网络，配备有企业级项目实战：IP地址配置与DNS解析；Linux基础，包括Linux操作系统及Linux高级管理；云数据中心">
+                                        <h4><span>零基础Linux培训课程有哪些内容？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/3914.html" title="1">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/static/assets/images/nopic.gif" alt="1">
+                                        <h4><span>1</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/413.html" title="报班学Linux很贵吗？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/23795329fcf44d3caff16c36651e5a6a.png" alt="报班学Linux很贵吗？Linux运维是目前比较热门的岗位，也很有发展前景。同样的学习内容也比较多，很多小伙伴就会想对于这种热门行业并且有一定技术难度的内容，在培训班学习会不会比较昂">
+                                        <h4><span>报班学Linux很贵吗？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="https://www.chenifan.cn/tougao/4094.html" target="_blank" title="汽车喷漆的步骤和方法是什么(汽车喷漆的步骤和方法是什么工艺)"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="https://www.chenifan.cn/static/assets/images/nopic.gif" alt=" " />
+       <div class="title ">
+        <span>2023-07-08</span>
+        <h4>汽车喷漆的步骤和方法是什么(汽车喷漆的步骤和方法是什么工艺)</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=1581" target="_blank " title="5.89亿！尚纬股份拟收购罗永浩直播公司四成股权|罗永浩|股权|李广元|野望"><img data-original="/pic/5.89亿！尚纬股份拟收购罗永浩直播公司四成股权|罗永浩|股权|李广元|野望.jpg" alt="5.89亿！尚纬股份拟收购罗永浩直播公司四成股权|罗永浩|股权|李广元|野望" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=1581" title="5.89亿！尚纬股份拟收购罗永浩直播公司四成股权|罗永浩|股权|李广元|野望">5.89亿！尚纬股份拟收购罗永浩直播公司四成股权|罗永浩|股权|李广元|野望</a></h4>
+       <span>2020-11-09</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=983" target="_blank " title="疫情爆发，亚马逊称假日购物季销售额和成本都增加|亚马逊|电商|假日|杰夫·贝索斯"><img data-original="/pic/疫情爆发，亚马逊称假日购物季销售额和成本都增加|亚马逊|电商|假日|杰夫·贝索斯.jpg" alt="疫情爆发，亚马逊称假日购物季销售额和成本都增加|亚马逊|电商|假日|杰夫·贝索斯" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=983" title="疫情爆发，亚马逊称假日购物季销售额和成本都增加|亚马逊|电商|假日|杰夫·贝索斯">疫情爆发，亚马逊称假日购物季销售额和成本都增加|亚马逊|电商|假日|杰夫·贝索斯</a></h4>
+       <span>2020-11-02</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=1113" target="_blank " title="SpaceX成功为美太空军发射GPS卫星 成功回收助推器|spacex|卫星|火箭|gps|nasa|太空军"><img data-original="/pic/SpaceX成功为美太空军发射GPS卫星 成功回收助推器|spacex|卫星|火箭|gps|nasa|太空军.jpg" alt="SpaceX成功为美太空军发射GPS卫星 成功回收助推器|spacex|卫星|火箭|gps|nasa|太空军" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=1113" title="SpaceX成功为美太空军发射GPS卫星 成功回收助推器|spacex|卫星|火箭|gps|nasa|太空军">SpaceX成功为美太空军发射GPS卫星 成功回收助推器|spacex|卫星|火箭|gps|nasa|太空军</a></h4>
+       <span>2020-11-06</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" https://www.chenifan.cn/duanzi/3506.html" target="_blank " title="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎.jpg" alt="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/duanzi/3466.html" target="_blank " title="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/神回复《文言文格式》：乱言无信之人，其生子之股无孔尔.jpg" alt="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>神回复《文言文格式》：乱言无信之人，其生子之股无孔尔</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/xmtyy/5175.html" target="_blank " title="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路.jpg" alt="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-07</span>
+        </div>
+        <h4>抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   <a href="/index.php?s=tag&name=di1" title="点击量：励志文案">地</a>
+<a href="/index.php?s=tag&name=rizhaokai" title="点击量：励志文案">日召开</a>
+<a href="/index.php?s=tag&name=baishouqijia" title="点击量：励志文案">白手起家</a>
+<a href="/index.php?s=tag&name=xu" title="点击量：励志文案">需</a>
+<a href="/index.php?s=tag&name=shangjiaosuo" title="点击量：励志文案">上交所</a>
+<a href="/index.php?s=tag&name=rengran" title="点击量：励志文案">仍然</a>
+<a href="/index.php?s=tag&name=dengwo" title="点击量：励志文案">等我</a>
+<a href="/index.php?s=tag&name=xiege" title="点击量：励志文案">些个</a>
+<a href="/index.php?s=tag&name=rongliang" title="点击量：励志文案">容量</a>
+<a href="/index.php?s=tag&name=cuxiao" title="点击量：励志文案">促销</a>
+<a href="/index.php?s=tag&name=xie1" title="点击量：励志文案">鞋</a>
+<a href="/index.php?s=tag&name=yigu" title="点击量：励志文案">已故</a>
+<a href="/index.php?s=tag&name=shousun" title="点击量：励志文案">受损</a>
+<a href="/index.php?s=tag&name=shezhizu" title="点击量：励志文案">摄制组</a>
+<a href="/index.php?s=tag&name=4200wanyuan" title="点击量：励志文案">4200万元</a>
+<a href="/index.php?s=tag&name=jihui" title="点击量：励志文案">计会</a>
+<a href="/index.php?s=tag&name=cengjin" title="点击量：励志文案">曾进</a>
+<a href="/index.php?s=tag&name=mai" title="点击量：励志文案">买</a>
+<a href="/index.php?s=tag&name=jiaoge" title="点击量：励志文案">交割</a>
+<a href="/index.php?s=tag&name=2.2yigu" title="点击量：励志文案">2.2亿股</a>
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                 
+                <a href="https://www.chenifan.cn/wenan">文案</a>
+                 
+                <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank"></a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script></body>
+</html>

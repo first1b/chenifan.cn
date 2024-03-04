@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>微店代理 , 分析一个淘宝店铺和天猫店铺,从店铺评分,好评率,中差评情况,开店时...-澈逆凡博客</title>
+<meta content="微店,代理,分析,一个,淘宝,店铺,和,天猫,从" name="keywords" />
+<meta content="店铺指店铺态评四项评包括宝贝与描述相符、卖家服务态度、卖家发货速度、物流公司服务每项店铺评取连续6月内所买家给予评算术平均值； 买三东西三评算少要看给态评打少看给几评；；；评数影响评价计评率别评加1评加差评减1三商品均效计总共获3； 本自月再买3同商品评价依计按评价规则每自月相同买家卖家间评计超6超则计 很不错哦， 分享自：电商知识人——手机 提升" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5981788569352351"
+     crossorigin="anonymous"></script>
+<script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?f0e0b571b86ade20d3587555160941d9079c10b49e1023c464d0a988a3aa98b33d72cd14f8a76432df3935ab77ec54f830517b3cb210f7fd334f50ccb772134a";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h2 class="logo">
+            <a href="/" title="澈逆凡bolg——专注分享优质内容" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h2>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/ziyuanfx">资源分享</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yx">营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/wenan">文案</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/lizhi">励志文案</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="//bk.chenifan.cn" target="_blank">百科</a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="https://www.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="breadcrumbs">
+                        <span itemprop="itemListElement"><i class="fa fa-map-marker"></i></span>
+                        <a href="/">首页</a> >  <a href="https://www.chenifan.cn/ganhuo">个人成长</a>  <a href="https://www.chenifan.cn/yygh">运营</a>  <a href="https://www.chenifan.cn/dianshang">电商运营</a>  > 微店代理 , 分析一个淘宝店铺和天猫店铺,从店铺评分,好评率,中差评情况,开店时间,主营、 分析一个淘                    </div>
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+     <a href="/index.php?s=tag&name=tianmao" title="查看更多“天猫”相关内容">天猫</a>
+<a href="/index.php?s=tag&name=he" title="查看更多“和”相关内容">和</a>
+<a href="/index.php?s=tag&name=daili" title="查看更多“代理”相关内容">代理</a>
+<a href="/index.php?s=tag&name=dianpu" title="查看更多“店铺”相关内容">店铺</a>
+<a href="/index.php?s=tag&name=fenxi" title="查看更多“分析”相关内容">分析</a>
+                            </div>
+                            <h1 class="title">微店代理 , 分析一个淘宝店铺和天猫店铺,从店铺评分,好评率,中差评情况,开店时间,主营、 分析一个淘</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>[db:文章来源]</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="https://www.chenifan.cn/dianshang">电商运营</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2021-01-22</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_3220">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=3220", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_3220").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <img src="/pic/微店代理 , 分析一个淘宝店铺和天猫店铺,从店铺评分,好评率,中差评情况,开店时间,主营、 分析一个淘.jpg" alt="微店代理 , 分析一个淘宝店铺和天猫店铺,从店铺评分,好评率,中差评情况,开店时间,主营、 分析一个淘">
+                            <p><noscript><img src="/uploads/allimg/210122/1032233K7-0.jpg" alt="微店代理" title="微店代理 , 分析一个淘宝店铺和天猫店铺,从店铺评分,好评率,中差评情况,开店时间,主营、 分析一个淘插图" /></noscript><img class="j-lazy" src="/uploads/allimg/210122/1032232153-1.png" data-original="/uploads/allimg/210122/1032233K7-0.jpg" alt="微店代理" title="微店代理 , 分析一个淘宝店铺和天猫店铺,从店铺评分,好评率,中差评情况,开店时间,主营、 分析一个淘插图1" /></p><a href="https://www.chenifan.cn/article/search/keyword-%E5%BA%97%E9%93%BA.html" target="_blank">店铺</a>指店铺态评四项评包括宝贝与描述相符、卖家服务态度、卖家发货速度、物流公司服务每项店铺评取连续6月内所买家给予评算术平均值；</p><p>买三东西三评算少要看给态评打少看给几评；；；评数影响评价计评率别评加1评加差评减1三商品均效计总共获3；</p><p>本自月再买3同商品评价依计按评价规则每自月相同买家卖家间评计超6超则计<br />很不错哦，<br />分享自：电商知识人——手机 提升店铺转化<p><a href="https://www.chenifan.cn/article/search/keyword-%E5%BE%AE%E5%BA%97.html" target="_blank">微店</a><a href="https://www.chenifan.cn/article/search/keyword-%E4%BB%A3%E7%90%86.html" target="_blank">代理</a></p>购买我们一年模版，可设计店招海报，背景布局，装修店铺首页， 联系：yilong123居然在线是居然之家的网上商城，于2013年11月11日正式上线，由北京居然之家投资控股集团有限公司的全资子公司北京居然之家电子商务有限公司全面运营管理。<br />      北京居然之家投资控股集团有限公司成立于1999年，是由全国华联商厦联合有限公司等股东投资设立的大型国有控股企业，公司的主要经营范围是投资开办以“居然之家”为统一字号，以中高端为经营定位，为顾客提供设计、材料、家具、家居用品及饰品等“一站式”服务，融家装设计中心、家具建材品牌专卖店、建材超市、家居商场等多种业态为一体的大型家居建材主题购物中心。<br />       截止目前，居然之家已在全国大中城市开办了78家分店，营业面积达500万平米，年销售额超过300亿元，连续7年蝉联“北京市十大商业品牌”称号，在家居建材流通业处于行业领先地位。预计到2013 年年底开业分店将接近100 家，到2015 年年底超过150 家，年销售额超过500 亿元，成为中国家居建材流通业第一服务品牌。<br />      居然在线基于居然之家15年稳步发展所积累的良好品牌形象及客户口碑、丰富的行业资源<a href="https://www.chenifan.cn/article/search/keyword-%E5%92%8C.html" target="_blank">和</a>“一以贯之”的企业精神等几大先天优势，立足于家具建材垂直领域的平台型电子商城，坚持“简单、协作、学习、卓越、共赢”的核心价值观，旨在打造“第<a href="https://www.chenifan.cn/article/search/keyword-%E4%B8%80%E4%B8%AA.html" target="_blank">一个</a>家具建材垂直行业定位于中高端O2O网上</p><p>平台品质商城”。居然在线采用“B2B2C”的平台定位，以O2O的电商模式切入，坚持贯彻“同一经营主体、同一品牌、同一价格、同一服务”的“四同”经营原则，实现“线上交易、线下体验”相互融合、协同发展的运作模式，创建商户、消费者与服务商同担共赢的可持续发展的生态圈。</p><p>微店代理</p><p>商业公司需要具备工商三证。</p><p>2、业务配备：有2名及以上专业人员进行代收、代寄等菜鸟驿站业务。合作快递公司需接入2家及以上。日均包裹派件量200单及以上。</p><p>3、经营空间：大于15平米的场地，如校园商业区或生活区、交通枢纽处等独立非露天场地。</p><p>个体渠道合作城市说明</p><p>个体渠道合作城市如下：上海市、北京市、广州市、深圳市、南京市、杭州市、宁波市、温州市、苏州市、无锡市、 重庆市、成都市、天津市、武汉市、福州市、长沙市、郑州市、青岛市、济南市、东莞市(非名单内城市合作工作暂未启动，后续进展，请关注菜鸟驿站合作平台或菜鸟驿站官方微博相关通知。)</p><p>有何要求呢?</p><p>1、对菜鸟驿站定位、业务等概况有基本了解。</p><br>本文链接：https://www.chenifan.cn/dianshang/3220.html<br>
+                            
+<p style="color:#C0C0C0">>>免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！</br> >  微店代理 , 分析一个淘宝店铺和天猫店铺,从店铺评分,好评率,中差评情况,开店时间,主营、 分析一个淘 </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="https://www.chenifan.cn/dianshang/3219.html" class="prev has-background"><span>上一篇：</span><h4>电商主播培训总结 唯品会的成功利用了网络营销的哪些特点</h4></a></div>
+                        <div class="next-post"><a href="https://www.chenifan.cn/dianshang/3221.html" class="nextv has-background"><span>下一篇：</span><h4>电商平台上如何推广产品 如何看待李佳琦新歌的上线推广呢？</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/199.html" title="拼多多9.9元卖Switch、SK-Ⅱ&#8230;背后有啥小心思？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/c200627/15932HQ401620-150I.jpg" alt="从进入 6 月份开始，各大电商平台都开始 618 大促，满屏都是预售、抽奖、做任务、拉人助力……但奇怪的是，却迟迟不见“价格屠夫”拼多多的身影。一直到 6 月 9 号，拼多多的官微上还都是助农活动，丝毫不见 618 活…">
+                                        <h4><span>拼多多9.9元卖Switch、SK-Ⅱ&#8230;背后有啥小心思？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/3205.html" title="电商app线下推广方案 商家哪些“提高门槛”的营销手段你不太喜欢？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210121/1_0121160112M16.jpg" alt="杨浩购买是什么鬼？买房子什么？噢，真的不要参与就跟菜市场一样，然后好几千人在一个大屋子里面，没事没事没事做。 电商app线下推广方案 怎么联系你，我可以发些资料给你做参考，现在外贸推广这块得慎重选择啊！ 我也版理解兄弟权你的心情 。 不要为了做外贸而做外贸，你做外贸，你得先考虑国外采购商会怎么来找你的产品。比如医药类，那么就有专业的行业网站。">
+                                        <h4><span>电商app线下推广方案 商家哪些“提高门槛”的营销手段你不太喜欢？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/3031.html" title="佛山万企电商培训学校 掘金“互联网+农业”，猪联网能起到什么作用">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210121/1_01211559222101.jpg" alt="物联网的一个概念。 猪联网可以追踪猪的生活位置，饮食成分，日常活动，屠宰环境，肉产品处理环境，肉产品物流信息。以此来实现你吃的肉制品质量可追踪，以便于使用物理的手段保证产品质量可追踪，挽救已经完全丢失的社会商业诚信。总之一句话，这是一种概念，成本坑定很高，但是未来社会，当经济条件高级到一定水平，人们可以承受这些附加费用，目的只在于确保">
+                                        <h4><span>佛山万企电商培训学校 掘金“互联网+农业”，猪联网能起到什么作用</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/3165.html" title="花都区新华镇电商培训 长虹经销商被薅羊毛导致快破产，谁给为此做出赔偿？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210121/1_012116005232K.png" alt="目前商家已经报案，但是情况还不算明朗，最终的赔偿还会要看调查结果，电商平台，推广平台，和商家本身都有问题，所以谁会做出赔偿还要看最终的调查结果 花都区新华镇电商培训 iPhone卡贴机：机器是国外的，是国外运营商合约机，直接用国内的卡不能用，要配合SIM卡贴。就是把一片很薄的电路垫在SIM卡和插槽之间。 这样的机器不能升级，一升级，卡贴就有可能失效。并且">
+                                        <h4><span>花都区新华镇电商培训 长虹经销商被薅羊毛导致快破产，谁给为此做出赔偿？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/3232.html" title="电商公司推广人员职责 请问淘宝的店铺名称修改后，多久生效，我都改了2小时了，店铺搜索还是搜不到，谢谢">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210122/1_012210322S313.png" alt="那个即时生效的啊，你是不是设置有问题？在店铺基本设置里面，改完记得点保存 电商公司推广人员职责 利用电子商务平台和技术，辅助贫困地区进行电商零售。 或者是将贫困地区的特产或者手工艺品，通过电商渠道销售。一款电商erp软件开发报价是根据ERP软件的功能来确定的。 电子商务ERP系统在设计专和开发过程中保证各模块属、模块中的各项功能高度模块化。实现对系统">
+                                        <h4><span>电商公司推广人员职责 请问淘宝的店铺名称修改后，多久生效，我都改了2小时了，店铺搜索还是搜不到，谢谢</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/1463.html" title="淘宝爆款打造有什么用">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.ruzw.com/uploads/allimg/201907/15633600584256.jpg" alt="一直以来淘宝的商家朋友都在寻找打造爆款的方式与技巧，但是大家却不知道打造爆款的意义与作用，一直以来都只是盲目跟风。下面小编就来为大家介绍一下淘宝爆款打造有什么用，希望可以给大家带来一些帮助。 淘宝爆款有什么意义？为什么要弱化？ 为什么店铺里要有爆款? 店铺对流量的需求是永无止境的，我们拥有了很多的流量才会有很好的淘宝排名。爆款则能带给店铺">
+                                        <h4><span>淘宝爆款打造有什么用</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="https://www.chenifan.cn/tougao/4567.html" target="_blank" title="申请报废车辆需要去哪里申请(车辆申请报废要到哪里去申请)"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="https://www.chenifan.cn/static/assets/images/nopic.gif" alt=" " />
+       <div class="title ">
+        <span>2023-07-13</span>
+        <h4>申请报废车辆需要去哪里申请(车辆申请报废要到哪里去申请)</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/yygh/1840.html" target="_blank " title="活动运营避坑指南：促销活动的正确使用方法"><img data-original="/pic/活动运营避坑指南：促销活动的正确使用方法.jpg" alt="活动运营避坑指南：促销活动的正确使用方法" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/yygh/1840.html" title="活动运营避坑指南：促销活动的正确使用方法">活动运营避坑指南：促销活动的正确使用方法</a></h4>
+       <span>2020-11-23</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=3016" target="_blank " title="坐拥近10公顷！比尔·盖茨成美国最大农田主|比尔盖茨|杰夫·贝索斯"><img data-original="/pic/坐拥近10公顷！比尔·盖茨成美国最大农田主|比尔盖茨|杰夫·贝索斯.jpg" alt="坐拥近10公顷！比尔·盖茨成美国最大农田主|比尔盖茨|杰夫·贝索斯" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=3016" title="坐拥近10公顷！比尔·盖茨成美国最大农田主|比尔盖茨|杰夫·贝索斯">坐拥近10公顷！比尔·盖茨成美国最大农田主|比尔盖茨|杰夫·贝索斯</a></h4>
+       <span>2021-01-15</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/jishu/69.html" target="_blank " title="阿里云虚拟主机导出的数据出现T FOREIGN_KEY_CHECKS = 0;错误"><img data-original="/pic/阿里云虚拟主机导出的数据出现T FOREIGN_KEY_CHECKS = 0;错误.jpg" alt="阿里云虚拟主机导出的数据出现T FOREIGN_KEY_CHECKS = 0;错误" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/jishu/69.html" title="阿里云虚拟主机导出的数据出现T FOREIGN_KEY_CHECKS = 0;错误">阿里云虚拟主机导出的数据出现T FOREIGN_KEY_CHECKS = 0;错误</a></h4>
+       <span>2020-06-10</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" https://www.chenifan.cn/duanzi/3506.html" target="_blank " title="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎.jpg" alt="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/duanzi/3466.html" target="_blank " title="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/神回复《文言文格式》：乱言无信之人，其生子之股无孔尔.jpg" alt="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>神回复《文言文格式》：乱言无信之人，其生子之股无孔尔</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/xmtyy/5175.html" target="_blank " title="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路.jpg" alt="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-07</span>
+        </div>
+        <h4>抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   <a href="/index.php?s=tag&name=tiku" title="点击量：励志文案">题库</a>
+<a href="/index.php?s=tag&name=biba" title="点击量：励志文案">枇杷</a>
+<a href="/index.php?s=tag&name=75sui" title="点击量：励志文案">75岁</a>
+<a href="/index.php?s=tag&name=jiancaixingye" title="点击量：励志文案">建材行业</a>
+<a href="/index.php?s=tag&name=qingshui" title="点击量：励志文案">氢水</a>
+<a href="/index.php?s=tag&name=chongci" title="点击量：励志文案">冲刺</a>
+<a href="/index.php?s=tag&name=tuijie" title="点击量：励志文案">推介</a>
+<a href="/index.php?s=tag&name=yikuan" title="点击量：励志文案">一款</a>
+<a href="/index.php?s=tag&name=ying1" title="点击量：励志文案">营</a>
+<a href="/index.php?s=tag&name=dedao" title="点击量：励志文案">得到</a>
+<a href="/index.php?s=tag&name=jiuyeqianjing" title="点击量：励志文案">就业前景</a>
+<a href="/index.php?s=tag&name=gequ" title="点击量：励志文案">歌曲</a>
+<a href="/index.php?s=tag&name=chanpinsiwei" title="点击量：励志文案">产品思维</a>
+<a href="/index.php?s=tag&name=maishu" title="点击量：励志文案">卖书</a>
+<a href="/index.php?s=tag&name=diandong" title="点击量：励志文案">电动</a>
+<a href="/index.php?s=tag&name=hanyou" title="点击量：励志文案">含有</a>
+<a href="/index.php?s=tag&name=zhe1" title="点击量：励志文案">着</a>
+<a href="/index.php?s=tag&name=yuanse" title="点击量：励志文案">原色</a>
+<a href="/index.php?s=tag&name=jidongrenxin" title="点击量：励志文案">激动人心</a>
+<a href="/index.php?s=tag&name=mianban" title="点击量：励志文案">面板</a>
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                 
+                <a href="https://www.chenifan.cn/wenan">文案</a>
+                 
+                <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank"></a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script></body>
+</html>

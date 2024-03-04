@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>4000字拆解直播卖课设计攻略-澈逆凡博客</title>
+<meta content="周推荐, 直播卖课" name="keywords" />
+<meta content="文章将以知名学习平台头部教培品牌为例，结合底层逻辑，拆解其直播转化流程。本文适合需要打造直播转化场景的企业/个人，尤其高决策型产品/服务，譬如教培、招代理等。直播4要素 一.时间：选择用户空闲时间开播，…" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5981788569352351"
+     crossorigin="anonymous"></script>
+<script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?f0e0b571b86ade20d3587555160941d9079c10b49e1023c464d0a988a3aa98b33d72cd14f8a76432df3935ab77ec54f830517b3cb210f7fd334f50ccb772134a";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h2 class="logo">
+            <a href="/" title="澈逆凡bolg——专注分享优质内容" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h2>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/ziyuanfx">资源分享</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yx">营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/wenan">文案</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/lizhi">励志文案</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="//bk.chenifan.cn" target="_blank">百科</a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="https://www.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="breadcrumbs">
+                        <span itemprop="itemListElement"><i class="fa fa-map-marker"></i></span>
+                        <a href="/">首页</a> >  <a href="https://www.chenifan.cn/ganhuo">个人成长</a>  <a href="https://www.chenifan.cn/yx">营销</a>  > 4000字拆解直播卖课设计攻略                    </div>
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+     <a href="/index.php?s=tag&name=zhoutuijian" title="查看更多“周推荐”相关内容">周推荐</a>
+                            </div>
+                            <h1 class="title">4000字拆解直播卖课设计攻略</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>admincyf</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="https://www.chenifan.cn/yx">营销</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2021-10-09</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_3807">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=3807", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_3807").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <img src="/pic/4000字拆解直播卖课设计攻略.jpg" alt="4000字拆解直播卖课设计攻略">
+                            <tbody><tr>
+                            <td>
+                                                                <span class="span-img"><img src="/uploads/allimg/c211009/1633LA2060P-5G43.jpg" alt="4000字拆解直播卖课设计攻略"></span>
+                                                                
+
+                                	<section>文章将以知名学习平台头部教培品牌为例，结合底层逻辑，拆解其直播转化流程。本文适合需要打造直播转化场景的企业/个人，尤其高决策型产品/服务，譬如教培、招代理等。</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>直播4要素 </strong></span></p>
+<p><strong>一.时间：</strong>选择用户空闲时间开播，建议19:00-22:00或15:00-18:00两个时间段</p>
+<p><strong>二. 留客：</strong>转化类直播需要环环相扣，前提用户需要沉浸式参与，建议约5分钟设置1个留客环节。</p>
+<p><strong>三. 政策：</strong>需要有直播限时政策，便于逼单。</p>
+<p><strong>四. 流程：</strong>详见下面拆解<strong> </strong></p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>直播流程</strong></span></p>
+<p>直播流程约为3个半小时，分为5个环节：<strong>基础认知—点燃欲望—怎么做—为什么需要我—为什么现在做选择。 </strong></p>
+<p>下面以教培案例为例，还原内容，并拆解其设计逻辑。</p>
+<p style="text-align: center;"><strong>一.基础认知：5-10min，15:00-15:10</strong></p>
+<p>解析：做基础定义介绍、项目前景及公司实力介绍等</p>
+<p>①介绍视频</p>
+<p>②基本认知扫盲</p>
+<p style="text-align: center;"><strong>二.点燃欲望：50min，15：00-16:00</strong></p>
+<p>解析：这个环节的关键是描绘美好前景、降低疑虑，点燃用户加入的欲望。</p>
+<p><strong>1.调研+引导互动+塑造专业</strong></p>
+<p>开场引导互动回复，调研大家的基本信息，告知会结合用户情况调节讲授节奏，一方面开始培养用户互动习惯；另一方面塑造专业感、定制感。</p>
+<p><strong>2.暗示门槛低、前景好</strong></p>
+<p>通过案例，结合后台数据，讲述一位基础条件差的客户，经过老师的辅导，短时间内产出的成果。</p>
+<p><span style="color: #0000ff;"><strong>解析：挑选的案例往往都是培训前“起点低、过程苦、结果差”，而培训后变得“起点低、过程好、结果更好” </strong></span></p>
+<p><strong>3.排除疑虑</strong></p>
+<p>提前排除用户心中可能的障碍，避免用户在想买单的时候因为常见障碍犹豫、放弃。</p>
+<p><img class="aligncenter" alt="118 4000字拆解直播卖课设计攻略" src="/uploads/allimg/c211009/1633LA2120X0-B524.jpg" width="565" height="417" title="4000字拆解直播卖课设计攻略" /><br />
+<span style="color: #0000ff;"> <strong>解析：关于“想做其他平台”即选择其他竞争对手应用了非常厉害的手段，叫做创造门槛/条件，让用户自行放弃。</strong></span></p>
+<p><span style="color: #0000ff;"><strong>这种方法远优于直接攻击抹黑竞争对手，显得更有格局；同时通过创造条件像是给客户自主选择，客户更情愿。 </strong></span></p>
+<p><strong>4.平台优势</strong></p>
+<p style="text-align: center;"><img class="aligncenter" alt="126 4000字拆解直播卖课设计攻略" src="/uploads/allimg/c211009/1633LA2153320-Ma4.jpg" width="439" height="565" title="4000字拆解直播卖课设计攻略" /><br />
+<strong>三.怎么做：50min，16：00-16:50</strong></p>
+<p>这个环节一方面展示老师专业，同时会不断种草付费课程及留下诱饵。</p>
+<p><strong>1.货源问题</strong></p>
+<p><strong>① 针对自有货源客户：</strong>告知定位很重要，老师引导课后添加，会花半小时左右教定位<strong>。（抛出1个加微信诱饵） </strong></p>
+<p><strong>②针对没货源客户</strong>（目标客户多属此情况）：鼓励优势+老师自身经历验证+解决方案</p>
+<p><strong>第一步鼓励优势：</strong>没货源反而更好，没有压货风险，让大家树立信息</p>
+<p>第二步讲述老师经历：</p>
+<p>A.老师自己也没货源，但是现在开店成绩很牛，最差1周也有80万净利润；</p>
+<p>B.展示了老师的相关行业证书；</p>
+<p>C.接着解释为什么那么有钱还来培训：因为自己赚钱的技能可以帮助别人赚钱，自己也能从中获利，何乐而不为</p>
+<p><strong>第三步提供解决方案：</strong>提供了十几个选品网站并且讲授了选品方法</p>
+<p><span style="color: #0000ff;"><strong>解析：整场培训老师会不断抛出一些专业资料、技能，是留住用户持续观看的关键 </strong></span></p>
+<p><strong>2.选品问题（黄金内容—重点种草付费课程部分）</strong></p>
+<p>老师开篇就说“7分靠选品+3分靠运营”，告知解决选品问题，起码日销百单没问题。因为这部分是付费课程的重要价值点，所以老师重点强调这部分。</p>
+<p><strong>可分为3个环节：案例（选错品的危害）—构建1个观点—秀自己差异化卖点 </strong></p>
+<p><strong>第一步案例解析</strong></p>
+<p>通过客户案例，强调选错品的危害。</p>
+<p><strong>第二步树立观点</strong></p>
+<p>选择大于努力！再用“欲擒故纵”法，告知“跟不跟我，没关系，一定要选对人教你”，暗示付费找师傅是一件合理的事；</p>
+<p>同时告知“这不是开一家店的事，而是一辈子的事情”拉高这件事的重要性。</p>
+<p><strong>第三步秀自己差异化卖点</strong></p>
+<p>展示有无我有的独家资源</p>
+<p>老师告知自己有平台内部稀缺报表，是同行都想买的。在这里又埋1个诱饵，告知加微信后可以提供对应站点的。</p>
+<p><strong>3.发货问题</strong></p>
+<p>告知先搞懂逻辑，后面课程会手把手教（种草）</p>
+<p><strong>4.回款问题</strong></p>
+<p>这个问题也是用户比较关注的，所以在这里继续种草放钩子</p>
+<p><img class="aligncenter" alt="136 4000字拆解直播卖课设计攻略" src="/uploads/allimg/c211009/1633LA21WN0-U124.jpg" width="565" height="133" title="4000字拆解直播卖课设计攻略" /><br />
+通过对比，秀出成为自己徒弟的独家福利，并引导互动回复，问”想当我学生的请在公屏回复666”，引导用户公开承诺。</p>
+<p style="text-align: center;"><strong>四.为什么需要我：40min，16：50-17:30</strong></p>
+<p>这个环节从平台政策解读切入，接着提供3种方案，1个自己方案+2个对比方案，逐步引导告知<strong>“选我的方案”才是最优解。</strong></p>
+<p><strong>1.内贸商家资质要求： </strong></p>
+<p>第一条：有中国内地或香港合法企业营业执照或个体工商营业执照</p>
+<p>第二条：产品符合当地出口要求及当地进口要求</p>
+<p>第三条：有一定内贸电商经验及产品数量达到50款以上</p>
+<p><strong>2.第一个解决方案：免费渠道</strong></p>
+<p>必须满足上面3条要求，但是免费渠道审核时间长，容易不通过，一旦不通过原资料要作废，老师提醒大家没搞懂，不要随便申请。</p>
+<p><span style="color: #0000ff;"><strong>解析：老师明着给免费渠道，也暗示了这个渠道的弊端（制造痛点）。 </strong></span></p>
+<p><strong>3.第二个解决方案：花钱买店铺</strong></p>
+<p>提供了买店铺的平台，费用在4000-8000元，但老师又得出一个点“不懂运营买了店铺也百搭”</p>
+<p><strong>解析：老师开始尝试提供付费的解决方案，同时告知不会运营也白搭（再次制造痛点），并且通过买店成本给大家下一个“价格锚点”，为提出下一个方案做好铺垫。</strong></p>
+<p><strong>4.第三个解决方案：VIP专属注册通道</strong></p>
+<p>经过前面两个方案铺垫，接下来老师重点展示自己的方案了。</p>
+<p><strong>主要分为两个环节“老师为什么带徒弟—解决方案呈现（消除痛点—稀缺性—权威性—对比—引导承诺）” </strong></p>
+<p><strong>第一个环节：说明老师为什么带徒弟 </strong></p>
+<p>因为这是官方给的任务，3个月店铺最少做到10万销售额，并且100%完成任务，官方才会给奖励（在活动期间官方才会给排名、资源和流量扶持）</p>
+<p><span style="color: #0000ff;"><strong>解析：老师透露出培养大家成功是和自己的利益挂钩的，暗示她会尽心尽责带大家跑出结果。</strong></span></p>
+<p><strong>第二个环节：解决方案呈现 </strong></p>
+<p><strong>①消除痛点</strong></p>
+<p>A.不需要营业执照，可以直接申请店铺，下店率99.9%</p>
+<p>B.下店时间3-7天，可以申请100%流量扶持的店铺</p>
+<p><strong>解析：这里不用100%而用99.9%更显得真实，老师提到了不通过的一种情况，告知失败案例是因为资料不一致，并非老师的问题，有瑕疵更可靠！</strong></p>
+<p><strong>②稀缺性</strong></p>
+<p>告知老师一年只带2期徒弟，形容稀缺性</p>
+<p><strong>③权威性</strong></p>
+<p>公司现场展示+多家分公司+全国唯一和官方合作的机构</p>
+<p><strong>④ 对比</strong></p>
+<p>通过3种解决方案对比，验证出自己的方案才是最优解。</p>
+<p><img class="aligncenter" alt="145 4000字拆解直播卖课设计攻略" src="/uploads/allimg/c211009/1633LA2211B0-935S.jpg" width="565" height="214" title="4000字拆解直播卖课设计攻略" /><br />
+<strong>⑤继续点燃欲望</strong></p>
+<p>价值包装+稀缺效应，再放课程钩子，将欲望炒热</p>
+<p>创造一个今天需要马上买单的理由</p>
+<p>老师提到向官方申请了2个福利，用爽点诱惑：</p>
+<p><strong>第1:一套资料，备案成功后可以申请9大站点店铺</strong></p>
+<p>老师用乘法算出多个站点的价值，看上去非常爽。</p>
+<p>同时告知多个站点可以降低运营风险，提高抗风险能力</p>
+<p><strong>第2:多出7倍流量扶持 </strong></p>
+<p>为了强调真实性和稀缺性，用与平台领导沟通截图透露2点：一个是老师的带人效果非常好，得到了官方认可；另一个是官方只给了8个扶持名额，强调稀缺性。</p>
+<p style="text-align: center;"><strong>五.转化环节：50min，17:30-18:30 </strong></p>
+<p>这里主要分为4个环节：美好未来—条件限制—报名方式—福利资源</p>
+<p>1.美好未来：再次激发美好效果，同时通过条件强调，避免售后问题</p>
+<p>分为两种情况，切不同客户需求。主要用“数据+截图证据+条件设置”</p>
+<p><strong>—全职 </strong></p>
+<p><strong>①数据：做加法</strong></p>
+<p><img class="aligncenter" alt="155 4000字拆解直播卖课设计攻略" src="/uploads/allimg/c211009/1633LA22415Z-1031T.jpg" width="565" height="206" title="4000字拆解直播卖课设计攻略" /></p>
+<p><strong>② 证据：直接用截图—客户证言</strong></p>
+<p>&nbsp;</p>
+<p><img class="aligncenter" alt="165 4000字拆解直播卖课设计攻略" src="/uploads/allimg/c211009/1633LA22LC0-111F2.jpg" width="565" height="523" title="4000字拆解直播卖课设计攻略" /></p>
+<p>&nbsp;</p>
+<p><strong>③条件设置：付出的条件不一样，效果也不一样。 </strong></p>
+<p>—兼职</p>
+<p><strong>①数据：做加法</strong></p>
+<p><img class="aligncenter" alt="175 4000字拆解直播卖课设计攻略" src="/uploads/allimg/c211009/1633LA2309620-12EV.jpg" width="565" height="252" title="4000字拆解直播卖课设计攻略" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>②证据：直接用截图—客户证言</strong></p>
+<p><img class="aligncenter" alt="185 4000字拆解直播卖课设计攻略" src="/uploads/allimg/c211009/1633LA233W40-134F9.jpg" width="436" height="565" title="4000字拆解直播卖课设计攻略" /></p>
+<p>&nbsp;</p>
+<p><strong>③条件设置：只要每天1-2小时，坚持2-3个月就有望爆发 </strong></p>
+<p><strong>2.要求：</strong>看似设置条件，实则通过设置条件的方式让人感觉有门槛，感觉机会更难得。</p>
+<p><strong>第一条要求：对学习时间的要求</strong></p>
+<p>每天只要1-3小时，如果没空，成为徒弟后，可以有直播回放。同时用案例借客户之口强调早选择可以少踩坑、多赚钱。</p>
+<p><strong>解析：细看会发现看似提要求，实际在说成为自己徒弟的特权感，同时将需求变得更紧迫。</strong></p>
+<p><strong>第二条要求：对执行力的要求</strong></p>
+<p>这条主要通过案例说一位高龄用户虽然基础差，但是听话照做，连续4遍都在耐心教。</p>
+<p><span style="color: #0000ff;"><strong>解析：看似提要求，实际在证明自己的服务质量。</strong></span></p>
+<p><strong>第三条：绝对不允许卖假货 </strong></p>
+<p><span style="color: #0000ff;"><strong>解析：这条谈不上要求，更多是唤起大家的民族自豪感，让大家感觉赚东南亚人的钱是一件荣耀的事！</strong></span></p>
+<p><strong>3.怎么报名 </strong></p>
+<p><strong>①报名要求</strong>：通过3个问题+截图公证方式引导大家确认报名的决心</p>
+<p>第一个问题：你是真心想跟老师学习的，请回复888；</p>
+<p>第二个问题：你想抓住跨境电商风口期，开店1-2个月就实现赚钱盈利的，请回复888；</p>
+<p>第三个问题：想要长期、稳定、安全、盈利店铺的，请回复888.。</p>
+<p>同时让助理截图公证。</p>
+<p><span style="color: #0000ff;"><strong>解析：一直通过引导大家公开表达，强化大家的决心。 </strong></span></p>
+<p><strong>②报名方式（消除隐患） </strong></p>
+<p>强调官方报名平台+合同，打消大家的付款疑虑</p>
+<p><strong>③马上开班（避免后悔） </strong></p>
+<p><strong>3.福利资源 </strong></p>
+<p><strong>①报学费：</strong>做减法+除法</p>
+<p>原价6980元/年，限时政策3980元一年365天，相当于每天学费只要10元。</p>
+<p>而且这是投资自己，价值非常大。</p>
+<p><span style="color: #0000ff;"><strong>解析：先报高价，再减，用户感觉特别爽；加上前面已有买店铺4000元做锚点，这个课程价格显得特别划算。而且上升到投资自己未来，价格显得没那么重要。</strong></span></p>
+<p><strong>②消除疑虑：</strong>告知没有任何形式的二次消费，让大家放心</p>
+<p><strong>③收益：</strong>做加法</p>
+<p>通过数据帮算中长期收益</p>
+<p><img class="aligncenter" alt="195 4000字拆解直播卖课设计攻略" src="/uploads/allimg/c211009/1633LA23K220-141493.jpg" width="565" height="116" title="4000字拆解直播卖课设计攻略" /><br />
+<strong>④兜底保障：</strong>有条件的全额退款</p>
+<p><img class="aligncenter" alt="205 4000字拆解直播卖课设计攻略" src="/uploads/allimg/c211009/1633LA24395Z-1543B.jpg" width="565" height="281" title="4000字拆解直播卖课设计攻略" /></p>
+<p>&nbsp;</p>
+<p><strong>⑤报名方式：</strong>加微信-留言报名-老师发链接-支付并返付款截图-直播间直接减名额</p>
+<p><strong>⑥逼单：</strong>直播通过快语速及以下7点塑造氛围感，激发大家尽快下单</p>
+<p>-卖得快，秒付3位</p>
+<p>-倒计时：5个名额、4个名额、2个名额、1个名额</p>
+<p>-损失规避：强调名额一满直接关闭报名通道</p>
+<p>-限时：拍下5分钟内不下单就会被取消订单</p>
+<p>-短缺效应：错过今晚就只能等下一批；今年是最后一批了</p>
+<p>-案例轰炸：不断讲成功案例</p>
+<p>-歌曲延缓：临近收尾，放2首歌结束直播，同时给大家时间下单</p>
+<p>以上直播转化流程已经过验证有效，企业可直接模仿落地。</p>
+<p><strong>两点叮嘱：</strong></p>
+<p>1.用在合法合规生意上</p>
+<p>2.学会活用，切勿生搬硬套</p>
+<p><strong>作者： 树叶聊私域运营</strong></p>
+</section>
+                                
+                            </td>
+                        </tr>
+                    </tbody><br>本文链接：https://www.chenifan.cn/yx/3807.html<br>
+                            
+<p style="color:#C0C0C0">>>免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！</br> >  4000字拆解直播卖课设计攻略 </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="https://www.chenifan.cn/yx/3806.html" class="prev has-background"><span>上一篇：</span><h4>一个直播间从月销4802元到2000000+，只因做对了这6点</h4></a></div>
+                        <div class="next-post"><a href="https://www.chenifan.cn/yx/3808.html" class="nextv has-background"><span>下一篇：</span><h4>知乎的内容营销逻辑</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yx/3325.html" title="教育产品30的获客单价，900的获客成本，怎么还一直在投放？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210126/1_0126162RO423.jpg" alt="知识星球上有一个问题“K12教育行业投放抖音，推广目标是出售课程获客单价20~30元，但是投放成本却在700~900元左右，成本如此高，收益这么少，广告主怎么赚钱呢？” 2020年教育行业可谓“冰火两重天”，线下教育和P2P一样，频频爆雷，线上教育却在疯狂烧钱，一片火热。以猿辅导为代表的K12客户，单平台日消耗峰值突破3000万，震惊了整个广告圈，而且还能持续投放。 这些消">
+                                        <h4><span>教育产品30的获客单价，900的获客成本，怎么还一直在投放？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yx/3749.html" title="万字解读丨如何成为一名乙方的策略总监（工作手册梳理）">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/c210918/16319323C41E0-233921.jpg" alt="新锐品牌到底需要什么样的品牌总监？近两年新锐品牌林立，对品牌总监提出了更高的要求，对赛道的判断、对资本讲的故事、对产品的构建、对营销的快节奏、对团队的驱动力，以及对渠道的认知等等。很多人就会说，这…">
+                                        <h4><span>万字解读丨如何成为一名乙方的策略总监（工作手册梳理）</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yx/3515.html" title="百度ocpc二阶成本高怎么优化?需掌握3个技巧！">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/c210709/1625Pc340K0-12S7-lp.jpg" alt="作者：厚昌学院 百度ocpc二阶成本高怎么优化？ 相信99%的竞价员只要是跑过ocpc的都经历过二阶段成本飙升的情况，因为进入二阶之后，匹配模式和出价是由系统控制的，系统可比人敢出价，所以这就导致了二阶成本波动很大，点击一次300、500的情况很常见。 正常情况下，大多数人的选择都是直接降价，但是可以肯定的说： 只要你敢降价，系统就敢让你消费不出去。所以优化二阶">
+                                        <h4><span>百度ocpc二阶成本高怎么优化?需掌握3个技巧！</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/youhua/128.html" title="防止网站被别人通过iframe框架引用的两种实用方法">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/static/assets/images/nopic.gif" alt="使用iframe框架引用网页，是某些不法分子的“钓鱼”手段。如果你发现自己的网站被另外非授权网站框架引用，那么我们应该如何应对呢？ 下面烽烟就为各位同学介绍两种防止网站被别人通过iframe框架引用的两种实用方法。 方法一 js的防御方案：将下面这段代码放到网站页面的/body标签前，这样别人在通过iframe框架引用你的网站网页时，浏览器会自动跳转到你的网站所引用的页">
+                                        <h4><span>防止网站被别人通过iframe框架引用的两种实用方法</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/yx/3319.html" title="图文时代要完了">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210126/1_0126162QE258.jpg" alt="虽然我也不想承认，但不得不面对的一个事实是：图文时代要完了。在我的人物属性里，有一个很好的特质，就是可以大致的预判到未来的趋势，准确率还是挺高的（除了股市）。所以，当我说出图文时代要完时，不要怀疑，这就是事实。 很早之前就有了这种看法，当时并不愿意承认，也可以说是故意假装看不见，原因很好理解，就跟工业革命时，传统作坊的工人反对引入先进">
+                                        <h4><span>图文时代要完了</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/youhua/3863.html" title="如何从零到一搭建一个属于自己的网站（SEO如何建站？）">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploadfile/thumb/cfecdb276f634854f3ef915e2e980c31/200x200_auto.jpg" alt="随着互联网时代的发展，无论是个人还是企业，都想拥有一个自己的网站，通过网站快速展示自己的商品信息。有很多人不了解一个网站是如何形成的，制作一个网站需要多少时间，具体由哪些细节都是全然不知。他们甚至感觉">
+                                        <h4><span>如何从零到一搭建一个属于自己的网站（SEO如何建站？）</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="https://www.chenifan.cn/tougao/4355.html" target="_blank" title="腿扭伤，用什么方法治疗比较好？热敷怎么样？(脚扭伤怎样热敷好得快)"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="https://www.chenifan.cn/static/assets/images/nopic.gif" alt=" " />
+       <div class="title ">
+        <span>2023-07-10</span>
+        <h4>腿扭伤，用什么方法治疗比较好？热敷怎么样？(脚扭伤怎样热敷好得快)</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/dianshang/3153.html" target="_blank " title="电商运营实训手册免费阅读 天猫跟京东代理有什么区别？"><img data-original="/pic/电商运营实训手册免费阅读 天猫跟京东代理有什么区别？.jpg" alt="电商运营实训手册免费阅读 天猫跟京东代理有什么区别？" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/dianshang/3153.html" title="电商运营实训手册免费阅读 天猫跟京东代理有什么区别？">电商运营实训手册免费阅读 天猫跟京东代理有什么区别？</a></h4>
+       <span>2021-01-21</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/dianshang/2626.html" target="_blank " title="淘宝网关键词优化 新店要做好哪些基础"><img data-original="/pic/淘宝网关键词优化 新店要做好哪些基础.jpg" alt="淘宝网关键词优化 新店要做好哪些基础" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/dianshang/2626.html" title="淘宝网关键词优化 新店要做好哪些基础">淘宝网关键词优化 新店要做好哪些基础</a></h4>
+       <span>2020-12-30</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/yygh/173.html" target="_blank " title="电商运营如何把我客户心理？"><img data-original="/pic/电商运营如何把我客户心理？.jpg" alt="电商运营如何把我客户心理？" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/yygh/173.html" title="电商运营如何把我客户心理？">电商运营如何把我客户心理？</a></h4>
+       <span>2020-06-17</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" https://www.chenifan.cn/duanzi/3506.html" target="_blank " title="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎.jpg" alt="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/duanzi/3466.html" target="_blank " title="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/神回复《文言文格式》：乱言无信之人，其生子之股无孔尔.jpg" alt="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>神回复《文言文格式》：乱言无信之人，其生子之股无孔尔</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/xmtyy/5175.html" target="_blank " title="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路.jpg" alt="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-07</span>
+        </div>
+        <h4>抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   <a href="/index.php?s=tag&name=muzhijiudian" title="点击量：励志文案">木制酒店</a>
+<a href="/index.php?s=tag&name=leqi" title="点击量：励志文案">乐其</a>
+<a href="/index.php?s=tag&name=zengfen" title="点击量：励志文案">增粉</a>
+<a href="/index.php?s=tag&name=leimu" title="点击量：励志文案">类目</a>
+<a href="/index.php?s=tag&name=songjian" title="点击量：励志文案">宋健</a>
+<a href="/index.php?s=tag&name=tuixiao" title="点击量：励志文案">推销</a>
+<a href="/index.php?s=tag&name=kongzhongbuhuo" title="点击量：励志文案">空中捕获</a>
+<a href="/index.php?s=tag&name=chengxuyuan" title="点击量：励志文案">程序员</a>
+<a href="/index.php?s=tag&name=hong1" title="点击量：励志文案">洪</a>
+<a href="/index.php?s=tag&name=zengchang" title="点击量：励志文案">增长</a>
+<a href="/index.php?s=tag&name=fuwu" title="点击量：励志文案">服务</a>
+<a href="/index.php?s=tag&name=daihuo" title="点击量：励志文案">带货</a>
+<a href="/index.php?s=tag&name=tianchen" title="点击量：励志文案">田眈</a>
+<a href="/index.php?s=tag&name=xinnian" title="点击量：励志文案">新年</a>
+<a href="/index.php?s=tag&name=dingyu" title="点击量：励志文案">定于</a>
+<a href="/index.php?s=tag&name=weili" title="点击量：励志文案">为例</a>
+<a href="/index.php?s=tag&name=qianshu" title="点击量：励志文案">签署</a>
+<a href="/index.php?s=tag&name=yongguo" title="点击量：励志文案">用过</a>
+<a href="/index.php?s=tag&name=weiqiche" title="点击量：励志文案">为汽车</a>
+<a href="/index.php?s=tag&name=tupoxing" title="点击量：励志文案">突破性</a>
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                 
+                <a href="https://www.chenifan.cn/wenan">文案</a>
+                 
+                <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank"></a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script></body>
+</html>

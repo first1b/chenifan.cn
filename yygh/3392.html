@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>底层逻辑，是什么？-澈逆凡博客</title>
+<meta content="底层逻辑" name="keywords" />
+<meta content="有一次听一个身价百亿的大老板分享人生经验。他是这样说的：我之所以能取得今天这样好的结果，是行为决定的；而影响人行为的是思维，别人都说我思维比较超前，其实我的智商跟大家差不多，为什么思维比较超前呢？是…" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5981788569352351"
+     crossorigin="anonymous"></script>
+<script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?f0e0b571b86ade20d3587555160941d9079c10b49e1023c464d0a988a3aa98b33d72cd14f8a76432df3935ab77ec54f830517b3cb210f7fd334f50ccb772134a";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h2 class="logo">
+            <a href="/" title="澈逆凡bolg——专注分享优质内容" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h2>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/ziyuanfx">资源分享</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yx">营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/wenan">文案</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/lizhi">励志文案</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="//bk.chenifan.cn" target="_blank">百科</a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="https://www.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="breadcrumbs">
+                        <span itemprop="itemListElement"><i class="fa fa-map-marker"></i></span>
+                        <a href="/">首页</a> >  <a href="https://www.chenifan.cn/ganhuo">个人成长</a>  <a href="https://www.chenifan.cn/yygh">运营</a>  > 底层逻辑，是什么？                    </div>
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+     <a href="/index.php?s=tag&name=dicengluoji" title="查看更多“底层逻辑”相关内容">底层逻辑</a>
+                            </div>
+                            <h1 class="title">底层逻辑，是什么？</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>admincyf</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="https://www.chenifan.cn/yygh">运营</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2021-06-15</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_3392">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=3392", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_3392").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <img src="/pic/底层逻辑，是什么？.jpg" alt="底层逻辑，是什么？">
+                            <tbody><tr>
+                            <td>
+                                                                <span class="span-img"><img src="/uploads/allimg/c210615/1623I42L405P-2DK4.jpg" alt="底层逻辑，是什么？"></span>
+                                                                
+
+                                	<p>有一次听一个身价百亿的大老板分享人生经验。</p>
+<p>他是这样说的：我之所以能取得今天这样好的结果，是行为决定的；而影响人行为的是思维，别人都说我思维比较超前，其实我的智商跟大家差不多，为什么思维比较超前呢？是因为环境，环境能影响人的思维。</p>
+<p>当你身处一个身价都是过亿的圈子里时，听听他们在聊什么，看看他们怎么看问题，久而久之你的思维也会被他们影响到。</p>
+<p>当你有了这样的思维，之后的结果就是水到渠成的事了。</p>
+<p>听君一席话胜读十年书，原来咱们之所以没成为那样的大佬，原因是出在环境上，身边缺少几个像马云爸爸那样的人物。</p>
+<p>而这个老板说的那样的思维，其实就是<a href="https://www.chenifan.cn/article/search/keyword-%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91.html" target="_blank">底层逻辑</a>了。</p>
+<p>什么是底层逻辑呢？</p>
+<p>就是事物背后最本质的原理，不足为外人所知的一种神秘存在。</p>
+<p style="text-align: center;"><img alt="313 底层逻辑，是什么？" src="/uploads/allimg/c210615/1623I42LO3Z-2M253.jpg" width="565" height="62" title="底层逻辑，是什么？" /></p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>底层逻辑的价值 </strong></span></p>
+<p>底层逻辑有什么价值？</p>
+<p>这样说吧：马斯克之所以能有特斯拉和航天飞船靠的是第一性原理，没有那个原理，他是万万取得不了今天这样成绩的。</p>
+<p>就像没有定位理论的加持，那些品牌怎么可能成长为百亿级的国民品牌？</p>
+<p>底层逻辑就跟第一性原理一样，是人的行为指南，你的一切行为都是来自对底层逻辑的理解。</p>
+<p>懂事物底层逻辑的人，能比他人取得更高的成就，也能比他人更容易取得成功。</p>
+<p>就像那句话说的：能用几分钟看透事物本质的人和一辈子都看不清事实的人，其人生会有明显的不同。说的也是对事物底层逻辑的理解。</p>
+<p>为什么在面对一个新领域时，不懂的人总觉得做起来应该很简单，而懂行的人却会告诉你，不要进来，里面都是坑。</p>
+<p>因为不懂这个领域的底层逻辑。</p>
+<p>从表面上看觉得里面就像阳春甘露一样甜美，冒然进入，结果被现实狠狠地教育了一顿。</p>
+<p>投资界有个说法：喜欢投在某个行业深耕十几年的老兵，为什么呢？是因为这些人在一个行业混了那么久，对这个行业的底层逻辑早已明了，他们去创业，成功就是手到擒来的事了。</p>
+<p style="text-align: center;"><img alt="413 底层逻辑，是什么？" src="/uploads/allimg/c210615/1623I42M0Q10-2Q2L.jpg" width="565" height="62" title="底层逻辑，是什么？" /></p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>底层逻辑的一些实例</strong></span></p>
+<p>底层逻辑看不见摸不着，若非深入某个行业，是万万</p>
+<p>不可知的，如果没有人告诉你，那么你是无论如何也想不到里面的底层逻辑是怎样的。</p>
+<p>比如：互联网行业的底层逻辑是什么？说白了就是流量的变现生意。</p>
+<p>根据个人的阅历，这里我给大家分享下餐饮和虚拟币这两个行业里的底层逻辑，他们底层的玩法可能跟你想的完全不一样。</p>
+<p><strong>1. 实例一：餐饮连锁的底层逻辑</strong></p>
+<p>蜜雪冰城大家有听说过吗？因为华与华和喜茶掐架，我第一次知道了蜜雪冰城这个牌子，是一个走低价路线的奶茶店品牌，在深圳一线商圈完全见不到。</p>
+<p>我心想，这是一个什么鬼牌子，竟然敢叫板我心中的白月光喜茶大人？</p>
+<p>后来深入了解，蜜雪冰城竟然比喜茶更赚钱，估值也更高。</p>
+<p>这有点颠覆我的认知了。</p>
+<p>就像一个不起眼的小角色打败莱昂纳多拿了奥斯卡一样，让人很难理解。现在再看我当时的想法，有点太幼稚了，那时对餐饮这块的了解太浮于表面了，自从做了一段时间餐饮品牌咨询后，对餐饮连锁有了常人所不知的理解。</p>
+<p>先来一个灵魂拷问：蜜雪冰城是靠什么赚钱的？靠卖奶茶赚钱吗？</p>
+<p>是的，但这只是表面。</p>
+<p>蜜雪冰城赚钱的底层逻辑是供应链，那一万多家门店本质上是奶茶原料的销售点。从这个底层逻辑出发，你会发现：名创优品、正新鸡排和蜜雪冰城是一样的物种，只是提供的产品不同而已。</p>
+<p>一个品牌一旦有了几百家门店，有了后端供应链，之后加盟的门店不管是一百家还是一千家，边际成本是不会发生明显变化的。也就是：服务一百家门店，公司需要五十人的话，服务一千家还是五十人一样可以承受得住。</p>
+<p>这里有个前提是加盟，不是直营。</p>
+<p>直营的连锁品牌边际成本随开店数量增加而不断增长，一旦遇到风吹草动，抗风险能力特别弱。</p>
+<p>国内餐饮连锁超过一千家规模的品牌不多，就是因为这个底层逻辑不太好理解，且理解后不太好落地，供应链的打造没有个几年的功夫很难跑通。</p>
+<p>最后用简短的话汇总一下餐饮连锁的底层逻辑，通过控制上游供应链，形成成本优势，然后用低价策略，海量开店的模式，在每一个线下门店“倾销”产品（实际上不是倾销，用这个词便于理解）。</p>
+<p><strong>2. 实例二：虚拟币的底层逻辑</strong></p>
+<p>虚拟币这个东西我18年时有看过，后来觉得风险太高就没关注这一块了。最近运营群里突然很多人讲起了马斯克站台的某个虚拟币，一个月暴涨几百倍，若踩到了风口瞬间财务自由。很多运营小伙伴跃跃欲试，想进去分一杯羹。</p>
+<p>让我印象深刻的是，我一看就知道这些人要被割了，就劝导大家：珍爱生命，远离虚拟币。</p>
+<p>结果被怼了，说不要阻碍大家赚钱。</p>
+<p>当时我的心情就像家长遇到了反叛期的孩子一样，着急又无奈。</p>
+<p>因为曾经在上面有吃过亏，所以懂得里面的底层逻辑，知道庄家的割韭菜手法，当大家热火朝天的讨论想在里面赚多少钱时，我仿佛开启了上帝视角，已经看到了这些人的命运：被套、被割。</p>
+<p>虚拟币的底层逻辑是怎样的？</p>
+<p>跟股市里的老鼠仓差不多：低价囤货，高价出售。这一波行情的始作俑者是科技狂人马斯克，也是背后的大庄家。一个人一旦在某个领域赚了第一桶金，再赚第二桶金时最常见的操作是复制第一桶金的玩法。</p>
+<p>要知道特斯拉2020年的盈利报表中，持有比特币的增长获利是超过卖车利润的。</p>
+<p>有了这样一个成功模型，加上马斯克本人的号召力（一句话让一个币涨百倍的能力），你觉得他会怎样做呢？</p>
+<p>我这么傻的人都知道，我要是有这样的资源，就先买一千块钱的冷门币藏着，然后发个微博说，我看好它哦。等涨了几百倍的时候出手，一下子几十万到手，有了这么多钱，就财务自由了，还打什么工，直接退休养老了。</p>
+<p>咱这么傻的人都知道这样干，马斯克再不济也比咱聪明一点点，他这一仗下来通过站台的某币最少也能获利几百万吧，是不是比卖车强多了？</p>
+<p>在这里面，那些想趁机分一杯羹的人扮演的是什么角色呢？</p>
+<p>没错，就是绿油油的韭菜。</p>
+<p>当你知道了庄家在虚拟币里面赚钱的底层逻辑，再看现实中发生的起起落落以及各种传闻，你就知道自己该怎么做了。</p>
+<p>还是那句老话：珍爱生命，远离虚拟币。</p>
+<p><img class="aligncenter" alt="514 底层逻辑，是什么？" src="/uploads/allimg/c210615/1623I42M36220-292253.jpg" width="565" height="62" title="底层逻辑，是什么？" /><br />
+虚拟币的底层逻辑要比餐饮业简单得多，被割一次你就知道里面的套路了。餐饮行业不在里面摸爬滚打几年，是洞察不到深层次原理的。每一个行业都有他的底层逻辑，一开始不懂底层逻辑也没有关系。</p>
+<p>给大家一个人生建议：一辈子把一个行业玩透就足够了。</p>
+<p>我们想要的无非是更加美好的生活，如何让自己生活得更美好呢？深耕一个行业，把这个行业底层逻辑研究的通透之后，你想要的自然就有了。</p>
+                                
+                            </td>
+                        </tr>
+                    </tbody><br>本文链接：https://www.chenifan.cn/yygh/3392.html<br>
+                            
+<p style="color:#C0C0C0">>>免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！</br> >  底层逻辑，是什么？ </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="https://www.chenifan.cn/yygh/3391.html" class="prev has-background"><span>上一篇：</span><h4>数据分析报告，建议就该这么写！</h4></a></div>
+                        <div class="next-post"><a href="https://www.chenifan.cn/yygh/3393.html" class="nextv has-background"><span>下一篇：</span><h4>当你的领导制定运营指标的时候，TA在想什么？</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/xmtyy/3846.html" title="#冬奥会流量话题大盘点，你都知道多少？#冰墩墩#冬奥会">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploadfile/thumb/fe9fc289c3ff0af142b6d3bead98a923/200x200_auto.jpg" alt="昨日，抖音发布“冰雪2022”半程战报，称冬奥会开幕式后，冰雪运动员在抖音涨粉超2500万，如谷爱凌，数据显示其抖音粉丝已突破1300万。本次冬奥，带出圈了一干运动健儿，也为抖音内容创作提供丰富的素材。不管是开幕式，还是吉祥物，亦或是参赛选手……均能让用户产生热烈讨论。通过新抖的「声量查询」功能，发现近半个月来，冬奥会相关作品日均发布15.66w，日均获赞高达7196.65w，热度居高不下。▲ 新">
+                                        <h4><span>#冬奥会流量话题大盘点，你都知道多少？#冰墩墩#冬奥会</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/3149.html" title="电商推广作用 新开的网店怎样推广才会有生意？我是卖iphone手机壳DIY的">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210121/1_01211600245039.jpg" alt="卖iphone手机壳DIY的这个市场前景还是很大的。 新开的网店的话，需要多方面推广的。 如：贴吧、微信、论坛、本地信息港、分类信息平台。 线下的话，可以发动身边的朋友一起帮忙宣传的。 电商推广作用 英文意思是未知错误导致找不到。建议卸载淘宝浏览器重新安装，如果是从旺旺客户端或者千牛客户端登陆的，最好和客户端或千牛卸载后重新安装一遍，以避免出现类似问题">
+                                        <h4><span>电商推广作用 新开的网店怎样推广才会有生意？我是卖iphone手机壳DIY的</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/xmtyy/3858.html" title="一文讲清楚如何用数据驱动活动">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploadfile/thumb/eecca5b6365d9607ee5a9d336962c534/200x200_auto.jpg" alt="编辑导语：运营想要做的好，数据分析的能力必不可少，尤其在活动运营中，在活动运营中，数据分析贯穿活动始终，是指导活动运营的指南针。这篇文章作者系统地讲述了如何在活动运营工作中用好数据，一起来看看吧。数据">
+                                        <h4><span>一文讲清楚如何用数据驱动活动</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/gzhyy/2578.html" title="如何用产品思维运营微信公众号？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/201229/1_12291F5492946.png" alt="可能是因为职业习惯的问题，我会有意识地用产品思维去运营公众号。我把微信公众号当成是一款产品，而我，既是微信运营者，也是一名产品经理。 我认为，产品思维不仅仅能应用于互联网领域，生活中的许多问题，我们都可以用产品思维去思考。 一、为什么想做一个微信公众号？ 互联网时代不缺内容，也不缺好内容，凭借碎片化学习，我从他人身上学到了不少知识，但是这">
+                                        <h4><span>如何用产品思维运营微信公众号？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/3313.html" title="推券 电子商务为人们的日常生活带来了什么影响？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210122/1_012210330S331.jpg" alt="电子商务对消费者生活方式的影响可以说是多方面的，主要表现在以下方面。 信息获取方式的改变 在电子商务方式下，人们除了从电视、广播、书籍和报刊杂志等传统媒体中获取信息以外，还">
+                                        <h4><span>推券 电子商务为人们的日常生活带来了什么影响？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/dianshang/3314.html" title="电商运营吴平 网络营销和市场营销的区别">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/210122/1_012210330cR0.jpg" alt="网络营销专业适合做互联网品牌推广和互联网产品推广； 网络营销与市场营销 网络营销作为一种新的营销模式和手段，与传统营销同属现代市场营销理论，两者既有相同点，又存在明显的区别">
+                                        <h4><span>电商运营吴平 网络营销和市场营销的区别</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="https://www.chenifan.cn/lizhi/3958.html" target="_blank" title="励志视频短片3分钟【43句精选】"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="https://www.chenifan.cn/static/assets/images/nopic.gif" alt=" 励志视频短片3分钟1、请听听布洛克和教练的对话。布洛克：很痛。教练：别放弃，要尽全力。布洛克：他很重，我快没力气了。教练：我知道，再找更多的力气。布洛克：很痛，我的" />
+       <div class="title ">
+        <span>2023-05-18</span>
+        <h4>励志视频短片3分钟【43句精选】</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/yx/204.html" target="_blank " title="这个方法助我23天裂变10万会员，1个月流水达60"><img data-original="/pic/这个方法助我23天裂变10万会员，1个月流水达60.jpg" alt="这个方法助我23天裂变10万会员，1个月流水达60" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/yx/204.html" title="这个方法助我23天裂变10万会员，1个月流水达60">这个方法助我23天裂变10万会员，1个月流水达60</a></h4>
+       <span>2020-06-28</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=3011" target="_blank " title="苹果防丢追踪器网页上线：已有跟踪日常物品的选项"><img data-original="/pic/苹果防丢追踪器网页上线：已有跟踪日常物品的选项.jpg" alt="苹果防丢追踪器网页上线：已有跟踪日常物品的选项" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=3011" title="苹果防丢追踪器网页上线：已有跟踪日常物品的选项">苹果防丢追踪器网页上线：已有跟踪日常物品的选项</a></h4>
+       <span>2021-01-15</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/yygh/3386.html" target="_blank " title="前字节/腾讯PM：做了5年面试官，一文讲透99.9%的人是怎么被淘汰的"><img data-original="/pic/前字节/腾讯PM：做了5年面试官，一文讲透99.9%的人是怎么被淘汰的.jpg" alt="前字节/腾讯PM：做了5年面试官，一文讲透99.9%的人是怎么被淘汰的" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/yygh/3386.html" title="前字节/腾讯PM：做了5年面试官，一文讲透99.9%的人是怎么被淘汰的">前字节/腾讯PM：做了5年面试官，一文讲透99.9%的人是怎么被淘汰的</a></h4>
+       <span>2021-06-15</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" https://www.chenifan.cn/duanzi/3506.html" target="_blank " title="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎.jpg" alt="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/duanzi/3466.html" target="_blank " title="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/神回复《文言文格式》：乱言无信之人，其生子之股无孔尔.jpg" alt="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>神回复《文言文格式》：乱言无信之人，其生子之股无孔尔</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/xmtyy/5175.html" target="_blank " title="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路.jpg" alt="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-07</span>
+        </div>
+        <h4>抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   <a href="/index.php?s=tag&name=shier" title="点击量：励志文案">十二</a>
+<a href="/index.php?s=tag&name=yanjin" title="点击量：励志文案">严禁</a>
+<a href="/index.php?s=tag&name=buzhi1" title="点击量：励志文案">不知</a>
+<a href="/index.php?s=tag&name=pinpaidazao" title="点击量：励志文案">品牌打造</a>
+<a href="/index.php?s=tag&name=bianji" title="点击量：励志文案">编辑</a>
+<a href="/index.php?s=tag&name=huoshi1" title="点击量：励志文案">或是</a>
+<a href="/index.php?s=tag&name=shangsheng" title="点击量：励志文案">上升</a>
+<a href="/index.php?s=tag&name=shangban1" title="点击量：励志文案">上半</a>
+<a href="/index.php?s=tag&name=yuyue" title="点击量：励志文案">预约</a>
+<a href="/index.php?s=tag&name=shenfanyi" title="点击量：励志文案">神翻译</a>
+<a href="/index.php?s=tag&name=xuanzhong" title="点击量：励志文案">选中</a>
+<a href="/index.php?s=tag&name=benri" title="点击量：励志文案">本日</a>
+<a href="/index.php?s=tag&name=ruguo" title="点击量：励志文案">如果</a>
+<a href="/index.php?s=tag&name=zhishifufei" title="点击量：励志文案">知识付费</a>
+<a href="/index.php?s=tag&name=maideqi" title="点击量：励志文案">买得起</a>
+<a href="/index.php?s=tag&name=shouzu" title="点击量：励志文案">受阻</a>
+<a href="/index.php?s=tag&name=qianmei" title="点击量：励志文案">钱没</a>
+<a href="/index.php?s=tag&name=tongbi" title="点击量：励志文案">同比</a>
+<a href="/index.php?s=tag&name=ruanjianpeixun" title="点击量：励志文案">软件培训</a>
+<a href="/index.php?s=tag&name=gaofu" title="点击量：励志文案">高福</a>
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                 
+                <a href="https://www.chenifan.cn/wenan">文案</a>
+                 
+                <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank"></a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script></body>
+</html>

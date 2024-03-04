@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> 网站的session不安全该如何加固（如何做好网站安全防护？）-澈逆凡博客</title>
+<meta content="网站运营,网站安全,session,session安全" name="keywords" />
+<meta content="网站安全防护中session会话安全是目前安全防护中,必须要进行安全部署的,session关系着整个用户登录网站与网站进行交互,数据传输都要进行的会话操作,如果session被劫持,那么网站里的用户账" name="description" />
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+<link rel='stylesheet' id='animate-css' href='/skin/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mcustomscrollbar-css' href='/skin/css/jquery.mcustomscrollbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='/skin/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css' href='/skin/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Grace-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/html5shiv.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type='text/javascript' src='/skin/js/respond.min.js'></script>
+<![endif]-->
+</head>
+<body class="post-template-default single single-post postid-917 single-format-aside off-canvas-nav-left">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JNtyj7si67Tn4g5t",ck: "JNtyj7si67Tn4g5t"})</script>
+<script src="/skin/js/lazyload/jquery-1.11.0.min.js"></script>
+<script src="/skin/js/lazyload/jquery.lazyload.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5981788569352351"
+     crossorigin="anonymous"></script>
+<script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?f0e0b571b86ade20d3587555160941d9079c10b49e1023c464d0a988a3aa98b33d72cd14f8a76432df3935ab77ec54f830517b3cb210f7fd334f50ccb772134a";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae86b9f95e6431d72b52a53c0ca66253";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div id="header" class=" navbar-fixed-top">
+    <div class="container">
+        <h2 class="logo">
+            <a href="/" title="澈逆凡bolg——专注分享优质内容" style="width:100%; background-image: url(/style/images/logo.png);"></a>
+        </h2>
+        <div role="navigation" class="site-nav  primary-menu">
+            <div class="menu-fix-box">
+                <ul id="menu-navigation" class="menu">
+                    <li><a href="/">网站首页</a></li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/ziyuanfx">资源分享</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yygh">运营</a></li>
+                                                        <li><a href="https://www.chenifan.cn/yx">营销</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/wenan">文案</a>
+                                                <ul>                             <li><a href="https://www.chenifan.cn/lizhi">励志文案</a></li>
+                                                    </ul>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                                            </li>
+                                        <li class="menu-item-has-children">
+                        <a href="//bk.chenifan.cn" target="_blank">百科</a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="js-toggle-message">
+                <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+                    <ul>
+                                                <li class="first">
+                            <span class="time">2019-06-08</span>
+                            <a target="_blank" href="https://www.chenifan.cn/life/6.html" title="中国各地土得掉渣的美食">中国各地土得掉渣的美食</a>
+                        </li>
+                                            </ul>
+                    <div class="more-messages">
+                        <a target="_blank" href="/hd" rel="nofollow">更多</a>
+                    </div>
+                </div>
+            </div>
+            <button class="js-toggle-search"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="article col-xs-12 col-sm-8 col-md-8">
+                    <div class="breadcrumbs">
+                        <span itemprop="itemListElement"><i class="fa fa-map-marker"></i></span>
+                        <a href="/">首页</a> >  <a href="https://www.chenifan.cn/ganhuo">个人成长</a>  <a href="https://www.chenifan.cn/jishu">IT技术</a>  >  网站的session不安全该如何加固（如何做好网站安全防护？）                    </div>
+                    <div class="post">
+                        <div class="post-title">
+                            <div class="post-entry-categories">
+     <a href="/index.php?s=tag&name=session" title="查看更多“session”相关内容">session</a>
+<a href="/index.php?s=tag&name=wangzhananquan" title="查看更多“网站安全”相关内容">网站安全</a>
+<a href="/index.php?s=tag&name=sessionanquan" title="查看更多“session安全”相关内容">session安全</a>
+<a href="/index.php?s=tag&name=wangzhanyunying" title="查看更多“网站运营”相关内容">网站运营</a>
+                            </div>
+                            <h1 class="title"> 网站的session不安全该如何加固（如何做好网站安全防护？）</h1>
+                            <div class="post_icon">
+                                <span class="postauthor"><i class="fa fa-user"></i>小澈</span>
+                                <span class="postcat">
+                                    <i class="fa fa-list-ul"></i>
+                                    <a href="https://www.chenifan.cn/jishu">IT技术</a></span>
+                                <span class="postclock">
+                                    <i class="fa fa-clock-o"></i>发布时间：2022-03-08</span>
+                                <span class="postlike">
+                                    <i class="fa fa-eye"></i>
+                                    <i id="eyou_arcclick" class="eyou_arcclick" style="font-style:normal"><span class="dr_show_hits_3866">0</span><script type="text/javascript"> $.ajax({ type: "GET", url:"/index.php?s=api&c=module&siteid=1&app=article&m=hits&id=3866", dataType: "jsonp", success: function(data){ if (data.code) { $(".dr_show_hits_3866").html(data.msg); } else { dr_tips(0, data.msg); } } }); </script></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                            <img src="/pic/ 网站的session不安全该如何加固（如何做好网站安全防护？）.jpg" alt=" 网站的session不安全该如何加固（如何做好网站安全防护？）">
+                            <p><a href="https://www.chenifan.cn/article/search/keyword-%E7%BD%91%E7%AB%99%E5%AE%89%E5%85%A8.html" target="_blank">网站安全</a>防护中<a href="https://www.chenifan.cn/article/search/keyword-session.html" target="_blank">session</a>会话安全是目前安全防护中,必须要进行安全部署的,session关系着整个用户登录网站与网站进行交互,数据传输都要进行的会话操作,如果session被劫持,那么网站里的用户账户就会被恶意登录,网站管理员的登录也被劫持,造成网站被劫持,被篡改,被跳转等情况的发生,根据我们SINE安全在对客户网站进行安全防护部署的时候,发现大部分的客户网站都没有对session会话状态进行安全加固,针对<a href="https://www.chenifan.cn/article/search/keyword-session%E5%AE%89%E5%85%A8.html" target="_blank">session安全</a>方面,我们跟大家来分享讲解一下,让更多的人了解网站安全.</p><p><br></p><p><img src="https://www.chenifan.cn/uploadfile/ueditor/image/202203/1646666587a60916.jpg" title=" 网站的session不安全该如何加固（如何做好网站安全防护？）" alt=" 网站的session不安全该如何加固（如何做好网站安全防护？）" width="860" height="573" border="0" vspace="0" style="text-align: center; white-space: normal;"></p><p><br></p><p>什么是session网站会话?</p><p><br></p><p>简单来将这个session就是用户登录网站的时候,会在后端服务器生成一个seeion值并记录到服务器中,跟cookies的道理是差不多的,相当于每个用户访问网站,都会单独的分配一个session给用户,相当于标记用户,正常的会话流程是:用户访问-建立session值-服务器数据传输给含有session的客户IP,如果用户没有session值那么服务器不会与其进行连接交互,不会返回任何数据给用户,session id是独立的.</p><p><br></p><p>session会话在日常的网站当中经常出现的安全问题就是,session被劫持,攻击者绕过session检查,直接获取用户的信息,有些攻击者甚至伪造session来登录网站,登录任意的会员账号,有些高级的攻击者会伪造session来登录网站后台,获取管理员权限.</p><p><br></p><p>我们SINE安全经常遇到客户的session没有释放掉,导致session一直可用,攻击者利用用户的session对服务器进行恶意代码的发送,或者是请求一些用户的操作,像修改用户的密码,提现,资料修改等等操作.这种属于会话重放攻击.还有一种是访问者打开网站后,并未登录账户密码的时候就已经创建了一个session值,这个值在账户登录后也是与其session一致,也就是说登录跟未登录的状态都调用的一个session值,如果网站程序在设计过程中没有对其做安全效验与过滤,那么就很容出问题,攻击者利用一个session值来登录用户账户,获取信息,甚至可能导致用户的信息泄露.</p><p><br></p><h3>那么如何对网站session会话安全做防护呢?</h3><p><br></p><p>1,账户登录后的session值为唯一性,当账户退出后将之前写进服务器端的session值进行删除,防止session一直可用.</p><p><br></p><p>2.对用户的权限做安全过滤,相当于逻辑漏洞范畴里的,当session访问一些有管理权限的页面时,对其当前管理员账户的session进行比对,如果session值不是管理员的,那么就直接退出页面并返回错误.如果您对网站安全不是太懂的话,建议找专业的网站安全公司来处理,国内SINESAFE,启明星辰,深信服,绿盟都是比较不错的.</p><p><br></p><p style="text-align: center;"><img src="https://www.chenifan.cn/uploadfile/202203/2b4fa0211b4c6d.jpg" title=" 网站的session不安全该如何加固（如何做好网站安全防护？）" alt=" 网站的session不安全该如何加固（如何做好网站安全防护？）" width="967" height="641" border="0" vspace="0"></p><p style="text-align: center;"></p><p>&nbsp;</p><p>3.在服务器端做session的有效时间设置,比如设置12小时使用时间,如果session超过12小时就删除掉,防止攻击者恶意利用session会话来劫持攻击网站.</p><p><br></p><p>4.对session做双向加密验证,配合cookies进行加密,加密出来的值到服务器端去解密,才能进行正常的数据通信.以上就是网站安全防护中对session会话的安全讲解分享,也希望我们SINE安全的这次分享,让越来越多的人深入的了解网站安全,只有网站安全了才能保障我们的信息安全,防止用户信息泄露的发生.</p><br>本文链接：https://www.chenifan.cn/jishu/3866.html<br>
+                            
+<p style="color:#C0C0C0">>>免责声明：本网站部分内容来源于互联网或用户投稿，内容版权归原作者所有，文章观点为原作者独立发表，不代表澈逆凡博客立场，不对其真实性、准确性负责！如本站内容侵犯了您的权益，我们也会在第一时间予以删除！</br> >   网站的session不安全该如何加固（如何做好网站安全防护？） </p>
+                        </div>
+
+                        <div class="su-dropdown paydropdown">
+                            <a href="javascript:;" class="pay-author" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="打赏站长">
+                                <i class="fa fa-qrcode"></i>
+                                <span>打赏</span></a>
+                            <div class="su-dropbox pay-allqr" aria-labelledby="pay-qr">
+                                <ul>
+                                    <li class="alipay">
+                                        <img alt="打赏" src="/skin/img/alipay.jpg">
+                                        <!--<b>支付宝扫一扫</b>-->
+                                    </li>
+                                    <li class="weixinpay">
+                                        <!--<img alt="打赏" src="/skin/img/wx.jpg">-->
+                                        <b>微信扫一扫</b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-cjtz content-cjtz clearfix"></div>
+                    <div class="next-prev-posts clearfix">
+                        <div class="prev-post"><a href="https://www.chenifan.cn/jishu/3837.html" class="prev has-background"><span>上一篇：</span><h4>没有用户思维，你怎么玩互联网？（运营里什么是用户思维）</h4></a></div>
+                        <div class="next-post"><a href="https://www.chenifan.cn/jishu/3913.html" class="nextv has-background"><span>下一篇：</span><h4>1</h4></a></div>
+                    </div>
+                    <div class="related-post">
+                        <h3><span>猜你喜欢</span></h3>
+                        <ul>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/420.html" title="嵌入式培训学习难吗？应该怎样学习？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/0ae1c5574651404e89a0dd6aa977ac13.png" alt="嵌入式蓬勃发展很多小伙伴们也很想学习嵌入式，成为一名嵌入式开发工程师。可是很多小白会担心，嵌入式好学吗，如何学习嵌入式，今天就和大家分享一下学习经验，希望对大家有所帮助。">
+                                        <h4><span>嵌入式培训学习难吗？应该怎样学习？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/70.html" title="阿里云虚拟机切换PHP版本的方法">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploads/allimg/200610/1402395619-0-lp.png" alt="阿里云的虚拟机默认是5.2的，但是现在ZBlog的很多应用最低版本都需要5.3及以上了，下载就会提示当前PHP版本低。 下面我们来说下阿里云虚拟机切换PHP版本的方法： 1.打开虚拟机控制面板，在PHP版本设置中选择5.3以上的版本，建议直接选择最高的5.5版本，点击保存设置。 阿里云虚拟机PHP版本设置为5.3以上，需在数据库信息重置数据库密码时，将数据库加密模式设置为41位加密。">
+                                        <h4><span>阿里云虚拟机切换PHP版本的方法</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/3837.html" title="没有用户思维，你怎么玩互联网？（运营里什么是用户思维）">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/uploadfile/thumb/1c383cd30b7c298ab50293adfecb7b18/200x200_auto.jpg" alt="没有用户思维，你怎么玩互联网？在互联网时代什么最重要，有人会说内容、渠道、数据最重要，确实这些很重要，但却不是最重要的，最重要的应该是用户思维。用户是我们一切产品的消费者。也是我们互联网企业的衣食父母。没有用户就没有一切。具备用户思维的产品才是合格的产品。一、什么是用户思维？首先，用户思维有明确的受众群概念。这里的受众群和过去的概念有很大的区别，以往是自然人群的观念，如今则是伴随着媒介产品产生的分">
+                                        <h4><span>没有用户思维，你怎么玩互联网？（运营里什么是用户思维）</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/78.html" title="关于设置全站所有链接都在新窗口打开等代码整理">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://www.chenifan.cn/static/assets/images/nopic.gif" alt="一、全站链接在新窗口打开 关于连接在新窗口打开我们平时大多数的用法就是，在a 标签里设置 target 属性，如target=“_blank”在新窗口打开，可是当站内的链接都是在当前窗口打开的话，一但想要全部都修改成新窗口打开的话，一个一个的去修改排查a标签肯定是非常的麻烦跟费事的，那么有没有什么简单的方法来修改全站的链接在新窗口打开呢； 下面我们来看下代码： basetarg">
+                                        <h4><span>关于设置全站所有链接都在新窗口打开等代码整理</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/417.html" title="零基础Linux培训课程有哪些内容？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/b29c8d2d385a46c2b15414225bb04dd9.jpg" alt="零基础Linux培训课程有哪些内容？Linux培训主要学习网络基础，计算机网络、云计算网络，配备有企业级项目实战：IP地址配置与DNS解析；Linux基础，包括Linux操作系统及Linux高级管理；云数据中心">
+                                        <h4><span>零基础Linux培训课程有哪些内容？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="item">
+                                    <a href="https://www.chenifan.cn/jishu/418.html" title="局域网和广域网的区别是什么？">
+                                        <div class="overlay"></div>
+                                        <img class="thumbnail" src="https://file.boxuegu.com/7d8d8b42beee4dcfb12a759f6be4c14a.jpg" alt="局域网和广域网的区别是什么？其主要的区别是覆盖范围不同。局域网的覆盖范围一般是方圆几千米之内，其具备的安装便捷、成本节约、扩展方便等，在各类办公室内运用广泛。广域网又称广">
+                                        <h4><span>局域网和广域网的区别是什么？</span></h4>
+                                    </a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+     <div class="sidebar col-xs-12 col-sm-4 col-md-4"> 
+   <div class="widget widget_suxingme_postlist"> 
+    <h3> <span> 随便看看</span></h3> 
+    <ul class="recent-posts-widget">
+       
+     <li class="one"> <a href="https://www.chenifan.cn/tougao/5183.html" target="_blank" title="《长城》电影女主为什么是景甜(《长城》电影女主为什么是景甜演的)"> 
+       <div class="overlay"> 
+       </div><img class="thumbnail lazy" data-original="https://www.chenifan.cn/static/assets/images/nopic.gif" alt=" " />
+       <div class="title ">
+        <span>2023-08-08</span>
+        <h4>《长城》电影女主为什么是景甜(《长城》电影女主为什么是景甜演的)</h4>
+       </div></a></li>   
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=2915" target="_blank " title="推特宣布特朗普推特账户被冻结12小时，FB等跟进了|唐纳德·特朗普"><img data-original="/pic/推特宣布特朗普推特账户被冻结12小时，FB等跟进了|唐纳德·特朗普.jpg" alt="推特宣布特朗普推特账户被冻结12小时，FB等跟进了|唐纳德·特朗普" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=2915" title="推特宣布特朗普推特账户被冻结12小时，FB等跟进了|唐纳德·特朗普">推特宣布特朗普推特账户被冻结12小时，FB等跟进了|唐纳德·特朗普</a></h4>
+       <span>2021-01-07</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/index.php?c=show&id=2430" target="_blank " title="最高奖励5000万！深圳支持5G核心产品产业化发展|科技|互联网|通信"><img data-original="/pic/最高奖励5000万！深圳支持5G核心产品产业化发展|科技|互联网|通信.jpg" alt="最高奖励5000万！深圳支持5G核心产品产业化发展|科技|互联网|通信" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/index.php?c=show&id=2430" title="最高奖励5000万！深圳支持5G核心产品产业化发展|科技|互联网|通信">最高奖励5000万！深圳支持5G核心产品产业化发展|科技|互联网|通信</a></h4>
+       <span>2020-12-23</span>
+      </div></li>  
+     <li class="others ">
+      <div class="image ">
+       <a href=" https://www.chenifan.cn/dianshang/3292.html" target="_blank " title="开网店怎样运营 为什么我的淘宝网不显示销量"><img data-original="/pic/开网店怎样运营 为什么我的淘宝网不显示销量.jpg" alt="开网店怎样运营 为什么我的淘宝网不显示销量" class="thumbnail lazy " /></a>
+      </div>
+      <div class="title ">
+       <h4><a href=" https://www.chenifan.cn/dianshang/3292.html" title="开网店怎样运营 为什么我的淘宝网不显示销量">开网店怎样运营 为什么我的淘宝网不显示销量</a></h4>
+       <span>2021-01-22</span>
+      </div></li>  
+    </ul>
+   </div>
+   <div class="widget widget_suxingme_hotpost ">
+    <h3><span>最新发布文章</span></h3>
+    <ul class="widget_suxingme_post ">
+       
+     <li><a href=" https://www.chenifan.cn/duanzi/3506.html" target="_blank " title="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎.jpg" alt="人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>人生天地之间,人即出,法即随,乱言无信之人 其生子之股,当无孔乎</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/duanzi/3466.html" target="_blank " title="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/神回复《文言文格式》：乱言无信之人，其生子之股无孔尔.jpg" alt="神回复《文言文格式》：乱言无信之人，其生子之股无孔尔" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-17</span>
+        </div>
+        <h4>神回复《文言文格式》：乱言无信之人，其生子之股无孔尔</h4>
+       </div></a></li>  
+     <li><a href=" https://www.chenifan.cn/xmtyy/5175.html" target="_blank " title="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路">
+       <div class="overlay "></div><img class="thumbnail lazy " data-original="/pic/抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路.jpg" alt="抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路" />
+       <div class="title ">
+        <div class="entry - meta ">
+         <span>2023-08-07</span>
+        </div>
+        <h4>抖音怎么拍有创意？这13个场景拍摄技巧或许可以帮你打开新思路</h4>
+       </div></a></li>  
+    </ul>
+   </div>
+   <div class="widget suxingme_tag ">
+    <h3><span>标签</span></h3>
+    <div class="widge_tags ">
+     <div class="tag - items ">
+   <a href="/index.php?s=tag&name=daguimo" title="点击量：励志文案">大规模</a>
+<a href="/index.php?s=tag&name=koc" title="点击量：励志文案">KOC</a>
+<a href="/index.php?s=tag&name=shutian" title="点击量：励志文案">暑天</a>
+<a href="/index.php?s=tag&name=licai" title="点击量：励志文案">理财</a>
+<a href="/index.php?s=tag&name=graphcore" title="点击量：励志文案">Graphcore</a>
+<a href="/index.php?s=tag&name=6000" title="点击量：励志文案">6000</a>
+<a href="/index.php?s=tag&name=zaocan" title="点击量：励志文案">早餐</a>
+<a href="/index.php?s=tag&name=zhuanjiayunying" title="点击量：励志文案">专家运营</a>
+<a href="/index.php?s=tag&name=feilubin" title="点击量：励志文案">菲律宾</a>
+<a href="/index.php?s=tag&name=fan" title="点击量：励志文案">饭</a>
+<a href="/index.php?s=tag&name=kai" title="点击量：励志文案">开</a>
+<a href="/index.php?s=tag&name=10shou" title="点击量：励志文案">10手</a>
+<a href="/index.php?s=tag&name=shenzhou1" title="点击量：励志文案">神州</a>
+<a href="/index.php?s=tag&name=xiao" title="点击量：励志文案">小</a>
+<a href="/index.php?s=tag&name=zai1" title="点击量：励志文案">再</a>
+<a href="/index.php?s=tag&name=ying1" title="点击量：励志文案">莹</a>
+<a href="/index.php?s=tag&name=1.19" title="点击量：励志文案">1.19</a>
+<a href="/index.php?s=tag&name=you1" title="点击量：励志文案">油</a>
+<a href="/index.php?s=tag&name=xiangtu" title="点击量：励志文案">像图</a>
+<a href="/index.php?s=tag&name=diaojie" title="点击量：励志文案">调节</a>
+      <a href=""></a> 
+     </div>
+    </div>
+   </div>
+<div class="widget suxingme_social">
+                            <h3>
+            <span>关注我们 么么哒！</span></h3>
+                            <div class="attentionus">
+                                <ul class="items clearfix"> <span class="social-widget-link social-link-qq">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-qq"></i>2794138804</span> <span class="social-widget-link-title">QQ号</span>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-email">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-envelope"></i>2794138804@qq.com</span> <span class="social-widget-link-title">邮箱</span>
+                                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2794138804@qq.com" target="_blank" rel="nofollow"></a>
+                                    </span> <span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>运营贩</span> <span class="social-widget-link-title">百家号</span>
+                                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                                    </span>
+                                    <!--<span class="social-widget-link social-link-wechat">
+                    <span class="social-widget-link-count">
+                        <i class="fa fa-weixin"></i>澈逆凡博客</span>
+                    <span class="social-widget-link-title">微信公众号</span>
+                    <a id="tooltip-s-weixin" href="javascript:void(0);"></a>
+                </span>--></ul>
+                            </div>
+                        </div>
+
+  </div>             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer">
+                <a class="weiboii" href="http://weibo.com/" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+                <a class="ttweiboii" href="http://t.qq.com/" target="_blank" rel="nofollow">
+                    <i class="fa fa-tencent-weibo"></i>
+                </a>
+                <a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1812215600@qq.com" rel="nofollow" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                 <a class="qqii" href="http://wpa.qq.com/msgrd?v=1&uin=1812215600&site=qq&menu=yes" rel="nofollow"  target="_blank">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);">
+                    <i class="fa fa-weixin"></i>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="/">首页</a>
+                 
+                <a href="https://www.chenifan.cn/ganhuo">个人成长</a>
+                 
+                <a href="https://www.chenifan.cn/wenan">文案</a>
+                 
+                <a href="https://www.chenifan.cn/hwfx">好文分享</a>
+                 
+                <a href="https://www.chenifan.cn/duanzi">神回复</a>
+                              <a href="/hwfx" target="blank">好文分享</a>
+            </div>
+            <div class="copyright-footer">
+                <!--<p>   备案号：<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank"></a></p>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="search-form">
+    <!--##form class="sidebar-search" method="get" action="/search.php">-->
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="q" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    <!--##/form>-->
+    <div class="close-search">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注站长公众号</h3>
+        <div class="qcode"><img src="/skin/img/wxgzh.png" width="160" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>
+<!--<div class="f-baijiahao-dropdown">
+    <div class="tooltip-baijiahao-inner">
+        <h3>关注站长百家号</h3>
+        <div class="qcode"><img src="/skin/img/bjh.png" width="160" height="160" alt="百家号"></div>
+    </div>
+    <div class="close-weixin">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+    </div>
+</div>-->
+<script type="text/javascript" src='/skin/js/fancybos.js'></script>
+<script type='text/javascript' src='/skin/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.mcustomscrollbar.concat.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.resizeend.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript'>/* <![CDATA[ */
+    var suxingme_url = {
+        "roll": "",
+        "headfixed": "1",
+        "slidestyle": "index_no_slide",
+        "wow": "1"
+    };
+    /* ]]> */
+    </script>
+<script type='text/javascript' src='/skin/js/suxingme.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+<script type='text/javascript' src='/skin/js/jquery.lazyload.min.js'></script>
+<script type='text/javascript' src='/skin/js/wow.min.js'></script>
+<script type='text/javascript' src='/skin/js/ajax-comment.js'></script>
+<script type='text/javascript' src='/skin/js/fancybox.js'></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script></body>
+</html>
